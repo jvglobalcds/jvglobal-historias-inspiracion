@@ -91,6 +91,7 @@ export class Categoria {
       'claridad': 'CLARIDAD',
       'liderazgo': 'LIDERAZGO',
       'deporte': 'DEPORTES',
+      'metaforas': 'METÁFORAS',
       'adversidad': 'ADVERSIDAD',
       'transformacion': 'TRANSFORMACIÓN',
       'innovacion': 'INNOVACIÓN',

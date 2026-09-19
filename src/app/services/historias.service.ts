@@ -56,14 +56,18 @@ export class HistoriasService {
     });
   }
 
-  private normalizar(texto: string): string {
 
-    return texto
-      .trim()
-      .toLowerCase()
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '');
+private normalizar(texto: string): string {
 
-  }
+  return texto
+    .trim()
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[-_]+/g, ' ')
+    .replace(/\s+/g, ' ');
+
+}
+
 
 }

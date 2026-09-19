@@ -1,8 +1,20 @@
-﻿import { Historia } from './historia.model';
+import { Historia } from './historia.model';
 import { historiasDeportes } from './historias/deportes';
+import { historiasLiderazgo } from './historias/liderazgo';
+import { historiasMetaforas } from './historias/metaforas';
+import { historiasSuperacionPersonal } from './historias/superacion-personal';
+import { historiasTransformacion } from './historias/transformacion';
+import { historiasClaridad } from './historias/claridad';
 
 export type { Historia };
 
 export const HISTORIAS: Historia[] = [
-  ...historiasDeportes
+  ...historiasDeportes,
+  ...historiasLiderazgo,
+  ...historiasMetaforas,
+  ...historiasSuperacionPersonal,
+  ...historiasTransformacion,
+  ...historiasClaridad
 ];
+
+
