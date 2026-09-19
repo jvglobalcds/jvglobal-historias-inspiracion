@@ -1,0 +1,136 @@
+.categoria-page {
+  min-height: 100vh;
+  background: #04101f;
+  color: #f5f0e6;
+}
+
+.categoria-header {
+  width: min(1100px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 45px 0 80px;
+}
+
+.volver {
+  color: #d4af37;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.encabezado {
+  margin-top: 80px;
+}
+
+.etiqueta,
+.numero {
+  color: #d4af37;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.encabezado h1 {
+  margin: 15px 0;
+  color: #f5f0e6;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  line-height: 1;
+}
+
+.encabezado p {
+  max-width: 650px;
+  margin: 25px 0 0;
+  color: #f5f0e6;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.categoria-contenido {
+  width: min(1100px, calc(100% - 40px));
+  margin: 0 auto;
+  padding-bottom: 100px;
+}
+
+.historias-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.historia-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 230px;
+  padding: 30px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 10px;
+  color: #f5f0e6;
+  text-decoration: none;
+  background: rgba(245, 240, 230, 0.025);
+  transition: 0.2s ease;
+}
+
+.historia-card:hover {
+  border-color: #d4af37;
+  transform: translateY(-3px);
+}
+
+.historia-card h2 {
+  margin: 25px 0 12px;
+  font-size: 1.5rem;
+}
+
+.historia-card p {
+  margin: 0;
+  color: #f5f0e6;
+  line-height: 1.6;
+}
+
+.ver-historia {
+  margin-top: auto;
+  padding-top: 25px;
+  color: #d4af37;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.sin-historias {
+  padding: 50px 35px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 10px;
+}
+
+.sin-historias h2 {
+  margin: 15px 0;
+  font-size: 1.4rem;
+}
+
+.sin-historias p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.volver-final {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.volver-final a {
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 700px) {
+
+  .encabezado {
+    margin-top: 55px;
+  }
+
+  .historias-grid {
+    grid-template-columns: 1fr;
+  }
+
+}

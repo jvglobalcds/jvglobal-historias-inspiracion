@@ -1,0 +1,163 @@
+.app-shell {
+  min-height: 100vh;
+  background: #04101f;
+}
+
+.hero {
+  min-height: 58vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.hero-content {
+  width: min(900px, 100%);
+}
+
+.brand {
+  margin-bottom: 28px;
+  color: #d4af37;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+}
+
+h1 {
+  margin: 0;
+  color: #f5f0e6;
+  font-size: clamp(2.4rem, 7vw, 5.5rem);
+  line-height: 1;
+  letter-spacing: 0.03em;
+}
+
+.hero-subtitle {
+  max-width: 720px;
+  margin: 32px auto 0;
+  color: #f5f0e6;
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+.cds-values {
+  margin-top: 28px;
+  color: #d4af37;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.contenido {
+  padding: 40px 24px 100px;
+}
+
+.biblioteca {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+}
+
+.seccion-titulo {
+  margin-bottom: 36px;
+  border-top: 1px solid rgba(212, 175, 55, 0.35);
+  padding-top: 35px;
+}
+
+.seccion-titulo span {
+  color: #d4af37;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+.seccion-titulo h2 {
+  margin: 10px 0 0;
+  color: #f5f0e6;
+  font-size: 1.8rem;
+}
+
+.categorias {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 50px;
+}
+
+.categoria {
+  min-height: 54px;
+  padding: 14px 18px;
+  background: transparent;
+  color: #f5f0e6;
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.categoria:hover {
+  background: #d4af37;
+  color: #04101f;
+}
+
+.historias {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.historia-card {
+  padding: 30px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 10px;
+  background: rgba(245, 240, 230, 0.03);
+}
+
+.historia-categoria {
+  margin-bottom: 18px;
+  color: #d4af37;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.historia-card h3 {
+  margin: 0 0 16px;
+  color: #f5f0e6;
+}
+
+.historia-card p {
+  color: #f5f0e6;
+  line-height: 1.6;
+}
+
+.btn-historia {
+  margin-top: 20px;
+  padding: 12px 18px;
+  background: #d4af37;
+  color: #04101f;
+  border: 1px solid #d4af37;
+  border-radius: 7px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .categorias {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .historias {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero {
+    min-height: 50vh;
+    padding: 60px 20px;
+  }
+
+  .categorias {
+    grid-template-columns: 1fr;
+  }
+}

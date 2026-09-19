@@ -1,0 +1,154 @@
+<p>buscador works!</p><div class="buscador-page">
+
+  <header class="buscador-header">
+
+    <a routerLink="/indice" class="volver">
+      ← VOLVER AL ÍNDICE
+    </a>
+
+    <div class="encabezado">
+
+      <span class="etiqueta">BIBLIOTECA</span>
+
+      <h1>BUSCADOR</h1>
+
+      <p>
+        Encuentra historias por nombre, categoría,
+        tema, época, contexto o valor CDS.
+      </p>
+
+    </div>
+
+  </header>
+
+  <main class="buscador-contenido">
+
+    <section class="busqueda">
+
+      <label for="campo-busqueda">
+        BUSCAR EN LA BIBLIOTECA
+      </label>
+
+      <div class="campo">
+
+        <span class="icono">⌕</span>
+
+        <input
+          id="campo-busqueda"
+          type="text"
+          [(ngModel)]="termino"
+          placeholder="Ejemplo: Derek, Barcelona, disciplina..."
+          autocomplete="off"
+        />
+
+      </div>
+
+      @if (termino.trim()) {
+
+        <p class="resultado-info">
+
+          @if (historiasFiltradas.length > 0) {
+            {{ historiasFiltradas.length }}
+            historia encontrada
+            @if (historiasFiltradas.length !== 1) {
+              historias encontradas
+            }
+          } @else {
+            No encontramos historias para
+            <strong>“{{ termino }}”</strong>.
+          }
+
+        </p>
+
+      }
+
+    </section>
+
+
+    @if (termino.trim() && historiasFiltradas.length > 0) {
+
+      <section class="resultados">
+
+        <div class="seccion-heading">
+
+          <span>RESULTADOS</span>
+
+          <h2>HISTORIAS ENCONTRADAS</h2>
+
+        </div>
+
+        <div class="historias-grid">
+
+          @for (
+            historia of historiasFiltradas;
+            track historia.id
+          ) {
+
+            <a
+              [routerLink]="['/historia', historia.id]"
+              class="historia-card">
+
+              <span class="numero">
+                HISTORIA
+              </span>
+
+              <h2>
+                {{ historia.nombre }}
+              </h2>
+
+              <p>
+                {{ historia.contexto }}
+                ·
+                {{ historia.epoca }}
+              </p>
+
+              <span class="ver-historia">
+                VER HISTORIA →
+              </span>
+
+            </a>
+
+          }
+
+        </div>
+
+      </section>
+
+    }
+
+
+    @if (!termino.trim()) {
+
+      <section class="ayuda">
+
+        <span class="numero">
+          PUEDES BUSCAR POR
+        </span>
+
+        <div class="criterios">
+
+          <span>NOMBRE</span>
+          <span>CATEGORÍA</span>
+          <span>TEMA</span>
+          <span>ÉPOCA</span>
+          <span>CONTEXTO</span>
+          <span>VALOR CDS</span>
+
+        </div>
+
+      </section>
+
+    }
+
+
+    <div class="volver-final">
+
+      <a routerLink="/indice">
+        ← VOLVER AL ÍNDICE
+      </a>
+
+    </div>
+
+  </main>
+
+</div>

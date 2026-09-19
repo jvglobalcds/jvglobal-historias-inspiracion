@@ -1,0 +1,345 @@
+<div class="historia-page">
+
+  <header class="historia-header">
+
+    <a routerLink="/indice" class="volver">
+      ← VOLVER AL ÍNDICE
+    </a>
+
+    <div class="encabezado">
+
+      <span class="etiqueta">HISTORIA 001</span>
+
+      <h1>{{ historia.nombre }}</h1>
+
+      <p class="contexto">
+        {{ historia.contexto }} · {{ historia.epoca }}
+      </p>
+
+    </div>
+
+  </header>
+
+
+  <main class="historia-contenido">
+
+
+    <!-- 01 · QUIÉN ES -->
+    <section class="bloque">
+
+      <span class="numero-seccion">01</span>
+
+      <h2>QUIÉN ES</h2>
+
+      <p>
+        {{ historia.quienEs }}
+      </p>
+
+    </section>
+
+
+    <!-- 02 · EL CONTEXTO -->
+    <section class="bloque">
+
+      <span class="numero-seccion">02</span>
+
+      <h2>EL CONTEXTO</h2>
+
+      <p>
+        {{ historia.contextoAmpliado }}
+      </p>
+
+    </section>
+
+
+    <!-- 03 · ANTES DEL MOMENTO CLAVE -->
+    <section class="bloque">
+
+      <span class="numero-seccion">03</span>
+
+      <h2>ANTES DEL MOMENTO CLAVE</h2>
+
+      <p>
+        {{ historia.antesDelMomentoClave }}
+      </p>
+
+    </section>
+
+
+    <!-- 04 · EL MOMENTO QUE CAMBIÓ TODO -->
+    <section class="bloque momento">
+
+      <span class="numero-seccion">04</span>
+
+      <h2>EL MOMENTO QUE CAMBIÓ TODO</h2>
+
+      <p>
+        {{ historia.momentoClave }}
+      </p>
+
+    </section>
+
+
+    <!-- 05 · LO QUE HIZO -->
+    <section class="bloque">
+
+      <span class="numero-seccion">05</span>
+
+      <h2>LO QUE HIZO</h2>
+
+      <p>
+        {{ historia.loQueHizo }}
+      </p>
+
+    </section>
+
+
+    <!-- 06 · EL ACOMPAÑAMIENTO -->
+    <section class="bloque">
+
+      <span class="numero-seccion">06</span>
+
+      <h2>EL ACOMPAÑAMIENTO</h2>
+
+      <p>
+        {{ historia.elAcompanamiento }}
+      </p>
+
+    </section>
+
+
+    <!-- 07 · LA HISTORIA COMPLETA -->
+    <section class="bloque historia-completa">
+
+      <span class="numero-seccion">07</span>
+
+      <h2>LA HISTORIA COMPLETA</h2>
+
+      @for (parrafo of historia.historiaCompleta; track parrafo) {
+
+        <p>
+          {{ parrafo }}
+        </p>
+
+      }
+
+    </section>
+
+    <!-- 08 · HECHOS DOCUMENTADOS -->
+<section class="bloque">
+
+  <span class="numero-seccion">08</span>
+
+  <h2>HECHOS DOCUMENTADOS</h2>
+
+  <ul>
+
+    @for (hecho of historia.hechosDocumentados; track hecho) {
+
+      <li>
+        {{ hecho }}
+      </li>
+
+    }
+
+  </ul>
+
+</section>
+
+
+    <!-- 09 · LO QUE PODEMOS OBSERVAR -->
+    <section class="bloque">
+
+      <span class="numero-seccion">09</span>
+
+      <h2>LO QUE PODEMOS OBSERVAR</h2>
+
+      <ul>
+
+        @for (observacion of historia.loQuePodemosObservar; track observacion) {
+
+          <li>
+            {{ observacion }}
+          </li>
+
+        }
+
+      </ul>
+
+    </section>
+
+
+    <!-- 10 · PARA REFLEXIONAR -->
+    <section class="bloque reflexion">
+
+      <span class="numero-seccion">10</span>
+
+      <h2>PARA REFLEXIONAR</h2>
+
+      @for (pregunta of historia.paraReflexionar; track pregunta) {
+
+        <div class="pregunta">
+          {{ pregunta }}
+        </div>
+
+      }
+
+    </section>
+
+
+    <!-- 11 · REFLEXIÓN CDS -->
+    <section class="bloque reflexion-cds">
+
+      <span class="numero-seccion">11</span>
+
+      <h2>REFLEXIÓN CDS</h2>
+
+      <div class="cds-item">
+
+        <h3>CLARIDAD</h3>
+
+        <p>
+          {{ historia.reflexionCds.claridad }}
+        </p>
+
+      </div>
+
+      <div class="cds-item">
+
+        <h3>DISCIPLINA</h3>
+
+        <p>
+          {{ historia.reflexionCds.disciplina }}
+        </p>
+
+      </div>
+
+      <div class="cds-item">
+
+        <h3>SUPERACIÓN</h3>
+
+        <p>
+          {{ historia.reflexionCds.superacion }}
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- 12 · UNA IDEA PARA LLEVAR -->
+    <section class="bloque idea-llevar">
+
+      <span class="numero-seccion">12</span>
+
+      <h2>UNA IDEA PARA LLEVAR</h2>
+
+      <p>
+        {{ historia.unaIdeaParaLlevar }}
+      </p>
+
+    </section>
+
+
+    <!-- 13 · CLASIFICACIÓN -->
+    <section class="bloque etiquetas">
+
+      <span class="numero-seccion">13</span>
+
+      <h2>CLASIFICACIÓN</h2>
+
+
+      <div class="grupo">
+
+        <h3>CATEGORÍAS</h3>
+
+        <div class="tags">
+
+          @for (categoria of historia.categoria; track categoria) {
+
+            <span>
+              {{ categoria }}
+            </span>
+
+          }
+
+        </div>
+
+      </div>
+
+
+      <div class="grupo">
+
+        <h3>TEMAS</h3>
+
+        <div class="tags">
+
+          @for (tema of historia.temas; track tema) {
+
+            <span>
+              {{ tema }}
+            </span>
+
+          }
+
+        </div>
+
+      </div>
+
+
+      <div class="grupo">
+
+        <h3>VALORES CDS</h3>
+
+        <div class="tags">
+
+          @for (valor of historia.valoresCds; track valor) {
+
+            <span>
+              {{ valor }}
+            </span>
+
+          }
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- 14 · FUENTES -->
+    <section class="bloque fuentes">
+
+      <span class="numero-seccion">14</span>
+
+      <h2>FUENTES</h2>
+
+      @for (fuente of historia.fuentes; track fuente.url) {
+
+        <a
+          [href]="fuente.url"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          {{ fuente.nombre }} →
+
+        </a>
+
+      }
+
+    </section>
+
+
+    <div class="volver-final">
+
+      <a routerLink="/indice">
+        ← VOLVER AL ÍNDICE
+      </a>
+
+    </div>
+
+
+  </main>
+
+</div>

@@ -1,0 +1,86 @@
+<div class="categoria-page">
+
+  <header class="categoria-header">
+
+    <a routerLink="/indice" class="volver">
+      ← VOLVER AL ÍNDICE
+    </a>
+
+    <div class="encabezado">
+
+      <span class="etiqueta">CATEGORÍA</span>
+
+      <h1>{{ nombreCategoria }}</h1>
+
+      <p>
+        Historias relacionadas con esta categoría.
+      </p>
+
+    </div>
+
+  </header>
+
+
+  <main class="categoria-contenido">
+
+    @if (historiasFiltradas.length > 0) {
+
+      <div class="historias-grid">
+
+       @for (historia of historiasFiltradas; track historia.id) {
+
+          <a
+           [routerLink]="['/historia', historia.id]"
+            class="historia-card">
+
+            <span class="numero">HISTORIA</span>
+
+            <h2>
+              {{ historia.nombre }}
+            </h2>
+
+            <p>
+              {{ historia.contexto }} · {{ historia.epoca }}
+            </p>
+
+            <span class="ver-historia">
+              VER HISTORIA →
+            </span>
+
+          </a>
+
+        }
+
+      </div>
+
+    } @else {
+
+      <section class="sin-historias">
+
+        <span class="numero">BIBLIOTECA</span>
+
+        <h2>
+          AÚN NO HAY HISTORIAS EN ESTA CATEGORÍA
+        </h2>
+
+        <p>
+          Esta categoría está preparada para incorporar
+          nuevas historias.
+        </p>
+
+      </section>
+
+    }
+
+
+    <div class="volver-final">
+
+      <a routerLink="/indice">
+        ← VOLVER AL ÍNDICE
+      </a>
+
+    </div>
+
+  </main>
+
+</div>
