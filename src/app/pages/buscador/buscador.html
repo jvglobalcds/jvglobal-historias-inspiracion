@@ -1,4 +1,4 @@
-<p>buscador works!</p><div class="buscador-page">
+<div class="buscador-page">
 
   <header class="buscador-header">
 
@@ -48,14 +48,15 @@
         <p class="resultado-info">
 
           @if (historiasFiltradas.length > 0) {
+
             {{ historiasFiltradas.length }}
-            historia encontrada
-            @if (historiasFiltradas.length !== 1) {
-              historias encontradas
-            }
+            {{ historiasFiltradas.length === 1 ? 'HISTORIA ENCONTRADA' : 'HISTORIAS ENCONTRADAS' }}
+
           } @else {
+
             No encontramos historias para
             <strong>“{{ termino }}”</strong>.
+
           }
 
         </p>
@@ -68,14 +69,6 @@
     @if (termino.trim() && historiasFiltradas.length > 0) {
 
       <section class="resultados">
-
-        <div class="seccion-heading">
-
-          <span>RESULTADOS</span>
-
-          <h2>HISTORIAS ENCONTRADAS</h2>
-
-        </div>
 
         <div class="historias-grid">
 

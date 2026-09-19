@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+
 import { Historia } from '../../data/historias';
 import { HistoriasService } from '../../services/historias.service';
 
 @Component({
   selector: 'app-categoria',
-  imports: [RouterLink],
+  imports: [RouterLink, FormsModule],
   templateUrl: './categoria.html',
   styleUrl: './categoria.css'
 })
@@ -14,6 +16,10 @@ export class Categoria {
   slug = '';
 
   historiasFiltradas: Historia[] = [];
+
+  terminoBusqueda = '';
+
+  private historiasCategoria: Historia[] = [];
 
   constructor(
     private route: ActivatedRoute,
@@ -24,10 +30,55 @@ export class Categoria {
 
       this.slug = params.get('slug') ?? '';
 
-      this.historiasFiltradas =
+      this.historiasCategoria =
         this.historiasService.obtenerPorCategoria(this.slug);
 
+      this.filtrarHistorias();
+
     });
+
+  }
+
+  filtrarHistorias(): void {
+
+    const termino = this.normalizar(this.terminoBusqueda);
+
+    if (!termino) {
+
+      this.historiasFiltradas = [
+        ...this.historiasCategoria
+      ];
+
+      return;
+    }
+
+    this.historiasFiltradas =
+      this.historiasCategoria.filter(historia => {
+
+        const contenido = [
+          historia.nombre,
+          historia.contexto,
+          historia.epoca,
+          ...historia.categoria,
+          ...historia.temas,
+          ...historia.valoresCds
+        ]
+          .map(valor => this.normalizar(valor))
+          .join(' ');
+
+        return contenido.includes(termino);
+
+      });
+
+  }
+
+  private normalizar(texto: string): string {
+
+    return texto
+      .trim()
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '');
 
   }
 
@@ -39,11 +90,12 @@ export class Categoria {
       'disciplina': 'DISCIPLINA',
       'claridad': 'CLARIDAD',
       'liderazgo': 'LIDERAZGO',
-      'deporte': 'DEPORTE',
+      'deporte': 'DEPORTES',
       'adversidad': 'ADVERSIDAD',
       'transformacion': 'TRANSFORMACIÓN',
       'innovacion': 'INNOVACIÓN',
-      'familia': 'FAMILIA'
+      'familia': 'FAMILIA',
+      'legado': 'LEGADO'
 
     };
 

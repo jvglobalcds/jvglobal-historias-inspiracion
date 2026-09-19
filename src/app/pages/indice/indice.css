@@ -1,185 +1,284 @@
 .indice-page {
-  min-height: 100vh;
-  background: #04101f;
-  color: #f5f0e6;
+min-height: 100vh;
+background: #04101f;
+color: #f5f0e6;
 }
 
 .indice-header {
-  width: min(1100px, calc(100% - 40px));
-  margin: 0 auto;
-  padding: 50px 0 70px;
+width: min(1100px, calc(100% - 40px));
+margin: 0 auto;
+padding: 50px 0 70px;
 }
 
 .volver-inicio {
-  color: #d4af37;
-  text-decoration: none;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
+color: #d4af37;
+text-decoration: none;
+font-size: 0.8rem;
+font-weight: 700;
+letter-spacing: 0.18em;
 }
 
 .titulo-biblioteca {
-  margin-top: 80px;
+margin-top: 80px;
 }
 
 .titulo-biblioteca span,
 .seccion-heading span {
-  color: #d4af37;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
+color: #d4af37;
+font-size: 0.78rem;
+font-weight: 700;
+letter-spacing: 0.2em;
 }
 
 .titulo-biblioteca h1 {
-  margin: 12px 0 0;
-  color: #f5f0e6;
-  font-size: clamp(2.4rem, 7vw, 5rem);
-  line-height: 1;
-  letter-spacing: 0.02em;
+margin: 12px 0 0;
+color: #f5f0e6;
+font-size: clamp(2.4rem, 7vw, 5rem);
+line-height: 1;
+letter-spacing: 0.02em;
 }
 
 .indice-header p {
-  max-width: 700px;
-  margin: 30px 0 0;
-  color: #f5f0e6;
-  font-size: 1.08rem;
-  line-height: 1.7;
+max-width: 700px;
+margin: 30px 0 0;
+color: #f5f0e6;
+font-size: 1.08rem;
+line-height: 1.7;
 }
 
 .indice-contenido {
-  width: min(1100px, calc(100% - 40px));
-  margin: 0 auto;
-  padding-bottom: 100px;
+width: min(1100px, calc(100% - 40px));
+margin: 0 auto;
+padding-bottom: 100px;
 }
 
+/* ===================================
+BUSCADOR
+=================================== */
+
 .buscador-acceso {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 22px 24px;
-  border: 1px solid rgba(212, 175, 55, 0.5);
-  border-radius: 10px;
-  color: #f5f0e6;
-  text-decoration: none;
-  background: rgba(245, 240, 230, 0.025);
-  transition: 0.2s ease;
+display: flex;
+align-items: center;
+gap: 20px;
+
+padding: 22px 24px;
+
+border: 1px solid rgba(212, 175, 55, 0.5);
+border-radius: 10px;
+
+color: #f5f0e6;
+text-decoration: none;
+
+background: rgba(245, 240, 230, 0.025);
+
+transition: 0.2s ease;
 }
 
 .buscador-acceso:hover {
-  background: #d4af37;
-  color: #04101f;
+background: #d4af37;
+color: #04101f;
 }
 
 .buscador-icono {
-  font-size: 2rem;
-  line-height: 1;
+font-size: 2rem;
+line-height: 1;
 }
 
 .buscador-acceso div {
-  flex: 1;
+flex: 1;
 }
 
 .buscador-acceso strong {
-  display: block;
-  font-size: 0.95rem;
+display: block;
+font-size: 0.95rem;
 }
 
 .buscador-acceso small {
-  display: block;
-  margin-top: 5px;
-  line-height: 1.5;
+display: block;
+margin-top: 5px;
+line-height: 1.5;
 }
 
 .flecha {
-  font-size: 1.5rem;
+font-size: 1.5rem;
 }
 
+/* ===================================
+ÍNDICE DE CATEGORÍAS
+=================================== */
+
 .categorias-seccion {
-  margin-top: 90px;
+margin-top: 90px;
 }
 
 .seccion-heading {
-  margin-bottom: 35px;
-  border-top: 1px solid rgba(212, 175, 55, 0.3);
-  padding-top: 30px;
+margin-bottom: 25px;
+
+border-top: 1px solid rgba(212, 175, 55, 0.3);
+
+padding-top: 30px;
 }
 
 .seccion-heading h2 {
-  margin: 10px 0 0;
-  font-size: 1.8rem;
+margin: 10px 0 0;
+font-size: 1.8rem;
 }
 
-.categorias-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
+/* ===================================
+LISTA DE CATEGORÍAS
+=================================== */
+
+.categorias-lista {
+display: flex;
+flex-direction: column;
+
+border-top: 1px solid rgba(212, 175, 55, 0.18);
 }
 
-.categoria-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-height: 250px;
-  padding: 30px;
-  border: 1px solid rgba(212, 175, 55, 0.28);
-  border-radius: 10px;
-  color: #f5f0e6;
-  text-decoration: none;
-  background: rgba(245, 240, 230, 0.025);
-  transition: 0.2s ease;
+.categoria-item {
+display: grid;
+
+grid-template-columns: 55px minmax(0, 1fr) 40px;
+
+align-items: center;
+
+gap: 25px;
+
+padding: 25px 10px;
+
+border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+
+color: #f5f0e6;
+text-decoration: none;
+
+transition:
+background 0.2s ease,
+padding-left 0.2s ease,
+border-color 0.2s ease;
 }
 
-.categoria-card:hover {
-  border-color: #d4af37;
-  transform: translateY(-3px);
+.categoria-item:hover {
+background: rgba(212, 175, 55, 0.055);
+
+border-bottom-color: rgba(212, 175, 55, 0.5);
+
+padding-left: 18px;
 }
+
+/* ===================================
+NUMERACIÓN
+=================================== */
 
 .numero {
-  color: #d4af37;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
+color: #d4af37;
+
+font-size: 0.75rem;
+
+font-weight: 700;
+
+letter-spacing: 0.15em;
 }
 
-.categoria-card h3 {
-  margin: 24px 0 12px;
-  font-size: 1.25rem;
+/* ===================================
+INFORMACIÓN DE CATEGORÍA
+=================================== */
+
+.categoria-info {
+min-width: 0;
 }
 
-.categoria-card p {
-  margin: 0;
-  color: #f5f0e6;
-  line-height: 1.6;
-  opacity: 0.9;
+.categoria-info h3 {
+margin: 0;
+
+color: #f5f0e6;
+
+font-size: 1.15rem;
+
+font-weight: 700;
+
+letter-spacing: 0.04em;
+}
+
+.categoria-info p {
+max-width: 720px;
+
+margin: 7px 0 0;
+
+color: #f5f0e6;
+
+line-height: 1.55;
+
+opacity: 0.75;
+}
+
+/* ===================================
+FLECHA
+=================================== */
+
+.categoria-flecha {
+color: #d4af37;
+
+font-size: 1.35rem;
+
+text-align: right;
+
+transition:
+transform 0.2s ease,
+color 0.2s ease;
+}
+
+.categoria-item:hover .categoria-flecha {
+transform: translateX(5px);
+color: #f5f0e6;
+}
+
+/* ===================================
+MÓVIL
+=================================== */
+
+@media (max-width: 700px) {
+
+.indice-header {
+padding-top: 35px;
+}
+
+.titulo-biblioteca {
+margin-top: 55px;
+}
+
+.categoria-item {
+grid-template-columns: 38px minmax(0, 1fr) 25px;
+
+
+gap: 15px;
+
+padding: 22px 5px;
+
+
+}
+
+.categoria-item:hover {
+padding-left: 10px;
+}
+
+.categoria-info h3 {
+font-size: 1rem;
+}
+
+.categoria-info p {
+font-size: 0.9rem;
+line-height: 1.5;
 }
 
 .categoria-flecha {
-  margin-top: auto;
-  padding-top: 25px;
-  color: #d4af37;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
+font-size: 1.1rem;
 }
 
-@media (max-width: 700px) {
-  .indice-header {
-    padding-top: 35px;
-  }
+.buscador-acceso {
+align-items: flex-start;
+}
 
-  .titulo-biblioteca {
-    margin-top: 55px;
-  }
-
-  .categorias-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .buscador-acceso {
-    align-items: flex-start;
-  }
-
-  .flecha {
-    margin-left: auto;
-  }
+.flecha {
+margin-left: auto;
+}
 }

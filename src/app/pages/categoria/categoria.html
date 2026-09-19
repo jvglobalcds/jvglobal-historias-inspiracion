@@ -2,38 +2,92 @@
 
   <header class="categoria-header">
 
-    <a routerLink="/indice" class="volver">
-      ← VOLVER AL ÍNDICE
-    </a>
 
-    <div class="encabezado">
+<a routerLink="/indice" class="volver">
+  ← VOLVER AL ÍNDICE
+</a>
 
-      <span class="etiqueta">CATEGORÍA</span>
+<div class="encabezado">
 
-      <h1>{{ nombreCategoria }}</h1>
+  <span class="etiqueta">CATEGORÍA</span>
 
-      <p>
-        Historias relacionadas con esta categoría.
-      </p>
+  <h1>{{ nombreCategoria }}</h1>
 
-    </div>
+  <p>
+    Historias relacionadas con esta categoría.
+  </p>
+
+</div>
+
 
   </header>
 
-
   <main class="categoria-contenido">
 
-    @if (historiasFiltradas.length > 0) {
 
-      <div class="historias-grid">
+<!-- =========================
+     BUSCADOR DE CATEGORÍA
+========================== -->
 
-       @for (historia of historiasFiltradas; track historia.id) {
+<div class="buscador-categoria">
 
-          <a
-           [routerLink]="['/historia', historia.id]"
-            class="historia-card">
+  <span class="buscador-icono">⌕</span>
 
-            <span class="numero">HISTORIA</span>
+<input
+  type="text"
+  [(ngModel)]="terminoBusqueda"
+  (input)="filtrarHistorias()"
+  placeholder="Buscar una historia en esta categoría..."
+  aria-label="Buscar una historia en esta categoría"
+/>
+
+</div>
+
+
+<!-- =========================
+     LISTADO DE HISTORIAS
+========================== -->
+
+<section class="historias-seccion">
+
+  @if (!terminoBusqueda.trim()) {
+
+    <div class="seccion-heading">
+
+      <span>EXPLORA</span>
+
+      <h2>HISTORIAS</h2>
+
+    </div>
+
+  }
+
+  @if (terminoBusqueda.trim()) {
+
+    <div class="resultado-busqueda">
+
+      {{ historiasFiltradas.length }}
+      {{ historiasFiltradas.length === 1 ? 'COINCIDENCIA' : 'COINCIDENCIAS' }}
+
+    </div>
+
+  }
+
+  @if (historiasFiltradas.length > 0) {
+
+    <div class="historias-lista">
+
+      @for (historia of historiasFiltradas; track historia.id) {
+
+        <a
+          [routerLink]="['/historia', historia.id]"
+          class="historia-item">
+
+          <span class="numero">
+            HISTORIA
+          </span>
+
+          <div class="historia-info">
 
             <h2>
               {{ historia.nombre }}
@@ -43,43 +97,53 @@
               {{ historia.contexto }} · {{ historia.epoca }}
             </p>
 
-            <span class="ver-historia">
-              VER HISTORIA →
-            </span>
+          </div>
 
-          </a>
+          <span class="ver-historia">
+            →
+          </span>
 
-        }
+        </a>
 
-      </div>
-
-    } @else {
-
-      <section class="sin-historias">
-
-        <span class="numero">BIBLIOTECA</span>
-
-        <h2>
-          AÚN NO HAY HISTORIAS EN ESTA CATEGORÍA
-        </h2>
-
-        <p>
-          Esta categoría está preparada para incorporar
-          nuevas historias.
-        </p>
-
-      </section>
-
-    }
-
-
-    <div class="volver-final">
-
-      <a routerLink="/indice">
-        ← VOLVER AL ÍNDICE
-      </a>
+      }
 
     </div>
+
+  } @else {
+
+    <section class="sin-historias">
+
+      <span class="numero">
+        BÚSQUEDA
+      </span>
+
+      <h2>
+        NO SE ENCONTRARON HISTORIAS
+      </h2>
+
+      <p>
+        No encontramos una historia que coincida con
+        "{{ terminoBusqueda }}".
+      </p>
+
+    </section>
+
+  }
+
+</section>
+
+<!-- =========================
+     VOLVER
+========================== -->
+
+<div class="volver-final">
+
+  <a routerLink="/indice">
+    ← VOLVER AL ÍNDICE
+  </a>
+
+</div>
+```
 
   </main>
 
