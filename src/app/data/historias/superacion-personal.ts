@@ -755,5 +755,226 @@ export const historiasSuperacionPersonal: Historia[] = [
     ]
   },
 
+// ============================================================
+// ANDREA BOCELLI
+// ============================================================
 
+  {
+    id: 'andrea-bocelli',
+    nombre: 'Andrea Bocelli',
+    epoca: '1958– · Momento clave: 1994',
+    contexto:
+      'Continuó desarrollando su formación musical después de perder completamente la visión y convirtió años de preparación en una trayectoria internacional',
+
+    categoria: [
+      'Superación personal',
+      'Disciplina',
+      'Adversidad'
+    ],
+
+    temas: [
+      'Superación',
+      'Disciplina',
+      'Perseverancia',
+      'Adaptación',
+      'Música',
+      'Talento',
+      'Formación',
+      'Determinación'
+    ],
+
+    valoresCds: [
+      'Claridad',
+      'Disciplina',
+      'Superación'
+    ],
+
+    quienEs:
+      'Andrea Bocelli es un tenor italiano nacido el 22 de septiembre de 1958 en Lajatico, Toscana. Desde niño mostró una fuerte inclinación hacia la música y comenzó a estudiar piano a los seis años. Posteriormente estudió otros instrumentos y desarrolló especialmente su voz. Estudió Derecho en la Universidad de Pisa y, paralelamente, continuó preparándose como cantante. Con el tiempo construyó una trayectoria internacional que combina ópera, música clásica y música popular.',
+
+    contextoAmpliado:
+      'Bocelli tuvo problemas visuales desde su nacimiento y quedó completamente ciego a los 12 años después de una lesión relacionada con el fútbol. La pérdida de la visión cambió las condiciones en las que tendría que desarrollar su vida, pero continuó estudiando música y desarrollando su voz. Antes de alcanzar reconocimiento internacional también estudió Derecho y trabajó como abogado, mientras continuaba formándose como cantante.',
+
+    antesDelMomentoClave:
+      'Mucho antes de los grandes escenarios, Bocelli pasó años desarrollando su formación musical. Comenzó a estudiar piano a los seis años, aprendió posteriormente otros instrumentos y recibió formación vocal de distintos maestros. Mientras estudiaba Derecho en la Universidad de Pisa también trabajaba y tocaba el piano en bares para financiar sus clases de canto. Su carrera musical se construyó durante años antes de alcanzar reconocimiento internacional.',
+
+    momentoClave:
+      'En 1994 Bocelli ganó la categoría de nuevas propuestas del Festival de Sanremo con Il mare calmo della sera. Ese reconocimiento abrió una nueva etapa en su carrera. Ese mismo año debutó en la ópera interpretando a Macduff en Macbeth y fue invitado a cantar Adeste Fideles en el Vaticano durante la Navidad. La preparación acumulada durante años comenzó a convertirse en una trayectoria profesional de mayor alcance.',
+
+    loQueHizo:
+      'Continuó estudiando y desarrollando su técnica vocal incluso después de comenzar a recibir reconocimiento. Amplió progresivamente su repertorio y trabajó tanto en la música operística como en canciones populares. En 1996 alcanzó un gran éxito con Con te partirò y posteriormente la versión Time to Say Goodbye, interpretada junto a Sarah Brightman, amplió todavía más su reconocimiento internacional. Su trayectoria continuó combinando formación, interpretación y adaptación a diferentes públicos.',
+
+    elAcompanamiento:
+      'La formación de Bocelli estuvo acompañada por diferentes personas. Sus padres apoyaron desde temprano su acercamiento a la música. Posteriormente estudió con maestros como Luciano Bettarini y Franco Corelli. También recibió oportunidades profesionales de personas que reconocieron sus capacidades, entre ellas Caterina Caselli, quien contribuyó a abrir una nueva etapa discográfica en su carrera. El acompañamiento permitió ampliar sus oportunidades, pero el desarrollo de su voz requirió años de estudio y práctica.',
+
+    historiaCompleta: [
+      'Andrea Bocelli nació el 22 de septiembre de 1958 en Lajatico, en la Toscana italiana.',
+
+      'Desde muy pequeño mostró interés por la música. A los seis años comenzó a estudiar piano y posteriormente aprendió también flauta y saxofón.',
+
+      'La música fue formando parte de su vida desde la infancia, pero su desarrollo no estuvo separado de otras responsabilidades y dificultades.',
+
+      'Bocelli tenía problemas visuales desde su nacimiento y quedó completamente ciego a los 12 años después de una lesión relacionada con el fútbol.',
+
+      'La pérdida de la visión cambió las condiciones en las que tendría que desenvolverse, pero no eliminó su relación con la música.',
+
+      'Continuó estudiando y desarrollando su voz. Durante su juventud participó en concursos de canto y en 1970 obtuvo su primera victoria en una competición interpretando O sole mio.',
+
+      'Posteriormente recibió formación vocal de diferentes maestros, entre ellos Luciano Bettarini y Franco Corelli.',
+
+      'Su camino hacia una carrera profesional no fue inmediato. También decidió continuar con su educación académica.',
+
+      'Estudió Derecho en la Universidad de Pisa y llegó a trabajar como abogado.',
+
+      'Mientras desarrollaba esa etapa profesional continuó cultivando la música. Para pagar sus clases de canto tocaba el piano en bares.',
+
+      'Durante esos años todavía no existía el reconocimiento internacional que posteriormente tendría. Había, en cambio, un proceso de formación que continuaba avanzando.',
+
+      'En 1992 apareció una oportunidad importante cuando participó en una grabación relacionada con Miserere, canción de Zucchero Fornaciari.',
+
+      'La interpretación de Bocelli llamó la atención de Luciano Pavarotti y posteriormente Bocelli participó junto a Zucchero y Pavarotti en diferentes interpretaciones de la canción.',
+
+      'En 1994 llegó uno de los momentos decisivos de su trayectoria.',
+
+      'Bocelli participó en el Festival de Sanremo y ganó la categoría de nuevas propuestas con Il mare calmo della sera.',
+
+      'El reconocimiento amplió considerablemente la atención sobre su voz y abrió una nueva etapa profesional.',
+
+      'Ese mismo año publicó su primer álbum y debutó en la ópera interpretando a Macduff en Macbeth.',
+
+      'También fue invitado a cantar Adeste Fideles en el Vaticano durante la Navidad de 1994.',
+
+      'El éxito no significó que el proceso de formación hubiera terminado. Por el contrario, comenzó una etapa de mayor exigencia profesional.',
+
+      'En 1995 publicó el álbum Bocelli y continuó desarrollando su carrera musical.',
+
+      'En 1996 alcanzó un gran éxito con Con te partirò. Posteriormente la versión interpretada junto a Sarah Brightman, Time to Say Goodbye, amplió todavía más su reconocimiento internacional.',
+
+      'En 1997 publicó Romanza, álbum que tuvo una amplia difusión internacional y contribuyó a consolidar su carrera fuera de Italia.',
+
+      'A partir de entonces continuó trabajando en diferentes escenarios y ampliando su repertorio.',
+
+      'Su trayectoria combinó diferentes áreas de la música. Interpretó repertorio operístico y clásico, pero también trabajó con canciones populares y colaboraciones dirigidas a públicos más amplios.',
+
+      'Esta combinación permitió que su voz llegara a personas que normalmente no tenían contacto habitual con la ópera.',
+
+      'Pero detrás del reconocimiento internacional existía un proceso que había comenzado muchos años antes.',
+
+      'Primero estuvo el niño que estudiaba piano.',
+
+      'Después estuvo el joven que continuó desarrollando su voz mientras estudiaba Derecho y trabajaba.',
+
+      'También estuvo la persona que tuvo que adaptarse a una pérdida completa de la visión durante su adolescencia.',
+
+      'Y durante todos esos años continuó desarrollando una capacidad musical que todavía no le había proporcionado reconocimiento internacional.',
+
+      'La historia de Bocelli permite observar que el talento no aparece terminado. Necesita formación, práctica, acompañamiento y tiempo.',
+
+      'También muestra que una dificultad importante puede cambiar las condiciones de un camino sin necesariamente eliminar el propósito que una persona está construyendo.',
+
+      'La pérdida de la visión no desapareció. Formó parte de las circunstancias dentro de las cuales tuvo que desarrollar su vida y su carrera.',
+
+      'Lo que continuó desarrollándose fue su capacidad para estudiar, cantar, trabajar y participar en escenarios cada vez más exigentes.',
+
+      'El reconocimiento llegó después de años de preparación.',
+
+      'Su trayectoria permite observar que muchas veces el resultado visible de una persona comienza mucho antes de que otras personas puedan verlo.',
+
+      'Andrea Bocelli continúa asociado internacionalmente con una trayectoria que combina música clásica, ópera y música popular.',
+
+      'Su historia invita a mirar el proceso que existe detrás de una capacidad reconocida: años de aprendizaje, práctica, adaptación y constancia.',
+
+      'La superación no consistió en eliminar una dificultad que no podía cambiar, sino en continuar desarrollando posibilidades dentro de esa realidad.'
+    ],
+
+    hechosDocumentados: [
+      'Andrea Bocelli nació el 22 de septiembre de 1958 en Lajatico, Italia.',
+      'Comenzó a estudiar piano a los seis años.',
+      'Posteriormente estudió también flauta y saxofón.',
+      'Tuvo problemas visuales desde su nacimiento.',
+      'Quedó completamente ciego a los 12 años después de una lesión relacionada con el fútbol.',
+      'En 1970 obtuvo una victoria en una competición de canto interpretando O sole mio.',
+      'Recibió formación vocal de maestros como Luciano Bettarini y Franco Corelli.',
+      'Estudió Derecho en la Universidad de Pisa.',
+      'Trabajó como abogado antes de desarrollar plenamente su carrera musical.',
+      'Para financiar sus clases de canto tocaba el piano en bares.',
+      'En 1994 ganó la categoría de nuevas propuestas del Festival de Sanremo con Il mare calmo della sera.',
+      'En 1994 debutó en la ópera interpretando a Macduff en Macbeth.',
+      'En 1994 fue invitado a cantar Adeste Fideles en el Vaticano.',
+      'En 1996 alcanzó un gran éxito con Con te partirò.',
+      'La versión Time to Say Goodbye junto a Sarah Brightman amplió su reconocimiento internacional.',
+      'Su trayectoria combina ópera, música clásica y música popular.',
+      'Ha desarrollado una carrera internacional durante varias décadas.'
+    ],
+
+    loQuePodemosObservar: [
+      'Una dificultad importante puede cambiar las condiciones de un proceso sin eliminar necesariamente el propósito.',
+      'El talento necesita formación para convertirse en una capacidad desarrollada.',
+      'La disciplina puede mantenerse incluso cuando todavía no existe reconocimiento externo.',
+      'Una persona puede desarrollar una pasión mientras también cumple otras responsabilidades.',
+      'La formación puede requerir años antes de producir resultados visibles.',
+      'Las oportunidades pueden aparecer después de un largo período de preparación.',
+      'El acompañamiento de otras personas puede abrir oportunidades sin sustituir el trabajo personal.',
+      'Una capacidad puede desarrollarse progresivamente mediante estudio, práctica y repetición.',
+      'El reconocimiento puede ser consecuencia de un proceso que comenzó muchos años antes.',
+      'Una dificultad no tiene por qué convertirse en la definición completa de una persona.',
+      'Adaptarse significa aprender a desarrollar capacidades dentro de las circunstancias existentes.',
+      'Continuar aprendiendo después de alcanzar reconocimiento también forma parte del desarrollo.'
+    ],
+
+    paraReflexionar: [
+      '¿Qué capacidad tienes que todavía necesita más desarrollo?',
+      '¿Qué estás haciendo actualmente para convertir un talento en una habilidad?',
+      '¿Qué dificultad has permitido que influya demasiado en lo que crees que puedes hacer?',
+      '¿Qué aprendizaje necesitas continuar aunque todavía no veas resultados?',
+      '¿Quiénes han contribuido al desarrollo de tus capacidades?',
+      '¿Qué actividad seguirías desarrollando aunque el reconocimiento todavía no hubiera llegado?',
+      '¿Estás dispuesto a trabajar durante una etapa en la que todavía nadie puede ver el resultado?',
+      '¿Qué capacidad podrías desarrollar si mantuvieras la disciplina durante varios años?'
+    ],
+
+    reflexionCds: {
+      claridad:
+        'Claridad puede observarse en la progresiva identificación de la música y especialmente de la voz como un área que Bocelli quería desarrollar. La claridad no significó tener todo resuelto desde el principio, sino reconocer una capacidad y decidir cultivarla.',
+
+      disciplina:
+        'Disciplina aparece en los años de estudio, formación vocal y trabajo que precedieron al reconocimiento internacional. También se observa en la continuidad de su desarrollo musical después de alcanzar sus primeros grandes éxitos.',
+
+      superacion:
+        'Superación puede observarse en la manera en que Bocelli continuó desarrollando sus capacidades después de perder completamente la visión. La dificultad permaneció, pero también continuó el proceso de aprendizaje, adaptación y construcción de una trayectoria profesional.'
+    },
+
+    unaIdeaParaLlevar:
+      'El resultado que otros pueden ver hoy puede haber comenzado muchos años antes, cuando todavía nadie reconocía lo que estabas construyendo.',
+
+    fuentes: [
+      {
+        nombre:
+          'Andrea Bocelli · Biografía oficial · VER FUENTE',
+        url:
+          'https://www.andreabocelli.com/about/'
+      },
+
+      {
+        nombre:
+          'Andrea Bocelli · Carrera 1992–2001 · VER FUENTE',
+        url:
+          'https://www.andreabocelli.com/career/1992-2001/'
+      },
+
+      {
+        nombre:
+          'Andrea Bocelli · Carrera 1992–2001 · Italiano · VER FUENTE',
+        url:
+          'https://www.andreabocelli.com/it/carriera/1992-2001/'
+      },
+
+      {
+        nombre:
+          'Biography.com · Andrea Bocelli · VER FUENTE',
+        url:
+          'https://www.biography.com/musicians/andrea-bocelli'
+      }
+    ]
+  },
 ];

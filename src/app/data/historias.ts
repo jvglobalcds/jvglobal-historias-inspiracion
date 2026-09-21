@@ -5,6 +5,7 @@ import { historiasMetaforas } from './historias/metaforas';
 import { historiasSuperacionPersonal } from './historias/superacion-personal';
 import { historiasTransformacion } from './historias/transformacion';
 import { historiasClaridad } from './historias/claridad';
+import { historiasInnovacion } from './historias/innovacion';
 
 export type { Historia };
 
@@ -14,7 +15,8 @@ export const HISTORIAS: Historia[] = [
   ...historiasMetaforas,
   ...historiasSuperacionPersonal,
   ...historiasTransformacion,
-  ...historiasClaridad
+  ...historiasClaridad,
+  ...historiasInnovacion
 ];
 
 
