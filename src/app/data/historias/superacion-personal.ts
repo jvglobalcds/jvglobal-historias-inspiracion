@@ -1542,6 +1542,218 @@ url:
 ]
 },
 
+// ============================================================
+// GILLIAN LYNNE
+// ============================================================
+
+  {
+    id: 'gillian-lynne',
+    nombre: 'Gillian Lynne',
+    epoca: '1926–2018 · Momento clave: infancia y desarrollo de su carrera artística',
+    contexto:
+      'Durante su infancia tuvo dificultades para permanecer quieta y concentrarse en el entorno escolar. Una observación diferente de su comportamiento permitió descubrir su afinidad natural con el movimiento y la música, iniciando un camino que posteriormente la llevaría a convertirse en una destacada bailarina, coreógrafa y directora teatral.',
+
+    categoria: [
+      'Superación personal',
+      'Claridad',
+      'Innovación',
+      'Disciplina',
+      'Transformación'
+    ],
+
+    temas: [
+      'Superación',
+      'Claridad',
+      'Disciplina',
+      'Creatividad',
+      'Danza',
+      'Talento',
+      'Formación',
+      'Innovación',
+      'Transformación',
+      'Oportunidad'
+    ],
+
+    valoresCds: [
+      'Claridad',
+      'Disciplina',
+      'Superación'
+    ],
+
+    quienEs:
+      'Gillian Lynne fue una bailarina, coreógrafa y directora británica nacida en 1926. Desarrolló una extensa carrera en la danza y el teatro musical y es especialmente conocida por su trabajo como coreógrafa y directora asociada de producciones como Cats y por su participación en The Phantom of the Opera.',
+
+    contextoAmpliado:
+      'Durante su infancia, Gillian Lynne tenía dificultades para permanecer sentada y quieta durante las clases. Su comportamiento llamó la atención de los adultos que la rodeaban y su madre buscó ayuda médica. Durante una consulta, el médico observó su comportamiento mientras sonaba música y descubrió que Gillian respondía de manera natural al ritmo y al movimiento. En lugar de limitarse a considerar su comportamiento como un problema, recomendó que asistiera a clases de danza.',
+
+    antesDelMomentoClave:
+      'Antes de comenzar su formación en danza, Gillian Lynne se encontraba en un entorno escolar donde su energía y necesidad de movimiento no encajaban bien con las expectativas de permanecer quieta y concentrada durante largos períodos. La situación cambió cuando un adulto observó su comportamiento desde otra perspectiva y reconoció una posible capacidad artística.',
+
+    momentoClave:
+      'El momento decisivo ocurrió durante una consulta médica en su infancia. El médico puso música y observó cómo Gillian reaccionaba espontáneamente al ritmo. Después de observarla, recomendó que asistiera a clases de danza. Al día siguiente comenzó sus clases con la profesora de danza Madeleine Sharp. Ese descubrimiento abrió un camino completamente diferente para su desarrollo.',
+
+    loQueHizo:
+      'Gillian desarrolló mediante años de formación y práctica aquello que inicialmente había aparecido como una afinidad natural por el movimiento. Se convirtió en bailarina y posteriormente amplió sus capacidades hacia la coreografía y la dirección teatral. Su carrera demuestra que descubrir una capacidad es solamente el comienzo: después es necesario desarrollarla mediante formación, práctica y disciplina.',
+
+    elAcompanamiento:
+      'El acompañamiento fue fundamental desde su infancia. Su madre buscó ayuda cuando observó las dificultades que tenía en la escuela y el médico que la atendió fue capaz de observar su comportamiento desde una perspectiva diferente. Posteriormente, la profesora Madeleine Sharp desempeñó un papel importante en el comienzo de su formación en danza. A lo largo de su carrera trabajó con numerosos profesionales del mundo de la danza y del teatro.',
+
+    historiaCompleta: [
+      'Gillian Lynne nació en 1926 en Inglaterra.',
+
+      'Durante su infancia tenía una gran necesidad de movimiento y encontraba dificultades para permanecer quieta durante las clases.',
+
+      'Su comportamiento llamó la atención de los adultos que la rodeaban y su madre decidió buscar ayuda médica.',
+
+      'Durante una consulta, el médico conversó con su madre sobre las dificultades que Gillian estaba teniendo en el entorno escolar.',
+
+      'El médico puso música y observó a Gillian mientras reaccionaba al sonido y al ritmo.',
+
+      'En lugar de interpretar únicamente su comportamiento como una dificultad, observó que Gillian respondía de manera natural al movimiento y a la música.',
+
+      'El médico recomendó que asistiera a clases de danza.',
+
+      'Al día siguiente comenzó sus clases con la profesora de danza Madeleine Sharp.',
+
+      'La danza proporcionó a Gillian un entorno en el que su necesidad de movimiento podía convertirse en una capacidad desarrollada.',
+
+      'A partir de entonces comenzó una formación que cambiaría el rumbo de su vida.',
+
+      'Con el paso de los años desarrolló sus capacidades como bailarina y comenzó a construir una carrera profesional dentro de la danza.',
+
+      'Trabajó como bailarina en Sadler’s Wells, una de las instituciones importantes de la danza británica.',
+
+      'Su trayectoria posteriormente se amplió hacia la coreografía y la dirección.',
+
+      'Gillian Lynne comenzó a trabajar en diferentes producciones teatrales, musicales, cinematográficas y televisivas.',
+
+      'Su experiencia como bailarina le permitió desarrollar una comprensión profunda del movimiento y utilizarla posteriormente en la creación de coreografías.',
+
+      'Durante su carrera participó en numerosas producciones de teatro musical.',
+
+      'Uno de los trabajos más importantes de su trayectoria fue Cats.',
+
+      'En Cats participó como directora asociada y coreógrafa, contribuyendo al desarrollo del lenguaje de movimiento que caracterizó la producción.',
+
+      'Cats se convirtió en uno de los musicales más reconocidos internacionalmente y tuvo una extensa trayectoria en escenarios de diferentes países.',
+
+      'Gillian Lynne también participó en la creación de The Phantom of the Opera, otra de las producciones teatrales más importantes de su carrera.',
+
+      'Su trabajo combinó danza, interpretación, movimiento y dirección escénica.',
+
+      'A lo largo de su carrera continuó desarrollando su capacidad creativa y trabajando en diferentes producciones.',
+
+      'En 2011 recibió el título de Dame Commander of the Order of the British Empire por sus servicios al teatro musical.',
+
+      'Su trayectoria profesional se extendió durante varias décadas.',
+
+      'La historia de Gillian Lynne comenzó con una característica que en un determinado entorno parecía representar un problema.',
+
+      'Sin embargo, cuando esa característica fue observada desde otra perspectiva, apareció una capacidad que podía ser desarrollada.',
+
+      'El descubrimiento de esa capacidad no significó que el éxito estuviera garantizado.',
+
+      'Gillian tuvo que recibir formación, practicar y desarrollar disciplina para convertir su afinidad por el movimiento en una profesión.',
+
+      'Su trayectoria también muestra que una capacidad puede evolucionar con el tiempo.',
+
+      'Primero desarrolló su trabajo como bailarina y posteriormente amplió sus posibilidades hacia la coreografía y la dirección.',
+
+      'Su historia permite observar la importancia de encontrar un entorno donde una capacidad pueda expresarse y desarrollarse.',
+
+      'También muestra que reconocer una capacidad es solamente el primer paso. El desarrollo posterior requiere formación, práctica y disciplina.',
+
+      'La historia de Gillian Lynne no demuestra que todos los problemas desaparezcan simplemente al encontrar una actividad que nos guste.',
+
+      'Demuestra algo más concreto: una persona puede desarrollarse de manera diferente cuando encuentra un entorno compatible con sus capacidades y recibe las herramientas necesarias para convertirlas en habilidades.',
+
+      'Su trayectoria terminó convirtiéndose en un ejemplo de cómo una capacidad reconocida y desarrollada puede abrir un camino profesional completamente diferente.'
+    ],
+
+    hechosDocumentados: [
+      'Gillian Lynne nació en 1926 en Inglaterra.',
+      'Durante su infancia tenía dificultades para permanecer quieta durante las clases.',
+      'Su madre buscó ayuda médica debido a las dificultades que presentaba en el entorno escolar.',
+      'Durante una consulta médica el médico observó su respuesta espontánea a la música.',
+      'El médico recomendó que asistiera a clases de danza.',
+      'Gillian comenzó sus clases de danza con Madeleine Sharp.',
+      'Posteriormente desarrolló una carrera profesional como bailarina.',
+      'Trabajó como bailarina en Sadler’s Wells.',
+      'Posteriormente desarrolló una destacada carrera como coreógrafa y directora.',
+      'Participó como directora asociada y coreógrafa en Cats.',
+      'También participó en The Phantom of the Opera.',
+      'Su carrera incluyó numerosos trabajos en teatro musical, cine y televisión.',
+      'En 2011 recibió el título de Dame Commander of the Order of the British Empire por sus servicios al teatro musical.',
+      'Su trayectoria profesional se extendió durante varias décadas.'
+    ],
+
+    loQuePodemosObservar: [
+      'Una característica que parece representar una dificultad en un entorno puede convertirse en una capacidad cuando encuentra un contexto adecuado para desarrollarse.',
+
+      'La claridad comienza muchas veces con la capacidad de observar una situación desde una perspectiva diferente.',
+
+      'Reconocer un talento no significa que ese talento esté desarrollado. La formación y la práctica siguen siendo necesarias.',
+
+      'El acompañamiento de una persona que observa una capacidad y sabe orientar puede cambiar las posibilidades de una trayectoria.',
+
+      'La disciplina permite transformar una afinidad natural en una habilidad profesional.',
+
+      'Una capacidad puede evolucionar con el tiempo. Gillian pasó de la danza a la coreografía y posteriormente a la dirección.',
+
+      'El entorno puede influir en la manera en que una persona expresa y desarrolla sus capacidades.',
+
+      'La innovación también puede surgir cuando una persona combina experiencias y conocimientos de diferentes áreas.',
+
+      'Encontrar aquello que se nos da bien no elimina el esfuerzo necesario para desarrollarlo.',
+
+      'La transformación puede comenzar cuando dejamos de preguntarnos solamente qué está mal y empezamos a observar qué capacidad necesita ser desarrollada.'
+    ],
+
+    paraReflexionar: [
+      '¿Existe alguna característica tuya que alguna vez hayas considerado una dificultad y que podría convertirse en una fortaleza?', 
+
+      '¿En qué actividades sientes que puedes expresarte de manera más natural?',
+
+      '¿Qué capacidad tienes actualmente que todavía necesita formación y disciplina para desarrollarse?',
+
+      '¿Quién ha sido capaz de reconocer en ti una capacidad que tú todavía no veías?',
+
+      '¿Qué diferencia existe entre descubrir un talento y desarrollar ese talento?',
+
+      '¿El entorno en el que estás actualmente te permite desarrollar tus capacidades?',
+
+      '¿Qué actividad podría ayudarte a descubrir una capacidad que todavía no has explorado?',
+
+      '¿Qué necesitas aprender para convertir una capacidad natural en una habilidad?',
+
+      '¿Qué característica tuya podría necesitar una nueva perspectiva en lugar de simplemente intentar eliminarla?',
+
+      '¿Qué podrías construir si encontraras el lugar adecuado para desarrollar una de tus capacidades?'
+    ],
+
+    reflexionCds: {
+      claridad:
+        'La claridad puede observarse en el momento en que una característica que parecía representar una dificultad fue observada desde una perspectiva diferente. Reconocer que Gillian respondía naturalmente a la música permitió abrir una dirección de desarrollo que antes no era evidente.',
+
+      disciplina:
+        'La disciplina aparece en el largo proceso necesario para transformar una afinidad natural por el movimiento en una carrera profesional. Gillian tuvo que formarse como bailarina y posteriormente desarrollar nuevas capacidades para trabajar como coreógrafa y directora.',
+
+      superacion:
+        'La superación puede observarse en la transformación de una dificultad inicial dentro del entorno escolar en una trayectoria profesional extraordinaria. No se trató simplemente de encontrar algo que le gustara, sino de desarrollar durante décadas una capacidad que comenzó a ser reconocida en su infancia.'
+    },
+
+    unaIdeaParaLlevar:
+      'No siempre necesitas cambiar aquello que te hace diferente. A veces necesitas encontrar el lugar donde esa diferencia pueda convertirse en una capacidad y después desarrollar esa capacidad con disciplina.',
+
+    fuentes: [
+      {
+        nombre:
+          'Dame Gillian Lynne DBE · Biografía oficial · VER FUENTE',
+        url:
+          'https://www.gillianlynne.com/biography'
+      }
+    ]
+  },
 
 
 ];

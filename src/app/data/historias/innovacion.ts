@@ -245,6 +245,166 @@ reflexionCds: {
       }
 
     ]
-  }
+  },
+
+  {
+  id: 'bertha-benz',
+  nombre: 'Bertha Benz',
+  epoca: '1849–1944 · Momento clave: 1888',
+  contexto:
+    'Una mujer que creyó en la visión de su esposo cuando todavía nadie confiaba en su automóvil y que, mediante un viaje histórico, demostró que aquella invención podía utilizarse en la vida real.',
+
+  categoria: [
+    'Innovación',
+    'Claridad',
+    'Disciplina',
+    'Superación personal',
+    'Liderazgo',
+    'Transformación'
+  ],
+
+  temas: [
+    'Innovación',
+    'Visión',
+    'Confianza',
+    'Valentía',
+    'Iniciativa',
+    'Emprendimiento',
+    'Disciplina',
+    'Perseverancia',
+    'Resolución de problemas',
+    'Transformación'
+  ],
+
+  valoresCds: [
+    'Claridad',
+    'Disciplina',
+    'Superación'
+  ],
+
+  quienEs:
+    'Bertha Benz fue una pionera de la historia del automóvil y una figura fundamental en los primeros años del proyecto de Carl Benz. Nacida en Alemania en 1849, apoyó la visión de su esposo, participó en el desarrollo inicial de su proyecto y en 1888 realizó junto con sus hijos un viaje de más de 100 kilómetros en el automóvil patentado por Carl Benz. Ese recorrido permitió demostrar públicamente que el automóvil podía utilizarse para realizar un viaje de larga distancia.',
+
+  contextoAmpliado:
+    'Carl Benz había desarrollado y patentado en 1886 el Benz Patent-Motorwagen, considerado uno de los primeros automóviles prácticos de la historia. Sin embargo, la invención todavía necesitaba demostrar que podía ser utilizada fuera del entorno controlado del taller. Bertha Benz había apoyado económicamente el trabajo de su esposo y confiaba en su proyecto. En agosto de 1888 decidió realizar un viaje desde Mannheim hasta Pforzheim junto con sus hijos Eugen y Richard. El recorrido se convirtió en una prueba práctica del automóvil y permitió identificar problemas que posteriormente ayudaron a mejorar el vehículo.',
+
+  antesDelMomentoClave:
+    'Antes del viaje, el automóvil de Carl Benz era una innovación extraordinaria, pero todavía era poco comprendido por el público. Existía una diferencia entre inventar una máquina y demostrar que podía funcionar de manera práctica en condiciones reales. Bertha comprendió que el automóvil necesitaba salir del taller y enfrentarse a un recorrido verdadero.',
+
+  momentoClave:
+    'En agosto de 1888, Bertha Benz tomó uno de los vehículos de su esposo y emprendió con sus hijos Eugen y Richard un viaje desde Mannheim hasta Pforzheim, de más de 100 kilómetros. Durante el recorrido tuvo que resolver diferentes problemas mecánicos y encontrar combustible y materiales adecuados. La experiencia demostró que el automóvil podía utilizarse para recorrer largas distancias y generó una importante atención pública alrededor de la invención.',
+
+  loQueHizo:
+    'Bertha convirtió una innovación que todavía generaba dudas en una demostración práctica. Durante el viaje no se limitó a conducir: observó los problemas, buscó soluciones y tomó decisiones para continuar. En Wiesloch consiguió ligroína para alimentar el motor en una farmacia. También utilizó un alfiler para ayudar a destapar una obstrucción del sistema de combustible, empleó una liga de su ropa como material aislante para un cable y buscó la ayuda de un zapatero para reforzar los frenos con cuero. El viaje permitió además identificar mejoras que posteriormente fueron incorporadas al desarrollo del automóvil.',
+
+  elAcompanamiento:
+    'Bertha había acompañado y apoyado el proyecto de Carl Benz desde sus primeros años. Su respaldo económico fue importante para el desarrollo inicial del trabajo de su esposo. Durante el viaje de 1888 también contó con la compañía de sus hijos Eugen y Richard, quienes participaron en el recorrido y ayudaron a enfrentar las dificultades del camino.',
+
+  historiaCompleta: [
+    'Bertha Ringer nació el 3 de mayo de 1849 en Pforzheim, Alemania.',
+    'En 1872 se casó con Carl Benz, quien posteriormente se convertiría en uno de los pioneros del automóvil.',
+    'Bertha apoyó el trabajo de Carl Benz y utilizó parte de su patrimonio para respaldar el desarrollo de sus proyectos técnicos.',
+    'Carl Benz desarrolló el Benz Patent-Motorwagen, un vehículo de tres ruedas impulsado por un motor de combustión interna.',
+    'El 29 de enero de 1886 Carl Benz obtuvo la patente alemana para su automóvil.',
+    'Aunque la invención era técnicamente innovadora, todavía necesitaba demostrar que podía utilizarse de manera práctica fuera del taller.',
+    'En agosto de 1888 Bertha Benz tomó uno de los vehículos junto con sus hijos Eugen y Richard.',
+    'El objetivo del viaje era llegar desde Mannheim hasta Pforzheim, donde vivía la familia de Bertha.',
+    'El recorrido superaba los 100 kilómetros y representaba un desafío considerable para un vehículo de esas características.',
+    'Durante el viaje Bertha tuvo que resolver diferentes problemas técnicos y encontrar recursos que todavía no existían específicamente para los automóviles.',
+    'Cuando necesitó combustible, compró ligroína en una farmacia de Wiesloch.',
+    'La farmacia de Wiesloch es reconocida posteriormente como un lugar emblemático de la historia del automóvil y como la primera estación de servicio del mundo.',
+    'Durante el recorrido utilizó un alfiler para ayudar a limpiar una obstrucción del conducto de combustible.',
+    'También utilizó una liga para solucionar temporalmente un problema de aislamiento eléctrico.',
+    'Cuando los frenos necesitaron mayor capacidad de frenado, acudió a un zapatero para que los reforzara con cuero.',
+    'En algunos tramos con pendientes pronunciadas, Bertha y sus hijos tuvieron que ayudar físicamente al vehículo.',
+    'Finalmente llegaron a Pforzheim y Bertha informó a Carl Benz que habían llegado bien.',
+    'El viaje demostró públicamente que el automóvil podía recorrer una distancia considerable y funcionar en condiciones reales.',
+    'La experiencia también permitió identificar mejoras técnicas necesarias para futuros vehículos.',
+    'Entre las mejoras asociadas a la experiencia del viaje estuvieron el refuerzo de los frenos y la necesidad de contar con una marcha adicional para afrontar determinadas pendientes.',
+    'El viaje recibió atención pública y contribuyó a generar mayor interés y confianza alrededor del automóvil.',
+    'Bertha Benz no había creado el automóvil, pero desempeñó un papel importante en demostrar públicamente sus posibilidades prácticas.',
+    'El recorrido realizado en 1888 se convirtió posteriormente en la base de la actual Bertha Benz Memorial Route en Alemania.',
+    'La ruta conmemorativa permite seguir actualmente el recorrido histórico entre Mannheim y Pforzheim.',
+    'La historia de Bertha muestra que una innovación no siempre necesita solamente una buena idea: también necesita personas capaces de creer en ella, probarla y llevarla al mundo real.',
+    'Su historia también muestra que los problemas encontrados durante una prueba pueden convertirse en información para mejorar un producto.',
+    'Bertha no se limitó a creer en la visión de su esposo. La puso a prueba en condiciones reales y ayudó a demostrar su utilidad.'
+  ],
+
+  hechosDocumentados: [
+    'Bertha Benz nació el 3 de mayo de 1849 en Pforzheim, Alemania.',
+    'Se casó con Carl Benz en 1872.',
+    'Apoyó económicamente los primeros proyectos técnicos de Carl Benz.',
+    'Carl Benz obtuvo en 1886 la patente de su automóvil.',
+    'En agosto de 1888 Bertha Benz realizó con sus hijos Eugen y Richard un viaje desde Mannheim hasta Pforzheim.',
+    'El recorrido de ida superó los 100 kilómetros.',
+    'Durante el viaje obtuvo ligroína en una farmacia de Wiesloch.',
+    'Utilizó diferentes recursos improvisados para resolver problemas técnicos durante el recorrido.',
+    'Los frenos fueron reforzados con cuero durante el viaje.',
+    'La experiencia permitió identificar mejoras para el desarrollo posterior del automóvil.',
+    'El viaje contribuyó a demostrar públicamente la utilidad práctica del automóvil.',
+    'La actual Bertha Benz Memorial Route conmemora el recorrido histórico.'
+  ],
+
+  loQuePodemosObservar: [
+    'Una innovación puede existir antes de que las personas confíen en ella.',
+    'Creer en una idea también puede significar estar dispuesto a ponerla a prueba.',
+    'Una persona puede apoyar una visión sin ser quien originalmente creó el producto.',
+    'Salir del entorno conocido permite descubrir problemas que no aparecen durante una prueba controlada.',
+    'Los problemas pueden convertirse en información útil para mejorar una innovación.',
+    'La iniciativa requiere actuar incluso cuando todavía no existe un camino preparado.',
+    'La confianza puede construirse cuando las personas pueden observar resultados reales.',
+    'El acompañamiento no siempre consiste en decir que todo está bien. También puede consistir en poner una idea a prueba y ayudar a mejorarla.',
+    'La innovación necesita tanto creatividad como capacidad para resolver problemas.',
+    'Una visión puede permanecer dentro de un taller si nadie se atreve a llevarla al mundo.'
+  ],
+
+  paraReflexionar: [
+    '¿Quién creyó en ti cuando todavía nadie veía lo que podías construir?',
+    '¿Hay alguna persona cuya visión estés apoyando actualmente?',
+    '¿Qué idea tienes hoy que todavía no has llevado al mundo real?',
+    '¿Qué problema estás evitando porque todavía no quieres poner tu proyecto a prueba?',
+    '¿Qué podrías aprender si salieras de tu entorno habitual y probaras aquello que estás construyendo?',
+    '¿Cómo reaccionas cuando algo no funciona como esperabas?',
+    '¿Puedes convertir los problemas de una prueba en mejoras para tu producto o proyecto?',
+    '¿Qué persona necesita hoy que creas en ella?',
+    '¿Qué significa para ti apoyar a alguien cuando todavía nadie más confía en su visión?',
+    '¿Qué idea necesita salir de tu garaje y comenzar a recorrer su propio camino?'
+  ],
+
+  reflexionCds: {
+    claridad:
+      'Bertha entendió que no bastaba con tener una invención. Había que demostrar que podía resolver una necesidad en condiciones reales. La claridad permitió identificar que el siguiente paso no era seguir trabajando únicamente dentro del taller, sino llevar el automóvil al camino.',
+
+    disciplina:
+      'El viaje exigió observar, resolver problemas y continuar a pesar de las dificultades. La disciplina no apareció solamente en la preparación del vehículo, sino también en la capacidad de mantener el objetivo mientras surgían obstáculos inesperados.',
+
+    superacion:
+      'Bertha enfrentó un recorrido para el que todavía no existía una infraestructura preparada. Cada problema exigió una solución práctica. La superación estuvo en continuar avanzando, aprender durante el proceso y convertir las dificultades del viaje en información para mejorar el automóvil.'
+  },
+
+  unaIdeaParaLlevar:
+    'Puedes tener una gran idea, pero alguien tiene que creer en ella, ponerla a prueba y ayudarla a salir del garaje para que el mundo pueda conocerla.',
+
+  fuentes: [
+    {
+      nombre:
+        'Mercedes-Benz Group · Bertha Benz · VER FUENTE',
+      url:
+        'https://group.mercedes-benz.com/company/tradition/founders-pioneers/bertha-benz.html'
+    },
+    {
+      nombre:
+        'Mercedes-Benz Group · 1885–1886 · VER FUENTE',
+      url:
+        'https://group.mercedes-benz.com/company/tradition/company-history/1885-1886.html'
+    },
+    {
+      nombre:
+        'Germany Travel · Bertha Benz Memorial Route · VER FUENTE',
+      url:
+        'https://www.germany.travel/en/nature-outdoor-activities/bertha-benz-memorial-route.html'
+    }
+  ]
+},
 
 ];
