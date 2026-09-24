@@ -96,6 +96,7 @@ export class Categoria {
       'transformacion': 'TRANSFORMACIÓN',
       'innovacion': 'INNOVACIÓN',
       'familia': 'FAMILIA',
+      'emprendimiento': 'EMPRENDIMIENTO',
       'legado': 'LEGADO'
 
     };

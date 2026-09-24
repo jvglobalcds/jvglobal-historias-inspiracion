@@ -977,4 +977,571 @@ export const historiasSuperacionPersonal: Historia[] = [
       }
     ]
   },
+
+
+// ============================================================
+// MIKE TYSON
+// ============================================================
+
+  {
+    id: 'mike-tyson',
+    nombre: 'Mike Tyson',
+    epoca: '1966– · Momento clave: 1985–1990 y reconstrucción posterior',
+    contexto:
+      'Pasó de una adolescencia marcada por dificultades sociales y conflictos con la ley a convertirse en campeón mundial de los pesos pesados, y posteriormente tuvo que reconstruir su vida después de una etapa de profundas caídas personales y profesionales',
+
+    categoria: [
+      'Superación personal',
+      'Disciplina',
+      'Adversidad',
+      'Deporte',
+      'Transformación'
+    ],
+
+    temas: [
+      'Superación',
+      'Disciplina',
+      'Perseverancia',
+      'Deporte',
+      'Formación',
+      'Mentoría',
+      'Determinación',
+      'Caída',
+      'Reconstrucción',
+      'Transformación'
+    ],
+
+    valoresCds: [
+      'Claridad',
+      'Disciplina',
+      'Superación'
+    ],
+
+    quienEs:
+      'Mike Tyson es un exboxeador estadounidense nacido el 30 de junio de 1966 en Brooklyn, Nueva York. Se convirtió en uno de los campeones mundiales de peso pesado más jóvenes de la historia y desarrolló una carrera marcada tanto por grandes logros deportivos como por importantes dificultades personales, legales y profesionales.',
+
+    contextoAmpliado:
+      'Tyson creció en Brownsville, Brooklyn, en un entorno con dificultades económicas y sociales. Durante su adolescencia tuvo numerosos problemas de conducta y enfrentamientos con la ley. Su vida comenzó a cambiar cuando ingresó a un centro de detención juvenil y conoció al entrenador y mentor Bobby Stewart, quien reconoció sus habilidades para el boxeo y lo presentó a Cus D’Amato. D’Amato se convirtió en una figura fundamental en su formación deportiva y personal.',
+
+    antesDelMomentoClave:
+      'Antes de convertirse en boxeador profesional, Tyson acumuló experiencias de conflicto y dificultades durante su infancia y adolescencia. Su encuentro con Bobby Stewart y posteriormente con Cus D’Amato marcó un cambio importante. D’Amato lo incorporó a un entorno de entrenamiento exigente y trabajó con él tanto en aspectos técnicos del boxeo como en disciplina, preparación mental y confianza.',
+
+    momentoClave:
+      'Tyson debutó como boxeador profesional en marzo de 1985. Su ascenso fue rápido. El 22 de noviembre de 1986 derrotó a Trevor Berbick y conquistó el título mundial del Consejo Mundial de Boxeo (WBC) con 20 años y cuatro meses, convirtiéndose en el campeón mundial de peso pesado más joven de la historia en ese momento. Posteriormente unificó los títulos WBC, WBA e IBF.',
+
+    loQueHizo:
+      'Tyson convirtió una gran capacidad física y técnica en una carrera deportiva de alto nivel mediante entrenamiento intenso, preparación constante y competencia profesional. Bajo la formación de Cus D’Amato y posteriormente de otros entrenadores, desarrolló un estilo de boxeo basado en velocidad, movimiento, presión y potencia. Su trayectoria deportiva demuestra cómo una capacidad puede desarrollarse dentro de una estructura de entrenamiento y disciplina.',
+
+    elAcompanamiento:
+      'El acompañamiento fue una parte fundamental de su transformación. Bobby Stewart fue una de las primeras personas que identificó su capacidad para el boxeo y lo puso en contacto con Cus D’Amato. D’Amato se convirtió en su entrenador y mentor y tuvo una influencia importante durante los primeros años de su carrera. Después de la muerte de D’Amato en 1985, Tyson continuó su carrera con otros entrenadores y personas de su entorno profesional.',
+
+    historiaCompleta: [
+      'Mike Tyson nació el 30 de junio de 1966 en Brooklyn, Nueva York.',
+
+      'Su infancia y adolescencia estuvieron marcadas por dificultades económicas, conflictos sociales y problemas de conducta.',
+
+      'Durante su adolescencia tuvo numerosos enfrentamientos con la ley y pasó por instituciones de detención juvenil.',
+
+      'En uno de esos centros conoció a Bobby Stewart, un antiguo boxeador y consejero juvenil que identificó sus habilidades para el boxeo.',
+
+      'Stewart le presentó a Cus D’Amato, entrenador que había trabajado anteriormente con otros boxeadores profesionales.',
+
+      'D’Amato se convirtió en una figura de formación deportiva y personal para Tyson. Bajo su dirección comenzó un entrenamiento mucho más estructurado y exigente.',
+
+      'Tyson desarrolló rápidamente sus capacidades como boxeador amateur y posteriormente comenzó su carrera profesional.',
+
+      'Debutó como profesional el 6 de marzo de 1985 y ganó su primer combate por nocaut técnico en el primer asalto.',
+
+      'Durante los primeros meses de su carrera acumuló una serie de victorias por nocaut y comenzó a ganar reconocimiento dentro de la división de los pesos pesados.',
+
+      'Cus D’Amato murió en noviembre de 1985, pocos meses después del debut profesional de Tyson.',
+
+      'A pesar de esa pérdida, Tyson continuó compitiendo y avanzando en su carrera profesional.',
+
+      'El 22 de noviembre de 1986 derrotó a Trevor Berbick y ganó el título mundial de peso pesado del WBC.',
+
+      'Con 20 años y cuatro meses se convirtió en el campeón mundial de peso pesado más joven de la historia en ese momento.',
+
+      'Posteriormente derrotó a James Smith y Tony Tucker para unificar los títulos WBA y IBF junto al WBC.',
+
+      'Durante la segunda mitad de la década de 1980 Tyson se convirtió en una de las figuras más reconocidas del boxeo mundial.',
+
+      'Su carrera deportiva continuó creciendo hasta que en febrero de 1990 perdió inesperadamente ante James Buster Douglas en Tokio.',
+
+      'La derrota puso fin a su etapa como campeón mundial invicto y marcó un cambio importante en su trayectoria.',
+
+      'Después atravesó problemas legales y en 1992 fue condenado por violación y sentenciado a prisión.',
+
+      'Tras cumplir parte de su condena, Tyson regresó al boxeo profesional en 1995.',
+
+      'Volvió a conquistar títulos mundiales y recuperó parte de su posición dentro de la división de los pesos pesados.',
+
+      'Sin embargo, su carrera posterior también estuvo acompañada por nuevas controversias, derrotas y dificultades personales.',
+
+      'En 2005 disputó su último combate profesional y posteriormente se retiró del boxeo.',
+
+      'Después de su retiro comenzó una etapa diferente de su vida, en la que ha hablado públicamente sobre sus errores, sus dificultades y los procesos de cambio que ha atravesado.',
+
+      'La historia de Tyson no puede reducirse solamente a sus victorias deportivas. Su trayectoria incluye ascenso, reconocimiento, caída, consecuencias y reconstrucción.',
+
+      'Su vida permite observar que alcanzar un nivel extraordinario de éxito no elimina la necesidad de disciplina, acompañamiento y responsabilidad personal.',
+
+      'También muestra que una persona puede atravesar etapas muy diferentes y que una caída no necesariamente representa el final de toda una trayectoria.',
+
+      'La reconstrucción posterior no borra las decisiones ni las consecuencias de las etapas anteriores, pero permite observar un proceso diferente de aprendizaje y transformación.'
+    ],
+
+    hechosDocumentados: [
+      'Mike Tyson nació el 30 de junio de 1966 en Brooklyn, Nueva York.',
+      'Durante su adolescencia tuvo múltiples problemas de conducta y enfrentamientos con la ley.',
+      'Bobby Stewart fue una de las primeras personas que identificó sus habilidades para el boxeo.',
+      'Cus D’Amato se convirtió en su entrenador y mentor durante su formación.',
+      'Tyson debutó como profesional el 6 de marzo de 1985.',
+      'Ganó el título mundial WBC de peso pesado el 22 de noviembre de 1986.',
+      'Con 20 años y cuatro meses se convirtió en el campeón mundial de peso pesado más joven de la historia en ese momento.',
+      'Posteriormente unificó los títulos WBC, WBA e IBF.',
+      'Perdió su campeonato mundial ante James Buster Douglas en febrero de 1990.',
+      'En 1992 fue condenado por violación y sentenciado a prisión.',
+      'Regresó al boxeo profesional en 1995.',
+      'Posteriormente recuperó títulos mundiales de peso pesado.',
+      'Disputó su último combate profesional en 2005.',
+      'Después de su retiro ha desarrollado diferentes actividades públicas y empresariales y ha hablado sobre distintas etapas de su vida y proceso de cambio.'
+    ],
+
+    loQuePodemosObservar: [
+      'La capacidad por sí sola no garantiza un resultado. Tyson tenía habilidades excepcionales, pero necesitó entrenamiento, estructura y acompañamiento para desarrollarlas.',
+
+      'El entorno puede influir profundamente en una trayectoria. El encuentro con Bobby Stewart y posteriormente con Cus D’Amato cambió las condiciones en las que Tyson estaba desarrollando su vida.',
+
+      'La disciplina deportiva puede convertir una capacidad inicial en una habilidad de alto nivel cuando existe entrenamiento constante y preparación.',
+
+      'El éxito también puede traer nuevas responsabilidades. Alcanzar una posición extraordinaria no elimina la necesidad de mantener hábitos, límites y responsabilidad personal.',
+
+      'Una trayectoria puede incluir tanto logros como consecuencias. La historia de Tyson muestra ambas partes sin necesidad de ocultar ninguna.',
+
+      'La caída no elimina lo que una persona construyó anteriormente, pero sí puede cambiar profundamente el camino que viene después.',
+
+      'La reconstrucción requiere reconocer que existen consecuencias y desarrollar nuevas formas de actuar.',
+
+      'La historia de Tyson también permite observar la importancia del acompañamiento. Entrenadores, mentores y otras personas pueden influir de manera significativa en una etapa de transformación.',
+
+      'La superación no significa negar los errores del pasado. Puede consistir en aprender de ellos y construir una etapa diferente.'
+    ],
+
+    paraReflexionar: [
+      '¿Qué capacidad tienes actualmente que todavía necesita disciplina para convertirse en una verdadera habilidad?',
+
+      '¿Qué personas han influido positivamente en tu proceso de formación?',
+
+      '¿Qué diferencia existe entre tener talento y desarrollar ese talento mediante disciplina?',
+
+      '¿Qué hábitos necesitas fortalecer para sostener aquello que estás construyendo?',
+
+      '¿Qué puede ocurrir cuando una persona alcanza el éxito pero deja de cuidar los fundamentos que la llevaron hasta allí?',
+
+      '¿Qué aprendizaje puede quedar después de una caída importante?',
+
+      '¿Qué responsabilidad tienes frente a las decisiones que tomas durante tu proceso?',
+
+      '¿Qué parte de tu vida necesita actualmente más estructura y disciplina?',
+
+      '¿Qué puedes reconstruir después de una etapa difícil sin negar lo que ocurrió?',
+
+      '¿Quién puede acompañarte o ayudarte a desarrollar mejor tus capacidades?'
+    ],
+
+    reflexionCds: {
+      claridad:
+        'La claridad puede observarse en la importancia de reconocer hacia dónde se quiere dirigir una capacidad y qué estructura se necesita para desarrollarla. La trayectoria de Tyson también muestra que perder claridad o control sobre las decisiones puede tener consecuencias importantes.',
+
+      disciplina:
+        'La disciplina aparece con especial fuerza durante su formación deportiva. El entrenamiento constante, la preparación y el trabajo técnico fueron fundamentales para convertir sus capacidades naturales en rendimiento profesional. También permite observar que la disciplina debe mantenerse más allá del momento del éxito.',
+
+      superacion:
+        'La superación puede observarse en diferentes etapas de su vida: desde la transformación de una adolescencia marcada por conflictos hacia una carrera deportiva extraordinaria, hasta los procesos posteriores de regreso y reconstrucción después de períodos difíciles. Superarse no significa borrar el pasado, sino aprender y construir una etapa diferente.'
+    },
+
+    unaIdeaParaLlevar:
+      'El talento puede abrir una puerta, pero la disciplina, las decisiones y la capacidad de aprender de las caídas determinan cómo continúa el camino.',
+
+    fuentes: [
+      {
+        nombre:
+          'Encyclopaedia Britannica · Mike Tyson · VER FUENTE',
+        url:
+          'https://www.britannica.com/biography/Mike-Tyson'
+      },
+
+      {
+        nombre:
+          'ESPN · Mike Tyson · VER FUENTE',
+        url:
+          'https://www.espn.com/boxing/story/_/id/37606257/mike-tyson-biography'
+      },
+
+    ]
+  },
+
+  {
+id: 'sylvester-stallone',
+nombre: 'Sylvester Stallone',
+epoca: '1946– · Momento clave: 1975–1977 y trayectoria posterior',
+contexto:
+'Pasó de ser un actor con dificultades para conseguir oportunidades y con problemas económicos a escribir, protagonizar y convertir Rocky en una de las películas más reconocidas de su generación.',
+
+categoria: [
+'Superación personal',
+'Disciplina',
+'Adversidad',
+'Cine',
+'Perseverancia'
+],
+
+temas: [
+'Superación',
+'Perseverancia',
+'Disciplina',
+'Rechazo',
+'Oportunidad',
+'Visión',
+'Determinación',
+'Creatividad',
+'Trabajo',
+'Transformación'
+],
+
+valoresCds: [
+'Claridad',
+'Disciplina',
+'Superación'
+],
+
+quienEs:
+'Sylvester Stallone es un actor, guionista y director estadounidense nacido el 6 de julio de 1946 en Nueva York. Alcanzó reconocimiento internacional después de escribir y protagonizar Rocky, película estrenada en 1976 que posteriormente ganó el Óscar a Mejor Película. Su carrera incluye trabajos como actor, escritor y director en diferentes producciones cinematográficas.',
+
+contextoAmpliado:
+'Stallone comenzó a desarrollar su interés por la actuación desde joven. Después de estudiar interpretación y trasladarse a Nueva York para intentar construir una carrera en el cine, tuvo dificultades para conseguir papeles importantes. Durante varios años realizó trabajos diversos mientras buscaba oportunidades como actor. Su situación económica llegó a ser muy complicada, pero continuó intentando desarrollar su carrera y también comenzó a escribir.',
+
+antesDelMomentoClave:
+'Antes de Rocky, Stallone había conseguido algunos papeles menores, pero todavía no había encontrado la oportunidad que pudiera cambiar su trayectoria. En entrevistas posteriores explicó que había tenido dificultades para ser contratado y que incluso había sido rechazado en oportunidades que esperaba conseguir. Mientras buscaba trabajo como actor, comenzó a desarrollar sus propios guiones.',
+
+momentoClave:
+'En marzo de 1975, después de presenciar la pelea entre Muhammad Ali y Chuck Wepner, Stallone comenzó a desarrollar la historia que posteriormente se convertiría en Rocky. Según su propio relato, escribió el guion en pocos días. Después intentó venderlo, pero rechazó las condiciones que no le permitían interpretar al personaje principal. Finalmente encontró productores dispuestos a realizar la película con él como protagonista.',
+
+loQueHizo:
+'Stallone no se limitó a esperar una oportunidad como actor. Cuando las oportunidades no llegaban, decidió crear una historia y escribir un personaje que pudiera interpretar. Mantuvo su posición respecto al papel de Rocky y continuó buscando productores hasta encontrar una posibilidad de realizar la película. El proyecto terminó convirtiéndose en una producción de gran impacto y abrió una nueva etapa en su carrera.',
+
+elAcompanamiento:
+'El proceso de Rocky también contó con el acompañamiento de productores que creyeron en el proyecto. Irwin Winkler y Robert Chartoff participaron en la producción y finalmente aceptaron que Stallone interpretara a Rocky Balboa. El proyecto también reunió a un equipo de profesionales que permitió transformar el guion en una película.',
+
+historiaCompleta: [
+'Sylvester Stallone nació el 6 de julio de 1946 en Nueva York.',
+'Desde joven mostró interés por la actuación y posteriormente estudió interpretación.',
+'Se trasladó a Nueva York con el objetivo de desarrollar una carrera como actor.',
+'Durante sus primeros años profesionales tuvo dificultades para conseguir papeles importantes.',
+'Mientras buscaba oportunidades en la actuación realizó diferentes trabajos para mantenerse económicamente.',
+'También comenzó a desarrollar su faceta como escritor y trabajó en diferentes guiones.',
+'Durante esta etapa consiguió algunos papeles menores en producciones cinematográficas.',
+'En 1974 obtuvo un papel más importante en la película The Lords of Flatbush.',
+'A pesar de comenzar a obtener algunas oportunidades, todavía no había alcanzado el reconocimiento que buscaba.',
+'El 24 de marzo de 1975 Stallone presenció la pelea entre Muhammad Ali y Chuck Wepner.',
+'La pelea le dio la idea para desarrollar una historia centrada en un boxeador con una oportunidad extraordinaria.',
+'Stallone comenzó a escribir el guion de Rocky.',
+'Según Stallone, escribió el primer guion en aproximadamente tres días y medio.',
+'Después comenzó a buscar una forma de convertir el guion en una película.',
+'Recibió ofertas por el guion, pero insistió en interpretar al personaje principal.',
+'Los productores Irwin Winkler y Robert Chartoff terminaron aceptando que Stallone protagonizara la película.',
+'Rocky fue producida con un presupuesto relativamente reducido para una producción de Hollywood.',
+'La película fue estrenada en 1976.',
+'Stallone interpretó a Rocky Balboa y también recibió el crédito como guionista.',
+'Rocky obtuvo nueve nominaciones en los Premios de la Academia de 1977.',
+'Sylvester Stallone fue nominado como actor principal y como guionista.',
+'Rocky ganó los premios Óscar a Mejor Película, Mejor Dirección y Mejor Edición.',
+'El éxito de Rocky convirtió a Stallone en una figura internacional del cine.',
+'La historia continuó posteriormente con varias películas de la saga Rocky.',
+'Stallone también desarrolló otro personaje importante de su carrera: John Rambo.',
+'A lo largo de las décadas posteriores continuó trabajando como actor, guionista y director.',
+'Su trayectoria profesional muestra diferentes etapas de éxito, dificultades, cambios y nuevos proyectos.',
+'La historia de Rocky también quedó asociada a una idea que Stallone había construido cuando todavía no tenía una posición consolidada dentro de Hollywood.',
+'La transformación de aquella idea en una película demuestra cómo una oportunidad puede comenzar con una persona que decide desarrollar una capacidad que ya posee.',
+'La trayectoria de Stallone también muestra que el rechazo profesional no necesariamente determina el resultado final de una carrera.',
+'Sin embargo, el resultado no llegó solamente por tener una idea. Fue necesario escribirla, defenderla, buscar productores y participar activamente en su realización.',
+'La historia permite observar la combinación entre creatividad, perseverancia, disciplina y decisión para aprovechar una oportunidad.'
+],
+
+hechosDocumentados: [
+'Sylvester Stallone nació el 6 de julio de 1946 en Nueva York.',
+'Se trasladó a Nueva York para intentar desarrollar una carrera como actor.',
+'Durante sus primeros años profesionales tuvo dificultades para conseguir papeles importantes.',
+'También trabajó como escritor mientras buscaba oportunidades como actor.',
+'En 1975 comenzó a desarrollar el guion de Rocky después de presenciar la pelea entre Muhammad Ali y Chuck Wepner.',
+'Stallone escribió el guion de Rocky.',
+'Stallone insistió en interpretar al personaje principal.',
+'Irwin Winkler y Robert Chartoff participaron como productores de Rocky.',
+'Rocky fue estrenada en 1976.',
+'Stallone fue nominado al Óscar como actor principal por Rocky.',
+'Stallone fue nominado al Óscar por el guion de Rocky.',
+'Rocky ganó el Óscar a Mejor Película en 1977.',
+'Rocky también ganó los premios Óscar a Mejor Dirección y Mejor Edición.',
+'Stallone continuó desarrollando su carrera como actor, guionista y director.',
+'Además de Rocky, desarrolló la franquicia de Rambo y participó en numerosas producciones cinematográficas.'
+],
+
+loQuePodemosObservar: [
+'Cuando una oportunidad no aparece, desarrollar una capacidad propia puede abrir una nueva posibilidad.',
+'Stallone no dependió únicamente de conseguir un papel. También desarrolló su capacidad como escritor.',
+'La perseverancia no consiste solamente en insistir, sino en continuar trabajando mientras se busca una nueva posibilidad.',
+'Tener una visión puede ayudar a mantener una dirección cuando todavía no existen resultados visibles.',
+'Defender una oportunidad también implica asumir riesgos y aceptar que una decisión puede tener consecuencias.',
+'Una idea necesita trabajo para convertirse en algo concreto.',
+'El acompañamiento de otras personas puede ser determinante cuando un proyecto comienza a crecer.',
+'El éxito de un proyecto no elimina la importancia de la disciplina que permitió construirlo.',
+'El rechazo profesional puede formar parte de una trayectoria sin convertirse necesariamente en su resultado final.',
+'La superación también puede consistir en transformar una limitación en una razón para desarrollar nuevas capacidades.'
+],
+
+paraReflexionar: [
+'¿Qué capacidad tienes actualmente que podrías desarrollar en lugar de esperar una oportunidad externa?',
+'¿Qué haces cuando una puerta se cierra frente a ti?',
+'¿Existe alguna idea que has dejado de lado porque todavía no tienes las condiciones perfectas para desarrollarla?',
+'¿Qué capacidad necesitas fortalecer para acercarte a la oportunidad que estás buscando?',
+'¿Qué diferencia existe entre esperar una oportunidad y prepararte para aprovecharla?',
+'¿Qué proyecto podrías comenzar a construir con los recursos que ya tienes?',
+'¿Qué personas pueden aportar conocimiento o acompañamiento a tu proceso?',
+'¿Qué rechazo del pasado podría convertirse en aprendizaje para una nueva etapa?',
+'¿Qué decisión necesitas tomar para dejar de depender únicamente de las oportunidades de otros?',
+'¿Qué estás construyendo hoy que podría abrir una puerta mañana?'
+],
+
+reflexionCds: {
+claridad:
+'La claridad puede observarse en la decisión de Stallone de desarrollar una historia y buscar una forma concreta de convertirla en una película. En lugar de limitarse a esperar un papel, identificó una posibilidad que podía construir desde sus propias capacidades.',
+
+
+disciplina:
+  'La disciplina aparece en la decisión de continuar trabajando como actor y escritor durante una etapa en la que las oportunidades eran limitadas. Escribir el guion, buscar productores y participar en la realización de Rocky requirió convertir una idea en acciones concretas.',
+
+superacion:
+  'La superación puede observarse en el paso de una etapa marcada por dificultades profesionales hacia una nueva etapa construida a partir de una capacidad propia. La historia muestra que superar una dificultad no significa que desaparezcan todos los obstáculos, sino desarrollar nuevas formas de avanzar frente a ellos.'
+
+
+},
+
+unaIdeaParaLlevar:
+'Cuando una oportunidad no llega, también puedes construir algo que te acerque a ella. Una capacidad desarrollada con claridad y disciplina puede convertirse en la puerta que estabas esperando.',
+
+fuentes: [
+{
+nombre:
+'Sitio oficial de Sylvester Stallone · Biografía · VER FUENTE',
+url:
+'https://sylvesterstallone.com/bio/'
+},
+
+{
+  nombre:
+    'Academy of Motion Picture Arts and Sciences · Rocky · VER FUENTE',
+  url:
+    'https://www.oscars.org/oscars/ceremonies/1977'
+},
+
+{
+  nombre:
+    'ABC News · Sylvester Stallone y Rocky · VER FUENTE',
+  url:
+    'https://abcnews.com/entertainment/sylvester-stallone-struggling-actor-wrote-starred-rocky/story?id=37005982'
+}
+
+
+]
+},
+
+{
+id: 'olga-korbut',
+nombre: 'Olga Korbut',
+epoca: '1955– · Momento clave: 1972 y transformación de la gimnasia femenina',
+contexto:
+'Pasó de ser una joven gimnasta soviética que todavía no era una figura internacional a convertirse en una de las atletas más reconocidas de los Juegos Olímpicos de Múnich 1972, revolucionando la gimnasia con movimientos acrobáticos que cambiaron la forma de entender las rutinas femeninas.',
+
+categoria: [
+'Superación personal',
+'Disciplina',
+'Adversidad',
+'Deporte',
+'Innovación'
+],
+
+temas: [
+'Superación',
+'Disciplina',
+'Perseverancia',
+'Deporte',
+'Innovación',
+'Precisión',
+'Valentía',
+'Caída',
+'Recuperación',
+'Transformación'
+],
+
+valoresCds: [
+'Claridad',
+'Disciplina',
+'Superación'
+],
+
+quienEs:
+'Olga Korbut es una exgimnasta soviética nacida el 16 de mayo de 1955 en Grodno, entonces parte de la Unión Soviética. Alcanzó fama internacional en los Juegos Olímpicos de Múnich 1972, donde ganó tres medallas de oro y una de plata. Sus rutinas, especialmente en las barras asimétricas y la viga de equilibrio, incorporaron movimientos acrobáticos que ayudaron a transformar la gimnasia femenina.',
+
+contextoAmpliado:
+'Korbut comenzó a entrenar gimnasia desde niña y desarrolló una combinación poco habitual de flexibilidad, capacidad acrobática y dinamismo. Su entrenador Renald Knysh reconoció su potencial y trabajó con ella en elementos de gran dificultad. Antes de los Juegos de Múnich ya había comenzado a realizar movimientos que llamaban la atención por su nivel de riesgo y dificultad.',
+
+antesDelMomentoClave:
+'Durante sus primeros años como gimnasta, Korbut tuvo que desarrollar habilidades que todavía no formaban parte habitual de las rutinas femeninas de alto nivel. En 1969 realizó un salto hacia atrás en las barras asimétricas que posteriormente sería asociado con el Korbut Flip. También desarrolló un salto mortal hacia atrás en la viga de equilibrio. Su preparación estuvo marcada por la búsqueda de elementos cada vez más difíciles y por un entrenamiento exigente.',
+
+momentoClave:
+'En los Juegos Olímpicos de Múnich 1972, con 17 años, Korbut sorprendió al público internacional con sus rutinas acrobáticas. En las barras asimétricas realizó el movimiento que posteriormente sería conocido como Korbut Flip: se colocaba de pie sobre la barra alta, ejecutaba un salto hacia atrás y volvía a sujetarse de la barra. La presentación recibió una puntuación de 9.8 y provocó una fuerte reacción del público. Años después, las reglas prohibieron permanecer de pie sobre la barra alta, haciendo que aquella versión del movimiento dejara de estar permitida en competición.',
+
+loQueHizo:
+'Korbut llevó a la competición movimientos de gran dificultad que exigían precisión, fuerza, coordinación y valentía. No solamente ejecutó elementos novedosos, sino que los incorporó dentro de rutinas completas frente al público internacional. Su forma de competir ayudó a impulsar una transformación en la gimnasia femenina hacia rutinas más acrobáticas y dinámicas.',
+
+elAcompanamiento:
+'El desarrollo deportivo de Korbut estuvo muy ligado a su entrenador Renald Knysh, quien identificó su potencial y trabajó con ella en elementos de alta dificultad. Su formación también se produjo dentro del sistema deportivo soviético, que proporcionaba entrenamiento especializado y preparación para las principales competiciones internacionales.',
+
+historiaCompleta: [
+'Olga Korbut nació el 16 de mayo de 1955 en Grodno, entonces parte de la Unión Soviética.',
+'Comenzó a practicar gimnasia desde niña.',
+'A los nueve años ingresó en una escuela deportiva en Bielorrusia.',
+'Posteriormente pasó al grupo de entrenamiento dirigido por Renald Knysh.',
+'Knysh identificó en ella una combinación de talento, flexibilidad y capacidad acrobática.',
+'Durante sus primeros años de entrenamiento comenzó a desarrollar elementos de gran dificultad.',
+'En 1969 realizó un salto hacia atrás en las barras asimétricas que posteriormente sería conocido como Korbut Flip.',
+'También desarrolló un salto mortal hacia atrás en la viga de equilibrio.',
+'Estas habilidades contribuyeron a diferenciar su estilo del de muchas otras gimnastas de su época.',
+'Antes de los Juegos Olímpicos de 1972 ya había comenzado a llamar la atención dentro de la gimnasia soviética.',
+'En los Juegos Olímpicos de Múnich 1972 tenía 17 años.',
+'Durante la competición por equipos realizó una actuación destacada en las barras asimétricas.',
+'Su rutina incluía movimientos acrobáticos que eran poco habituales en la gimnasia femenina internacional.',
+'Uno de ellos fue el movimiento que posteriormente recibiría el nombre de Korbut Flip.',
+'El movimiento comenzaba desde una posición de pie sobre la barra alta.',
+'Korbut realizaba un salto hacia atrás y volvía a sujetarse de la barra.',
+'La ejecución sorprendió al público y se convirtió en uno de los momentos más recordados de los Juegos de Múnich.',
+'En la final de barras asimétricas recibió una puntuación de 9.8 y obtuvo la medalla de plata.',
+'La medalla de oro en barras fue para Karin Janz.',
+'Korbut también ganó la medalla de oro con el equipo soviético.',
+'Ganó además el oro individual en la viga de equilibrio.',
+'También ganó el oro en ejercicios de suelo.',
+'En total consiguió tres medallas de oro y una de plata en Múnich 1972.',
+'Sin embargo, su participación en la competición individual no fue perfecta.',
+'En la final individual sufrió errores en las barras asimétricas y terminó en una posición mucho más baja de la que se esperaba inicialmente.',
+'En lugar de quedar definida por ese momento difícil, continuó compitiendo.',
+'Posteriormente ganó el oro en viga y suelo, demostrando su capacidad para recuperarse después de una actuación complicada.',
+'Su estilo tuvo una enorme influencia en la evolución de la gimnasia femenina.',
+'Los movimientos acrobáticos que presentó ayudaron a impulsar una nueva etapa del deporte.',
+'El Korbut Flip se convirtió en uno de los movimientos más conocidos asociados con una gimnasta específica.',
+'Con el paso del tiempo, las reglas de la gimnasia prohibieron que las gimnastas permanecieran de pie sobre la barra alta.',
+'Como consecuencia, la versión original del Korbut Flip en barras asimétricas dejó de estar permitida en competición.',
+'Esto convirtió al movimiento en parte de la historia de la evolución técnica de la gimnasia.',
+'Korbut regresó a los Juegos Olímpicos en Montreal 1976.',
+'En esos Juegos volvió a competir con el equipo soviético y obtuvo una medalla de plata por equipos.',
+'Su etapa olímpica terminó después de Montreal.',
+'A lo largo de su trayectoria obtuvo cuatro medallas de oro y dos de plata en Juegos Olímpicos.',
+'Su legado no se limita a sus medallas.',
+'Korbut ayudó a demostrar que una gimnasta podía incorporar movimientos de gran dificultad y riesgo dentro de una rutina femenina de alto nivel.',
+'Su forma de competir contribuyó a cambiar las expectativas sobre lo que podía realizar una gimnasta.',
+'Su historia también muestra que incluso una atleta extraordinaria puede cometer errores en el momento más importante.',
+'La diferencia está en la capacidad de continuar después del error y volver a competir.',
+'Su trayectoria representa una combinación de disciplina, innovación, preparación y capacidad de recuperación.'
+],
+
+hechosDocumentados: [
+'Olga Korbut nació el 16 de mayo de 1955 en Grodno.',
+'Comenzó a entrenar gimnasia desde niña.',
+'Renald Knysh fue uno de sus principales entrenadores durante su formación.',
+'En 1969 realizó un salto hacia atrás en las barras asimétricas que posteriormente sería conocido como Korbut Flip.',
+'En los Juegos Olímpicos de Múnich 1972 tenía 17 años.',
+'Ganó tres medallas de oro y una de plata en Múnich 1972.',
+'Ganó oro por equipos, en viga de equilibrio y en ejercicios de suelo.',
+'Ganó plata en barras asimétricas.',
+'En la final de barras de Múnich recibió una puntuación de 9.8.',
+'Sus movimientos acrobáticos fueron considerados revolucionarios para la gimnasia femenina de su época.',
+'El Korbut Flip en barras implicaba ponerse de pie sobre la barra alta, realizar un salto hacia atrás y volver a sujetarse.',
+'Las reglas posteriores prohibieron permanecer de pie sobre la barra alta, por lo que esa versión del movimiento dejó de estar permitida.',
+'Korbut volvió a competir en los Juegos Olímpicos de Montreal 1976.',
+'En Montreal obtuvo una medalla de plata por equipos.',
+'En total ganó cuatro medallas de oro y dos de plata en Juegos Olímpicos.'
+],
+
+loQuePodemosObservar: [
+'La disciplina permite desarrollar capacidades que inicialmente parecen fuera del alcance.',
+'La innovación puede surgir cuando una persona se atreve a explorar nuevas posibilidades dentro de una disciplina.',
+'La precisión es fundamental cuando una capacidad implica un alto nivel de dificultad.',
+'Una rutina extraordinaria no elimina la posibilidad de cometer errores.',
+'Un error importante no tiene por qué definir toda una trayectoria.',
+'La recuperación después de una caída también forma parte de la superación.',
+'El acompañamiento de un entrenador puede ayudar a convertir una capacidad inicial en una habilidad desarrollada.',
+'La preparación permite ejecutar bajo presión aquello que se ha entrenado repetidamente.',
+'Los cambios que una persona introduce pueden influir en la evolución de toda una disciplina.',
+'La verdadera transformación no siempre consiste solamente en ganar, sino también en ampliar los límites de lo que otros consideran posible.'
+],
+
+paraReflexionar: [
+'¿Qué capacidad tienes que todavía necesita más disciplina para desarrollarse?',
+'¿Qué diferencia existe entre hacer algo bien y atreverse a hacerlo de una manera diferente?',
+'¿Qué estás entrenando hoy que podría convertirse mañana en una habilidad extraordinaria?',
+'¿Cómo reaccionas cuando cometes un error frente a otras personas?',
+'¿Qué puedes aprender de una caída que no habrías aprendido de una victoria?',
+'¿Quién ha sido una persona importante en tu formación?',
+'¿Qué área de tu vida necesita actualmente mayor precisión y preparación?',
+'¿Existe algo que quieres hacer pero todavía consideras demasiado difícil?',
+'¿Qué ocurriría si en lugar de abandonar después de un error decidieras volver a intentarlo con mayor preparación?',
+'¿Qué límite podrías ampliar si combinaras claridad, disciplina y perseverancia?'
+],
+
+reflexionCds: {
+claridad:
+'La claridad puede observarse en la dirección que Korbut tomó durante su formación: desarrollar capacidades acrobáticas concretas y llevarlas a un nivel competitivo. Tener una dirección permitió que su entrenamiento tuviera un propósito definido.',
+
+
+disciplina:
+  'La disciplina aparece en la preparación necesaria para ejecutar movimientos de enorme dificultad con precisión. Una rutina de pocos segundos podía depender de años de entrenamiento, repetición y preparación física y técnica.',
+
+superacion:
+  'La superación aparece tanto en el desarrollo de movimientos que cambiaron la gimnasia como en su capacidad para recuperarse después de errores importantes. Su historia muestra que superar no significa evitar todas las caídas, sino aprender a continuar después de ellas.'
+
+
+},
+
+unaIdeaParaLlevar:
+'Una caída puede cambiar el resultado de un momento, pero no tiene por qué definir toda tu historia. La disciplina te prepara, la claridad te dirige y la superación te permite volver a levantarte.',
+
+fuentes: [
+{
+nombre:
+'Olympedia · Olga Korbut · VER FUENTE',
+url:
+'https://www.olympedia.org/athletes/29193'
+},
+
+
+{
+  nombre:
+    'Olympedia · Barras asimétricas femeninas · Múnich 1972 · VER FUENTE',
+  url:
+    'https://www.olympedia.org/results/70393'
+},
+
+{
+  nombre:
+    'Smithsonian Magazine · Historia de la gimnasia · Olga Korbut · VER FUENTE',
+  url:
+    'https://www.smithsonianmag.com/history/history-gymnastics-ancient-greece-tokyo-2020-180978270/'
+}
+
+
+]
+},
+
+
+
 ];
