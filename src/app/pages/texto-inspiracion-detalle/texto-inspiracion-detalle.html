@@ -1,0 +1,115 @@
+<main class="texto-page">
+
+  <!-- =====================================================
+       ENCABEZADO
+       ===================================================== -->
+
+  @if (texto) {
+
+    <header class="texto-header">
+
+      <a
+        routerLink="/textos-inspiracion"
+        class="volver-indice"
+      >
+        ← TEXTOS DE INSPIRACIÓN
+      </a>
+
+      <div class="marca-cds">
+        INSPIRACIÓN CDS
+      </div>
+
+      <span class="numero">
+        {{ texto.numero }}
+      </span>
+
+      <h1>
+        {{ texto.titulo }}
+      </h1>
+
+      <div class="linea-dorada"></div>
+
+      <p class="tema">
+        {{ texto.tema }}
+      </p>
+
+    </header>
+
+
+    <!-- =====================================================
+         TEXTO
+         ===================================================== -->
+
+    <article class="contenido-texto">
+
+      @for (parrafo of texto.contenido; track $index) {
+
+        <p>
+          {{ parrafo }}
+        </p>
+
+      }
+
+      <p class="frase-central">
+        {{ texto.fraseCentral }}
+      </p>
+
+      <p>
+        {{ texto.cierre }}
+      </p>
+
+    </article>
+
+
+    <!-- =====================================================
+         CIERRE
+         ===================================================== -->
+
+    <footer class="texto-footer">
+
+      <div class="linea-cierre"></div>
+
+      <p>
+        JUNTOS VENCEMOS
+      </p>
+
+      <a
+        routerLink="/textos-inspiracion"
+        class="volver-final"
+      >
+        VOLVER AL ÍNDICE
+      </a>
+
+    </footer>
+
+  }
+
+
+  <!-- =====================================================
+       TEXTO NO ENCONTRADO
+       ===================================================== -->
+
+  @else {
+
+    <section class="texto-no-encontrado">
+
+      <h1>
+        Texto no encontrado
+      </h1>
+
+      <p>
+        El texto que buscas no existe o ya no está disponible.
+      </p>
+
+      <a
+        routerLink="/textos-inspiracion"
+        class="volver-final"
+      >
+        VOLVER A TEXTOS DE INSPIRACIÓN
+      </a>
+
+    </section>
+
+  }
+
+</main>

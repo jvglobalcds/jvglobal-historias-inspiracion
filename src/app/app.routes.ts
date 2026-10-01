@@ -12,6 +12,27 @@ export const routes: Routes = [
       import('./pages/indice/indice')
         .then(m => m.Indice)
   },
+
+  {
+  path: 'inspiracion-cds',
+  loadComponent: () =>
+    import('./pages/inspiracion-cds/inspiracion-cds')
+      .then(m => m.InspiracionCds)
+},
+
+{
+  path: 'textos-inspiracion',
+  loadComponent: () =>
+    import('./pages/textos-inspiracion/textos-inspiracion')
+      .then(m => m.TextosInspiracion)
+},
+
+{
+  path: 'texto-inspiracion/:slug',
+  loadComponent: () =>
+    import('./pages/texto-inspiracion-detalle/texto-inspiracion-detalle')
+      .then(m => m.TextoInspiracionDetalle)
+},
   {
     path: 'buscador',
     loadComponent: () =>

@@ -1,0 +1,282 @@
+/* =========================================================
+   INSPIRACIÓN CDS
+   ========================================================= */
+
+:host {
+  display: block;
+}
+
+.inspiracion-cds {
+  min-height: 100vh;
+  background: #04101f;
+  color: #f5f0e6;
+}
+
+
+/* =========================================================
+   ENCABEZADO
+   ========================================================= */
+
+.encabezado {
+  padding: 90px 24px 70px;
+  text-align: center;
+}
+
+.contenido-encabezado {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.marca-cds {
+  margin-bottom: 20px;
+  color: #d4af37;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+}
+
+h1 {
+  margin: 0;
+  color: #f5f0e6;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: 0.04em;
+}
+
+.linea-dorada {
+  width: 70px;
+  height: 2px;
+  margin: 28px auto 26px;
+  background: #d4af37;
+}
+
+.descripcion {
+  max-width: 650px;
+  margin: 0 auto;
+  color: rgba(245, 240, 230, 0.78);
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+.valores {
+  margin: 24px 0 0;
+  color: #d4af37;
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+}
+
+
+/* =========================================================
+   CAMINOS
+   ========================================================= */
+
+.caminos {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+.introduccion {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.introduccion p {
+  margin: 0;
+  color: rgba(245, 240, 230, 0.62);
+  font-size: 0.95rem;
+}
+
+
+/* =========================================================
+   TARJETAS
+   ========================================================= */
+
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.tarjeta {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 350px;
+  padding: 38px;
+  overflow: hidden;
+
+  border: 1px solid rgba(212, 175, 55, 0.30);
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.035),
+      rgba(255, 255, 255, 0.012)
+    );
+
+  color: #f5f0e6;
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.tarjeta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #d4af37;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212, 175, 55, 0.75);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(212, 175, 55, 0.07),
+      rgba(255, 255, 255, 0.018)
+    );
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+}
+
+.tarjeta:hover::before {
+  transform: scaleX(1);
+}
+
+
+/* =========================================================
+   NUMERACIÓN
+   ========================================================= */
+
+.numero {
+  color: #d4af37;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+}
+
+
+/* =========================================================
+   CONTENIDO
+   ========================================================= */
+
+.contenido-tarjeta {
+  margin-top: 28px;
+}
+
+.contenido-tarjeta h2 {
+  margin: 0 0 18px;
+  color: #f5f0e6;
+  font-size: 1.45rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.contenido-tarjeta p {
+  margin: 0;
+  color: rgba(245, 240, 230, 0.70);
+  font-size: 0.98rem;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   ENTRAR
+   ========================================================= */
+
+.entrar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-top: auto;
+  padding-top: 32px;
+
+  color: #d4af37;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.entrar span {
+  font-size: 1.15rem;
+  transition: transform 0.25s ease;
+}
+
+.tarjeta:hover .entrar span {
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   CIERRE
+   ========================================================= */
+
+.cierre {
+  padding: 20px 24px 90px;
+  text-align: center;
+}
+
+.cierre p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: rgba(245, 240, 230, 0.55);
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+  .encabezado {
+    padding: 65px 20px 50px;
+  }
+
+  .caminos {
+    padding: 0 20px 60px;
+  }
+
+  .tarjetas {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .tarjeta {
+    min-height: 300px;
+    padding: 30px;
+  }
+
+  .contenido-tarjeta h2 {
+    font-size: 1.25rem;
+  }
+
+  .descripcion {
+    font-size: 1rem;
+  }
+
+  .valores {
+    line-height: 1.7;
+  }
+
+  .cierre {
+    padding: 10px 20px 65px;
+  }
+
+}

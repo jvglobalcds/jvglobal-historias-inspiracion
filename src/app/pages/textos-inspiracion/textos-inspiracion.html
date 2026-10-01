@@ -1,0 +1,122 @@
+<div class="indice-page">
+
+  <!-- =====================================================
+       ENCABEZADO
+       ===================================================== -->
+
+  <header class="indice-header">
+
+    <a routerLink="/inspiracion-cds" class="volver-inicio">
+      JV GLOBAL
+    </a>
+
+    <div class="titulo-biblioteca">
+      <span>INSPIRACIÓN CDS</span>
+      <h1>TEXTOS DE INSPIRACIÓN</h1>
+    </div>
+
+    <p>
+      Textos creados para detenerse, reflexionar y encontrar
+      nuevas perspectivas sobre el camino.
+    </p>
+
+  </header>
+
+
+  <!-- =====================================================
+       CONTENIDO
+       ===================================================== -->
+
+  <main class="indice-contenido">
+
+
+    <!-- ===================================================
+         BUSCADOR
+         =================================================== -->
+
+    <a routerLink="/buscador" class="buscador-acceso">
+
+      <span class="buscador-icono">⌕</span>
+
+      <div>
+        <strong>BUSCAR EN TEXTOS DE INSPIRACIÓN</strong>
+
+        <small>
+          Busca por título, tema o palabra clave.
+        </small>
+      </div>
+
+      <span class="flecha">→</span>
+
+    </a>
+
+
+    <!-- ===================================================
+         ÍNDICE
+         =================================================== -->
+
+    <section class="textos-seccion">
+
+      <div class="seccion-heading">
+
+        <span>EXPLORA</span>
+
+        <h2>ÍNDICE DE TEXTOS</h2>
+
+      </div>
+
+
+      <nav
+        class="textos-lista"
+        aria-label="Índice de textos de inspiración"
+      >
+
+
+        <!-- =================================================
+             TEXTOS DINÁMICOS
+             ================================================= -->
+
+        @for (texto of textos; track texto.id) {
+
+          <a
+            [routerLink]="['/texto-inspiracion', texto.id]"
+            class="texto-item"
+          >
+
+            <span class="numero">
+              {{ ('0' + ($index + 1)).slice(-2) }}
+            </span>
+
+            <div class="texto-info">
+
+              <span class="tema">
+                {{ texto.tema }}
+              </span>
+
+              <h3>
+                {{ texto.titulo }}
+              </h3>
+
+              <p>
+                {{ texto.descripcion }}
+              </p>
+
+            </div>
+
+            <span class="texto-flecha">
+              →
+            </span>
+
+          </a>
+
+        }
+
+
+      </nav>
+
+    </section>
+
+
+  </main>
+
+</div>

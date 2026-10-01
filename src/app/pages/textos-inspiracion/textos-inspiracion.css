@@ -1,0 +1,345 @@
+/* =========================================================
+   TEXTOS DE INSPIRACIÓN · ÍNDICE
+   ========================================================= */
+
+:host {
+  display: block;
+}
+
+.indice-page {
+  min-height: 100vh;
+  background: #04101f;
+  color: #f5f0e6;
+}
+
+
+/* =========================================================
+   ENCABEZADO
+   ========================================================= */
+
+.indice-header {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 70px 24px 55px;
+  text-align: center;
+}
+
+.volver-inicio {
+  display: inline-block;
+  margin-bottom: 45px;
+
+  color: #d4af37;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-decoration: none;
+
+  transition: opacity 0.25s ease;
+}
+
+.volver-inicio:hover {
+  opacity: 0.7;
+}
+
+
+/* =========================================================
+   TÍTULO
+   ========================================================= */
+
+.titulo-biblioteca span {
+  display: block;
+  margin-bottom: 14px;
+
+  color: #d4af37;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+}
+
+.titulo-biblioteca h1 {
+  margin: 0;
+
+  color: #f5f0e6;
+  font-size: clamp(2.2rem, 6vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: 0.04em;
+}
+
+.indice-header > p {
+  max-width: 650px;
+  margin: 28px auto 0;
+
+  color: rgba(245, 240, 230, 0.68);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   CONTENIDO
+   ========================================================= */
+
+.indice-contenido {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 24px 90px;
+}
+
+
+/* =========================================================
+   BUSCADOR
+   ========================================================= */
+
+.buscador-acceso {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+
+  padding: 22px 26px;
+  margin-bottom: 65px;
+
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  color: #f5f0e6;
+  text-decoration: none;
+
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.buscador-acceso:hover {
+  border-color: rgba(212, 175, 55, 0.65);
+  background: rgba(212, 175, 55, 0.045);
+  transform: translateY(-2px);
+}
+
+.buscador-icono {
+  color: #d4af37;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.buscador-acceso div {
+  flex: 1;
+}
+
+.buscador-acceso strong {
+  display: block;
+
+  color: #f5f0e6;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+}
+
+.buscador-acceso small {
+  display: block;
+  margin-top: 6px;
+
+  color: rgba(245, 240, 230, 0.55);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.flecha {
+  color: #d4af37;
+  font-size: 1.25rem;
+}
+
+
+/* =========================================================
+   SECCIÓN
+   ========================================================= */
+
+.textos-seccion {
+  width: 100%;
+}
+
+.seccion-heading {
+  margin-bottom: 28px;
+}
+
+.seccion-heading span {
+  display: block;
+  margin-bottom: 10px;
+
+  color: #d4af37;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.20em;
+}
+
+.seccion-heading h2 {
+  margin: 0;
+
+  color: #f5f0e6;
+  font-size: 1.55rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+
+/* =========================================================
+   LISTA DE TEXTOS
+   ========================================================= */
+
+.textos-lista {
+  display: flex;
+  flex-direction: column;
+}
+
+.texto-item {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 60px 1fr 35px;
+  align-items: center;
+  gap: 22px;
+
+  padding: 30px 10px 30px 0;
+
+  border-top: 1px solid rgba(245, 240, 230, 0.10);
+
+  color: #f5f0e6;
+  text-decoration: none;
+
+  transition:
+    padding-left 0.25s ease,
+    background 0.25s ease;
+}
+
+.texto-item:last-child {
+  border-bottom: 1px solid rgba(245, 240, 230, 0.10);
+}
+
+.texto-item:hover {
+  padding-left: 12px;
+  background: rgba(212, 175, 55, 0.025);
+}
+
+
+/* =========================================================
+   NUMERACIÓN
+   ========================================================= */
+
+.numero {
+  color: #d4af37;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+
+/* =========================================================
+   INFORMACIÓN DEL TEXTO
+   ========================================================= */
+
+.texto-info {
+  min-width: 0;
+}
+
+.tema {
+  display: block;
+  margin-bottom: 8px;
+
+  color: rgba(212, 175, 55, 0.85);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.texto-info h3 {
+  margin: 0;
+
+  color: #f5f0e6;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.texto-info p {
+  max-width: 700px;
+  margin: 9px 0 0;
+
+  color: rgba(245, 240, 230, 0.58);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   FLECHA
+   ========================================================= */
+
+.texto-flecha {
+  color: #d4af37;
+  font-size: 1.2rem;
+
+  transition: transform 0.25s ease;
+}
+
+.texto-item:hover .texto-flecha {
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .indice-header {
+    padding: 55px 20px 45px;
+  }
+
+  .volver-inicio {
+    margin-bottom: 35px;
+  }
+
+  .indice-contenido {
+    padding: 0 20px 65px;
+  }
+
+  .buscador-acceso {
+    gap: 15px;
+    padding: 19px 18px;
+    margin-bottom: 50px;
+  }
+
+  .buscador-icono {
+    font-size: 1.5rem;
+  }
+
+  .buscador-acceso strong {
+    font-size: 0.74rem;
+  }
+
+  .buscador-acceso small {
+    font-size: 0.76rem;
+  }
+
+  .texto-item {
+    grid-template-columns: 42px 1fr 22px;
+    gap: 12px;
+    padding: 25px 4px 25px 0;
+  }
+
+  .texto-item:hover {
+    padding-left: 6px;
+  }
+
+  .texto-info h3 {
+    font-size: 1.08rem;
+  }
+
+  .texto-info p {
+    font-size: 0.84rem;
+  }
+
+}
