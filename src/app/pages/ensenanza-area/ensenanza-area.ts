@@ -194,52 +194,50 @@ ngOnInit(): void {
   });
 }
 
- actualizarProgreso(): void {
-  this.totalLecciones = this.areaActual.temas.length;
+  actualizarProgreso(): void {
+    this.totalLecciones = this.areaActual.temas.length;
+    this.leccionesCompletadas = 0;
 
-  this.leccionesCompletadas = 0;
+    const clavesPorArea: Record<string, string[]> = {
+      claridad: [
+        'jv-leccion-autoconocimiento-proposito',
+        'jv-leccion-vision-personal-objetivos',
+        'jv-leccion-pensamiento-consciente',
+        'jv-leccion-toma-de-decisiones',
+        'jv-leccion-planificacion-y-direccion',
+      ],
 
-  if (this.areaActual.titulo === 'Claridad') {
+      disciplina: [
+        'jv-leccion-habitos-y-constancia',
+        'jv-leccion-organizacion-personal',
+        'jv-leccion-gestion-del-tiempo',
+        'jv-leccion-compromiso-y-responsabilidad',
+        'jv-leccion-ejecucion-y-seguimiento',
+      ],
 
-    const leccion1 = localStorage.getItem(
-      'jv-leccion-autoconocimiento-proposito'
+      superacion: [
+        'jv-leccion-resiliencia',
+        'jv-leccion-aprendizaje-errores',
+        'jv-leccion-gestion-desafios',
+        'jv-leccion-desarrollo-potencial',
+        'jv-leccion-adaptacion-mejora-continua',
+      ],
+    };
+
+    const slug = Object.keys(this.areas).find(
+      (key) => this.areas[key] === this.areaActual
     );
 
-    const leccion2 = localStorage.getItem(
-      'jv-leccion-vision-personal-objetivos'
-    );
-
-    const leccion3 = localStorage.getItem(
-      'jv-leccion-pensamiento-consciente'
-    );
-
-    const leccion4 = localStorage.getItem(
-      'jv-leccion-toma-de-decisiones'
-    );
-
-    const leccion5 = localStorage.getItem(
-      'jv-leccion-planificacion-y-direccion'
-    );
-
-    if (leccion1 === 'completada') {
-      this.leccionesCompletadas++;
+    if (!slug) {
+      return;
     }
 
-    if (leccion2 === 'completada') {
-      this.leccionesCompletadas++;
-    }
+    const claves = clavesPorArea[slug] ?? [];
 
-    if (leccion3 === 'completada') {
-      this.leccionesCompletadas++;
-    }
-
-    if (leccion4 === 'completada') {
-      this.leccionesCompletadas++;
-    }
-
-    if (leccion5 === 'completada') {
-      this.leccionesCompletadas++;
-    }
+    claves.forEach((clave) => {
+      if (localStorage.getItem(clave) === 'completada') {
+        this.leccionesCompletadas++;
+      }
+    });
   }
-}
 }

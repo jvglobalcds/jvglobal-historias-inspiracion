@@ -85,126 +85,51 @@
 
 <div class="tema-contenido">
 
-<a
-  *ngIf="areaActual.titulo === 'Claridad' && i === 0"
-  routerLink="/ensenanza-cds/claridad/autoconocimiento-y-proposito"
-  class="tema-enlace"
->
-  <span>{{ tema }}</span>
-
-  <span
-    *ngIf="leccionesCompletadas > 0"
-    class="tema-completado"
+  <!-- CLARIDAD -->
+  <a
+    *ngIf="areaActual.titulo === 'Claridad'"
+    [routerLink]="[
+      '/ensenanza-cds/claridad',
+      [
+        'autoconocimiento-y-proposito',
+        'vision-personal-y-objetivos',
+        'pensamiento-consciente',
+        'toma-de-decisiones',
+        'planificacion-y-direccion'
+      ][i]
+    ]"
+    class="tema-enlace"
   >
-    ✓ Completada
-  </span>
+    <span>{{ tema }}</span>
+    <span class="tema-disponible">Ver lección →</span>
+  </a>
 
-  <span
-    *ngIf="leccionesCompletadas === 0"
-    class="tema-disponible"
+  <!-- DISCIPLINA -->
+  <a
+    *ngIf="areaActual.titulo === 'Disciplina'"
+    [routerLink]="[
+      '/ensenanza-cds/disciplina',
+      [
+        'habitos-y-constancia',
+        'organizacion-personal',
+        'gestion-del-tiempo',
+        'compromiso-y-responsabilidad',
+        'ejecucion-y-seguimiento'
+      ][i]
+    ]"
+    class="tema-enlace"
   >
-    Ver lección →
-  </span>
-</a>
+    <span>{{ tema }}</span>
+    <span class="tema-disponible">Ver lección →</span>
+  </a>
 
-<a
-  *ngIf="areaActual.titulo === 'Claridad' && i === 1"
-  routerLink="/ensenanza-cds/claridad/vision-personal-y-objetivos"
-  class="tema-enlace"
->
-  <span>{{ tema }}</span>
-
-  <span
-    *ngIf="leccionesCompletadas > 1"
-    class="tema-completado"
+  <!-- OTRAS ÁREAS -->
+  <ng-container
+    *ngIf="areaActual.titulo !== 'Claridad' && areaActual.titulo !== 'Disciplina'"
   >
-    ✓ Completada
-  </span>
-
-  <span
-    *ngIf="leccionesCompletadas <= 1"
-    class="tema-disponible"
-  >
-    Ver lección →
-  </span>
-</a>
-
-<a
-  *ngIf="areaActual.titulo === 'Claridad' && i === 2"
-  routerLink="/ensenanza-cds/claridad/pensamiento-consciente"
-  class="tema-enlace"
->
-  <span>{{ tema }}</span>
-
-  <span
-    *ngIf="leccionesCompletadas > 2"
-    class="tema-completado"
-  >
-    ✓ Completada
-  </span>
-
-  <span
-    *ngIf="leccionesCompletadas <= 2"
-    class="tema-disponible"
-  >
-    Ver lección →
-  </span>
-</a>
-
-<a
-  *ngIf="areaActual.titulo === 'Claridad' && i === 3"
-  routerLink="/ensenanza-cds/claridad/toma-de-decisiones"
-  class="tema-enlace"
->
-  <span>{{ tema }}</span>
-
-  <span
-    *ngIf="leccionesCompletadas > 3"
-    class="tema-completado"
-  >
-    ✓ Completada
-  </span>
-
-  <span
-    *ngIf="leccionesCompletadas <= 3"
-    class="tema-disponible"
-  >
-    Ver lección →
-  </span>
-</a>
-
-<a
-  *ngIf="areaActual.titulo === 'Claridad' && i === 4"
-  routerLink="/ensenanza-cds/claridad/planificacion-y-direccion"
-  class="tema-enlace"
->
-  <span>{{ tema }}</span>
-
-  <span
-    *ngIf="leccionesCompletadas > 4"
-    class="tema-completado"
-  >
-    ✓ Completada
-  </span>
-
-  <span
-    *ngIf="leccionesCompletadas <= 4"
-    class="tema-disponible"
-  >
-    Ver lección →
-  </span>
-</a>
-
-<ng-container
-  *ngIf="areaActual.titulo !== 'Claridad' || (i !== 0 && i !== 1 && i !== 2 && i !== 3 && i !== 4)"
->
-  <ng-container *ngTemplateOutlet="temaNormal"></ng-container>
-</ng-container>
-
-<ng-template #temaNormal>
-  <h3>{{ tema }}</h3>
-  <p>Contenido formativo en preparación.</p>
-</ng-template>
+    <h3>{{ tema }}</h3>
+    <p>Contenido formativo en preparación.</p>
+  </ng-container>
 
 </div>
 

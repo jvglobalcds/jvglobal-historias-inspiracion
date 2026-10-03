@@ -141,7 +141,10 @@
       </button>
 
       <div class="resultado" *ngIf="evaluacionEnviada">
-        <h3>Resultado: {{ puntuacion }} de {{ preguntas.length }}</h3>
+       <h3>
+  Resultado: {{ totalCorrectas }} de {{ preguntas.length }}
+  ({{ puntuacion }}%)
+</h3>
         <button class="boton-evaluar" (click)="repetirEvaluacion()">
           Repetir evaluación
         </button>

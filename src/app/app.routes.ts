@@ -5,7 +5,7 @@ export const routes: Routes = [
 
   {
     path: '',
-    redirectTo: 'indice',
+    redirectTo: 'inspiracion-cds',
     pathMatch: 'full'
   },
 

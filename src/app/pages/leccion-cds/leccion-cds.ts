@@ -1,6 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, ActivatedRoute } from '@angular/router';
+
+interface ConceptoCds {
+  nombre: string;
+  significado: string;
+  ejemplo: string;
+}
+
+interface SeccionCds {
+  titulo: string;
+  parrafos: string[];
+  destacado?: string;
+  puntos?: string[];
+  cierre?: string;
+  conceptos?: ConceptoCds[];
+}
 
 @Component({
   selector: 'app-leccion-cds',
@@ -9,7 +24,7 @@ import { RouterLink, ActivatedRoute } from '@angular/router';
   templateUrl: './leccion-cds.html',
   styleUrl: './leccion-cds.css'
 })
-export class LeccionCds {
+export class LeccionCds implements OnInit {
 
     private leccionActual = '';
 
@@ -21,7 +36,7 @@ export class LeccionCds {
   objetivo =
     'Comprender la importancia del autoconocimiento como punto de partida para construir un propósito personal, identificar fortalezas y áreas de mejora, y establecer una dirección consciente para el desarrollo personal.';
 
-  secciones = [
+  secciones: SeccionCds[] = [
     {
       titulo: 'Introducción: conocerte antes de avanzar',
       parrafos: [
@@ -185,9 +200,32 @@ export class LeccionCds {
 
   respuestas: number[] = [];
   evaluacionEnviada = false;
-  leccionCompletada = localStorage.getItem(
-  'jv-leccion-autoconocimiento-proposito'
-) === 'completada';
+  leccionCompletada = false;
+  calificacion = 0;
+  totalCorrectas = 0;
+  mensajeEvaluacion = '';
+
+  private readonly clavesLecciones: Record<string, string> = {
+    'autoconocimiento-y-proposito': 'jv-leccion-autoconocimiento-proposito',
+    'vision-personal-y-objetivos': 'jv-leccion-vision-personal-objetivos',
+    'pensamiento-consciente': 'jv-leccion-pensamiento-consciente',
+    'toma-de-decisiones': 'jv-leccion-toma-de-decisiones',
+    'planificacion-y-direccion': 'jv-leccion-planificacion-y-direccion',
+    'habitos-y-constancia': 'jv-leccion-habitos-y-constancia',
+    'organizacion-personal': 'jv-leccion-organizacion-personal',
+    'gestion-del-tiempo': 'jv-leccion-gestion-del-tiempo',
+    'compromiso-y-responsabilidad': 'jv-leccion-compromiso-y-responsabilidad',
+    'ejecucion-y-seguimiento': 'jv-leccion-ejecucion-y-seguimiento'
+  };
+
+  private readonly contenidoBase = {
+    titulo: this.titulo,
+    subtitulo: this.subtitulo,
+    objetivo: this.objetivo,
+    secciones: this.secciones,
+    reflexiones: this.reflexiones,
+    preguntas: this.preguntas
+  };
 
   constructor(private route: ActivatedRoute) {}
 
@@ -195,56 +233,83 @@ export class LeccionCds {
     this.route.paramMap.subscribe((params) => {
       this.leccionActual = params.get('leccion') ?? '';
 
-      if (this.leccionActual === 'vision-personal-y-objetivos') {
-        this.cargarLeccionVision();
+      this.restablecerEstadoEvaluacion();
+      this.restablecerContenidoBase();
+
+      switch (this.leccionActual) {
+        case 'autoconocimiento-y-proposito':
+          break;
+
+        case 'vision-personal-y-objetivos':
+          this.cargarLeccionVision();
+          break;
+
+        case 'pensamiento-consciente':
+          this.cargarLeccionPensamiento();
+          break;
+
+        case 'toma-de-decisiones':
+          this.cargarLeccionTomaDecisiones();
+          break;
+
+        case 'planificacion-y-direccion':
+          this.cargarLeccionPlanificacion();
+          break;
+
+        case 'habitos-y-constancia':
+          this.cargarLeccionHabitos();
+          break;
+
+        case 'organizacion-personal':
+          this.cargarLeccionOrganizacion();
+          break;
+
+        case 'gestion-del-tiempo':
+          this.cargarLeccionTiempo();
+          break;
+
+        case 'compromiso-y-responsabilidad':
+          this.cargarLeccionCompromiso();
+          break;
+
+        case 'ejecucion-y-seguimiento':
+          this.cargarLeccionEjecucion();
+          break;
+
+        default:
+          this.leccionActual = 'autoconocimiento-y-proposito';
+          break;
       }
-
-   if (this.leccionActual === 'pensamiento-consciente') {
-  this.cargarLeccionPensamiento();
-}
-
-if (this.leccionActual === 'toma-de-decisiones') {
-  this.cargarLeccionTomaDecisiones();
-}
-
-if (this.leccionActual === 'planificacion-y-direccion') {
-  this.cargarLeccionPlanificacion();
-}
 
       this.actualizarEstadoLeccion();
     });
   }
 
-private actualizarEstadoLeccion(): void {
-
-  if (this.leccionActual === 'pensamiento-consciente') {
-    this.leccionCompletada =
-      localStorage.getItem('jv-leccion-pensamiento-consciente') ===
-      'completada';
-
-    return;
+    private restablecerEstadoEvaluacion(): void {
+    this.respuestas = [];
+    this.evaluacionEnviada = false;
+    this.calificacion = 0;
+    this.totalCorrectas = 0;
+    this.mensajeEvaluacion = '';
+    this.leccionCompletada = false;
   }
 
-  if (this.leccionActual === 'toma-de-decisiones') {
-    this.leccionCompletada =
-      localStorage.getItem('jv-leccion-toma-de-decisiones') ===
-      'completada';
-
-    return;
+  private restablecerContenidoBase(): void {
+    this.titulo = this.contenidoBase.titulo;
+    this.subtitulo = this.contenidoBase.subtitulo;
+    this.objetivo = this.contenidoBase.objetivo;
+    this.secciones = this.contenidoBase.secciones;
+    this.reflexiones = this.contenidoBase.reflexiones;
+    this.preguntas = this.contenidoBase.preguntas;
   }
 
-  if (this.leccionActual === 'vision-personal-y-objetivos') {
-    this.leccionCompletada =
-      localStorage.getItem('jv-leccion-vision-personal-objetivos') ===
-      'completada';
+  private actualizarEstadoLeccion(): void {
+    const clave = this.clavesLecciones[this.leccionActual];
 
-    return;
+    this.leccionCompletada = clave
+      ? localStorage.getItem(clave) === 'completada'
+      : false;
   }
-
-  this.leccionCompletada =
-    localStorage.getItem('jv-leccion-autoconocimiento-proposito') ===
-    'completada';
-}
 
 
     private cargarLeccionVision(): void {
@@ -937,13 +1002,55 @@ private cargarLeccionTomaDecisiones(): void {
 
   seleccionarRespuesta(pregunta: number, opcion: number): void {
     if (this.evaluacionEnviada) return;
-    this.respuestas[pregunta] = opcion;
+
+    if (
+      pregunta < 0 ||
+      pregunta >= this.preguntas.length ||
+      opcion < 0 ||
+      opcion >= this.preguntas[pregunta].opciones.length
+    ) {
+      return;
+    }
+
+    const nuevasRespuestas = [...this.respuestas];
+    nuevasRespuestas[pregunta] = opcion;
+    this.respuestas = nuevasRespuestas;
   }
 
   comprobarEvaluacion(): void {
-    if (this.respuestas.length === this.preguntas.length &&
-        this.respuestas.every(r => r !== undefined)) {
-      this.evaluacionEnviada = true;
+    if (this.evaluacionEnviada) return;
+
+    const todasRespondidas = this.preguntas.every(
+      (_, indice) => this.respuestas[indice] !== undefined
+    );
+
+    if (!todasRespondidas) {
+      this.mensajeEvaluacion =
+        'Responde todas las preguntas antes de enviar la evaluación.';
+      return;
+    }
+
+    this.totalCorrectas = 0;
+
+    this.preguntas.forEach((pregunta, indice) => {
+      if (this.respuestas[indice] === pregunta.correcta) {
+        this.totalCorrectas++;
+      }
+    });
+
+    this.calificacion = Math.round(
+      (this.totalCorrectas / this.preguntas.length) * 100
+    );
+
+    this.evaluacionEnviada = true;
+    this.mensajeEvaluacion =
+      `Evaluación finalizada. Obtuviste ${this.totalCorrectas} de ${this.preguntas.length} respuestas correctas (${this.calificacion}%).`;
+
+    const clave = this.clavesLecciones[this.leccionActual];
+
+    if (clave) {
+      localStorage.setItem(clave, 'completada');
+      this.leccionCompletada = true;
     }
   }
 
@@ -1166,40 +1273,701 @@ private cargarLeccionTomaDecisiones(): void {
   this.evaluacionEnviada = false;
 }
 
-  repetirEvaluacion(): void {
-    this.respuestas = [];
-    this.evaluacionEnviada = false;
-  }
+cargarLeccionHabitos(): void {
+  if (this.leccionActual !== 'habitos-y-constancia') return;
+
+  this.titulo = 'Hábitos y constancia';
+  this.subtitulo = 'Construir prácticas cotidianas que permitan sostener nuestras decisiones y avanzar con disciplina.';
+  this.objetivo = 'Comprender cómo se forman los hábitos, reconocer la importancia de la constancia y desarrollar acciones cotidianas sostenibles.';
+
+  this.secciones = [
+    {
+      titulo: '¿Qué son los hábitos?',
+      parrafos: [
+        'Los hábitos son comportamientos que repetimos con frecuencia y que, con el tiempo, pueden convertirse en parte de nuestra rutina.',
+        'Un hábito puede estar relacionado con el aprendizaje, la organización, la salud, el trabajo o cualquier otra dimensión de nuestra vida.',
+        'Los hábitos influyen en nuestros resultados porque conectan las decisiones con las acciones cotidianas.'
+      ],
+      destacado: 'Lo que repetimos diariamente puede influir en la dirección de nuestro crecimiento.'
+    },
+    {
+      titulo: 'La importancia de la constancia',
+      parrafos: [
+        'La constancia consiste en mantener el esfuerzo y continuar actuando incluso cuando el entusiasmo inicial disminuye.',
+        'No significa que todos los días debamos tener el mismo rendimiento. Significa conservar el compromiso y retomar el camino cuando aparecen dificultades.',
+        'La constancia permite que las acciones pequeñas se acumulen y formen parte de un proceso de desarrollo.'
+      ]
+    },
+    {
+      titulo: 'De las decisiones a los hábitos',
+      parrafos: [
+        'Una decisión puede marcar el inicio de un cambio, pero su continuidad depende de las acciones que realizamos.',
+        'Cuando una acción se repite en circunstancias similares, puede convertirse progresivamente en un hábito.',
+        'Por eso, es importante transformar las intenciones generales en comportamientos concretos y realizables.'
+      ]
+    },
+    {
+      titulo: 'Cómo construir hábitos sostenibles',
+      parrafos: [
+        'Para desarrollar un hábito, conviene comenzar con acciones pequeñas y definir claramente cuándo y dónde se realizarán.',
+        'También ayuda preparar el entorno, registrar los avances y revisar periódicamente qué está funcionando.',
+        'Si un día no cumples lo previsto, puedes retomar la práctica sin convertir una interrupción en abandono.'
+      ],
+      puntos: [
+        'Comienza con una acción sencilla.',
+        'Define un horario o momento específico.',
+        'Prepara un entorno que facilite la práctica.',
+        'Registra tus avances.',
+        'Retoma el hábito después de una interrupción.'
+      ],
+      cierre: 'Un hábito sostenible se construye mediante acciones realistas que pueden mantenerse y ajustarse con el tiempo.'
+    },
+    {
+      titulo: 'Disciplina y motivación',
+      parrafos: [
+        'La motivación puede impulsarnos a comenzar una actividad, pero no siempre se mantiene constante.',
+        'La disciplina ayuda a sostener el compromiso cuando el entusiasmo disminuye o aparecen distracciones.',
+        'Ambas pueden complementarse: la motivación inspira el inicio y la disciplina favorece la continuidad.'
+      ]
+    },
+    {
+      titulo: 'La conexión con la Filosofía CDS',
+      parrafos: [
+        'La Claridad permite reconocer qué hábito queremos desarrollar y por qué es importante.',
+        'La Disciplina ayuda a sostener las acciones necesarias para construirlo.',
+        'La Superación nos permite aprender de la experiencia, corregir errores y continuar avanzando.'
+      ],
+      destacado: 'Claridad para elegir el rumbo. Disciplina para sostener el esfuerzo. Superación para seguir aprendiendo.'
+    }
+  ];
+
+  this.reflexiones = [
+    { titulo: 'Mi hábito', pregunta: '¿Qué hábito quiero desarrollar o fortalecer?' },
+    { titulo: 'Mi propósito', pregunta: '¿Por qué es importante para mí incorporar este hábito?' },
+    { titulo: 'Mi acción diaria', pregunta: '¿Qué acción concreta puedo repetir cada día?' },
+    { titulo: 'Mi horario', pregunta: '¿En qué momento específico realizaré esta acción?' },
+    { titulo: 'Mi compromiso', pregunta: '¿Cómo retomaré la práctica si un día no consigo cumplirla?' }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Qué es un hábito?',
+      opciones: [
+        'Una acción que realizamos una sola vez',
+        'Un comportamiento que repetimos con frecuencia',
+        'Una actividad que siempre requiere motivación'
+      ],
+      correcta: 1,
+      explicacion: 'Un hábito es un comportamiento que se repite y puede incorporarse a nuestra rutina.'
+    },
+    {
+      texto: '¿Qué significa actuar con constancia?',
+      opciones: [
+        'Sostener el esfuerzo y retomar el camino ante las dificultades',
+        'Exigir el mismo rendimiento todos los días',
+        'Evitar modificar cualquier planificación'
+      ],
+      correcta: 0,
+      explicacion: 'La constancia implica mantener el compromiso y continuar después de las dificultades.'
+    },
+    {
+      texto: '¿Qué relación existe entre las decisiones y los hábitos?',
+      opciones: [
+        'Las decisiones no influyen en nuestros comportamientos',
+        'Los hábitos impiden tomar nuevas decisiones',
+        'Los hábitos ayudan a convertir decisiones en acciones cotidianas'
+      ],
+      correcta: 2,
+      explicacion: 'La repetición permite transformar decisiones conscientes en prácticas cotidianas.'
+    },
+    {
+      texto: '¿Qué favorece la construcción de un hábito sostenible?',
+      opciones: [
+        'Realizar acciones pequeñas en momentos definidos',
+        'Esperar a tener motivación permanente',
+        'Cambiar de objetivo todos los días'
+      ],
+      correcta: 0,
+      explicacion: 'Las acciones pequeñas y específicas facilitan la continuidad.'
+    },
+    {
+      texto: '¿Qué papel cumple la disciplina cuando disminuye la motivación?',
+      opciones: [
+        'Obliga a abandonar la actividad',
+        'Ayuda a sostener el compromiso',
+        'Hace innecesaria la planificación'
+      ],
+      correcta: 1,
+      explicacion: 'La disciplina favorece la continuidad incluso cuando el entusiasmo inicial disminuye.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+cargarLeccionOrganizacion(): void {
+  if (this.leccionActual !== 'organizacion-personal') return;
+
+  this.titulo = 'Organización personal';
+  this.subtitulo = 'Desarrollar una forma consciente de organizar actividades, responsabilidades y recursos.';
+  this.objetivo = 'Comprender la importancia de la organización personal y aplicar herramientas sencillas para ordenar las actividades y cumplir compromisos.';
+
+  this.secciones = [
+    {
+      titulo: '¿Qué es la organización personal?',
+      parrafos: [
+        'La organización personal es la capacidad de ordenar nuestras actividades, responsabilidades y recursos para avanzar con mayor claridad.',
+        'Organizarse no significa llenar cada minuto del día. Significa reconocer qué necesitamos hacer, establecer prioridades y distribuir nuestras tareas de manera consciente.',
+        'Una buena organización facilita el cumplimiento de los compromisos y ayuda a reducir la improvisación.'
+      ],
+      destacado: 'Organizarse es dar estructura a nuestras acciones para avanzar con dirección.'
+    },
+    {
+      titulo: 'La importancia del orden',
+      parrafos: [
+        'Cuando las tareas están desordenadas o no tenemos claridad sobre nuestras responsabilidades, es más fácil olvidar actividades importantes o dedicar demasiado tiempo a asuntos secundarios.',
+        'El orden permite identificar qué debemos hacer, qué recursos necesitamos y cuáles son los siguientes pasos.',
+        'También facilita revisar nuestros avances y realizar ajustes cuando las circunstancias cambian.'
+      ]
+    },
+    {
+      titulo: 'Prioridades y responsabilidades',
+      parrafos: [
+        'No todas las actividades tienen la misma importancia ni requieren atención inmediata.',
+        'Establecer prioridades significa reconocer qué tareas están más relacionadas con nuestros objetivos y compromisos.',
+        'Es importante diferenciar entre lo urgente, lo importante y aquello que puede esperar o delegarse cuando sea posible.'
+      ],
+      puntos: [
+        'Identificar las tareas pendientes.',
+        'Reconocer cuáles tienen mayor importancia.',
+        'Considerar los plazos y compromisos.',
+        'Asignar tiempo a las actividades prioritarias.',
+        'Revisar las tareas que pueden posponerse o reorganizarse.'
+      ]
+    },
+    {
+      titulo: 'Herramientas para organizarse',
+      parrafos: [
+        'Existen herramientas sencillas que pueden ayudar a organizar las actividades diarias y semanales.',
+        'Una agenda, un calendario, una lista de tareas o una planificación semanal pueden servir para visualizar responsabilidades y recordar compromisos.',
+        'La herramienta más útil es aquella que podemos utilizar de manera constante y que se adapta a nuestra realidad.'
+      ],
+      puntos: [
+        'Utilizar una lista de tareas.',
+        'Registrar fechas y compromisos en un calendario.',
+        'Planificar las actividades de la semana.',
+        'Dividir las tareas grandes en acciones pequeñas.',
+        'Revisar periódicamente las actividades pendientes.'
+      ],
+      cierre: 'Una herramienta de organización es útil cuando facilita la acción, no cuando se convierte en una carga adicional.'
+    },
+    {
+      titulo: 'Organización y flexibilidad',
+      parrafos: [
+        'Una planificación puede cambiar debido a imprevistos, nuevas responsabilidades o modificaciones en nuestras prioridades.',
+        'Organizarse no significa seguir un plan de manera rígida, sino contar con una estructura que pueda adaptarse.',
+        'Cuando algo no sale como estaba previsto, podemos revisar las prioridades y reorganizar las acciones sin abandonar nuestros objetivos.'
+      ],
+      destacado: 'La organización aporta estructura; la flexibilidad permite responder a la realidad.'
+    },
+    {
+      titulo: 'La organización dentro de la Filosofía CDS',
+      parrafos: [
+        'La Claridad permite identificar objetivos y responsabilidades.',
+        'La Disciplina ayuda a mantener el orden y cumplir las actividades planificadas.',
+        'La Superación impulsa a revisar nuestros métodos, aprender de la experiencia y mejorar nuestra organización.'
+      ]
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Mis responsabilidades',
+      pregunta: '¿Cuáles son las principales responsabilidades que debo atender actualmente?'
+    },
+    {
+      titulo: 'Mis prioridades',
+      pregunta: '¿Qué actividades requieren mayor atención esta semana y por qué?'
+    },
+    {
+      titulo: 'Mi herramienta',
+      pregunta: '¿Qué herramienta sencilla puedo utilizar para organizar mis tareas?'
+    },
+    {
+      titulo: 'Mi planificación',
+      pregunta: '¿Cómo puedo distribuir mis actividades para cumplir mis compromisos?'
+    },
+    {
+      titulo: 'Mi mejora',
+      pregunta: '¿Qué aspecto de mi organización personal necesito mejorar?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Cuál es el propósito de la organización personal?',
+      opciones: [
+        'Mantener todas las horas del día ocupadas',
+        'Ordenar actividades, responsabilidades y recursos para avanzar con claridad',
+        'Evitar cualquier cambio en nuestros planes'
+      ],
+      correcta: 1,
+      explicacion: 'La organización personal permite estructurar nuestras acciones y responsabilidades de manera consciente.'
+    },
+    {
+      texto: '¿Por qué es importante establecer prioridades?',
+      opciones: [
+        'Porque todas las tareas tienen la misma importancia',
+        'Porque permite evitar cualquier responsabilidad',
+        'Porque ayuda a concentrar la atención en las actividades más importantes'
+      ],
+      correcta: 2,
+      explicacion: 'Las prioridades permiten orientar el tiempo y el esfuerzo hacia las tareas relevantes.'
+    },
+    {
+      texto: '¿Qué herramienta puede ayudar a organizar las actividades?',
+      opciones: [
+        'Una agenda o una lista de tareas',
+        'Dejar todas las actividades para el último momento',
+        'Depender únicamente de la memoria'
+      ],
+      correcta: 0,
+      explicacion: 'Las agendas y listas permiten visualizar y recordar las actividades pendientes.'
+    },
+    {
+      texto: '¿Qué debemos hacer cuando cambian nuestras circunstancias?',
+      opciones: [
+        'Abandonar todos nuestros objetivos',
+        'Revisar las prioridades y reorganizar las actividades',
+        'Ignorar los nuevos compromisos'
+      ],
+      correcta: 1,
+      explicacion: 'La organización también requiere flexibilidad para adaptarse a situaciones nuevas.'
+    },
+    {
+      texto: '¿Cómo se relaciona la organización con la Filosofía CDS?',
+      opciones: [
+        'La organización elimina la necesidad de aprender',
+        'La organización depende únicamente de la motivación',
+        'La Claridad orienta, la Disciplina sostiene y la Superación impulsa la mejora'
+      ],
+      correcta: 2,
+      explicacion: 'Los tres principios CDS se complementan en la organización y el desarrollo personal.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+cargarLeccionTiempo(): void {
+  if (this.leccionActual !== 'gestion-del-tiempo') return;
+
+  this.titulo = 'Gestión del tiempo';
+
+  this.subtitulo =
+    'Aprende a organizar tu tiempo con intención, disciplina y enfoque.';
+
+  this.objetivo =
+    'Desarrollar la capacidad de administrar el tiempo de manera consciente, establecer prioridades y mantener el enfoque en las actividades que contribuyen al crecimiento personal.';
+
+  this.secciones = [
+    {
+      titulo: '1. El tiempo es un recurso limitado',
+      parrafos: [
+        'El tiempo es uno de los recursos más importantes de nuestra vida. A diferencia del dinero o de otros recursos, no podemos recuperar el tiempo que ya ha pasado.',
+        'Gestionar el tiempo no significa llenar cada minuto con actividades. Significa utilizarlo conscientemente, dando prioridad a aquello que realmente importa.',
+        'Una persona disciplinada comprende que sus decisiones diarias influyen directamente en sus resultados a largo plazo.'
+      ],
+      destacado:
+        'No se trata de hacer más cosas, sino de dedicar tiempo a las cosas correctas.'
+    },
+    {
+      titulo: '2. Aprende a establecer prioridades',
+      parrafos: [
+        'No todas las actividades tienen la misma importancia. Algunas contribuyen directamente a nuestros objetivos, mientras que otras consumen tiempo sin aportar un beneficio significativo.',
+        'Establecer prioridades consiste en identificar qué actividades necesitan atención inmediata, cuáles son importantes para el futuro y cuáles pueden esperar o eliminarse.',
+        'Cuando no establecemos prioridades, corremos el riesgo de dedicar la mayor parte del día a tareas urgentes y descuidar nuestros objetivos importantes.'
+      ],
+      puntos: [
+        'Identifica tus objetivos principales.',
+        'Distingue las tareas importantes de las secundarias.',
+        'Organiza tus actividades según su prioridad.',
+        'Aprende a decir no a las distracciones y compromisos innecesarios.'
+      ]
+    },
+    {
+      titulo: '3. Planificación diaria y semanal',
+      parrafos: [
+        'La planificación permite transformar las intenciones en acciones concretas. Cuando organizamos nuestras actividades, tenemos una visión más clara de lo que debemos hacer y del tiempo que necesitamos.',
+        'Una planificación efectiva debe ser realista. No es conveniente llenar la agenda con más tareas de las que realmente podemos cumplir.',
+        'Dedicar unos minutos al inicio o al final del día para organizar las actividades ayuda a mantener el rumbo y reducir la improvisación.'
+      ],
+      puntos: [
+        'Define entre una y tres prioridades principales para el día.',
+        'Asigna un horario aproximado a cada actividad.',
+        'Reserva espacios para imprevistos y descansos.',
+        'Revisa al finalizar el día lo que lograste y lo que debes ajustar.'
+      ]
+    },
+    {
+      titulo: '4. Identifica y controla las distracciones',
+      parrafos: [
+        'Las distracciones pueden interrumpir nuestra concentración y dificultar el cumplimiento de las tareas importantes.',
+        'El uso descontrolado del teléfono, las redes sociales, las interrupciones constantes y la falta de un espacio organizado pueden fragmentar nuestro tiempo.',
+        'La disciplina consiste en reconocer aquello que nos distrae y establecer límites para proteger nuestra atención.'
+      ],
+      puntos: [
+        'Silencia las notificaciones que no sean necesarias.',
+        'Evita revisar constantemente el teléfono mientras trabajas.',
+        'Organiza un espacio que facilite la concentración.',
+        'Trabaja en una tarea a la vez cuando necesites atención profunda.'
+      ]
+    },
+    {
+      titulo: '5. Constancia, descanso y evaluación',
+      parrafos: [
+        'Una buena gestión del tiempo no depende de un solo día de productividad. Se construye mediante hábitos que se mantienen y mejoran con el tiempo.',
+        'El descanso también forma parte de una organización responsable. Trabajar sin pausas puede afectar la concentración y dificultar el cumplimiento de los objetivos.',
+        'Evaluar cómo utilizamos nuestro tiempo nos permite identificar errores, reconocer avances y realizar cambios para mejorar.'
+      ],
+      cierre:
+        'La disciplina se demuestra cuando organizas tu tiempo y mantienes tus compromisos incluso cuando la motivación disminuye.'
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Reflexión personal',
+      pregunta:
+        '¿En qué actividades se está yendo la mayor parte de tu tiempo y cuáles de ellas contribuyen realmente a tus objetivos?'
+    },
+    {
+      titulo: 'Compromiso de acción',
+      pregunta:
+        '¿Qué cambio concreto puedes realizar desde hoy para administrar mejor tu tiempo?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Qué significa gestionar correctamente el tiempo?',
+      opciones: [
+        'Llenar cada minuto con actividades.',
+        'Realizar tantas tareas como sea posible.',
+        'Utilizar el tiempo conscientemente y priorizar lo importante.',
+        'Evitar todos los momentos de descanso.'
+      ],
+      correcta: 2,
+      explicacion:
+        'Gestionar el tiempo significa organizar las actividades de acuerdo con su importancia y utilizar los recursos disponibles con intención.'
+    },
+    {
+      texto: '¿Por qué es importante establecer prioridades?',
+      opciones: [
+        'Porque todas las tareas deben realizarse al mismo tiempo.',
+        'Porque permite dedicar atención a las actividades que más contribuyen a nuestros objetivos.',
+        'Porque elimina la necesidad de planificar.',
+        'Porque permite evitar cualquier imprevisto.'
+      ],
+      correcta: 1,
+      explicacion:
+        'Las prioridades ayudan a distinguir las tareas importantes de las secundarias y a dirigir nuestros esfuerzos hacia los objetivos.'
+    },
+    {
+      texto: '¿Cuál es una práctica adecuada de planificación diaria?',
+      opciones: [
+        'Programar más tareas de las que podemos cumplir.',
+        'Dejar todas las decisiones para el último momento.',
+        'Definir prioridades y reservar tiempo para imprevistos.',
+        'Realizar únicamente las actividades más fáciles.'
+      ],
+      correcta: 2,
+      explicacion:
+        'Una planificación realista contempla las prioridades, el tiempo disponible y posibles imprevistos.'
+    },
+    {
+      texto: '¿Qué acción ayuda a reducir las distracciones?',
+      opciones: [
+        'Revisar las notificaciones constantemente.',
+        'Realizar varias tareas exigentes al mismo tiempo.',
+        'Mantener el teléfono siempre visible.',
+        'Silenciar notificaciones innecesarias durante las tareas importantes.'
+      ],
+      correcta: 3,
+      explicacion:
+        'Reducir las interrupciones ayuda a proteger la concentración y a dedicar atención a las tareas importantes.'
+    },
+    {
+      texto: '¿Qué papel cumple el descanso en la gestión del tiempo?',
+      opciones: [
+        'Es una pérdida de tiempo que debe eliminarse.',
+        'Forma parte de una organización responsable y ayuda a mantener el rendimiento.',
+        'Debe realizarse únicamente cuando todas las tareas estén terminadas.',
+        'No tiene relación con la disciplina.'
+      ],
+      correcta: 1,
+      explicacion:
+        'El descanso forma parte de una planificación equilibrada y contribuye a sostener la concentración y la constancia.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+private cargarLeccionCompromiso(): void {
+  this.titulo = 'Compromiso y responsabilidad';
+  this.subtitulo = 'Convertir las decisiones en acciones sostenidas';
+  this.objetivo =
+    'Comprender el papel del compromiso y la responsabilidad personal para transformar las decisiones en acciones coherentes y sostenidas.';
+
+  this.secciones = [
+    {
+      titulo: 'El compromiso comienza con una decisión',
+      parrafos: [
+        'El compromiso implica asumir una decisión de manera consciente y estar dispuesto a actuar de acuerdo con ella.',
+        'No depende únicamente de la motivación del momento, sino de la capacidad de mantener una dirección incluso cuando aparecen dificultades.'
+      ],
+      destacado:
+        'Comprometerse significa asumir responsabilidad sobre aquello que has decidido construir.'
+    },
+    {
+      titulo: 'Responsabilidad personal',
+      parrafos: [
+        'La responsabilidad personal consiste en reconocer que nuestras decisiones generan consecuencias y que nuestras acciones tienen un papel importante en los resultados que construimos.',
+        'Esto no significa controlar todas las circunstancias, sino actuar sobre aquello que sí está bajo nuestro control.'
+      ],
+      puntos: [
+        'Reconocer las propias decisiones.',
+        'Cumplir los acuerdos establecidos.',
+        'Aprender de los errores.',
+        'Actuar con coherencia.',
+        'Mantener constancia ante las dificultades.'
+      ],
+      cierre:
+        'La responsabilidad aumenta cuando dejamos de esperar que otros resuelvan aquello que depende de nosotros.'
+    },
+    {
+      titulo: 'Compromiso sostenido',
+      parrafos: [
+        'Un compromiso real se demuestra mediante acciones repetidas a lo largo del tiempo.',
+        'La constancia permite convertir una intención en un comportamiento y un comportamiento sostenido en un hábito.'
+      ],
+      conceptos: [
+        {
+          nombre: 'Decisión',
+          significado: 'Elegir conscientemente una dirección.',
+          ejemplo: 'Definir qué objetivo quieres alcanzar.'
+        },
+        {
+          nombre: 'Compromiso',
+          significado: 'Asumir la decisión y actuar de acuerdo con ella.',
+          ejemplo: 'Establecer acciones concretas para avanzar.'
+        },
+        {
+          nombre: 'Constancia',
+          significado: 'Mantener las acciones necesarias a través del tiempo.',
+          ejemplo: 'Continuar trabajando aunque el progreso sea gradual.'
+        }
+      ],
+      cierre:
+        'La claridad permite decidir; el compromiso permite comenzar; la constancia permite avanzar.'
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Mi compromiso actual',
+      pregunta: '¿Qué decisión importante necesitas asumir con mayor responsabilidad?'
+    },
+    {
+      titulo: 'Mis acciones',
+      pregunta: '¿Qué acción concreta puedes comenzar a realizar desde hoy?'
+    },
+    {
+      titulo: 'Mi constancia',
+      pregunta: '¿Qué hábito necesitas mantener para avanzar hacia tu objetivo?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Qué caracteriza principalmente al compromiso?',
+      opciones: [
+        'Depender de la motivación del momento',
+        'Asumir una decisión y actuar de acuerdo con ella',
+        'Esperar que otros resuelvan las dificultades',
+        'Evitar cualquier error'
+      ],
+      correcta: 1,
+      explicacion:
+        'El compromiso implica asumir una decisión y actuar de manera coherente con ella.'
+    },
+    {
+      texto: '¿Qué significa responsabilidad personal?',
+      opciones: [
+        'Controlar todas las circunstancias',
+        'Evitar asumir errores',
+        'Reconocer nuestras decisiones y actuar sobre aquello que podemos controlar',
+        'Esperar resultados inmediatos'
+      ],
+      correcta: 2,
+      explicacion:
+        'La responsabilidad personal consiste en reconocer nuestras decisiones y actuar sobre aquello que está bajo nuestro control.'
+    },
+    {
+      texto: '¿Qué permite la constancia?',
+      opciones: [
+        'Convertir una intención en acciones sostenidas',
+        'Evitar cualquier dificultad',
+        'Obtener resultados sin esfuerzo',
+        'Eliminar la necesidad de aprender'
+      ],
+      correcta: 0,
+      explicacion:
+        'La constancia permite mantener las acciones necesarias a través del tiempo.'
+    }
+  ];
+}
+
+private cargarLeccionEjecucion(): void {
+  this.titulo = 'Ejecución y seguimiento';
+  this.subtitulo = 'Convertir la planificación en acción';
+  this.objetivo =
+    'Comprender cómo transformar los planes en acciones concretas y utilizar el seguimiento para mantener una dirección clara.';
+
+  this.secciones = [
+    {
+      titulo: 'De la intención a la acción',
+      parrafos: [
+        'Una meta puede estar bien definida y aun así no producir avances si no se transforma en acciones concretas.',
+        'La ejecución consiste en llevar una decisión o un plan al terreno de la práctica.'
+      ],
+      destacado:
+        'Una dirección clara necesita acciones concretas para convertirse en avance.'
+    },
+    {
+      titulo: 'Acciones concretas',
+      parrafos: [
+        'Una acción útil debe poder identificarse claramente y realizarse dentro de un período determinado.',
+        'Dividir un objetivo en acciones pequeñas permite reducir la incertidumbre y facilita el seguimiento.'
+      ],
+      puntos: [
+        'Definir qué se debe hacer.',
+        'Establecer cuándo se realizará.',
+        'Determinar qué recursos se necesitan.',
+        'Registrar el avance.',
+        'Ajustar cuando sea necesario.'
+      ],
+      cierre:
+        'La ejecución mejora cuando sabemos exactamente cuál es el siguiente paso.'
+    },
+    {
+      titulo: 'Seguimiento y ajuste',
+      parrafos: [
+        'El seguimiento permite observar qué se ha realizado, qué permanece pendiente y qué necesita ser modificado.',
+        'Revisar el avance no significa abandonar el plan ante una dificultad, sino utilizar la información disponible para tomar mejores decisiones.'
+      ],
+      conceptos: [
+        {
+          nombre: 'Ejecución',
+          significado: 'Convertir una planificación en acciones reales.',
+          ejemplo: 'Realizar hoy una tarea concreta relacionada con el objetivo.'
+        },
+        {
+          nombre: 'Seguimiento',
+          significado: 'Revisar periódicamente el avance.',
+          ejemplo: 'Comprobar cada semana qué acciones fueron realizadas.'
+        },
+        {
+          nombre: 'Ajuste',
+          significado: 'Modificar una acción cuando la información indica que es necesario.',
+          ejemplo: 'Cambiar una estrategia que no está produciendo el avance esperado.'
+        }
+      ],
+      cierre:
+        'Planificar orienta, ejecutar mueve y hacer seguimiento permite corregir el rumbo.'
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Mi siguiente acción',
+      pregunta:
+        '¿Cuál es la acción concreta que puedes realizar para avanzar en uno de tus objetivos?'
+    },
+    {
+      titulo: 'Mi seguimiento',
+      pregunta:
+        '¿Cómo podrías revisar periódicamente tu propio avance?'
+    },
+    {
+      titulo: 'Mi ajuste',
+      pregunta:
+        '¿Qué harías si una estrategia no produce el resultado esperado?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Qué significa ejecutar un plan?',
+      opciones: [
+        'Pensar constantemente en el objetivo',
+        'Convertir la planificación en acciones reales',
+        'Cambiar de objetivo cada semana',
+        'Esperar el momento perfecto'
+      ],
+      correcta: 1,
+      explicacion:
+        'La ejecución consiste en llevar una decisión o planificación al terreno de la práctica.'
+    },
+    {
+      texto: '¿Para qué sirve el seguimiento?',
+      opciones: [
+        'Para evitar cualquier cambio',
+        'Para demostrar que nunca existen dificultades',
+        'Para revisar el avance y detectar ajustes necesarios',
+        'Para reemplazar la planificación'
+      ],
+      correcta: 2,
+      explicacion:
+        'El seguimiento permite observar el avance y utilizar esa información para realizar ajustes cuando sean necesarios.'
+    },
+    {
+      texto: '¿Qué debe caracterizar una acción concreta?',
+      opciones: [
+        'Ser indefinida',
+        'Depender únicamente de la motivación',
+        'Poder identificarse y realizarse',
+        'No tener un plazo'
+      ],
+      correcta: 2,
+      explicacion:
+        'Una acción concreta debe poder identificarse claramente y llevarse a cabo.'
+    }
+  ];
+}
+
+get puntuacion(): number {
+  return this.calificacion;
+}
+
+repetirEvaluacion(): void {
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+  this.calificacion = 0;
+  this.totalCorrectas = 0;
+  this.mensajeEvaluacion = '';
+}
 
 completarLeccion(): void {
+  const clave = this.clavesLecciones[this.leccionActual];
 
-  this.leccionCompletada = true;
-
-  let clave = 'jv-leccion-autoconocimiento-proposito';
-
-  if (this.leccionActual === 'vision-personal-y-objetivos') {
-    clave = 'jv-leccion-vision-personal-objetivos';
+  if (clave) {
+    localStorage.setItem(clave, 'completada');
+    this.leccionCompletada = true;
   }
-
-  if (this.leccionActual === 'pensamiento-consciente') {
-    clave = 'jv-leccion-pensamiento-consciente';
-  }
-
-  if (this.leccionActual === 'toma-de-decisiones') {
-  clave = 'jv-leccion-toma-de-decisiones';
 }
-
-if (this.leccionActual === 'planificacion-y-direccion') {
-  clave = 'jv-leccion-planificacion-y-direccion';
-}
-
-  localStorage.setItem(clave, 'completada');
-
-}
-
-  get puntuacion(): number {
-    return this.preguntas.filter(
-      (pregunta, i) => this.respuestas[i] === pregunta.correcta
-    ).length;
-  }
 }
