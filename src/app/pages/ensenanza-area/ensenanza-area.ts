@@ -222,6 +222,14 @@ ngOnInit(): void {
         'jv-leccion-desarrollo-potencial',
         'jv-leccion-adaptacion-mejora-continua',
       ],
+
+      emprendimiento: [
+  'jv-leccion-mentalidad-emprendedora',
+  'jv-leccion-modelos-de-negocio',
+  'jv-leccion-propuesta-de-valor',
+  'jv-leccion-ventas-y-servicio',
+  'jv-leccion-creacion-y-desarrollo-de-proyectos',
+],
     };
 
     const slug = Object.keys(this.areas).find(

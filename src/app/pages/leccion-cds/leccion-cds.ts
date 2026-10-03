@@ -221,7 +221,13 @@ export class LeccionCds implements OnInit {
     'gestion-de-desafios': 'jv-leccion-gestion-desafios',
     'desarrollo-del-potencial': 'jv-leccion-desarrollo-potencial',
     'adaptacion-y-mejora-continua': 'jv-leccion-adaptacion-mejora-continua',
-  };
+    'mentalidad-emprendedora': 'jv-leccion-mentalidad-emprendedora',
+    'modelos-de-negocio': 'jv-leccion-modelos-de-negocio',
+'propuesta-de-valor': 'jv-leccion-propuesta-de-valor',
+'ventas-y-servicio': 'jv-leccion-ventas-y-servicio',
+'creacion-y-desarrollo-de-proyectos':
+  'jv-leccion-creacion-y-desarrollo-de-proyectos',
+    };
 
   private readonly contenidoBase = {
     titulo: this.titulo,
@@ -281,6 +287,26 @@ export class LeccionCds implements OnInit {
           this.cargarLeccionEjecucion();
           break;
 
+          case 'mentalidad-emprendedora':
+          this.cargarLeccionMentalidadEmprendedora();
+          break;
+
+       case 'modelos-de-negocio':
+       this.cargarLeccionModelosNegocio();
+       break;
+
+       case 'propuesta-de-valor':
+       this.cargarLeccionPropuestaValor();
+       break;
+
+        case 'ventas-y-servicio':
+        this.cargarLeccionVentasServicio();
+        break;
+
+        case 'creacion-y-desarrollo-de-proyectos':
+        this.cargarLeccionCreacionProyectos();
+        break;
+
         case 'resiliencia':
           this.cargarLeccionResiliencia();
           break;
@@ -297,11 +323,11 @@ export class LeccionCds implements OnInit {
            this.cargarLeccionDesarrolloPotencial();
            break;
 
-           case 'adaptacion-y-mejora-continua':
-           this.cargarLeccionAdaptacionMejora();
-           break;
+          case 'adaptacion-y-mejora-continua':
+          this.cargarLeccionAdaptacionMejora();
+          break;
 
-        default:
+         default:
           this.leccionActual = 'autoconocimiento-y-proposito';
           break;
       }
@@ -482,88 +508,66 @@ export class LeccionCds implements OnInit {
 
     ];
 
-    this.reflexiones = [
-
-      {
-        titulo: 'Mi visión',
-        pregunta: '¿Cómo me gustaría que fuera mi vida dentro de tres años?'
-      },
-
-      {
-        titulo: 'Mis prioridades',
-        pregunta: '¿Qué áreas de mi vida necesitan mayor atención en este momento?'
-      },
-
-      {
-        titulo: 'Mi objetivo',
-        pregunta: '¿Qué resultado concreto quiero alcanzar durante los próximos meses?'
-      },
-
-      {
-        titulo: 'Mis acciones',
-        pregunta: '¿Qué tres acciones puedo comenzar esta semana para acercarme a ese objetivo?'
-      },
-
-      {
-        titulo: 'Mi coherencia',
-        pregunta: '¿Mis decisiones actuales están relacionadas con la vida que quiero construir?'
-      }
-
-    ];
-
-    this.preguntas = [
-
-      {
-        texto: '¿Cuál es la función principal de una visión personal?',
-
-        opciones: [
-          'Definir una dirección consciente para el futuro que deseamos construir',
-          'Garantizar exactamente lo que ocurrirá en el futuro',
-          'Evitar cualquier cambio en nuestros planes'
-        ],
-
-        correcta: 0,
-
-        explicacion:
-          'La visión proporciona una dirección y puede orientar nuestras decisiones, aunque el camino pueda cambiar.'
-      },
-
-      {
-        texto: '¿Qué permite hacer un objetivo concreto?',
-
-        opciones: [
-          'Convertir una visión general en un resultado que puede organizarse y revisarse',
-          'Eliminar todas las dificultades del camino',
-          'Garantizar que nunca tendremos que cambiar de estrategia'
-        ],
-
-        correcta: 0,
-
-        explicacion:
-          'Los objetivos ayudan a transformar una dirección general en resultados concretos que pueden trabajarse y revisarse.'
-      },
-
-      {
-        texto: '¿Qué relación existe entre visión, objetivo y acción?',
-
-        opciones: [
-          'La visión orienta, el objetivo concreta y la acción permite avanzar',
-          'Los tres conceptos significan exactamente lo mismo',
-          'La acción es independiente de cualquier objetivo'
-        ],
-
-        correcta: 0,
-
-        explicacion:
-          'La visión establece una dirección, los objetivos organizan resultados concretos y las acciones permiten avanzar hacia ellos.'
-      }
-
-    ];
-
-    this.respuestas = [];
-
-    this.evaluacionEnviada = false;
+this.reflexiones = [
+  {
+    titulo: 'Mi planificación',
+    pregunta:
+      '¿Qué objetivo necesitas convertir en acciones concretas?'
+  },
+  {
+    titulo: 'Mi seguimiento',
+    pregunta:
+      '¿Cómo puedes revisar el avance de tus actividades?'
+  },
+  {
+    titulo: 'Mi siguiente acción',
+    pregunta:
+      '¿Qué tarea específica puedes realizar hoy para avanzar?'
   }
+];
+
+this.preguntas = [
+  {
+    texto: '¿Qué significa ejecutar un plan?',
+    opciones: [
+      'Pensar constantemente en el objetivo.',
+      'Esperar el momento perfecto.',
+      'Transformar la planificación en acciones concretas.',
+      'Cambiar de objetivo cada día.'
+    ],
+    correcta: 2,
+    explicacion:
+      'La ejecución consiste en llevar las decisiones y los planes a la práctica mediante acciones concretas.'
+  },
+  {
+    texto: '¿Para qué sirve el seguimiento?',
+    opciones: [
+      'Para evitar revisar los resultados.',
+      'Para observar el avance e identificar ajustes necesarios.',
+      'Para garantizar resultados inmediatos.',
+      'Para eliminar la planificación.'
+    ],
+    correcta: 1,
+    explicacion:
+      'El seguimiento permite comprobar el avance, reconocer tareas pendientes y ajustar las acciones cuando sea necesario.'
+  },
+  {
+    texto: '¿Qué conviene hacer cuando una acción no produce el resultado esperado?',
+    opciones: [
+      'Ignorar el resultado.',
+      'Abandonar siempre el objetivo.',
+      'Revisar la información y ajustar la estrategia.',
+      'Repetir exactamente lo mismo sin analizarlo.'
+    ],
+    correcta: 2,
+    explicacion:
+      'Analizar los resultados permite identificar qué debe modificarse para continuar avanzando.'
+  }
+];
+
+this.respuestas = [];
+this.evaluacionEnviada = false;
+}
 
   private cargarLeccionPensamiento(): void {
 
@@ -1917,64 +1921,66 @@ private cargarLeccionEjecucion(): void {
     }
   ];
 
-  this.reflexiones = [
-    {
-      titulo: 'Mi siguiente acción',
-      pregunta:
-        '¿Cuál es la acción concreta que puedes realizar para avanzar en uno de tus objetivos?'
-    },
-    {
-      titulo: 'Mi seguimiento',
-      pregunta:
-        '¿Cómo podrías revisar periódicamente tu propio avance?'
-    },
-    {
-      titulo: 'Mi ajuste',
-      pregunta:
-        '¿Qué harías si una estrategia no produce el resultado esperado?'
-    }
-  ];
+this.reflexiones = [
+  {
+    titulo: 'Mi planificación',
+    pregunta:
+      '¿Qué plan tienes pendiente de convertir en acciones concretas?'
+  },
+  {
+    titulo: 'Mi seguimiento',
+    pregunta:
+      '¿Cómo puedes comprobar si estás avanzando de acuerdo con lo planificado?'
+  },
+  {
+    titulo: 'Mi siguiente acción',
+    pregunta:
+      '¿Qué acción específica puedes realizar hoy para avanzar hacia tu objetivo?'
+  }
+];
 
-  this.preguntas = [
-    {
-      texto: '¿Qué significa ejecutar un plan?',
-      opciones: [
-        'Pensar constantemente en el objetivo',
-        'Convertir la planificación en acciones reales',
-        'Cambiar de objetivo cada semana',
-        'Esperar el momento perfecto'
-      ],
-      correcta: 1,
-      explicacion:
-        'La ejecución consiste en llevar una decisión o planificación al terreno de la práctica.'
-    },
-    {
-      texto: '¿Para qué sirve el seguimiento?',
-      opciones: [
-        'Para evitar cualquier cambio',
-        'Para demostrar que nunca existen dificultades',
-        'Para revisar el avance y detectar ajustes necesarios',
-        'Para reemplazar la planificación'
-      ],
-      correcta: 2,
-      explicacion:
-        'El seguimiento permite observar el avance y utilizar esa información para realizar ajustes cuando sean necesarios.'
-    },
-    {
-      texto: '¿Qué debe caracterizar una acción concreta?',
-      opciones: [
-        'Ser indefinida',
-        'Depender únicamente de la motivación',
-        'Poder identificarse y realizarse',
-        'No tener un plazo'
-      ],
-      correcta: 2,
-      explicacion:
-        'Una acción concreta debe poder identificarse claramente y llevarse a cabo.'
-    }
-  ];
+this.preguntas = [
+  {
+    texto: '¿Qué significa ejecutar un plan?',
+    opciones: [
+      'Pensar constantemente en el objetivo.',
+      'Esperar a que aparezca la motivación.',
+      'Transformar la planificación en acciones concretas.',
+      'Cambiar de objetivo cada vez que aparece una dificultad.'
+    ],
+    correcta: 2,
+    explicacion:
+      'La ejecución consiste en llevar una planificación a la práctica mediante acciones concretas.'
+  },
+  {
+    texto: '¿Para qué sirve el seguimiento?',
+    opciones: [
+      'Para comprobar avances, identificar pendientes y revisar resultados.',
+      'Para garantizar que nunca habrá errores.',
+      'Para evitar realizar cambios.',
+      'Para sustituir la planificación.'
+    ],
+    correcta: 0,
+    explicacion:
+      'El seguimiento permite observar el progreso y obtener información para tomar decisiones.'
+  },
+  {
+    texto: '¿Qué debemos hacer cuando una acción no produce el resultado esperado?',
+    opciones: [
+      'Ignorar lo ocurrido.',
+      'Abandonar siempre el objetivo.',
+      'Continuar sin revisar nada.',
+      'Analizar el resultado y ajustar la estrategia cuando sea necesario.'
+    ],
+    correcta: 3,
+    explicacion:
+      'Analizar los resultados permite identificar qué ajustes pueden mejorar las siguientes acciones.'
+  }
+];
+
+this.respuestas = [];
+this.evaluacionEnviada = false;
 }
-
   private cargarLeccionResiliencia(): void {
     this.titulo = 'Resiliencia';
 
@@ -2820,6 +2826,666 @@ private cargarLeccionEjecucion(): void {
     ];
   }
 
+  private cargarLeccionMentalidadEmprendedora(): void {
+  this.titulo = 'Mentalidad emprendedora';
+
+  this.subtitulo =
+    'Desarrolla una forma consciente de identificar oportunidades, asumir responsabilidad y transformar ideas en acciones.';
+
+  this.secciones = [
+    {
+      titulo: 'Comprender la mentalidad emprendedora',
+      parrafos: [
+        'La mentalidad emprendedora comienza con la disposición de observar la realidad, identificar necesidades y buscar formas responsables de generar valor.',
+        'Emprender no significa únicamente crear una empresa. También implica desarrollar iniciativa, tomar decisiones conscientes y asumir responsabilidad sobre las acciones que realizamos.',
+        'Una persona puede desarrollar mentalidad emprendedora dentro de un proyecto propio, una organización, una profesión o cualquier espacio donde busque aportar soluciones.'
+      ],
+      destacado:
+        'Emprender comienza con una actitud de iniciativa, aprendizaje y responsabilidad.',
+      cierre:
+        'La mentalidad emprendedora no depende solamente de tener una idea. Depende de aprender a convertir las ideas en acciones con propósito.'
+    },
+
+    {
+      titulo: 'De la idea a la iniciativa',
+      parrafos: [
+        'Muchas ideas aparecen diariamente, pero una idea por sí sola no constituye un proyecto. Para avanzar es necesario observar, analizar y decidir qué puede hacerse con ella.',
+        'La iniciativa aparece cuando una persona deja de limitarse a imaginar una posibilidad y comienza a investigar, preguntar, probar y aprender.',
+        'Este proceso no exige tener todas las respuestas desde el comienzo. Exige estar dispuesto a dar un primer paso y obtener información que permita mejorar la siguiente decisión.'
+      ],
+      puntos: [
+        'Observar una necesidad o problema.',
+        'Identificar una posible solución.',
+        'Investigar antes de asumir.',
+        'Dar un primer paso pequeño.',
+        'Observar los resultados y aprender.'
+      ]
+    },
+
+    {
+      titulo: 'Responsabilidad y toma de decisiones',
+      parrafos: [
+        'Emprender implica tomar decisiones y asumir sus consecuencias. Esto requiere comprender que no todas las decisiones producirán el resultado esperado.',
+        'La responsabilidad consiste en evaluar las opciones disponibles, actuar con información suficiente y aprender de los resultados.',
+        'Una mentalidad emprendedora evita depender exclusivamente de las circunstancias externas. Busca identificar qué puede hacerse con los recursos, conocimientos y oportunidades disponibles.'
+      ],
+      conceptos: [
+        {
+          nombre: 'Iniciativa',
+          significado:
+            'Capacidad de comenzar una acción sin esperar permanentemente a que otra persona la indique.',
+          ejemplo:
+            'Investigar una necesidad y proponer una posible solución.'
+        },
+        {
+          nombre: 'Responsabilidad',
+          significado:
+            'Disposición para asumir las decisiones tomadas y aprender de sus resultados.',
+          ejemplo:
+            'Revisar qué ocurrió después de una decisión y ajustar el siguiente paso.'
+        },
+        {
+          nombre: 'Oportunidad',
+          significado:
+            'Posibilidad de generar valor cuando existe una necesidad, problema o situación que puede ser atendida.',
+          ejemplo:
+            'Detectar que un grupo de personas necesita una solución que actualmente no encuentra.'
+        }
+      ]
+    },
+
+    {
+      titulo: 'Pensar en soluciones y generar valor',
+      parrafos: [
+        'Una oportunidad emprendedora suele aparecer cuando existe una necesidad, una dificultad o una situación que puede mejorar.',
+        'Por eso, una mentalidad emprendedora aprende a observar desde la perspectiva de las personas: qué necesitan, qué dificultades enfrentan y qué alternativas podrían ayudarlas.',
+        'Generar valor significa aportar una solución que resulte útil para alguien. La idea debe relacionarse con una necesidad real y no solamente con lo que nosotros queremos ofrecer.'
+      ],
+      puntos: [
+        '¿Qué problema existe?',
+        '¿A quién afecta?',
+        '¿Qué necesita esa persona?',
+        '¿Qué solución podría aportar?',
+        '¿Cómo puedo comprobar si realmente es útil?'
+      ],
+      destacado:
+        'Una buena idea puede convertirse en una oportunidad cuando responde de manera concreta a una necesidad.'
+    },
+
+    {
+      titulo: 'Aprender antes de crecer',
+      parrafos: [
+        'El crecimiento de un proyecto requiere aprendizaje. Antes de intentar hacerlo grande, es importante comprender si la propuesta funciona, quién la necesita y qué debe mejorarse.',
+        'Probar una idea en pequeña escala permite obtener información y reducir decisiones basadas únicamente en suposiciones.',
+        'El aprendizaje obtenido de cada prueba puede utilizarse para ajustar la propuesta, mejorar la experiencia y tomar decisiones más conscientes.'
+      ],
+      cierre:
+        'Crecer no consiste solamente en hacer más. También significa comprender mejor lo que se está construyendo.'
+    },
+
+    {
+      titulo: 'De la mentalidad a la acción',
+      parrafos: [
+        'La mentalidad emprendedora adquiere verdadero sentido cuando se transforma en comportamiento.',
+        'Observar, aprender, decidir, actuar y evaluar forman parte de un proceso continuo. No es necesario comenzar con un proyecto perfecto; es más importante comenzar con claridad sobre el siguiente paso.',
+        'Durante esta semana puedes elegir una necesidad concreta de tu entorno, investigarla y escribir una posible solución. El objetivo no es crear inmediatamente un negocio, sino practicar la capacidad de observar oportunidades y convertirlas en acciones.'
+      ],
+      destacado:
+        'Una idea se desarrolla cuando pasa de la imaginación a la observación, de la observación a la decisión y de la decisión a la acción.',
+      cierre:
+        'La mentalidad emprendedora se construye mediante práctica, aprendizaje, responsabilidad y acción consciente.'
+    }
+  ];
+
+ this.reflexiones = [
+  {
+    titulo: 'Una oportunidad',
+    pregunta:
+      '¿Qué necesidad o problema de tu entorno has observado recientemente?'
+  },
+  {
+    titulo: 'Una idea',
+    pregunta:
+      '¿Qué idea tienes actualmente que podrías convertir en una pequeña acción?'
+  },
+  {
+    titulo: 'Mi primer paso',
+    pregunta:
+      '¿Qué primer paso concreto podrías realizar esta semana para comprobar una idea?'
+  }
+];
+
+this.preguntas = [
+  {
+    texto:
+      '¿Qué caracteriza principalmente a una mentalidad emprendedora?',
+    opciones: [
+      'Esperar a tener todas las condiciones perfectas.',
+      'Identificar oportunidades, actuar y aprender de los resultados.',
+      'Evitar cualquier decisión que pueda producir errores.',
+      'Crear una empresa inmediatamente.'
+    ],
+    correcta: 1,
+    explicacion:
+      'Una mentalidad emprendedora implica identificar oportunidades, tomar iniciativa, actuar y aprender de los resultados.'
+  },
+  {
+    texto:
+      '¿Qué significa generar valor desde una perspectiva emprendedora?',
+    opciones: [
+      'Ofrecer algo sin analizar si alguien lo necesita.',
+      'Buscar únicamente obtener reconocimiento.',
+      'Aportar una solución útil frente a una necesidad o problema.',
+      'Copiar exactamente lo que hacen otros proyectos.'
+    ],
+    correcta: 2,
+    explicacion:
+      'Generar valor significa aportar una solución que responda de manera útil a una necesidad o problema real.'
+  },
+  {
+    texto:
+      '¿Por qué es útil probar una idea antes de intentar hacerla crecer?',
+    opciones: [
+      'Porque permite obtener información y aprender antes de tomar decisiones mayores.',
+      'Porque garantiza que el proyecto tendrá éxito.',
+      'Porque elimina completamente los riesgos.',
+      'Porque evita tener que escuchar a las personas.'
+    ],
+    correcta: 0,
+    explicacion:
+      'Probar una idea permite obtener información, comprobar supuestos y aprender antes de tomar decisiones de mayor alcance.'
+  }
+];
+
+this.respuestas = [];
+this.evaluacionEnviada = false;
+}
+
+private cargarLeccionModelosNegocio(): void {
+  this.titulo = 'Modelos de Negocio';
+  this.subtitulo = 'Comprender cómo se crea, entrega y sostiene el valor';
+  this.objetivo =
+    'Identificar los elementos de un modelo de negocio y comprender cómo se relacionan para desarrollar proyectos sostenibles.';
+
+  this.secciones = [
+    {
+      titulo: '1. ¿Qué es un modelo de negocio?',
+      parrafos: [
+        'Un modelo de negocio describe cómo una iniciativa crea valor para las personas, cómo lo entrega y de qué manera obtiene los recursos necesarios para mantenerse.',
+        'No se limita a vender un producto. También contempla a quién se sirve, qué necesidad se atiende, qué recursos se utilizan y cómo funciona la operación.'
+      ],
+      destacado:
+        'Un negocio no se define solamente por lo que vende, sino por la forma en que crea y entrega valor.',
+      conceptos: [
+        {
+          nombre: 'Propuesta de valor',
+          significado: 'Beneficio principal que una iniciativa ofrece a sus clientes.',
+          ejemplo: 'Una plataforma que facilita el aprendizaje de nuevas habilidades.'
+        },
+        {
+          nombre: 'Segmento de clientes',
+          significado: 'Grupo de personas al que se dirige una solución.',
+          ejemplo: 'Emprendedores que necesitan aprender a promocionar sus servicios.'
+        },
+        {
+          nombre: 'Fuentes de ingresos',
+          significado: 'Formas mediante las cuales el negocio recibe dinero.',
+          ejemplo: 'Venta de productos, suscripciones o prestación de servicios.'
+        }
+      ]
+    },
+    {
+      titulo: '2. Elementos fundamentales',
+      parrafos: [
+        'Para comprender un modelo de negocio es necesario observar sus componentes como partes de una misma estructura.',
+        'Los clientes, la propuesta de valor, los canales, las relaciones, los recursos, las actividades, los aliados, los costos y los ingresos deben guardar coherencia entre sí.'
+      ],
+      puntos: [
+        'Clientes: personas a las que se busca atender.',
+        'Canales: medios para comunicar, entregar y ofrecer la solución.',
+        'Recursos y actividades: elementos y tareas necesarios para operar.',
+        'Aliados: personas u organizaciones que contribuyen al funcionamiento.',
+        'Costos e ingresos: recursos que se utilizan y formas de sostenimiento.'
+      ],
+      cierre:
+        'Cuando los elementos están conectados, el negocio puede funcionar con mayor claridad y organización.'
+    },
+    {
+      titulo: '3. Tipos de modelos de negocio',
+      parrafos: [
+        'Existen diferentes formas de organizar una actividad económica. La elección depende de las necesidades del cliente, los recursos disponibles y la naturaleza de la solución.',
+        'Un mismo emprendimiento puede combinar distintos modelos, siempre que exista coherencia en su funcionamiento.'
+      ],
+      puntos: [
+        'Venta directa: comercialización de productos o servicios al cliente.',
+        'Suscripción: acceso continuo a un producto o servicio mediante pagos periódicos.',
+        'Intermediación: conexión entre personas que ofrecen y personas que necesitan algo.',
+        'Freemium: acceso básico gratuito con funciones o servicios adicionales de pago.',
+        'Licenciamiento: autorización para utilizar una marca, tecnología o contenido bajo determinadas condiciones.'
+      ]
+    },
+    {
+      titulo: '4. Validar antes de crecer',
+      parrafos: [
+        'Una idea no se convierte automáticamente en un negocio viable. Es necesario comprobar si existe una necesidad real y si las personas están dispuestas a utilizar o pagar por la solución.',
+        'La validación puede comenzar con conversaciones, pruebas pequeñas, prototipos y observación de resultados.',
+        'Aprender de la experiencia permite ajustar el modelo antes de invertir recursos importantes.'
+      ],
+      destacado:
+        'Primero comprende y valida; después organiza y escala.'
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Pensamiento estratégico',
+      pregunta:
+        '¿Qué necesidad concreta podría atender un negocio que te gustaría desarrollar y qué modelo permitiría hacerlo de manera sostenible?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Qué describe principalmente un modelo de negocio?',
+      opciones: [
+        'Únicamente el producto que se vende.',
+        'La forma en que se crea, entrega y sostiene el valor.',
+        'Solamente las estrategias de publicidad.',
+        'El nombre y la imagen de una empresa.'
+      ],
+      correcta: 1,
+      explicacion:
+        'Un modelo de negocio explica cómo funciona una iniciativa para crear y entregar valor y sostener sus operaciones.'
+    },
+    {
+      texto: '¿Qué representa una propuesta de valor?',
+      opciones: [
+        'El beneficio que se ofrece para atender una necesidad.',
+        'La lista de gastos mensuales.',
+        'El número de trabajadores.',
+        'El nombre comercial del negocio.'
+      ],
+      correcta: 0,
+      explicacion:
+        'La propuesta de valor expresa el beneficio que una solución ofrece a sus clientes.'
+    },
+    {
+      texto: '¿Para qué sirve validar una idea de negocio?',
+      opciones: [
+        'Para evitar hablar con los clientes.',
+        'Para garantizar ganancias inmediatas.',
+        'Para comprobar necesidades y obtener información antes de crecer.',
+        'Para eliminar todos los costos.'
+      ],
+      correcta: 2,
+      explicacion:
+        'La validación permite aprender de clientes potenciales y reducir decisiones basadas únicamente en suposiciones.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+private cargarLeccionPropuestaValor(): void {
+  this.titulo = 'Propuesta de Valor';
+  this.subtitulo = 'Diseñar soluciones que respondan a necesidades reales';
+  this.objetivo =
+    'Aprender a identificar necesidades, definir beneficios y comunicar con claridad el valor de un producto o servicio.';
+
+  this.secciones = [
+    {
+      titulo: '1. El valor comienza con una necesidad',
+      parrafos: [
+        'Una propuesta de valor parte de comprender a las personas. Antes de diseñar una solución, es necesario conocer sus problemas, expectativas, dificultades y objetivos.',
+        'Las ideas que parecen interesantes para quien emprende no siempre representan una prioridad para el cliente.',
+        'Escuchar, observar y hacer preguntas permite reconocer oportunidades reales.'
+      ],
+      destacado:
+        'No se trata de ofrecer lo que uno quiere vender, sino de comprender qué necesita resolver la persona.'
+    },
+    {
+      titulo: '2. Componentes de una propuesta de valor',
+      parrafos: [
+        'Una propuesta de valor clara identifica a quién se dirige, qué necesidad atiende, qué beneficio ofrece y por qué la solución puede resultar relevante.',
+        'La diferenciación puede surgir de la calidad, la facilidad de uso, la atención, la rapidez, la accesibilidad o la experiencia.'
+      ],
+      conceptos: [
+        {
+          nombre: 'Necesidad',
+          significado: 'Situación o problema que una persona busca resolver.',
+          ejemplo: 'Un pequeño negocio necesita organizar sus pedidos.'
+        },
+        {
+          nombre: 'Beneficio',
+          significado: 'Resultado positivo que la solución busca proporcionar.',
+          ejemplo: 'Reducir errores y ahorrar tiempo en la gestión de pedidos.'
+        },
+        {
+          nombre: 'Diferenciación',
+          significado: 'Característica que distingue una solución de otras alternativas.',
+          ejemplo: 'Ofrecer acompañamiento personalizado además de una herramienta digital.'
+        }
+      ]
+    },
+    {
+      titulo: '3. Comunicar el valor con claridad',
+      parrafos: [
+        'Una propuesta de valor debe poder explicarse de manera sencilla. El cliente necesita comprender qué se ofrece, para quién es y qué beneficio puede esperar.',
+        'Es importante evitar afirmaciones exageradas o promesas que no puedan demostrarse.',
+        'La comunicación debe corresponder con la experiencia real del producto o servicio.'
+      ],
+      puntos: [
+        'Identificar al cliente específico.',
+        'Explicar el problema que se atiende.',
+        'Describir el beneficio principal.',
+        'Mostrar qué hace diferente a la solución.',
+        'Respaldar las afirmaciones con información verificable.'
+      ],
+      cierre:
+        'La claridad genera comprensión; la coherencia entre lo que se comunica y lo que se entrega fortalece la confianza.'
+    },
+    {
+      titulo: '4. Probar y mejorar la propuesta',
+      parrafos: [
+        'Las propuestas de valor se desarrollan mediante aprendizaje continuo. Las conversaciones con clientes, las pruebas y la observación ayudan a descubrir qué aspectos funcionan y cuáles necesitan ajustes.',
+        'Una respuesta negativa también aporta información. Puede indicar que el problema no es prioritario, que el beneficio no está claro o que la solución necesita cambios.'
+      ],
+      destacado:
+        'Una propuesta de valor se construye con comprensión, pruebas y mejora continua.'
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Comprender para aportar',
+      pregunta:
+        '¿Qué problema de tu entorno podrías resolver y qué beneficio concreto ofrecerías a las personas que lo experimentan?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Cuál es el punto de partida de una propuesta de valor?',
+      opciones: [
+        'La preferencia personal de quien emprende.',
+        'La comprensión de una necesidad del cliente.',
+        'La elección de un logotipo.',
+        'La cantidad de publicaciones en redes sociales.'
+      ],
+      correcta: 1,
+      explicacion:
+        'Una propuesta de valor debe partir de necesidades y problemas que sean relevantes para las personas.'
+    },
+    {
+      texto: '¿Qué caracteriza una comunicación de valor clara?',
+      opciones: [
+        'Utilizar términos complicados.',
+        'Prometer resultados extraordinarios.',
+        'Explicar a quién se ayuda y qué beneficio se ofrece.',
+        'Evitar mencionar las características de la solución.'
+      ],
+      correcta: 2,
+      explicacion:
+        'La claridad permite que el cliente comprenda la solución, su público y sus beneficios.'
+    },
+    {
+      texto: '¿Qué permite probar una propuesta de valor?',
+      opciones: [
+        'Obtener información para mejorar la solución.',
+        'Garantizar que no habrá competencia.',
+        'Eliminar la necesidad de escuchar al cliente.',
+        'Asegurar ingresos sin importar el mercado.'
+      ],
+      correcta: 0,
+      explicacion:
+        'Las pruebas permiten aprender de la respuesta de los clientes y realizar ajustes fundamentados.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+private cargarLeccionVentasServicio(): void {
+  this.titulo = 'Ventas y Servicio';
+  this.subtitulo = 'Construir relaciones mediante confianza y atención';
+  this.objetivo =
+    'Comprender el proceso de venta, desarrollar una comunicación orientada al cliente y reconocer el servicio como parte de la experiencia.';
+
+  this.secciones = [
+    {
+      titulo: '1. La venta como proceso de comprensión',
+      parrafos: [
+        'Vender consiste en ayudar a una persona a evaluar si un producto o servicio responde a una necesidad. No se trata solamente de convencer, sino de comprender, informar y facilitar una decisión.',
+        'Una venta responsable requiere conocer lo que se ofrece, identificar las necesidades del cliente y explicar con honestidad las características, condiciones y limitaciones.'
+      ],
+      destacado:
+        'Una relación comercial sostenible se construye sobre la confianza, no sobre la presión.'
+    },
+    {
+      titulo: '2. Etapas de una venta',
+      parrafos: [
+        'El proceso comercial puede organizarse en varias etapas. Cada una ayuda a avanzar desde el primer contacto hasta la atención posterior.'
+      ],
+      puntos: [
+        'Preparación: conocer el producto, el público y el propósito del contacto.',
+        'Acercamiento: iniciar una conversación respetuosa.',
+        'Identificación de necesidades: escuchar y formular preguntas pertinentes.',
+        'Presentación: explicar cómo la solución puede responder a lo identificado.',
+        'Resolución de dudas: ofrecer información clara y atender objeciones.',
+        'Decisión: respetar la elección del cliente.',
+        'Seguimiento: mantener una atención adecuada después de la compra.'
+      ]
+    },
+    {
+      titulo: '3. Servicio y experiencia del cliente',
+      parrafos: [
+        'El servicio incluye todas las interacciones que una persona tiene con un negocio antes, durante y después de adquirir una solución.',
+        'La puntualidad, el respeto, la comunicación, el cumplimiento de acuerdos y la capacidad de resolver inconvenientes influyen en la experiencia.',
+        'Un buen servicio no significa aceptar cualquier exigencia. También implica establecer límites claros y actuar con responsabilidad.'
+      ],
+      conceptos: [
+        {
+          nombre: 'Escucha activa',
+          significado: 'Prestar atención para comprender lo que la otra persona comunica.',
+          ejemplo: 'Permitir que el cliente explique su dificultad antes de ofrecer una respuesta.'
+        },
+        {
+          nombre: 'Seguimiento',
+          significado: 'Dar continuidad a una relación o solicitud después del contacto inicial.',
+          ejemplo: 'Consultar si el producto entregado funciona según lo esperado.'
+        },
+        {
+          nombre: 'Fidelización',
+          significado: 'Fortalecer una relación para favorecer la continuidad basada en experiencias positivas.',
+          ejemplo: 'Ofrecer atención consistente y resolver oportunamente los problemas.'
+        }
+      ]
+    },
+    {
+      titulo: '4. Mejorar a partir de la experiencia',
+      parrafos: [
+        'Las preguntas, reclamos y comentarios de los clientes pueden revelar oportunidades para mejorar productos, procesos y comunicación.',
+        'Registrar situaciones recurrentes permite identificar causas y diseñar soluciones. La mejora del servicio requiere observar resultados y mantener una actitud de aprendizaje.'
+      ],
+      cierre:
+        'Cada interacción es una oportunidad para demostrar coherencia entre lo que el negocio promete y lo que realmente entrega.'
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Servicio con responsabilidad',
+      pregunta:
+        '¿Qué experiencia positiva recuerdas como cliente y qué podrías aplicar de ella en un proyecto propio?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Cuál es el propósito de una venta responsable?',
+      opciones: [
+        'Presionar al cliente para que compre.',
+        'Ayudar al cliente a evaluar una solución con información clara.',
+        'Ocultar las limitaciones del producto.',
+        'Cerrar la conversación lo más rápido posible.'
+      ],
+      correcta: 1,
+      explicacion:
+        'Una venta responsable facilita una decisión informada y respeta las necesidades y la autonomía del cliente.'
+    },
+    {
+      texto: '¿Qué práctica corresponde a la escucha activa?',
+      opciones: [
+        'Interrumpir para hablar de las características del producto.',
+        'Suponer lo que el cliente necesita.',
+        'Prestar atención y hacer preguntas para comprender la situación.',
+        'Evitar las preguntas difíciles.'
+      ],
+      correcta: 2,
+      explicacion:
+        'La escucha activa busca comprender antes de responder o presentar una solución.'
+    },
+    {
+      texto: '¿Por qué es importante el seguimiento después de una venta?',
+      opciones: [
+        'Porque permite atender dudas y conocer la experiencia del cliente.',
+        'Porque garantiza que todos volverán a comprar.',
+        'Porque reemplaza la calidad del producto.',
+        'Porque evita tener que resolver problemas.'
+      ],
+      correcta: 0,
+      explicacion:
+        'El seguimiento ayuda a atender necesidades posteriores y a detectar oportunidades de mejora.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+private cargarLeccionCreacionProyectos(): void {
+  this.titulo = 'Creación y Desarrollo de Proyectos';
+  this.subtitulo = 'Transformar ideas en acciones organizadas';
+  this.objetivo =
+    'Conocer las etapas fundamentales para planificar, ejecutar, evaluar y mejorar un proyecto de manera organizada.';
+
+  this.secciones = [
+    {
+      titulo: '1. De una idea a un proyecto',
+      parrafos: [
+        'Una idea expresa una posibilidad. Un proyecto organiza acciones, recursos y tiempos para alcanzar un resultado definido.',
+        'Para convertir una idea en proyecto es necesario comprender el problema, establecer un propósito y determinar qué resultado se busca conseguir.',
+        'La planificación no elimina la incertidumbre, pero ayuda a tomar decisiones con mayor claridad.'
+      ],
+      destacado:
+        'Una idea comienza a convertirse en proyecto cuando se transforma en objetivos y acciones concretas.'
+    },
+    {
+      titulo: '2. Planificación del proyecto',
+      parrafos: [
+        'Planificar significa definir el rumbo y organizar los elementos necesarios para avanzar. Un plan útil debe ser comprensible, realista y adaptable.',
+        'Los objetivos permiten orientar el trabajo. Las actividades describen qué se hará, los responsables indican quién participará y los plazos ayudan a organizar el tiempo.'
+      ],
+      puntos: [
+        'Definir el problema y el propósito.',
+        'Establecer objetivos específicos.',
+        'Identificar actividades y responsables.',
+        'Determinar recursos y presupuesto.',
+        'Organizar un cronograma.',
+        'Reconocer riesgos y posibles respuestas.',
+        'Definir indicadores para evaluar el avance.'
+      ]
+    },
+    {
+      titulo: '3. Ejecución y trabajo colaborativo',
+      parrafos: [
+        'La ejecución consiste en llevar a la práctica lo planificado. Durante esta etapa es importante coordinar tareas, comunicar avances y utilizar los recursos de manera responsable.',
+        'Los proyectos pueden requerir ajustes cuando aparecen dificultades o nueva información. Adaptar el plan no significa perder el propósito, sino encontrar formas viables de continuar.',
+        'La colaboración permite integrar capacidades, distribuir responsabilidades y aprender de diferentes perspectivas.'
+      ],
+      conceptos: [
+        {
+          nombre: 'Cronograma',
+          significado: 'Organización temporal de actividades y plazos.',
+          ejemplo: 'Distribuir las tareas de un lanzamiento durante cuatro semanas.'
+        },
+        {
+          nombre: 'Indicador',
+          significado: 'Dato o referencia que permite observar el avance o resultado.',
+          ejemplo: 'Porcentaje de actividades completadas según lo planificado.'
+        },
+        {
+          nombre: 'Riesgo',
+          significado: 'Situación incierta que puede afectar el desarrollo del proyecto.',
+          ejemplo: 'Un retraso en la entrega de materiales necesarios.'
+        }
+      ]
+    },
+    {
+      titulo: '4. Evaluación y mejora',
+      parrafos: [
+        'Evaluar un proyecto implica comparar los resultados obtenidos con los objetivos establecidos y analizar qué factores influyeron en el proceso.',
+        'La evaluación debe considerar tanto los logros como las dificultades. Reconocer errores permite aprender y tomar mejores decisiones en futuras iniciativas.',
+        'Un proyecto puede concluir, continuar o transformarse según sus resultados, los recursos disponibles y las necesidades que busca atender.'
+      ],
+      cierre:
+        'La disciplina permite avanzar; la evaluación aporta aprendizaje; la mejora continua fortalece los proyectos.'
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'De la intención a la acción',
+      pregunta:
+        '¿Qué proyecto te gustaría desarrollar y cuál sería la primera acción concreta que podrías realizar para comenzar?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Qué convierte una idea en un proyecto?',
+      opciones: [
+        'Hablar de ella con frecuencia.',
+        'Organizar objetivos, acciones y recursos para lograr un resultado.',
+        'Esperar a tener todos los recursos disponibles.',
+        'Crear primero una imagen publicitaria.'
+      ],
+      correcta: 1,
+      explicacion:
+        'Un proyecto estructura una idea mediante objetivos, actividades, recursos y un resultado esperado.'
+    },
+    {
+      texto: '¿Para qué sirve un cronograma?',
+      opciones: [
+        'Para organizar actividades y plazos.',
+        'Para garantizar que no existan dificultades.',
+        'Para reemplazar los objetivos.',
+        'Para calcular únicamente las ganancias.'
+      ],
+      correcta: 0,
+      explicacion:
+        'El cronograma permite organizar el tiempo y visualizar cuándo deben realizarse las actividades.'
+    },
+    {
+      texto: '¿Qué debe hacerse al evaluar un proyecto?',
+      opciones: [
+        'Considerar solamente los resultados positivos.',
+        'Evitar revisar los errores.',
+        'Comparar los resultados con los objetivos y aprender del proceso.',
+        'Cambiar todos los objetivos al finalizar.'
+      ],
+      correcta: 2,
+      explicacion:
+        'La evaluación analiza los resultados y las dificultades para obtener aprendizajes y orientar mejoras.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
 get puntuacion(): number {
   return this.calificacion;
 }
@@ -2835,9 +3501,9 @@ repetirEvaluacion(): void {
 completarLeccion(): void {
   const clave = this.clavesLecciones[this.leccionActual];
 
-  if (clave) {
-    localStorage.setItem(clave, 'completada');
-    this.leccionCompletada = true;
-  }
+  if (!clave) return;
+
+  localStorage.setItem(clave, 'completada');
+  this.leccionCompletada = true;
 }
 }

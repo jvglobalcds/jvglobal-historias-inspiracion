@@ -142,12 +142,35 @@
   <span class="tema-disponible">Ver lección →</span>
 </a>
 
-<!-- OTRAS ÁREAS -->
+<!-- EMPRENDIMIENTO Y NEGOCIOS -->
+<ng-container
+  *ngIf="areaActual.titulo === 'Emprendimiento y negocios'"
+>
+  <a
+    [routerLink]="[
+      '/ensenanza-cds/emprendimiento-y-negocios',
+      [
+        'mentalidad-emprendedora',
+        'modelos-de-negocio',
+        'propuesta-de-valor',
+        'ventas-y-servicio',
+        'creacion-y-desarrollo-de-proyectos'
+      ][i]
+    ]"
+    class="tema-enlace"
+  >
+    <span>{{ tema }}</span>
+    <span class="tema-disponible">Ver lección →</span>
+  </a>
+</ng-container>
+
+<!-- DEMÁS ÁREAS SIN NAVEGACIÓN CONFIGURADA -->
 <ng-container
   *ngIf="
     areaActual.titulo !== 'Claridad' &&
     areaActual.titulo !== 'Disciplina' &&
-    areaActual.titulo !== 'Superación'
+    areaActual.titulo !== 'Superación' &&
+    areaActual.titulo !== 'Emprendimiento y negocios'
   "
 >
   <h3>{{ tema }}</h3>
