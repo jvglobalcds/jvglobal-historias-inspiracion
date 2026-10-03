@@ -1,0 +1,339 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background: #071323;
+  color: #e9edf3;
+}
+
+.leccion-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at top, #142640 0%, #071323 55%);
+}
+
+.leccion-header {
+  max-width: 1000px;
+  margin: auto;
+  padding: 45px 24px 65px;
+  text-align: center;
+}
+
+.volver {
+  display: block;
+  width: fit-content;
+  color: #d5b56b;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  margin-bottom: 55px;
+}
+
+.marca {
+  color: #d5b56b;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  margin-bottom: 24px;
+}
+
+.etiqueta,
+.numero-seccion {
+  color: #c7a45a;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.leccion-header h1 {
+  max-width: 800px;
+  margin: 18px auto;
+  color: #f3f0e8;
+  font-size: clamp(32px, 5vw, 56px);
+  line-height: 1.15;
+}
+
+.linea-dorada {
+  width: 90px;
+  height: 2px;
+  margin: 28px auto;
+  background: #b9964c;
+}
+
+.subtitulo {
+  max-width: 700px;
+  margin: auto;
+  color: #c1cad5;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.filosofia {
+  margin-top: 30px;
+  color: #d5b56b;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+}
+
+.contenido {
+  max-width: 850px;
+  margin: auto;
+  padding: 0 24px 80px;
+}
+
+.objetivo,
+.ejercicio,
+.evaluacion,
+.conclusion {
+  padding: 30px;
+  margin-bottom: 35px;
+  border: 1px solid rgba(201, 169, 99, 0.22);
+  border-radius: 14px;
+  background: rgba(15, 31, 52, 0.75);
+}
+
+.objetivo p,
+.seccion p,
+.ejercicio p,
+.conclusion p {
+  color: #cbd3de;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.seccion {
+  margin-bottom: 55px;
+}
+
+.seccion h2,
+.ejercicio h2,
+.evaluacion h2,
+.conclusion h2 {
+  margin: 14px 0 22px;
+  color: #f1e8d4;
+  font-size: 25px;
+  line-height: 1.35;
+}
+
+.seccion ul {
+  padding-left: 22px;
+  color: #cbd3de;
+  line-height: 1.9;
+}
+
+.seccion li {
+  margin-bottom: 12px;
+}
+
+blockquote {
+  margin: 28px 0;
+  padding: 18px 22px;
+  border-left: 3px solid #c7a45a;
+  background: rgba(201, 169, 99, 0.07);
+  color: #e5d4ad;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.cierre {
+  color: #e0d3b7 !important;
+}
+
+.conceptos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 25px 0;
+}
+
+.concepto {
+  padding: 20px;
+  border: 1px solid rgba(201, 169, 99, 0.2);
+  border-radius: 10px;
+  background: #0b1b30;
+}
+
+.concepto h3 {
+  color: #d5b56b;
+}
+
+.concepto p,
+.concepto small {
+  color: #cbd3de;
+  line-height: 1.7;
+}
+
+.pregunta-reflexion {
+  margin-top: 28px;
+}
+
+.pregunta-reflexion label {
+  display: block;
+  color: #e8d4a5;
+  font-weight: 700;
+}
+
+.pregunta-reflexion textarea {
+  box-sizing: border-box;
+  width: 100%;
+  resize: vertical;
+  padding: 14px;
+  border: 1px solid #34445a;
+  border-radius: 8px;
+  background: #081629;
+  color: #fff;
+  font: inherit;
+}
+
+.pregunta-evaluacion {
+  padding: 24px 0;
+  border-bottom: 1px solid #2c3a4c;
+}
+
+.pregunta-evaluacion h3 {
+  color: #f0e5cd;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.opcion {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin: 12px 0;
+  padding: 14px;
+  border: 1px solid #2d3d52;
+  border-radius: 8px;
+  color: #cbd3de;
+  cursor: pointer;
+  line-height: 1.6;
+}
+
+.opcion.seleccionada {
+  border-color: #c7a45a;
+  background: rgba(201, 169, 99, 0.08);
+}
+
+.opcion input {
+  margin-top: 5px;
+  accent-color: #c7a45a;
+}
+
+.explicacion {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 8px;
+  background: #102b29;
+  color: #c9e6d7;
+  line-height: 1.6;
+}
+
+.explicacion p {
+  margin-bottom: 0;
+}
+
+.boton-evaluar {
+  margin-top: 25px;
+  padding: 14px 22px;
+  border: 1px solid #c7a45a;
+  border-radius: 7px;
+  background: #b18e48;
+  color: #071323;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.boton-evaluar:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.resultado {
+  margin-top: 25px;
+  color: #e9d5a7;
+}
+
+.volver-final {
+  display: block;
+  width: fit-content;
+  margin: 45px auto 0;
+  padding: 14px 24px;
+  border: 1px solid #c7a45a;
+  border-radius: 7px;
+  color: #e4c77f;
+  text-decoration: none;
+}
+
+@media (max-width: 700px) {
+  .leccion-header {
+    padding: 30px 20px 45px;
+  }
+
+  .volver {
+    margin-bottom: 40px;
+  }
+
+  .contenido {
+    padding: 0 16px 55px;
+  }
+
+  .objetivo,
+  .ejercicio,
+  .evaluacion,
+  .conclusion {
+    padding: 22px 18px;
+  }
+
+  .conceptos {
+    grid-template-columns: 1fr;
+  }
+
+  .seccion h2,
+  .ejercicio h2,
+  .evaluacion h2,
+  .conclusion h2 {
+    font-size: 22px;
+  }
+}
+.completar-leccion {
+  margin: 40px 0;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid rgba(201, 169, 99, 0.25);
+  border-radius: 14px;
+  background: rgba(15, 31, 52, 0.75);
+}
+
+.completar-leccion h2 {
+  margin: 14px 0;
+  color: #f1e8d4;
+}
+
+.completar-leccion p {
+  color: #cbd3de;
+  line-height: 1.7;
+}
+
+.boton-completar {
+  margin-top: 20px;
+  padding: 14px 24px;
+  border: 1px solid #c7a45a;
+  border-radius: 7px;
+  background: #b18e48;
+  color: #071323;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.boton-completar:hover {
+  background: #d0ad5d;
+}
+
+.mensaje-completada {
+  margin-top: 20px;
+  padding: 16px;
+  border: 1px solid rgba(199, 164, 90, 0.4);
+  border-radius: 8px;
+  color: #e5d4a6;
+  background: rgba(199, 164, 90, 0.08);
+  font-weight: 700;
+}

@@ -1,0 +1,225 @@
+
+<main class="area-page">
+
+  <!-- ENCABEZADO -->
+
+  <header class="area-header">
+
+    <a routerLink="/ensenanza-cds" class="volver">
+      ← ENSEÑANZA CDS
+    </a>
+
+    <div class="marca">
+      JV GLOBAL
+    </div>
+
+    <span class="etiqueta">
+      FORMACIÓN Y CONOCIMIENTO
+    </span>
+
+    <h1>{{ areaActual.titulo }}</h1>
+
+    <div class="linea-dorada"></div>
+
+    <p class="descripcion">
+      {{ areaActual.descripcion }}
+    </p>
+
+    <div class="filosofia">
+      Claridad · Disciplina · Superación
+    </div>
+
+  </header>
+
+
+  <!-- CONTENIDO -->
+
+  <section class="contenido-area">
+
+ <div class="introduccion">
+  <span>RUTA DE APRENDIZAJE</span>
+
+  <h2>Explora los temas de esta área</h2>
+
+  <p>
+    Cada tema representa una oportunidad para adquirir conocimientos,
+    reflexionar y llevar lo aprendido a la práctica.
+  </p>
+
+  <div class="progreso-area">
+    <div class="progreso-texto">
+      <span>PROGRESO</span>
+      <strong>{{ leccionesCompletadas }} / {{ totalLecciones }}</strong>
+    </div>
+
+    <div class="barra-progreso">
+      <div
+        class="barra-progreso-actual"
+        [style.width.%]="
+          totalLecciones > 0
+            ? (leccionesCompletadas / totalLecciones) * 100
+            : 0
+        "
+      ></div>
+    </div>
+
+    <p class="progreso-descripcion">
+      {{ leccionesCompletadas }} de {{ totalLecciones }} lecciones completadas
+    </p>
+  </div>
+</div>
+
+
+    <!-- TEMAS -->
+
+    <div class="lista-temas">
+
+      <article
+        class="tema"
+        *ngFor="let tema of areaActual.temas; let i = index"
+      >
+
+        <span class="numero">
+          {{ (i + 1).toString().padStart(2, '0') }}
+        </span>
+
+<div class="tema-contenido">
+
+<a
+  *ngIf="areaActual.titulo === 'Claridad' && i === 0"
+  routerLink="/ensenanza-cds/claridad/autoconocimiento-y-proposito"
+  class="tema-enlace"
+>
+  <span>{{ tema }}</span>
+
+  <span
+    *ngIf="leccionesCompletadas > 0"
+    class="tema-completado"
+  >
+    ✓ Completada
+  </span>
+
+  <span
+    *ngIf="leccionesCompletadas === 0"
+    class="tema-disponible"
+  >
+    Ver lección →
+  </span>
+</a>
+
+<a
+  *ngIf="areaActual.titulo === 'Claridad' && i === 1"
+  routerLink="/ensenanza-cds/claridad/vision-personal-y-objetivos"
+  class="tema-enlace"
+>
+  <span>{{ tema }}</span>
+
+  <span
+    *ngIf="leccionesCompletadas > 1"
+    class="tema-completado"
+  >
+    ✓ Completada
+  </span>
+
+  <span
+    *ngIf="leccionesCompletadas <= 1"
+    class="tema-disponible"
+  >
+    Ver lección →
+  </span>
+</a>
+
+<a
+  *ngIf="areaActual.titulo === 'Claridad' && i === 2"
+  routerLink="/ensenanza-cds/claridad/pensamiento-consciente"
+  class="tema-enlace"
+>
+  <span>{{ tema }}</span>
+
+  <span
+    *ngIf="leccionesCompletadas > 2"
+    class="tema-completado"
+  >
+    ✓ Completada
+  </span>
+
+  <span
+    *ngIf="leccionesCompletadas <= 2"
+    class="tema-disponible"
+  >
+    Ver lección →
+  </span>
+</a>
+
+<a
+  *ngIf="areaActual.titulo === 'Claridad' && i === 3"
+  routerLink="/ensenanza-cds/claridad/toma-de-decisiones"
+  class="tema-enlace"
+>
+  <span>{{ tema }}</span>
+
+  <span
+    *ngIf="leccionesCompletadas > 3"
+    class="tema-completado"
+  >
+    ✓ Completada
+  </span>
+
+  <span
+    *ngIf="leccionesCompletadas <= 3"
+    class="tema-disponible"
+  >
+    Ver lección →
+  </span>
+</a>
+
+<a
+  *ngIf="areaActual.titulo === 'Claridad' && i === 4"
+  routerLink="/ensenanza-cds/claridad/planificacion-y-direccion"
+  class="tema-enlace"
+>
+  <span>{{ tema }}</span>
+
+  <span
+    *ngIf="leccionesCompletadas > 4"
+    class="tema-completado"
+  >
+    ✓ Completada
+  </span>
+
+  <span
+    *ngIf="leccionesCompletadas <= 4"
+    class="tema-disponible"
+  >
+    Ver lección →
+  </span>
+</a>
+
+<ng-container
+  *ngIf="areaActual.titulo !== 'Claridad' || (i !== 0 && i !== 1 && i !== 2 && i !== 3 && i !== 4)"
+>
+  <ng-container *ngTemplateOutlet="temaNormal"></ng-container>
+</ng-container>
+
+<ng-template #temaNormal>
+  <h3>{{ tema }}</h3>
+  <p>Contenido formativo en preparación.</p>
+</ng-template>
+
+</div>
+
+<span class="indicador">
+  →
+</span>
+
+</article>
+
+</div>
+
+<a routerLink="/ensenanza-cds" class="volver-final">
+  Volver a todas las áreas
+</a>
+
+</section>
+
+</main>

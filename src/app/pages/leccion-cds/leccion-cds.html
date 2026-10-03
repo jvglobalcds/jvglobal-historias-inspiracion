@@ -1,0 +1,209 @@
+<main class="leccion-page">
+
+  <header class="leccion-header">
+    <a routerLink="/ensenanza-cds/claridad" class="volver">
+      ← VOLVER A CLARIDAD
+    </a>
+
+    <div class="marca">JV GLOBAL</div>
+    <span class="etiqueta">ENSEÑANZA CDS · CLARIDAD</span>
+
+    <h1>{{ titulo }}</h1>
+
+    <div class="linea-dorada"></div>
+
+    <p class="subtitulo">{{ subtitulo }}</p>
+
+    <div class="filosofia">
+      Claridad · Disciplina · Superación
+    </div>
+  </header>
+
+  <section class="contenido">
+
+    <article class="objetivo">
+      <span class="numero-seccion">OBJETIVO DE APRENDIZAJE</span>
+      <p>{{ objetivo }}</p>
+    </article>
+
+    <article
+      class="seccion"
+      *ngFor="let seccion of secciones; let i = index"
+    >
+      <span class="numero-seccion">
+        {{ (i + 1).toString().padStart(2, '0') }}
+      </span>
+
+      <h2>{{ seccion.titulo }}</h2>
+
+      <p *ngFor="let parrafo of seccion.parrafos">
+        {{ parrafo }}
+      </p>
+
+      <ul *ngIf="seccion.puntos">
+        <li *ngFor="let punto of seccion.puntos">
+          {{ punto }}
+        </li>
+      </ul>
+
+      <div class="conceptos" *ngIf="seccion.conceptos">
+        <article
+          class="concepto"
+          *ngFor="let concepto of seccion.conceptos"
+        >
+          <h3>{{ concepto.nombre }}</h3>
+          <p>{{ concepto.significado }}</p>
+          <small>Ejemplo: {{ concepto.ejemplo }}</small>
+        </article>
+      </div>
+
+      <blockquote *ngIf="seccion.destacado">
+        {{ seccion.destacado }}
+      </blockquote>
+
+      <p class="cierre" *ngIf="seccion.cierre">
+        {{ seccion.cierre }}
+      </p>
+    </article>
+
+    <section class="ejercicio">
+      <span class="numero-seccion">ACTIVIDAD PRÁCTICA</span>
+      <h2>Mi mapa personal</h2>
+
+      <p>
+        Dedica entre 15 y 20 minutos a responder con sinceridad.
+        Puedes escribir tus respuestas en un cuaderno.
+      </p>
+
+      <div
+        class="pregunta-reflexion"
+        *ngFor="let reflexion of reflexiones; let i = index"
+      >
+        <label [for]="'reflexion-' + i">
+          {{ i + 1 }}. {{ reflexion.titulo }}
+        </label>
+        <p>{{ reflexion.pregunta }}</p>
+        <textarea
+          [id]="'reflexion-' + i"
+          rows="4"
+          placeholder="Escribe tu reflexión..."
+        ></textarea>
+      </div>
+    </section>
+
+    <section class="evaluacion">
+      <span class="numero-seccion">EVALUACIÓN</span>
+      <h2>Comprueba lo aprendido</h2>
+
+      <article
+        class="pregunta-evaluacion"
+        *ngFor="let pregunta of preguntas; let i = index"
+      >
+        <h3>{{ i + 1 }}. {{ pregunta.texto }}</h3>
+
+        <label
+          class="opcion"
+          *ngFor="let opcion of pregunta.opciones; let j = index"
+          [class.seleccionada]="respuestas[i] === j"
+        >
+          <input
+            type="radio"
+            [name]="'pregunta-' + i"
+            [checked]="respuestas[i] === j"
+            [disabled]="evaluacionEnviada"
+            (change)="seleccionarRespuesta(i, j)"
+          >
+          <span>{{ opcion }}</span>
+        </label>
+
+        <div
+          class="explicacion"
+          *ngIf="evaluacionEnviada"
+        >
+          <strong>
+            {{ respuestas[i] === pregunta.correcta
+              ? 'Respuesta correcta'
+              : 'Respuesta correcta: ' + pregunta.opciones[pregunta.correcta]
+            }}
+          </strong>
+          <p>{{ pregunta.explicacion }}</p>
+        </div>
+      </article>
+
+      <button
+        *ngIf="!evaluacionEnviada"
+        class="boton-evaluar"
+        [disabled]="respuestas.length !== preguntas.length ||
+                    respuestas.some(r => r === undefined)"
+        (click)="comprobarEvaluacion()"
+      >
+        Comprobar respuestas
+      </button>
+
+      <div class="resultado" *ngIf="evaluacionEnviada">
+        <h3>Resultado: {{ puntuacion }} de {{ preguntas.length }}</h3>
+        <button class="boton-evaluar" (click)="repetirEvaluacion()">
+          Repetir evaluación
+        </button>
+      </div>
+    </section>
+
+    <section class="conclusion">
+      <span class="numero-seccion">CONCLUSIÓN</span>
+      <h2>La claridad como punto de partida</h2>
+
+      <p>
+        Conocerte es un proceso que requiere honestidad, paciencia
+        y disposición para aprender. No significa definir cada
+        aspecto de tu futuro, sino comprender mejor tu presente
+        y construir una dirección coherente con lo que consideras importante.
+      </p>
+
+      <p>
+        Cuando reconoces tus valores, capacidades, motivaciones y
+        oportunidades de mejora, puedes establecer metas más conscientes
+        y asumir mayor responsabilidad sobre tus decisiones.
+      </p>
+
+      <blockquote>
+        No necesitas tener toda tu vida resuelta para comenzar a avanzar.
+        Necesitas la honestidad de reconocer dónde estás y la claridad
+        suficiente para elegir tu próximo paso.
+      </blockquote>
+    </section>
+
+    <section class="completar-leccion">
+
+  <span class="numero-seccion">PROGRESO</span>
+
+  <h2>
+    {{ leccionCompletada
+      ? 'Lección completada'
+      : '¿Terminaste esta lección?' }}
+  </h2>
+
+  <p *ngIf="!leccionCompletada">
+    Cuando hayas leído el contenido, realizado la actividad y
+    completado la evaluación, puedes marcar esta lección como terminada.
+  </p>
+
+  <div *ngIf="leccionCompletada" class="mensaje-completada">
+    ✓ Autoconocimiento y propósito completada
+  </div>
+
+  <button
+    *ngIf="!leccionCompletada"
+    class="boton-completar"
+    (click)="completarLeccion()"
+  >
+    Marcar lección como completada
+  </button>
+
+</section>
+
+    <a routerLink="/ensenanza-cds/claridad" class="volver-final">
+      Volver al área Claridad
+    </a>
+
+  </section>
+</main>

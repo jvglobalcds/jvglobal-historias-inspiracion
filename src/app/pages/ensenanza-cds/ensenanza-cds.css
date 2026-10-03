@@ -1,0 +1,405 @@
+
+/* =========================================
+   ENSEÑANZA CDS
+   JV GLOBAL
+========================================= */
+
+:host {
+  display: block;
+  min-height: 100vh;
+  color: #e9e7e1;
+  background: #071321;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+.indice-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      ellipse at top,
+      rgba(32, 55, 79, 0.38),
+      transparent 55%
+    ),
+    #071321;
+}
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.indice-header {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 38px 24px 65px;
+  text-align: center;
+}
+
+.volver-inicio {
+  display: inline-block;
+  color: #c5a568;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  transition: color 0.3s ease;
+}
+
+.volver-inicio:hover {
+  color: #e7d2a4;
+}
+
+.titulo-biblioteca {
+  margin-top: 65px;
+}
+
+.titulo-biblioteca span {
+  display: block;
+  margin-bottom: 16px;
+  color: #b99b60;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+
+.titulo-biblioteca h1 {
+  margin: 0;
+  color: #f2eee5;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(30px, 5vw, 54px);
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+.indice-header > p {
+  max-width: 680px;
+  margin: 25px auto 18px;
+  color: #aeb8c3;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.filosofia-cds {
+  margin-top: 24px;
+  color: #c5a568;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+/* =========================================
+   CONTENIDO PRINCIPAL
+========================================= */
+
+.indice-contenido {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 24px 90px;
+}
+
+/* =========================================
+   BUSCADOR
+========================================= */
+
+.buscador-acceso {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 25px 28px;
+  border: 1px solid rgba(197, 165, 104, 0.25);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.025);
+  color: #f2eee5;
+  text-decoration: none;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.buscador-acceso:hover {
+  background: rgba(197, 165, 104, 0.07);
+  border-color: rgba(197, 165, 104, 0.6);
+  transform: translateY(-2px);
+}
+
+.buscador-icono {
+  color: #c5a568;
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.buscador-acceso > div {
+  flex: 1;
+}
+
+.buscador-acceso strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #d6bd8b;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+}
+
+.buscador-acceso small {
+  display: block;
+  color: #aeb8c3;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.flecha {
+  color: #c5a568;
+  font-size: 22px;
+  transition: transform 0.3s ease;
+}
+
+.buscador-acceso:hover .flecha {
+  transform: translateX(5px);
+}
+
+/* =========================================
+   SECCIONES
+========================================= */
+
+.categorias-seccion {
+  margin-top: 75px;
+}
+
+.seccion-heading {
+  margin-bottom: 25px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(197, 165, 104, 0.2);
+}
+
+.seccion-heading span {
+  display: block;
+  margin-bottom: 10px;
+  color: #b99b60;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+
+.seccion-heading h2 {
+  margin: 0;
+  color: #f2eee5;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+/* =========================================
+   LISTA DE CATEGORÍAS
+========================================= */
+
+.categorias-lista {
+  display: flex;
+  flex-direction: column;
+}
+
+.categoria-item {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 27px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.075);
+  color: inherit;
+  text-decoration: none;
+  transition:
+    background 0.3s ease,
+    padding 0.3s ease;
+}
+
+.categoria-item:hover {
+  padding-left: 20px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.numero {
+  flex: 0 0 45px;
+  color: #b99b60;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.categoria-info {
+  flex: 1;
+}
+
+.categoria-info h3 {
+  margin: 0 0 10px;
+  color: #e8e3d9;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.3px;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+.categoria-item:hover .categoria-info h3 {
+  color: #d6bd8b;
+}
+
+.categoria-info p {
+  max-width: 700px;
+  margin: 0;
+  color: #9ba8b5;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.categoria-flecha {
+  flex: 0 0 25px;
+  color: #b99b60;
+  font-size: 21px;
+  transition: transform 0.3s ease;
+}
+
+.categoria-item:hover .categoria-flecha {
+  transform: translateX(5px);
+}
+
+/* =========================================
+   ACCESIBILIDAD
+========================================= */
+
+.volver-inicio:focus-visible,
+.buscador-acceso:focus-visible,
+.categoria-item:focus-visible {
+  outline: 2px solid #d6bd8b;
+  outline-offset: 5px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+  .indice-header {
+    padding: 30px 22px 50px;
+  }
+
+  .titulo-biblioteca {
+    margin-top: 52px;
+  }
+
+  .titulo-biblioteca span {
+    letter-spacing: 3px;
+  }
+
+  .indice-header > p {
+    font-size: 15px;
+  }
+
+  .indice-contenido {
+    padding: 0 22px 65px;
+  }
+
+  .categorias-seccion {
+    margin-top: 58px;
+  }
+
+  .categoria-item {
+    gap: 18px;
+    padding: 24px 8px;
+  }
+
+}
+
+/* =========================================
+   MÓVIL
+========================================= */
+
+@media (max-width: 480px) {
+
+  .indice-header {
+    padding: 25px 18px 42px;
+  }
+
+  .titulo-biblioteca {
+    margin-top: 45px;
+  }
+
+  .titulo-biblioteca h1 {
+    font-size: 31px;
+    letter-spacing: 1px;
+  }
+
+  .titulo-biblioteca span {
+    font-size: 9px;
+    letter-spacing: 2.5px;
+  }
+
+  .indice-header > p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .filosofia-cds {
+    font-size: 10px;
+    letter-spacing: 1.8px;
+  }
+
+  .indice-contenido {
+    padding: 0 17px 55px;
+  }
+
+  .buscador-acceso {
+    gap: 14px;
+    padding: 20px 16px;
+  }
+
+  .buscador-icono {
+    font-size: 29px;
+  }
+
+  .buscador-acceso strong {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  .buscador-acceso small {
+    font-size: 12px;
+  }
+
+  .categorias-seccion {
+    margin-top: 48px;
+  }
+
+  .seccion-heading h2 {
+    font-size: 21px;
+  }
+
+  .categoria-item {
+    gap: 13px;
+    padding: 22px 4px;
+  }
+
+  .numero {
+    flex-basis: 30px;
+    font-size: 19px;
+  }
+
+  .categoria-info h3 {
+    font-size: 12px;
+    letter-spacing: 0.7px;
+  }
+
+  .categoria-info p {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .categoria-flecha {
+    flex-basis: 17px;
+    font-size: 18px;
+  }
+
+}
