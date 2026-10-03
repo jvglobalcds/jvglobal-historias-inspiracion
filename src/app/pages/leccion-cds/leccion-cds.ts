@@ -215,7 +215,12 @@ export class LeccionCds implements OnInit {
     'organizacion-personal': 'jv-leccion-organizacion-personal',
     'gestion-del-tiempo': 'jv-leccion-gestion-del-tiempo',
     'compromiso-y-responsabilidad': 'jv-leccion-compromiso-y-responsabilidad',
-    'ejecucion-y-seguimiento': 'jv-leccion-ejecucion-y-seguimiento'
+    'ejecucion-y-seguimiento': 'jv-leccion-ejecucion-y-seguimiento',
+    'resiliencia': 'jv-leccion-resiliencia',
+    'aprendizaje-de-los-errores': 'jv-leccion-aprendizaje-errores',
+    'gestion-de-desafios': 'jv-leccion-gestion-desafios',
+    'desarrollo-del-potencial': 'jv-leccion-desarrollo-potencial',
+    'adaptacion-y-mejora-continua': 'jv-leccion-adaptacion-mejora-continua',
   };
 
   private readonly contenidoBase = {
@@ -275,6 +280,26 @@ export class LeccionCds implements OnInit {
         case 'ejecucion-y-seguimiento':
           this.cargarLeccionEjecucion();
           break;
+
+        case 'resiliencia':
+          this.cargarLeccionResiliencia();
+          break;
+
+         case 'aprendizaje-de-los-errores':
+           this.cargarLeccionAprendizajeErrores();
+           break;
+
+           case 'gestion-de-desafios':
+           this.cargarLeccionGestionDesafios();
+           break;
+
+           case 'desarrollo-del-potencial':
+           this.cargarLeccionDesarrolloPotencial();
+           break;
+
+           case 'adaptacion-y-mejora-continua':
+           this.cargarLeccionAdaptacionMejora();
+           break;
 
         default:
           this.leccionActual = 'autoconocimiento-y-proposito';
@@ -1949,6 +1974,851 @@ private cargarLeccionEjecucion(): void {
     }
   ];
 }
+
+  private cargarLeccionResiliencia(): void {
+    this.titulo = 'Resiliencia';
+
+    this.subtitulo =
+      'Desarrollar la capacidad de afrontar dificultades, aprender de las experiencias y continuar avanzando con mayor claridad.';
+
+    this.objetivo =
+      'Comprender qué es la resiliencia, reconocer cómo puede desarrollarse y aprender a responder de manera consciente ante las dificultades y los cambios.';
+
+    this.secciones = [
+      {
+        titulo: 'Comprender la resiliencia',
+        parrafos: [
+          'La vida presenta situaciones que no siempre podemos controlar: cambios inesperados, pérdidas, dificultades, errores, frustraciones o períodos de incertidumbre.',
+          'La resiliencia es la capacidad de afrontar estas experiencias, adaptarse a las circunstancias y continuar avanzando sin negar lo que está ocurriendo.',
+          'Ser resiliente no significa evitar las dificultades ni permanecer siempre fuerte. Significa desarrollar recursos para responder ante ellas y aprender de la experiencia.'
+        ],
+        destacado:
+          'La resiliencia no elimina las dificultades; fortalece nuestra capacidad para atravesarlas y seguir avanzando.'
+      },
+      {
+        titulo: 'Lo que sí podemos controlar',
+        parrafos: [
+          'Ante una situación difícil, es importante diferenciar aquello que podemos controlar de aquello que no depende directamente de nosotros.',
+          'No siempre podemos cambiar una circunstancia, pero podemos trabajar sobre nuestra manera de responder, las decisiones que tomamos y las acciones que realizamos.'
+        ],
+        puntos: [
+          'La actitud con la que enfrentamos una situación.',
+          'Las decisiones que tomamos.',
+          'Las acciones que podemos realizar.',
+          'La manera en que buscamos información o apoyo.',
+          'La disposición para aprender de la experiencia.'
+        ],
+        cierre:
+          'La claridad aumenta cuando dejamos de concentrarnos únicamente en lo que no podemos cambiar y dirigimos nuestra atención hacia lo que sí podemos hacer.'
+      },
+      {
+        titulo: 'Aprender de las dificultades',
+        parrafos: [
+          'Una dificultad puede convertirse en una experiencia de aprendizaje cuando analizamos lo ocurrido y buscamos comprender qué podemos hacer diferente en el futuro.',
+          'Esto no significa justificar una situación negativa ni asumir que toda dificultad tiene un resultado positivo inmediato. Significa utilizar la experiencia como una fuente de información para continuar desarrollándonos.'
+        ],
+        puntos: [
+          'Reconocer lo ocurrido.',
+          'Identificar qué estuvo bajo nuestro control.',
+          'Observar qué decisiones produjeron determinados resultados.',
+          'Extraer aprendizajes.',
+          'Definir una respuesta diferente cuando sea necesario.'
+        ],
+        cierre:
+          'Aprender de una experiencia permite convertir información del pasado en mayor claridad para las decisiones futuras.'
+      },
+      {
+        titulo: 'Recursos que fortalecen la resiliencia',
+        parrafos: [
+          'La resiliencia puede fortalecerse mediante hábitos y recursos que ayudan a afrontar mejor los períodos de dificultad.',
+          'Estos recursos no hacen desaparecer los problemas, pero pueden facilitar una respuesta más consciente y organizada.'
+        ],
+        conceptos: [
+          {
+            nombre: 'Autoconocimiento',
+            significado: 'Comprender nuestras emociones, capacidades, límites y formas habituales de responder.',
+            ejemplo: 'Reconocer qué situaciones generan mayor dificultad y cómo solemos reaccionar ante ellas.'
+          },
+          {
+            nombre: 'Adaptación',
+            significado: 'Modificar estrategias cuando las circunstancias cambian.',
+            ejemplo: 'Buscar una nueva forma de avanzar cuando el plan inicial deja de ser viable.'
+          },
+          {
+            nombre: 'Apoyo',
+            significado: 'Reconocer cuándo es útil buscar orientación o acompañamiento.',
+            ejemplo: 'Conversar con una persona de confianza para analizar una situación desde otra perspectiva.'
+          }
+        ],
+        cierre:
+          'La resiliencia se fortalece cuando desarrollamos recursos internos y aprendemos a utilizar adecuadamente los recursos disponibles en nuestro entorno.'
+      },
+      {
+        titulo: 'Resiliencia y superación',
+        parrafos: [
+          'Superarse no significa competir permanentemente contra otras personas. También significa desarrollar la capacidad de aprender, ajustar el rumbo y continuar construyendo después de una dificultad.',
+          'Cada experiencia puede aportar información sobre nuestras capacidades, nuestros límites y las áreas que necesitamos seguir desarrollando.',
+          'La resiliencia permite mantener una dirección mientras aprendemos a responder a las circunstancias que aparecen en el camino.'
+        ],
+        destacado:
+          'Superar una dificultad no siempre significa regresar al punto anterior; en ocasiones significa avanzar con una comprensión diferente.'
+      },
+      {
+        titulo: 'De la experiencia a la acción',
+        parrafos: [
+          'La resiliencia se desarrolla mediante la práctica. Por eso, una forma de comenzar es observar una dificultad actual y analizarla con mayor claridad.',
+          'El objetivo no es encontrar una solución perfecta, sino identificar un siguiente paso que esté dentro de nuestras posibilidades.'
+        ],
+        puntos: [
+          'Identifica una dificultad que estés enfrentando actualmente.',
+          'Separa los aspectos que puedes controlar de los que no puedes controlar.',
+          'Escribe qué aprendizaje puedes extraer de la situación.',
+          'Define una acción concreta que puedas realizar.',
+          'Revisa posteriormente qué ocurrió y qué necesitas ajustar.'
+        ],
+        cierre:
+          'La superación comienza cuando transformamos la experiencia en aprendizaje y el aprendizaje en una acción consciente.'
+      }
+    ];
+
+    this.reflexiones = [
+      {
+        titulo: 'Una dificultad',
+        pregunta:
+          '¿Qué situación difícil has enfrentado recientemente y qué aprendiste de ella?'
+      },
+      {
+        titulo: 'Lo que puedo controlar',
+        pregunta:
+          'Ante una dificultad actual, ¿qué aspectos sí dependen de tus decisiones y acciones?'
+      },
+      {
+        titulo: 'Mi siguiente paso',
+        pregunta:
+          '¿Qué acción concreta puedes realizar para avanzar frente a una dificultad?'
+      }
+    ];
+
+    this.preguntas = [
+      {
+        texto: '¿Qué describe mejor la resiliencia?',
+        opciones: [
+          'Evitar todas las dificultades de la vida',
+          'Afrontar dificultades, adaptarse y continuar avanzando',
+          'Nunca experimentar emociones negativas',
+          'Controlar todas las circunstancias'
+        ],
+        correcta: 1,
+        explicacion:
+          'La resiliencia implica afrontar las dificultades, adaptarse a las circunstancias y continuar avanzando.'
+      },
+      {
+        texto: '¿Qué podemos hacer cuando una situación está fuera de nuestro control?',
+        opciones: [
+          'Concentrarnos únicamente en lo que no podemos cambiar',
+          'Esperar que otra persona resuelva la situación',
+          'Dirigir nuestra atención hacia las decisiones y acciones que sí podemos realizar',
+          'Evitar analizar lo ocurrido'
+        ],
+        correcta: 2,
+        explicacion:
+          'Aunque no podamos controlar todas las circunstancias, podemos trabajar sobre nuestras decisiones, acciones y respuestas.'
+      },
+      {
+        texto: '¿Cómo puede una dificultad convertirse en una experiencia de aprendizaje?',
+        opciones: [
+          'Ignorando lo ocurrido',
+          'Culpando siempre a otras personas',
+          'Analizando la experiencia, identificando aprendizajes y ajustando nuestras acciones',
+          'Evitando enfrentar situaciones similares'
+        ],
+        correcta: 2,
+        explicacion:
+          'Analizar lo ocurrido permite identificar aprendizajes y utilizar esa información para tomar mejores decisiones en el futuro.'
+      }
+    ];
+  }
+
+    private cargarLeccionAprendizajeErrores(): void {
+    this.titulo = 'Aprendizaje de los errores';
+
+    this.subtitulo =
+      'Transformar las experiencias y los errores en información para mejorar nuestras decisiones y acciones.';
+
+    this.objetivo =
+      'Comprender cómo analizar los errores de manera consciente, identificar aprendizajes y utilizar esa información para mejorar las decisiones y comportamientos futuros.';
+
+    this.secciones = [
+      {
+        titulo: 'Los errores forman parte del aprendizaje',
+        parrafos: [
+          'Aprender implica experimentar, tomar decisiones, recibir resultados y ajustar nuestras acciones. En ese proceso pueden aparecer errores.',
+          'Un error no define por completo a una persona. Puede convertirse en una fuente de información cuando existe disposición para analizar lo ocurrido y aprender de ello.',
+          'Evitar cualquier error no siempre es posible. Lo importante es desarrollar la capacidad de responder de manera consciente cuando ocurre.'
+        ],
+        destacado:
+          'Un error puede convertirse en información cuando estamos dispuestos a observarlo, comprenderlo y aprender de él.'
+      },
+      {
+        titulo: 'Diferenciar error, resultado y aprendizaje',
+        parrafos: [
+          'Es importante distinguir entre la acción realizada, el resultado obtenido y la interpretación que hacemos de esa experiencia.',
+          'Un resultado diferente al esperado no significa automáticamente que todo el proceso haya sido inútil. Puede mostrar qué funcionó, qué no funcionó y qué necesita ser revisado.'
+        ],
+        conceptos: [
+          {
+            nombre: 'Error',
+            significado: 'Una acción, decisión o comportamiento que produce un resultado diferente al esperado o que puede mejorarse.',
+            ejemplo: 'Utilizar una estrategia que no produce el resultado previsto.'
+          },
+          {
+            nombre: 'Resultado',
+            significado: 'La consecuencia obtenida después de una acción o decisión.',
+            ejemplo: 'Una meta que no se alcanza dentro del plazo establecido.'
+          },
+          {
+            nombre: 'Aprendizaje',
+            significado: 'La comprensión obtenida a partir de una experiencia que puede utilizarse posteriormente.',
+            ejemplo: 'Descubrir qué aspecto de una estrategia debe modificarse.'
+          }
+        ],
+        cierre:
+          'Analizar una experiencia permite pasar de simplemente vivirla a obtener información útil de ella.'
+      },
+      {
+        titulo: 'Evitar la culpa como única respuesta',
+        parrafos: [
+          'Cuando ocurre un error, una reacción frecuente puede ser concentrarse únicamente en la culpa o en el resultado negativo.',
+          'Reconocer la responsabilidad es importante, pero también lo es identificar qué puede hacerse diferente en el futuro.',
+          'La responsabilidad permite aprender cuando se acompaña de análisis y disposición para corregir.'
+        ],
+        puntos: [
+          'Reconocer lo ocurrido sin ocultarlo.',
+          'Identificar qué decisiones estuvieron bajo nuestro control.',
+          'Comprender las posibles causas.',
+          'Aceptar las consecuencias cuando corresponda.',
+          'Definir qué podemos hacer diferente.'
+        ],
+        cierre:
+          'Asumir responsabilidad no significa quedarse atrapado en el error; significa utilizarlo para mejorar.'
+      },
+      {
+        titulo: 'Cómo analizar un error',
+        parrafos: [
+          'Un análisis sencillo puede ayudar a convertir una experiencia negativa en una oportunidad de aprendizaje.',
+          'La intención no es justificar lo ocurrido, sino comprenderlo suficientemente para tomar mejores decisiones posteriormente.'
+        ],
+        puntos: [
+          '¿Qué ocurrió exactamente?',
+          '¿Qué decisión o acción produjo el resultado?',
+          '¿Qué factores estaban bajo mi control?',
+          '¿Qué información no tuve en ese momento?',
+          '¿Qué haría diferente si enfrentara nuevamente una situación similar?',
+          '¿Qué acción puedo realizar ahora para corregir o mejorar?'
+        ],
+        cierre:
+          'Las preguntas correctas pueden convertir una experiencia difícil en una fuente de claridad.'
+      },
+      {
+        titulo: 'Convertir el aprendizaje en mejora',
+        parrafos: [
+          'Identificar un aprendizaje es solamente una parte del proceso. El aprendizaje adquiere valor cuando modifica nuestras decisiones o acciones.',
+          'Si una experiencia muestra que una estrategia necesita cambiar, el siguiente paso consiste en aplicar ese conocimiento.'
+        ],
+        puntos: [
+          'Registrar el aprendizaje.',
+          'Modificar la estrategia cuando sea necesario.',
+          'Probar nuevamente con el ajuste realizado.',
+          'Observar el nuevo resultado.',
+          'Continuar aprendiendo del proceso.'
+        ],
+        destacado:
+          'Aprender de un error significa permitir que la experiencia influya en nuestras próximas decisiones.'
+      },
+      {
+        titulo: 'Una práctica para esta semana',
+        parrafos: [
+          'Elige una experiencia reciente en la que el resultado no haya sido el esperado.',
+          'Analízala sin utilizarla para descalificarte. Busca información concreta que pueda ayudarte a mejorar.',
+          'Después identifica una acción que puedas aplicar durante los próximos siete días.'
+        ],
+        cierre:
+          'La superación se construye cuando convertimos la experiencia en conocimiento y el conocimiento en una nueva acción.'
+      }
+    ];
+
+    this.reflexiones = [
+      {
+        titulo: 'Un error reciente',
+        pregunta:
+          '¿Qué experiencia reciente no produjo el resultado que esperabas?'
+      },
+      {
+        titulo: 'Mi aprendizaje',
+        pregunta:
+          '¿Qué información útil puedes obtener de esa experiencia?'
+      },
+      {
+        titulo: 'Mi próxima acción',
+        pregunta:
+          '¿Qué harías diferente si volvieras a enfrentar una situación similar?'
+      }
+    ];
+
+    this.preguntas = [
+      {
+        texto: '¿Qué puede representar un error dentro del proceso de aprendizaje?',
+        opciones: [
+          'Una definición permanente de nuestra identidad',
+          'Una fuente de información para mejorar',
+          'Una razón para evitar cualquier nueva experiencia',
+          'Una prueba de que nunca podemos aprender'
+        ],
+        correcta: 1,
+        explicacion:
+          'Un error puede proporcionar información útil cuando analizamos lo ocurrido y buscamos mejorar.'
+      },
+      {
+        texto: '¿Qué significa asumir responsabilidad ante un error?',
+        opciones: [
+          'Culpar siempre a otras personas',
+          'Ignorar las consecuencias',
+          'Reconocer lo ocurrido e identificar qué podemos corregir',
+          'Pensar que nunca podremos mejorar'
+        ],
+        correcta: 2,
+        explicacion:
+          'La responsabilidad implica reconocer lo ocurrido, analizar nuestras decisiones y buscar formas de corregir o mejorar.'
+      },
+      {
+        texto: '¿Cuándo el aprendizaje de un error se convierte en mejora?',
+        opciones: [
+          'Cuando simplemente recordamos lo ocurrido',
+          'Cuando evitamos hablar del error',
+          'Cuando utilizamos el aprendizaje para modificar nuestras próximas acciones',
+          'Cuando culpamos a las circunstancias'
+        ],
+        correcta: 2,
+        explicacion:
+          'El aprendizaje produce mejora cuando influye en nuestras decisiones y acciones posteriores.'
+      }
+    ];
+  }
+
+    private cargarLeccionGestionDesafios(): void {
+    this.titulo = 'Gestión de desafíos';
+
+    this.subtitulo =
+      'Aprender a enfrentar situaciones difíciles con claridad, organización y capacidad de adaptación.';
+
+    this.objetivo =
+      'Comprender cómo analizar los desafíos, establecer prioridades y desarrollar respuestas conscientes que permitan avanzar ante situaciones complejas.';
+
+    this.secciones = [
+      {
+        titulo: 'Los desafíos forman parte del camino',
+        parrafos: [
+          'En cualquier proceso de crecimiento pueden aparecer situaciones que exigen esfuerzo adicional, adaptación y toma de decisiones.',
+          'Un desafío puede surgir en el ámbito personal, educativo, profesional o en cualquier proyecto que implique alcanzar un objetivo.',
+          'Gestionar un desafío no significa eliminar todas las dificultades, sino aprender a responder ante ellas de una manera organizada y consciente.'
+        ],
+        destacado:
+          'Un desafío puede exigir más esfuerzo, pero también puede revelar capacidades que todavía necesitamos desarrollar.'
+      },
+      {
+        titulo: 'Comprender el desafío',
+        parrafos: [
+          'Antes de actuar ante una situación difícil, conviene comprender qué está ocurriendo realmente.',
+          'Cuando enfrentamos un problema sin analizarlo, podemos reaccionar impulsivamente o concentrarnos en aspectos secundarios.',
+          'La claridad permite identificar cuál es el problema principal, qué factores lo están afectando y qué resultado queremos alcanzar.'
+        ],
+        puntos: [
+          'Definir cuál es el desafío.',
+          'Identificar sus principales causas o factores.',
+          'Distinguir hechos de interpretaciones.',
+          'Reconocer qué aspectos podemos controlar.',
+          'Determinar qué resultado queremos construir.'
+        ],
+        cierre:
+          'Comprender correctamente un desafío es el primer paso para responder de manera adecuada.'
+      },
+      {
+        titulo: 'Priorizar antes de actuar',
+        parrafos: [
+          'No todos los aspectos de un desafío tienen la misma importancia ni requieren atención inmediata.',
+          'Establecer prioridades permite utilizar mejor nuestro tiempo, energía y recursos.',
+          'Una situación compleja puede resultar más manejable cuando se divide en partes y se identifica cuál debe atenderse primero.'
+        ],
+        puntos: [
+          'Identificar lo urgente.',
+          'Identificar lo importante.',
+          'Separar lo que puede esperar.',
+          'Definir el siguiente paso.',
+          'Evitar intentar resolver todo al mismo tiempo.'
+        ],
+        cierre:
+          'Priorizar permite convertir una situación compleja en una serie de acciones más claras.'
+      },
+      {
+        titulo: 'Estrategias para afrontar desafíos',
+        parrafos: [
+          'Una estrategia es una forma organizada de actuar para acercarnos a un resultado determinado.',
+          'Ante un desafío, puede ser necesario probar diferentes alternativas, buscar información o solicitar orientación.',
+          'No todas las estrategias producen el resultado esperado. Por eso, observar y ajustar forma parte del proceso.'
+        ],
+        conceptos: [
+          {
+            nombre: 'Análisis',
+            significado: 'Observar la situación para comprender sus elementos principales.',
+            ejemplo: 'Identificar qué está provocando una dificultad antes de tomar una decisión.'
+          },
+          {
+            nombre: 'Prioridad',
+            significado: 'Determinar qué debe atenderse primero.',
+            ejemplo: 'Resolver primero una tarea necesaria para poder continuar con las siguientes.'
+          },
+          {
+            nombre: 'Estrategia',
+            significado: 'Definir una forma organizada de actuar.',
+            ejemplo: 'Dividir un desafío grande en acciones concretas y ordenadas.'
+          },
+          {
+            nombre: 'Ajuste',
+            significado: 'Modificar la estrategia cuando la información demuestra que es necesario.',
+            ejemplo: 'Cambiar el método después de comprobar que no está produciendo avances.'
+          }
+        ],
+        cierre:
+          'Gestionar desafíos requiere observar, decidir, actuar y ajustar cuando sea necesario.'
+      },
+      {
+        titulo: 'Mantener la dirección',
+        parrafos: [
+          'Un desafío puede generar frustración cuando los resultados no aparecen inmediatamente.',
+          'Mantener una dirección no significa insistir de manera ciega en una única estrategia. Significa recordar el objetivo y estar dispuesto a modificar el camino cuando sea necesario.',
+          'La disciplina y la claridad ayudan a sostener las acciones mientras se evalúan los resultados.'
+        ],
+        destacado:
+          'Mantener la dirección no significa mantener siempre el mismo camino.'
+      },
+      {
+        titulo: 'De la dificultad al siguiente paso',
+        parrafos: [
+          'Cuando una situación parece demasiado grande, puede ser útil concentrarse en la siguiente acción posible.',
+          'No siempre necesitamos resolver todo inmediatamente. En ocasiones, avanzar consiste simplemente en identificar qué podemos hacer hoy.'
+        ],
+        puntos: [
+          'Define el desafío que estás enfrentando.',
+          'Escribe cuál sería un resultado deseable.',
+          'Identifica qué puedes controlar.',
+          'Determina la acción más importante que puedes realizar ahora.',
+          'Revisa posteriormente el resultado y decide el siguiente paso.'
+        ],
+        cierre:
+          'La superación también consiste en aprender a avanzar paso a paso frente a situaciones que inicialmente parecen difíciles.'
+      }
+    ];
+
+    this.reflexiones = [
+      {
+        titulo: 'Mi desafío actual',
+        pregunta:
+          '¿Qué desafío estás enfrentando actualmente y por qué es importante para ti?'
+      },
+      {
+        titulo: 'Mi prioridad',
+        pregunta:
+          '¿Cuál es el aspecto más importante de ese desafío que deberías atender primero?'
+      },
+      {
+        titulo: 'Mi siguiente paso',
+        pregunta:
+          '¿Qué acción concreta puedes realizar para comenzar a gestionar mejor esa situación?'
+      }
+    ];
+
+    this.preguntas = [
+      {
+        texto: '¿Qué significa gestionar un desafío?',
+        opciones: [
+          'Eliminar cualquier dificultad inmediatamente',
+          'Responder de manera organizada y consciente ante una situación difícil',
+          'Evitar tomar decisiones',
+          'Esperar que el problema desaparezca'
+        ],
+        correcta: 1,
+        explicacion:
+          'Gestionar un desafío implica comprender la situación y desarrollar respuestas organizadas y conscientes.'
+      },
+      {
+        texto: '¿Por qué es importante establecer prioridades?',
+        opciones: [
+          'Para intentar resolver todo al mismo tiempo',
+          'Para evitar cualquier esfuerzo',
+          'Para determinar qué debe atenderse primero',
+          'Para eliminar la necesidad de planificar'
+        ],
+        correcta: 2,
+        explicacion:
+          'Priorizar permite concentrar los recursos disponibles en los aspectos más importantes.'
+      },
+      {
+        texto: '¿Qué debemos hacer cuando una estrategia no produce el resultado esperado?',
+        opciones: [
+          'Continuar exactamente igual sin observar los resultados',
+          'Abandonar siempre el objetivo',
+          'Analizar la información y realizar los ajustes necesarios',
+          'Evitar volver a intentarlo'
+        ],
+        correcta: 2,
+        explicacion:
+          'Observar los resultados permite determinar cuándo una estrategia necesita ser modificada.'
+      }
+    ];
+  }
+
+    private cargarLeccionDesarrolloPotencial(): void {
+    this.titulo = 'Desarrollo del potencial';
+
+    this.subtitulo =
+      'Reconocer capacidades, desarrollar habilidades y convertir las posibilidades personales en acciones concretas.';
+
+    this.objetivo =
+      'Comprender qué significa desarrollar el potencial personal, identificar capacidades que pueden fortalecerse y establecer acciones concretas para continuar creciendo mediante el aprendizaje y la práctica.';
+
+    this.secciones = [
+      {
+        titulo: 'El potencial no es un resultado terminado',
+        parrafos: [
+          'Cada persona posee capacidades, conocimientos, experiencias e intereses que pueden desarrollarse a lo largo del tiempo.',
+          'El potencial no debe entenderse como una característica fija ni como una garantía de éxito. Representa posibilidades que pueden fortalecerse mediante aprendizaje, práctica, disciplina y experiencia.',
+          'Reconocer el potencial personal permite identificar áreas en las que vale la pena invertir tiempo y esfuerzo.'
+        ],
+        destacado:
+          'El potencial representa una posibilidad; el desarrollo comienza cuando esa posibilidad se convierte en aprendizaje y acción.'
+      },
+      {
+        titulo: 'Reconocer nuestras capacidades',
+        parrafos: [
+          'Para desarrollar nuestro potencial primero necesitamos reconocer las capacidades que ya poseemos y aquellas que todavía necesitamos fortalecer.',
+          'Las capacidades pueden encontrarse en diferentes áreas: conocimientos, habilidades prácticas, comunicación, creatividad, organización, liderazgo, aprendizaje y muchas otras.'
+        ],
+        puntos: [
+          'Identificar conocimientos que ya posees.',
+          'Reconocer habilidades que utilizas con facilidad.',
+          'Observar actividades en las que puedes aportar valor.',
+          'Identificar capacidades que deseas fortalecer.',
+          'Reconocer experiencias que han contribuido a tu desarrollo.'
+        ],
+        cierre:
+          'Conocer nuestras capacidades permite tomar decisiones más conscientes sobre aquello que queremos seguir desarrollando.'
+      },
+      {
+        titulo: 'Potencial y aprendizaje',
+        parrafos: [
+          'Una capacidad puede desarrollarse mediante el aprendizaje. Esto requiere adquirir información, practicar, recibir retroalimentación y aplicar lo aprendido.',
+          'Aprender no consiste únicamente en acumular información. También implica desarrollar la capacidad de utilizar ese conocimiento en situaciones reales.'
+        ],
+        conceptos: [
+          {
+            nombre: 'Conocimiento',
+            significado: 'Información y comprensión adquirida mediante estudio, experiencia o investigación.',
+            ejemplo: 'Comprender los principios básicos de una determinada disciplina.'
+          },
+          {
+            nombre: 'Habilidad',
+            significado: 'Capacidad desarrollada para realizar una actividad de manera efectiva.',
+            ejemplo: 'Aplicar un conocimiento para resolver una tarea concreta.'
+          },
+          {
+            nombre: 'Práctica',
+            significado: 'Repetición consciente de una actividad para desarrollar mayor dominio.',
+            ejemplo: 'Practicar regularmente una habilidad que deseas fortalecer.'
+          },
+          {
+            nombre: 'Retroalimentación',
+            significado: 'Información que permite identificar avances y aspectos que pueden mejorarse.',
+            ejemplo: 'Revisar el resultado de un trabajo y detectar qué puede hacerse mejor.'
+          }
+        ],
+        cierre:
+          'El desarrollo del potencial requiere combinar conocimiento, práctica, experiencia y disposición para aprender.'
+      },
+      {
+        titulo: 'Salir de la zona de comodidad',
+        parrafos: [
+          'Desarrollar una capacidad nueva suele implicar enfrentarse a situaciones que todavía no dominamos.',
+          'Al principio es normal cometer errores, avanzar lentamente o necesitar orientación. Estas experiencias forman parte del proceso de aprendizaje.',
+          'Salir de la comodidad no significa asumir riesgos innecesarios. Significa estar dispuesto a aprender y practicar cuando una capacidad nueva requiere esfuerzo.'
+        ],
+        puntos: [
+          'Elegir una habilidad que quieras desarrollar.',
+          'Comenzar con un nivel de dificultad adecuado.',
+          'Aceptar que el aprendizaje requiere tiempo.',
+          'Practicar de manera constante.',
+          'Evaluar el progreso y ajustar la práctica.'
+        ],
+        cierre:
+          'El desarrollo ocurre cuando combinamos desafío suficiente con aprendizaje y práctica sostenida.'
+      },
+      {
+        titulo: 'Convertir el potencial en acción',
+        parrafos: [
+          'Una capacidad potencial solamente comienza a desarrollarse cuando se convierte en una práctica concreta.',
+          'Por eso es importante pasar de la intención a una acción verificable.',
+          'Un objetivo amplio puede dividirse en pequeñas acciones que permitan construir progreso con el tiempo.'
+        ],
+        puntos: [
+          'Define una capacidad que deseas desarrollar.',
+          'Determina qué conocimiento necesitas adquirir.',
+          'Elige una forma concreta de practicar.',
+          'Establece una frecuencia de práctica.',
+          'Revisa periódicamente tu avance.'
+        ],
+        destacado:
+          'El potencial se desarrolla mediante acciones repetidas, no únicamente mediante intención.'
+      },
+      {
+        titulo: 'Una práctica para esta semana',
+        parrafos: [
+          'Elige una habilidad que consideres importante para tu desarrollo personal.',
+          'Investiga qué necesitas aprender para comenzar a desarrollarla y establece una pequeña práctica que puedas realizar durante los próximos siete días.',
+          'Al finalizar la semana, observa qué aprendiste, qué dificultad encontraste y qué deberías ajustar.'
+        ],
+        cierre:
+          'La superación se construye cuando identificamos posibilidades y trabajamos conscientemente para convertirlas en capacidades.'
+      }
+    ];
+
+    this.reflexiones = [
+      {
+        titulo: 'Mi potencial',
+        pregunta:
+          '¿Qué capacidad personal consideras que tiene mayor potencial de desarrollo en este momento?'
+      },
+      {
+        titulo: 'Mi aprendizaje',
+        pregunta:
+          '¿Qué conocimiento necesitas adquirir para fortalecer esa capacidad?'
+      },
+      {
+        titulo: 'Mi práctica',
+        pregunta:
+          '¿Qué acción concreta puedes realizar durante los próximos siete días para comenzar a desarrollarla?'
+      }
+    ];
+
+    this.preguntas = [
+      {
+        texto: '¿Cómo debe entenderse el potencial personal?',
+        opciones: [
+          'Como una capacidad completamente terminada',
+          'Como una posibilidad que puede desarrollarse mediante aprendizaje y práctica',
+          'Como una garantía de obtener cualquier resultado',
+          'Como algo que no puede cambiar'
+        ],
+        correcta: 1,
+        explicacion:
+          'El potencial representa posibilidades que pueden fortalecerse mediante aprendizaje, práctica, experiencia y disciplina.'
+      },
+      {
+        texto: '¿Qué elementos contribuyen al desarrollo de una capacidad?',
+        opciones: [
+          'Únicamente la intención',
+          'Evitar cualquier dificultad',
+          'Conocimiento, práctica, experiencia y retroalimentación',
+          'Esperar resultados sin practicar'
+        ],
+        correcta: 2,
+        explicacion:
+          'El desarrollo de capacidades requiere combinar conocimiento, práctica, experiencia y retroalimentación.'
+      },
+      {
+        texto: '¿Qué convierte una intención de desarrollo en una acción concreta?',
+        opciones: [
+          'Pensar constantemente en la capacidad',
+          'Definir qué desarrollar y establecer una práctica verificable',
+          'Esperar a sentirse completamente preparado',
+          'Compararse con otras personas'
+        ],
+        correcta: 1,
+        explicacion:
+          'Convertir la intención en una acción concreta permite comenzar un proceso real de desarrollo.'
+      }
+    ];
+  }
+
+    private cargarLeccionAdaptacionMejora(): void {
+    this.titulo = 'Adaptación y mejora continua';
+
+    this.subtitulo =
+      'Aprender a ajustar nuestras acciones, aprovechar la experiencia y construir avances sostenidos a través del tiempo.';
+
+    this.objetivo =
+      'Comprender la importancia de la adaptación y la mejora continua como procesos permanentes de aprendizaje, evaluación y ajuste para avanzar de manera consciente.';
+
+    this.secciones = [
+      {
+        titulo: 'Adaptarse es aprender a responder al cambio',
+        parrafos: [
+          'Las circunstancias pueden cambiar aunque nuestros objetivos permanezcan. Nuevas responsabilidades, información, recursos o dificultades pueden exigir que ajustemos nuestra manera de actuar.',
+          'Adaptarse no significa abandonar nuestros principios o cambiar constantemente de dirección. Significa observar las nuevas circunstancias y determinar qué ajustes pueden ayudarnos a continuar avanzando.',
+          'La adaptación requiere apertura para aprender y disposición para revisar aquello que ya no funciona.'
+        ],
+        destacado:
+          'Adaptarse no significa perder la dirección; significa ajustar el camino cuando las circunstancias cambian.'
+      },
+      {
+        titulo: 'La importancia de observar',
+        parrafos: [
+          'La mejora comienza cuando somos capaces de observar nuestros resultados con honestidad.',
+          'Si no revisamos lo que hacemos, podemos repetir las mismas acciones sin saber si realmente están produciendo el resultado esperado.',
+          'Observar permite identificar avances, dificultades, errores y oportunidades de mejora.'
+        ],
+        puntos: [
+          '¿Qué resultado estamos obteniendo?',
+          '¿Qué está funcionando?',
+          '¿Qué no está funcionando como esperábamos?',
+          '¿Qué información nueva tenemos?',
+          '¿Qué podríamos hacer de manera diferente?'
+        ],
+        cierre:
+          'Observar con atención proporciona información para tomar mejores decisiones.'
+      },
+      {
+        titulo: 'El ciclo de mejora continua',
+        parrafos: [
+          'La mejora continua puede entenderse como un proceso en el que observamos, aprendemos, ajustamos y volvemos a actuar.',
+          'No se trata de cambiar todo constantemente. Se trata de realizar ajustes conscientes a partir de la información obtenida.'
+        ],
+        conceptos: [
+          {
+            nombre: 'Observar',
+            significado: 'Revisar lo que está ocurriendo y reconocer los resultados obtenidos.',
+            ejemplo: 'Comprobar semanalmente el avance de una meta.'
+          },
+          {
+            nombre: 'Analizar',
+            significado: 'Buscar comprender por qué se obtuvo determinado resultado.',
+            ejemplo: 'Identificar qué factores facilitaron o dificultaron el progreso.'
+          },
+          {
+            nombre: 'Ajustar',
+            significado: 'Modificar una acción o estrategia cuando existe una razón para hacerlo.',
+            ejemplo: 'Cambiar la forma de organizar una tarea cuando el método actual no funciona.'
+          },
+          {
+            nombre: 'Aplicar',
+            significado: 'Poner en práctica el ajuste y observar nuevamente los resultados.',
+            ejemplo: 'Utilizar el nuevo método durante una semana y revisar su efecto.'
+          }
+        ],
+        cierre:
+          'La mejora continua convierte la experiencia en información y la información en nuevas acciones.'
+      },
+      {
+        titulo: 'Adaptación sin perder la dirección',
+        parrafos: [
+          'Una persona puede modificar sus estrategias sin abandonar aquello que considera importante.',
+          'Los objetivos pueden mantenerse mientras cambian las acciones utilizadas para alcanzarlos.',
+          'La claridad ayuda a distinguir entre un cambio necesario y una decisión impulsiva.'
+        ],
+        puntos: [
+          'Mantener claros los principios importantes.',
+          'Revisar si el objetivo sigue siendo relevante.',
+          'Modificar las estrategias cuando sea necesario.',
+          'Aprender de los resultados.',
+          'Evitar cambiar solamente por frustración momentánea.'
+        ],
+        cierre:
+          'La flexibilidad en las estrategias puede convivir con la firmeza en los principios.'
+      },
+      {
+        titulo: 'La mejora no exige perfección',
+        parrafos: [
+          'La mejora continua no significa alcanzar resultados perfectos en todo momento.',
+          'Significa buscar pequeños avances, aprender de las experiencias y realizar ajustes cuando exista información suficiente para hacerlo.',
+          'El progreso puede ser gradual y aun así representar un desarrollo significativo.'
+        ],
+        destacado:
+          'Mejorar no significa ser perfecto; significa aprender y avanzar con mayor conciencia.'
+      },
+      {
+        titulo: 'Construir una práctica de mejora',
+        parrafos: [
+          'Puedes incorporar la mejora continua a diferentes áreas de tu vida mediante revisiones periódicas.',
+          'Una revisión sencilla puede ayudarte a reconocer qué funcionó, qué necesitas cambiar y cuál será tu siguiente acción.'
+        ],
+        puntos: [
+          'Elige una meta o actividad que quieras mejorar.',
+          'Define qué resultado quieres observar.',
+          'Realiza la actividad durante un período determinado.',
+          'Revisa los resultados obtenidos.',
+          'Identifica un ajuste concreto.',
+          'Aplica el ajuste y vuelve a observar.'
+        ],
+        cierre:
+          'La mejora continua se construye mediante pequeños ciclos de aprendizaje y acción sostenidos en el tiempo.'
+      }
+    ];
+
+    this.reflexiones = [
+      {
+        titulo: 'Mi adaptación',
+        pregunta:
+          '¿Qué situación actual requiere que adaptes tu manera de actuar?'
+      },
+      {
+        titulo: 'Mi mejora',
+        pregunta:
+          '¿Qué aspecto de una actividad o hábito podrías mejorar mediante un pequeño ajuste?'
+      },
+      {
+        titulo: 'Mi siguiente ciclo',
+        pregunta:
+          '¿Qué resultado observarás y qué ajuste podrías realizar después de revisarlo?'
+      }
+    ];
+
+    this.preguntas = [
+      {
+        texto: '¿Qué significa adaptarse ante un cambio?',
+        opciones: [
+          'Abandonar siempre los objetivos anteriores',
+          'Cambiar constantemente sin analizar las circunstancias',
+          'Ajustar nuestra manera de actuar según las nuevas circunstancias',
+          'Evitar cualquier situación nueva'
+        ],
+        correcta: 2,
+        explicacion:
+          'Adaptarse significa observar las nuevas circunstancias y ajustar nuestra manera de actuar cuando sea necesario.'
+      },
+      {
+        texto: '¿Cuál es una característica de la mejora continua?',
+        opciones: [
+          'Buscar la perfección inmediata',
+          'Observar, aprender, ajustar y volver a actuar',
+          'Cambiar todo constantemente',
+          'Evitar revisar los resultados'
+        ],
+        correcta: 1,
+        explicacion:
+          'La mejora continua funciona mediante ciclos de observación, aprendizaje, ajuste y aplicación.'
+      },
+      {
+        texto: '¿Es posible adaptar una estrategia sin abandonar un objetivo?',
+        opciones: [
+          'No, cambiar una estrategia siempre significa abandonar el objetivo',
+          'Sí, podemos mantener el objetivo y modificar el camino para alcanzarlo',
+          'Solo cuando no existen dificultades',
+          'Únicamente cuando otra persona decide el cambio'
+        ],
+        correcta: 1,
+        explicacion:
+          'Un objetivo puede mantenerse mientras modificamos las estrategias utilizadas para alcanzarlo.'
+      }
+    ];
+  }
 
 get puntuacion(): number {
   return this.calificacion;

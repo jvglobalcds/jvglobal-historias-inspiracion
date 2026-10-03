@@ -123,13 +123,36 @@
     <span class="tema-disponible">Ver lección →</span>
   </a>
 
-  <!-- OTRAS ÁREAS -->
-  <ng-container
-    *ngIf="areaActual.titulo !== 'Claridad' && areaActual.titulo !== 'Disciplina'"
-  >
-    <h3>{{ tema }}</h3>
-    <p>Contenido formativo en preparación.</p>
-  </ng-container>
+<!-- SUPERACIÓN -->
+<a
+  *ngIf="areaActual.titulo === 'Superación'"
+  [routerLink]="[
+    '/ensenanza-cds/superacion',
+    [
+      'resiliencia',
+      'aprendizaje-de-los-errores',
+      'gestion-de-desafios',
+      'desarrollo-del-potencial',
+      'adaptacion-y-mejora-continua'
+    ][i]
+  ]"
+  class="tema-enlace"
+>
+  <span>{{ tema }}</span>
+  <span class="tema-disponible">Ver lección →</span>
+</a>
+
+<!-- OTRAS ÁREAS -->
+<ng-container
+  *ngIf="
+    areaActual.titulo !== 'Claridad' &&
+    areaActual.titulo !== 'Disciplina' &&
+    areaActual.titulo !== 'Superación'
+  "
+>
+  <h3>{{ tema }}</h3>
+  <p>Contenido formativo en preparación.</p>
+</ng-container>
 
 </div>
 
