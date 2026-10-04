@@ -27,7 +27,7 @@ interface SeccionCds {
 export class LeccionCds implements OnInit {
 
     private leccionActual = '';
-    private areaActual = '';
+    areaActual = '';
 
   titulo = 'Autoconocimiento y propósito';
 
