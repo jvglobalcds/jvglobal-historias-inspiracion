@@ -205,6 +205,106 @@
   </a>
 </ng-container>
 
+<!-- TECNOLOGÍA E INTELIGENCIA ARTIFICIAL -->
+<ng-container *ngIf="areaActual.titulo === 'Tecnología e inteligencia artificial'">
+  <a
+    [routerLink]="[
+      '/ensenanza-cds/tecnologia',
+      [
+        'alfabetizacion-digital',
+        'inteligencia-artificial',
+        'herramientas-de-productividad',
+        'automatizacion',
+        'innovacion-y-uso-responsable-de-la-tecnologia'
+      ][i]
+    ]"
+    class="tema-enlace"
+  >
+    <span>{{ tema }}</span>
+    <span class="tema-disponible">Ver lección →</span>
+  </a>
+</ng-container>
+
+<!-- FINANZAS Y EDUCACIÓN ECONÓMICA -->
+<ng-container *ngIf="areaActual.titulo === 'Finanzas y educación económica'">
+  <a
+    [routerLink]="[
+      '/ensenanza-cds/finanzas',
+      [
+        'educacion-financiera-basica',
+        'presupuesto-personal',
+        'ahorro-y-planificacion',
+        'administracion-de-recursos',
+        'decisiones-economicas-responsables'
+      ][i]
+    ]"
+    class="tema-enlace"
+  >
+    <span>{{ tema }}</span>
+    <span class="tema-disponible">Ver lección →</span>
+  </a>
+</ng-container>
+
+<!-- MARKETING Y COMUNICACIÓN -->
+<ng-container *ngIf="areaActual.titulo === 'Marketing y comunicación'">
+  <a
+    [routerLink]="[
+      '/ensenanza-cds/marketing',
+      [
+        'comunicacion-de-valor',
+        'marca-personal',
+        'creacion-de-contenido',
+        'marketing-digital',
+        'estrategias-de-comunicacion'
+      ][i]
+    ]"
+    class="tema-enlace"
+  >
+    <span>{{ tema }}</span>
+    <span class="tema-disponible">Ver lección →</span>
+  </a>
+</ng-container>
+
+<!-- DESARROLLO PERSONAL -->
+<ng-container *ngIf="areaActual.titulo === 'Desarrollo personal'">
+  <a
+    [routerLink]="[
+      '/ensenanza-cds/desarrollo-personal',
+      [
+        'autoconocimiento',
+        'habilidades-personales',
+        'inteligencia-emocional',
+        'relaciones-humanas',
+        'evolucion-consciente'
+      ][i]
+    ]"
+    class="tema-enlace"
+  >
+    <span>{{ tema }}</span>
+    <span class="tema-disponible">Ver lección →</span>
+  </a>
+</ng-container>
+
+<!-- VISIÓN Y LEGADO -->
+<ng-container *ngIf="areaActual.titulo === 'Visión y legado'">
+  <a
+    [routerLink]="[
+      '/ensenanza-cds/vision-legado',
+      [
+        'vision-a-largo-plazo',
+        'proposito-y-contribucion',
+        'construccion-de-proyectos-duraderos',
+        'mentoria-y-servicio',
+        'legado-generacional'
+      ][i]
+    ]"
+    class="tema-enlace"
+  >
+    <span>{{ tema }}</span>
+    <span class="tema-disponible">Ver lección →</span>
+  </a>
+</ng-container>
+
 <!-- DEMÁS ÁREAS SIN NAVEGACIÓN CONFIGURADA -->
 <ng-container
   *ngIf="
@@ -213,7 +313,12 @@
     areaActual.titulo !== 'Superación' &&
     areaActual.titulo !== 'Emprendimiento y negocios'&&
     areaActual.titulo !== 'Liderazgo' &&
-    areaActual.titulo !== 'Educación y conocimiento'
+    areaActual.titulo !== 'Educación y conocimiento' &&
+    areaActual.titulo !== 'Tecnología e inteligencia artificial' &&
+    areaActual.titulo !== 'Finanzas y educación económica' &&
+    areaActual.titulo !== 'Marketing y comunicación' &&
+    areaActual.titulo !== 'Desarrollo personal' &&
+    areaActual.titulo !== 'Visión y legado'
   "
 >
   <h3>{{ tema }}</h3>

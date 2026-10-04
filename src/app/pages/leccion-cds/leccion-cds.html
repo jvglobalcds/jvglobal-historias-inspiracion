@@ -1,9 +1,12 @@
 <main class="leccion-page">
 
   <header class="leccion-header">
-    <a routerLink="/ensenanza-cds/claridad" class="volver">
-      ← VOLVER A CLARIDAD
-    </a>
+  <a
+  [routerLink]="['/ensenanza-cds', areaActual]"
+  class="volver"
+>
+  ← VOLVER AL ÁREA
+</a>
 
     <div class="marca">JV GLOBAL</div>
     <span class="etiqueta">ENSEÑANZA CDS · CLARIDAD</span>
@@ -194,19 +197,25 @@
   ✓ {{ titulo }} completada
 </div>
 
-  <button
-    *ngIf="!leccionCompletada"
-    class="boton-completar"
-    (click)="completarLeccion()"
-  >
-    Marcar lección como completada
-  </button>
+<button
+  type="button"
+  class="boton-completar"
+  [disabled]="leccionCompletada"
+  (click)="completarLeccion()"
+>
+  {{ leccionCompletada
+    ? 'Lección completada'
+    : 'Marcar lección como completada' }}
+</button>
 
 </section>
 
-    <a routerLink="/ensenanza-cds/claridad" class="volver-final">
-      Volver al área Claridad
-    </a>
+    <a
+  [routerLink]="['/ensenanza-cds', areaActual]"
+  class="volver-final"
+>
+  Volver al área
+</a>
 
   </section>
 </main>

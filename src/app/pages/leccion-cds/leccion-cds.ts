@@ -27,6 +27,7 @@ interface SeccionCds {
 export class LeccionCds implements OnInit {
 
     private leccionActual = '';
+    private areaActual = '';
 
   titulo = 'Autoconocimiento y propósito';
 
@@ -249,6 +250,66 @@ export class LeccionCds implements OnInit {
 
   'desarrollo-de-capacidades':
   'jv-leccion-desarrollo-de-capacidades',
+
+  // TECNOLOGÍA E INTELIGENCIA ARTIFICIAL
+'alfabetizacion-digital':
+  'jv-leccion-alfabetizacion-digital',
+'inteligencia-artificial':
+  'jv-leccion-inteligencia-artificial',
+'herramientas-de-productividad':
+  'jv-leccion-herramientas-de-productividad',
+'automatizacion':
+  'jv-leccion-automatizacion',
+'innovacion-y-uso-responsable-de-la-tecnologia':
+  'jv-leccion-innovacion-uso-responsable-tecnologia',
+
+// FINANZAS Y EDUCACIÓN ECONÓMICA
+'educacion-financiera-basica':
+  'jv-leccion-educacion-financiera-basica',
+'presupuesto-personal':
+  'jv-leccion-presupuesto-personal',
+'ahorro-y-planificacion':
+  'jv-leccion-ahorro-y-planificacion',
+'administracion-de-recursos':
+  'jv-leccion-administracion-de-recursos',
+'decisiones-economicas-responsables':
+  'jv-leccion-decisiones-economicas-responsables',
+
+// MARKETING Y COMUNICACIÓN
+'comunicacion-de-valor':
+  'jv-leccion-comunicacion-de-valor',
+'marca-personal':
+  'jv-leccion-marca-personal',
+'creacion-de-contenido':
+  'jv-leccion-creacion-de-contenido',
+'marketing-digital':
+  'jv-leccion-marketing-digital',
+'estrategias-de-comunicacion':
+  'jv-leccion-estrategias-de-comunicacion',
+
+// DESARROLLO PERSONAL
+'autoconocimiento':
+  'jv-leccion-autoconocimiento',
+'habilidades-personales':
+  'jv-leccion-habilidades-personales',
+'inteligencia-emocional':
+  'jv-leccion-inteligencia-emocional',
+'relaciones-humanas':
+  'jv-leccion-relaciones-humanas',
+'evolucion-consciente':
+  'jv-leccion-evolucion-consciente',
+
+// VISIÓN Y LEGADO
+'vision-a-largo-plazo':
+  'jv-leccion-vision-a-largo-plazo',
+'proposito-y-contribucion':
+  'jv-leccion-proposito-y-contribucion',
+'construccion-de-proyectos-duraderos':
+  'jv-leccion-construccion-de-proyectos-duraderos',
+'mentoria-y-servicio':
+  'jv-leccion-mentoria-y-servicio',
+'legado-generacional':
+  'jv-leccion-legado-generacional',
 };
   
   private readonly contenidoBase = {
@@ -264,135 +325,97 @@ export class LeccionCds implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
-      this.leccionActual = params.get('leccion') ?? '';
+    this.areaActual = params.get('area') ?? 'claridad';
+    this.leccionActual = params.get('leccion') ?? '';
 
-      this.restablecerEstadoEvaluacion();
+    this.restablecerEstadoEvaluacion();
       this.restablecerContenidoBase();
 
-      switch (this.leccionActual) {
-        case 'autoconocimiento-y-proposito':
-          break;
+const cargadores: { [key: string]: () => void } = {
 
-        case 'vision-personal-y-objetivos':
-          this.cargarLeccionVision();
-          break;
+  // CLARIDAD
+  'autoconocimiento-y-proposito': () => {},
+  'vision-personal-y-objetivos': () => this.cargarLeccionVision(),
+  'pensamiento-consciente': () => this.cargarLeccionPensamiento(),
+  'toma-de-decisiones': () => this.cargarLeccionTomaDecisiones(),
+  'planificacion-y-direccion': () => this.cargarLeccionPlanificacion(),
 
-        case 'pensamiento-consciente':
-          this.cargarLeccionPensamiento();
-          break;
+  // DISCIPLINA
+  'habitos-y-constancia': () => this.cargarLeccionHabitos(),
+  'organizacion-personal': () => this.cargarLeccionOrganizacion(),
+  'gestion-del-tiempo': () => this.cargarLeccionTiempo(),
+  'compromiso-y-responsabilidad': () => this.cargarLeccionCompromiso(),
+  'ejecucion-y-seguimiento': () => this.cargarLeccionEjecucion(),
 
-        case 'toma-de-decisiones':
-          this.cargarLeccionTomaDecisiones();
-          break;
+  // EMPRENDIMIENTO Y NEGOCIOS
+  'mentalidad-emprendedora': () => this.cargarLeccionMentalidadEmprendedora(),
+  'modelos-de-negocio': () => this.cargarLeccionModelosNegocio(),
+  'propuesta-de-valor': () => this.cargarLeccionPropuestaValor(),
+  'ventas-y-servicio': () => this.cargarLeccionVentasServicio(),
+  'creacion-y-desarrollo-de-proyectos': () => this.cargarLeccionCreacionProyectos(),
 
-        case 'planificacion-y-direccion':
-          this.cargarLeccionPlanificacion();
-          break;
+  // SUPERACIÓN
+  'resiliencia': () => this.cargarLeccionResiliencia(),
+  'aprendizaje-de-los-errores': () => this.cargarLeccionAprendizajeErrores(),
+  'gestion-de-desafios': () => this.cargarLeccionGestionDesafios(),
+  'desarrollo-del-potencial': () => this.cargarLeccionDesarrolloPotencial(),
+  'adaptacion-y-mejora-continua': () => this.cargarLeccionAdaptacionMejora(),
 
-        case 'habitos-y-constancia':
-          this.cargarLeccionHabitos();
-          break;
+  // LIDERAZGO
+  'liderazgo-consciente': () => this.cargarLeccionLiderazgoConsciente(),
+  'trabajo-en-equipo': () => this.cargarLeccionTrabajoEnEquipo(),
+  'responsabilidad-y-servicio': () => this.cargarLeccionResponsabilidadYServicio(),
+  'acompanamiento-y-desarrollo-de-personas': () => this.cargarLeccionAcompanamientoDesarrolloPersonas(),
+  'aprendizaje-continuo': () => this.cargarLeccionAprendizajeContinuo(),
 
-        case 'organizacion-personal':
-          this.cargarLeccionOrganizacion();
-          break;
+  // EDUCACIÓN Y CONOCIMIENTO
+  'pensamiento-critico': () => this.cargarLeccionPensamientoCritico(),
+  'metodos-de-estudio': () => this.cargarLeccionMetodosDeEstudio(),
+  'investigacion-y-comprension': () => this.cargarLeccionInvestigacionComprension(),
+  'desarrollo-de-capacidades': () => this.cargarLeccionDesarrolloCapacidades(),
+  'comunicacion-efectiva': () => this.cargarLeccionComunicacionEfectiva(),
 
-        case 'gestion-del-tiempo':
-          this.cargarLeccionTiempo();
-          break;
+  // TECNOLOGÍA E INTELIGENCIA ARTIFICIAL
+  'alfabetizacion-digital': () => this.cargarLeccionAlfabetizacionDigital(),
+  'inteligencia-artificial': () => this.cargarLeccionInteligenciaArtificial(),
+  'herramientas-de-productividad': () => this.cargarLeccionHerramientasProductividad(),
+  'automatizacion': () => this.cargarLeccionAutomatizacion(),
+  'innovacion-y-uso-responsable-de-la-tecnologia': () => this.cargarLeccionInnovacionTecnologia(),
 
-        case 'compromiso-y-responsabilidad':
-          this.cargarLeccionCompromiso();
-          break;
+  // FINANZAS
+  'educacion-financiera-basica': () => this.cargarLeccionEducacionFinanciera(),
+  'presupuesto-personal': () => this.cargarLeccionPresupuestoPersonal(),
+  'ahorro-y-planificacion': () => this.cargarLeccionAhorroPlanificacion(),
+  'administracion-de-recursos': () => this.cargarLeccionAdministracionRecursos(),
+  'decisiones-economicas-responsables': () => this.cargarLeccionDecisionesEconomicas(),
 
-        case 'ejecucion-y-seguimiento':
-          this.cargarLeccionEjecucion();
-          break;
+  // MARKETING Y COMUNICACIÓN
+  'comunicacion-de-valor': () => this.cargarLeccionComunicacionValor(),
+  'marca-personal': () => this.cargarLeccionMarcaPersonal(),
+  'creacion-de-contenido': () => this.cargarLeccionCreacionContenido(),
+  'marketing-digital': () => this.cargarLeccionMarketingDigital(),
+  'estrategias-de-comunicacion': () => this.cargarLeccionEstrategiasComunicacion(),
 
-          case 'mentalidad-emprendedora':
-          this.cargarLeccionMentalidadEmprendedora();
-          break;
+  // DESARROLLO PERSONAL
+  'autoconocimiento': () => this.cargarLeccionAutoconocimiento(),
+  'habilidades-personales': () => this.cargarLeccionHabilidadesPersonales(),
+  'inteligencia-emocional': () => this.cargarLeccionInteligenciaEmocional(),
+  'relaciones-humanas': () => this.cargarLeccionRelacionesHumanas(),
+  'evolucion-consciente': () => this.cargarLeccionEvolucionConsciente(),
 
-       case 'modelos-de-negocio':
-       this.cargarLeccionModelosNegocio();
-       break;
+  // VISIÓN Y LEGADO
+  'vision-a-largo-plazo': () => this.cargarLeccionVisionLargoPlazo(),
+  'proposito-y-contribucion': () => this.cargarLeccionPropositoContribucion(),
+  'construccion-de-proyectos-duraderos': () => this.cargarLeccionProyectosDuraderos(),
+  'mentoria-y-servicio': () => this.cargarLeccionMentoriaServicio(),
+  'legado-generacional': () => this.cargarLeccionLegadoGeneracional()
+};
 
-       case 'propuesta-de-valor':
-       this.cargarLeccionPropuestaValor();
-       break;
+const cargar = cargadores[this.leccionActual];
 
-        case 'ventas-y-servicio':
-        this.cargarLeccionVentasServicio();
-        break;
-
-        case 'creacion-y-desarrollo-de-proyectos':
-        this.cargarLeccionCreacionProyectos();
-        break;
-
-        case 'resiliencia':
-          this.cargarLeccionResiliencia();
-          break;
-
-         case 'aprendizaje-de-los-errores':
-           this.cargarLeccionAprendizajeErrores();
-           break;
-
-           case 'gestion-de-desafios':
-           this.cargarLeccionGestionDesafios();
-           break;
-
-           case 'desarrollo-del-potencial':
-           this.cargarLeccionDesarrolloPotencial();
-           break;
-
-          case 'adaptacion-y-mejora-continua':
-          this.cargarLeccionAdaptacionMejora();
-          break;
-
-          case 'liderazgo-consciente':
-          this.cargarLeccionLiderazgoConsciente();
-          break;
-
-          case 'trabajo-en-equipo':
-          this.cargarLeccionTrabajoEnEquipo();
-          break;
-
-          case 'responsabilidad-y-servicio':
-          this.cargarLeccionResponsabilidadYServicio();
-          break;
-
-          case 'acompanamiento-y-desarrollo-de-personas':
-          this.cargarLeccionAcompanamientoDesarrolloPersonas();
-          break;
-
-          case 'aprendizaje-continuo':
-          this.cargarLeccionAprendizajeContinuo();
-          break;
-
-          case 'pensamiento-critico':
-          this.cargarLeccionPensamientoCritico();
-          break;
-
-          case 'metodos-de-estudio':
-          this.cargarLeccionMetodosDeEstudio();
-          break;
-
-          case 'investigacion-y-comprension':
-          this.cargarLeccionInvestigacionComprension();
-          break;
-
-          case 'desarrollo-de-capacidades':
-          this.cargarLeccionDesarrolloCapacidades();
-          break;
-
-          case 'comunicacion-efectiva':
-          this.cargarLeccionComunicacionEfectiva();
-          break;
-
-         default:
-          this.leccionActual = 'autoconocimiento-y-proposito';
-          break;
-      }
+if (cargar) {
+  cargar();
+}
 
       this.actualizarEstadoLeccion();
     });
@@ -5231,6 +5254,3131 @@ conceptos: [
       ],
       correcta: 2,
       explicacion: 'La constancia, junto con la capacidad de revisar y ajustar las estrategias, favorece el progreso.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+private cargarLeccionAlfabetizacionDigital(): void {
+  this.titulo = 'Alfabetización digital';
+  this.subtitulo = 'Comprender y utilizar la tecnología de manera consciente, segura y efectiva.';
+  this.objetivo = 'Desarrollar conocimientos básicos para utilizar herramientas digitales con criterio, seguridad y responsabilidad en diferentes contextos personales y profesionales.';
+
+  this.secciones = [
+    {
+      titulo: '1. ¿Qué es la alfabetización digital?',
+      parrafos: [
+        'La alfabetización digital es la capacidad de comprender, utilizar y aprovechar las tecnologías digitales de manera efectiva.',
+        'No consiste solamente en saber utilizar dispositivos o aplicaciones. También implica comprender cómo funcionan, evaluar la información y actuar responsablemente en entornos digitales.'
+      ],
+      destacado: 'La tecnología es una herramienta. La verdadera capacidad está en saber utilizarla con criterio.'
+    },
+    {
+      titulo: '2. Herramientas digitales básicas',
+      parrafos: [
+        'Las herramientas digitales permiten comunicarse, organizar información, aprender, crear contenidos y desarrollar actividades profesionales.',
+        'Conocer sus funciones principales permite seleccionar la herramienta adecuada según la necesidad.'
+      ],
+      puntos: [
+        'Procesadores de texto y documentos.',
+        'Herramientas de comunicación.',
+        'Plataformas educativas.',
+        'Almacenamiento en la nube.',
+        'Herramientas de organización y productividad.'
+      ]
+    },
+    {
+      titulo: '3. Seguridad y protección digital',
+      parrafos: [
+        'El uso de la tecnología requiere responsabilidad sobre la información personal y profesional.',
+        'Contraseñas seguras, verificación de fuentes, actualizaciones y cuidado de los datos son prácticas fundamentales.'
+      ],
+      conceptos: [
+        {
+          nombre: 'Privacidad',
+          significado: 'Protección de la información personal y sensible.',
+          ejemplo: 'Evitar compartir datos personales innecesariamente.'
+        },
+        {
+          nombre: 'Seguridad digital',
+          significado: 'Medidas para proteger cuentas, dispositivos y datos.',
+          ejemplo: 'Utilizar contraseñas seguras y autenticación adicional.'
+        },
+        {
+          nombre: 'Ciudadanía digital',
+          significado: 'Uso responsable y consciente de la tecnología.',
+          ejemplo: 'Respetar a otras personas en espacios digitales.'
+        }
+      ]
+    },
+    {
+      titulo: '4. Evaluar la información digital',
+      parrafos: [
+        'Internet permite acceder a una enorme cantidad de información, pero no toda es correcta ni confiable.',
+        'Aprender a verificar fuentes, comparar información y distinguir hechos de opiniones es una habilidad esencial.'
+      ],
+      puntos: [
+        'Revisar la fuente.',
+        'Comparar información.',
+        'Verificar fechas y contexto.',
+        'Identificar posibles sesgos.'
+      ]
+    },
+    {
+      titulo: '5. Aprender de manera digital',
+      parrafos: [
+        'La tecnología amplía las posibilidades de aprendizaje y permite acceder a conocimientos desde diferentes lugares.',
+        'El verdadero beneficio aparece cuando la persona utiliza estas herramientas con objetivos claros y disciplina.'
+      ],
+      cierre: 'La alfabetización digital permite pasar de ser un usuario pasivo a utilizar la tecnología de forma consciente y productiva.'
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Reflexión 1',
+      pregunta: '¿Qué herramienta digital utilizas actualmente y cómo podrías aprovecharla mejor?'
+    },
+    {
+      titulo: 'Reflexión 2',
+      pregunta: '¿Qué hábito de seguridad digital necesitas fortalecer?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Qué significa alfabetización digital?',
+      opciones: [
+        'Utilizar únicamente redes sociales.',
+        'Comprender y utilizar la tecnología de manera efectiva y responsable.',
+        'Comprar dispositivos tecnológicos.',
+        'Utilizar muchas aplicaciones.'
+      ],
+      correcta: 1,
+      explicacion: 'La alfabetización digital implica utilizar la tecnología con conocimiento, criterio y responsabilidad.'
+    },
+    {
+      texto: '¿Qué práctica ayuda a proteger la información personal?',
+      opciones: [
+        'Compartir contraseñas.',
+        'Utilizar la misma contraseña siempre.',
+        'Utilizar contraseñas seguras.',
+        'Publicar todos los datos personales.'
+      ],
+      correcta: 2,
+      explicacion: 'Las contraseñas seguras ayudan a proteger las cuentas y la información personal.'
+    },
+    {
+      texto: '¿Por qué es importante verificar la información digital?',
+      opciones: [
+        'Porque toda información en Internet es falsa.',
+        'Porque toda información en Internet es verdadera.',
+        'Porque no toda la información disponible es confiable.',
+        'Porque Internet no permite comparar fuentes.'
+      ],
+      correcta: 2,
+      explicacion: 'La información digital debe evaluarse porque puede ser incorrecta, incompleta o sesgada.'
+    },
+    {
+      texto: '¿Qué representa la ciudadanía digital?',
+      opciones: [
+        'El uso responsable de la tecnología.',
+        'La compra de dispositivos.',
+        'El uso exclusivo de redes sociales.',
+        'La programación avanzada.'
+      ],
+      correcta: 0,
+      explicacion: 'La ciudadanía digital implica actuar de manera responsable y respetuosa en entornos digitales.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+private cargarLeccionInteligenciaArtificial(): void {
+  this.titulo = 'Inteligencia artificial';
+  this.subtitulo = 'Comprender el potencial, los límites y el uso responsable de la inteligencia artificial.';
+  this.objetivo = 'Comprender los fundamentos generales de la inteligencia artificial y aprender a utilizarla como herramienta de apoyo al aprendizaje, la productividad y la creación.';
+
+  this.secciones = [
+    {
+      titulo: '1. ¿Qué es la inteligencia artificial?',
+      parrafos: [
+        'La inteligencia artificial reúne tecnologías capaces de realizar tareas que normalmente requieren capacidades humanas como analizar información, reconocer patrones, generar contenido o apoyar decisiones.',
+        'Su utilidad depende de cómo se integra dentro de un objetivo concreto.'
+      ],
+      destacado: 'La inteligencia artificial no sustituye el criterio humano. Lo amplifica cuando se utiliza correctamente.'
+    },
+    {
+      titulo: '2. La IA como herramienta',
+      parrafos: [
+        'La inteligencia artificial puede utilizarse para aprender, investigar, organizar información, generar ideas y automatizar determinadas tareas.',
+        'La persona debe mantener el control sobre el propósito, las instrucciones y la revisión de los resultados.'
+      ]
+    },
+    {
+      titulo: '3. Capacidades y límites',
+      parrafos: [
+        'Las herramientas de inteligencia artificial pueden producir resultados útiles, pero también pueden equivocarse o presentar información incompleta.',
+        'Por esta razón, los resultados deben revisarse antes de utilizarlos como información definitiva.'
+      ],
+      conceptos: [
+        {
+          nombre: 'Prompt',
+          significado: 'Instrucción que se proporciona a una herramienta de inteligencia artificial.',
+          ejemplo: 'Solicitar a una IA que explique un concepto con ejemplos.'
+        },
+        {
+          nombre: 'Automatización',
+          significado: 'Uso de tecnología para ejecutar tareas con menor intervención manual.',
+          ejemplo: 'Generar automáticamente un informe a partir de datos.'
+        },
+        {
+          nombre: 'Verificación',
+          significado: 'Proceso de revisar la exactitud y utilidad de un resultado.',
+          ejemplo: 'Contrastar una respuesta de IA con fuentes confiables.'
+        }
+      ]
+    },
+    {
+      titulo: '4. Uso responsable',
+      parrafos: [
+        'Utilizar inteligencia artificial de manera responsable implica proteger información sensible, respetar derechos de autor y revisar los resultados.',
+        'También implica reconocer cuándo una decisión requiere criterio humano y responsabilidad directa.'
+      ],
+      puntos: [
+        'No compartir información sensible innecesariamente.',
+        'Verificar resultados importantes.',
+        'Respetar la propiedad intelectual.',
+        'Mantener supervisión humana.'
+      ]
+    },
+    {
+      titulo: '5. IA para el aprendizaje y la productividad',
+      parrafos: [
+        'La IA puede convertirse en un asistente para estudiar, investigar, practicar habilidades y organizar tareas.',
+        'Su verdadero valor aparece cuando ayuda a la persona a comprender y mejorar, no cuando reemplaza completamente su aprendizaje.'
+      ],
+      cierre: 'La inteligencia artificial debe convertirse en una herramienta al servicio del propósito humano.'
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Reflexión 1',
+      pregunta: '¿Qué tarea de tu vida podrías mejorar utilizando inteligencia artificial de manera responsable?'
+    },
+    {
+      titulo: 'Reflexión 2',
+      pregunta: '¿Qué información deberías verificar antes de confiar plenamente en una respuesta generada por IA?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Qué es la inteligencia artificial?',
+      opciones: [
+        'Una red social.',
+        'Un conjunto de tecnologías capaces de realizar determinadas tareas asociadas a capacidades humanas.',
+        'Un dispositivo físico.',
+        'Un sistema exclusivamente para videojuegos.'
+      ],
+      correcta: 1,
+      explicacion: 'La inteligencia artificial reúne tecnologías capaces de realizar diversas tareas mediante procesamiento de información y patrones.'
+    },
+    {
+      texto: '¿Por qué deben revisarse los resultados de una IA?',
+      opciones: [
+        'Porque nunca produce resultados.',
+        'Porque puede cometer errores.',
+        'Porque no procesa información.',
+        'Porque solamente funciona sin Internet.'
+      ],
+      correcta: 1,
+      explicacion: 'La IA puede generar información incorrecta o incompleta, por lo que es necesaria la revisión humana.'
+    },
+    {
+      texto: '¿Qué es un prompt?',
+      opciones: [
+        'Una contraseña.',
+        'Una aplicación.',
+        'Una instrucción dada a una herramienta de IA.',
+        'Un dispositivo.'
+      ],
+      correcta: 2,
+      explicacion: 'Un prompt es la instrucción o solicitud que se proporciona a una herramienta de inteligencia artificial.'
+    },
+    {
+      texto: '¿Cuál es un principio del uso responsable de IA?',
+      opciones: [
+        'Compartir información sensible.',
+        'No verificar resultados.',
+        'Mantener supervisión humana.',
+        'Aceptar cualquier respuesta automáticamente.'
+      ],
+      correcta: 2,
+      explicacion: 'La supervisión humana permite evaluar los resultados y asumir responsabilidad sobre su uso.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+private cargarLeccionHerramientasProductividad(): void {
+  this.titulo = 'Herramientas de productividad';
+  this.subtitulo = 'Utilizar herramientas digitales para organizar mejor el trabajo y el aprendizaje.';
+  this.objetivo = 'Aprender a seleccionar y utilizar herramientas digitales que permitan organizar tareas, información, comunicación y proyectos con mayor claridad y eficiencia.';
+
+  this.secciones = [
+    {
+      titulo: '1. ¿Qué es la productividad?',
+      parrafos: [
+        'La productividad no consiste en hacer más cosas sin descanso. Consiste en utilizar adecuadamente el tiempo y los recursos para avanzar hacia objetivos importantes.',
+        'Una buena organización permite reducir esfuerzos innecesarios y concentrarse en lo que realmente importa.'
+      ],
+      destacado: 'Ser productivo no significa estar ocupado todo el tiempo. Significa avanzar con propósito.'
+    },
+    {
+      titulo: '2. Herramientas para organizar',
+      parrafos: [
+        'Las herramientas digitales pueden ayudar a registrar tareas, establecer prioridades, organizar calendarios y administrar información.',
+        'La herramienta debe adaptarse a la necesidad y no convertirse en una fuente adicional de complejidad.'
+      ]
+    },
+    {
+      titulo: '3. Organización de la información',
+      parrafos: [
+        'Una estructura clara permite encontrar rápidamente documentos, datos y recursos.',
+        'Nombrar archivos correctamente, utilizar carpetas y mantener criterios consistentes facilita el trabajo individual y colaborativo.'
+      ],
+      conceptos: [
+        {
+          nombre: 'Prioridad',
+          significado: 'Nivel de importancia asignado a una tarea.',
+          ejemplo: 'Atender primero una tarea necesaria para cumplir un objetivo.'
+        },
+        {
+          nombre: 'Planificación',
+          significado: 'Organización anticipada de acciones y recursos.',
+          ejemplo: 'Definir las tareas de una semana antes de comenzar.'
+        },
+        {
+          nombre: 'Flujo de trabajo',
+          significado: 'Secuencia organizada de acciones para completar una actividad.',
+          ejemplo: 'Recibir información, procesarla, revisarla y entregar un resultado.'
+        }
+      ]
+    },
+    {
+      titulo: '4. Automatizar tareas repetitivas',
+      parrafos: [
+        'Algunas herramientas permiten reducir tareas repetitivas mediante plantillas, reglas, integraciones y automatizaciones.',
+        'Automatizar correctamente libera tiempo para actividades que requieren análisis, creatividad y criterio.'
+      ]
+    },
+    {
+      titulo: '5. Elegir la herramienta adecuada',
+      parrafos: [
+        'No existe una única herramienta perfecta para todas las personas o situaciones.',
+        'La elección debe considerar el objetivo, la facilidad de uso, la seguridad y la necesidad real.'
+      ],
+      cierre: 'Las herramientas son medios. La productividad comienza con claridad sobre lo que se quiere lograr.'
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Reflexión 1',
+      pregunta: '¿Qué actividad realizas repetidamente que podría organizarse mejor con una herramienta digital?'
+    },
+    {
+      titulo: 'Reflexión 2',
+      pregunta: '¿Qué aspecto de tu organización personal necesita mayor claridad?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Qué significa ser productivo?',
+      opciones: [
+        'Estar ocupado todo el día.',
+        'Hacer muchas tareas sin planificación.',
+        'Avanzar hacia objetivos utilizando adecuadamente los recursos.',
+        'Utilizar muchas aplicaciones.'
+      ],
+      correcta: 2,
+      explicacion: 'La productividad está relacionada con avanzar hacia objetivos de manera eficiente y consciente.'
+    },
+    {
+      texto: '¿Para qué sirven las herramientas de organización?',
+      opciones: [
+        'Para complicar el trabajo.',
+        'Para organizar tareas e información.',
+        'Para eliminar todos los objetivos.',
+        'Para evitar planificar.'
+      ],
+      correcta: 1,
+      explicacion: 'Las herramientas de organización ayudan a estructurar tareas, información y actividades.'
+    },
+    {
+      texto: '¿Qué beneficio puede ofrecer la automatización?',
+      opciones: [
+        'Aumentar tareas repetitivas.',
+        'Eliminar toda responsabilidad humana.',
+        'Reducir tareas repetitivas.',
+        'Evitar revisar resultados.'
+      ],
+      correcta: 2,
+      explicacion: 'La automatización puede reducir tareas repetitivas y liberar tiempo para actividades de mayor valor.'
+    },
+    {
+      texto: '¿Cómo debe elegirse una herramienta digital?',
+      opciones: [
+        'Por ser la más popular.',
+        'Por tener más funciones.',
+        'Según el objetivo y la necesidad real.',
+        'Porque otras personas la utilizan.'
+      ],
+      correcta: 2,
+      explicacion: 'La herramienta debe responder a una necesidad concreta y a los objetivos de quien la utiliza.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+private cargarLeccionAutomatizacion(): void {
+  this.titulo = 'Automatización';
+  this.subtitulo = 'Comprender cómo automatizar tareas para mejorar procesos y aprovechar mejor los recursos.';
+  this.objetivo = 'Comprender los principios básicos de la automatización y reconocer oportunidades para simplificar procesos mediante herramientas digitales.';
+
+  this.secciones = [
+    {
+      titulo: '1. ¿Qué es la automatización?',
+      parrafos: [
+        'La automatización consiste en utilizar tecnología para ejecutar determinadas tareas o procesos con menor intervención manual.',
+        'Su propósito no es automatizar por automatizar, sino mejorar la forma en que se utilizan el tiempo y los recursos.'
+      ],
+      destacado: 'Automatizar significa diseñar un proceso para que una parte de su ejecución ocurra de manera sistemática.'
+    },
+    {
+      titulo: '2. Identificar tareas repetitivas',
+      parrafos: [
+        'El primer paso para automatizar es identificar actividades repetitivas, previsibles y que consumen tiempo.',
+        'Observar el proceso antes de elegir una herramienta permite evitar automatizaciones innecesarias.'
+      ]
+    },
+    {
+      titulo: '3. Elementos de una automatización',
+      parrafos: [
+        'Una automatización suele comenzar con un evento o condición y posteriormente ejecuta una o varias acciones.',
+        'Comprender esta lógica permite diseñar procesos más claros.'
+      ],
+      conceptos: [
+        {
+          nombre: 'Disparador',
+          significado: 'Evento que inicia una automatización.',
+          ejemplo: 'Recibir un nuevo formulario.'
+        },
+        {
+          nombre: 'Acción',
+          significado: 'Tarea que se ejecuta después del disparador.',
+          ejemplo: 'Guardar automáticamente la información.'
+        },
+        {
+          nombre: 'Flujo',
+          significado: 'Secuencia de pasos que conforman un proceso automatizado.',
+          ejemplo: 'Recibir datos, clasificarlos y generar una notificación.'
+        }
+      ]
+    },
+    {
+      titulo: '4. Revisar antes de automatizar',
+      parrafos: [
+        'Una automatización mal diseñada puede multiplicar errores.',
+        'Antes de implementarla es importante comprobar las condiciones, revisar los resultados y establecer controles.'
+      ]
+    },
+    {
+      titulo: '5. Automatizar con responsabilidad',
+      parrafos: [
+        'La automatización debe proteger la información y mantener supervisión sobre los procesos importantes.',
+        'No todas las decisiones deben delegarse a sistemas automáticos.'
+      ],
+      cierre: 'La automatización tiene valor cuando simplifica procesos sin perder control, seguridad ni responsabilidad.'
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Reflexión 1',
+      pregunta: '¿Qué tarea repetitiva realizas que podría convertirse en un proceso automatizado?'
+    },
+    {
+      titulo: 'Reflexión 2',
+      pregunta: '¿Qué riesgo deberías considerar antes de automatizar un proceso?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Qué es la automatización?',
+      opciones: [
+        'Realizar todo manualmente.',
+        'Utilizar tecnología para ejecutar tareas o procesos con menor intervención manual.',
+        'Eliminar todos los procesos.',
+        'Evitar utilizar tecnología.'
+      ],
+      correcta: 1,
+      explicacion: 'La automatización utiliza tecnología para ejecutar determinadas tareas o procesos de manera sistemática.'
+    },
+    {
+      texto: '¿Qué debe hacerse antes de automatizar?',
+      opciones: [
+        'Elegir cualquier herramienta.',
+        'Identificar y comprender el proceso.',
+        'Eliminar los controles.',
+        'Compartir toda la información.'
+      ],
+      correcta: 1,
+      explicacion: 'Comprender el proceso permite identificar qué parte realmente conviene automatizar.'
+    },
+    {
+      texto: '¿Qué es un disparador?',
+      opciones: [
+        'El resultado final.',
+        'El evento que inicia una automatización.',
+        'Una contraseña.',
+        'Un documento.'
+      ],
+      correcta: 1,
+      explicacion: 'El disparador es el evento o condición que inicia el flujo automatizado.'
+    },
+    {
+      texto: '¿Por qué deben revisarse las automatizaciones?',
+      opciones: [
+        'Porque pueden generar errores.',
+        'Porque nunca funcionan.',
+        'Porque no necesitan supervisión.',
+        'Porque eliminan la tecnología.'
+      ],
+      correcta: 0,
+      explicacion: 'Una automatización incorrecta puede multiplicar errores, por lo que necesita revisión y controles.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+private cargarLeccionInnovacionTecnologia(): void {
+  this.titulo = 'Innovación y uso responsable de la tecnología';
+  this.subtitulo = 'Utilizar la tecnología para crear soluciones sin perder criterio, responsabilidad ni propósito.';
+  this.objetivo = 'Comprender la innovación tecnológica como una oportunidad para resolver problemas y generar valor mediante un uso consciente y responsable de la tecnología.';
+
+  this.secciones = [
+    {
+      titulo: '1. ¿Qué es innovar?',
+      parrafos: [
+        'Innovar significa desarrollar o mejorar ideas, procesos, productos o servicios para responder mejor a una necesidad.',
+        'No toda novedad es innovación. La innovación debe aportar utilidad o valor.'
+      ],
+      destacado: 'Innovar no significa hacer algo diferente solamente. Significa crear o mejorar algo que tiene un propósito.'
+    },
+    {
+      titulo: '2. Tecnología al servicio de las personas',
+      parrafos: [
+        'La tecnología puede ampliar capacidades humanas, facilitar procesos y crear nuevas oportunidades.',
+        'Su utilización debe partir de necesidades reales y considerar las consecuencias de su implementación.'
+      ]
+    },
+    {
+      titulo: '3. Criterios para una innovación responsable',
+      parrafos: [
+        'La innovación responsable considera seguridad, privacidad, accesibilidad, impacto social y sostenibilidad.',
+        'Las decisiones tecnológicas deben evaluar tanto los beneficios como los posibles riesgos.'
+      ],
+      conceptos: [
+        {
+          nombre: 'Utilidad',
+          significado: 'Capacidad de una solución para responder a una necesidad.',
+          ejemplo: 'Una herramienta que reduce tiempo en una tarea necesaria.'
+        },
+        {
+          nombre: 'Impacto',
+          significado: 'Consecuencias que una innovación genera.',
+          ejemplo: 'Evaluar cómo afecta una nueva tecnología a sus usuarios.'
+        },
+        {
+          nombre: 'Responsabilidad',
+          significado: 'Compromiso con el uso adecuado de una solución.',
+          ejemplo: 'Proteger los datos de las personas que utilizan un sistema.'
+        }
+      ]
+    },
+    {
+      titulo: '4. Evaluar antes de implementar',
+      parrafos: [
+        'Antes de incorporar una nueva tecnología es necesario comprender qué problema resuelve, cuánto cuesta, qué riesgos presenta y qué recursos requiere.',
+        'Una decisión consciente evita adoptar herramientas solamente por tendencia.'
+      ]
+    },
+    {
+      titulo: '5. Construir una cultura de innovación',
+      parrafos: [
+        'La innovación también requiere aprender, experimentar, medir resultados y corregir errores.',
+        'Una cultura innovadora permite mejorar continuamente sin abandonar los principios fundamentales.'
+      ],
+      cierre: 'La tecnología tiene verdadero valor cuando se utiliza para resolver problemas y generar valor con responsabilidad.'
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Reflexión 1',
+      pregunta: '¿Qué problema de tu entorno podría resolverse mejor mediante tecnología?'
+    },
+    {
+      titulo: 'Reflexión 2',
+      pregunta: '¿Qué principio debería guiar siempre tus decisiones tecnológicas?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Qué caracteriza a una innovación?',
+      opciones: [
+        'Ser nueva aunque no sea útil.',
+        'Aportar valor o responder a una necesidad.',
+        'Ser costosa.',
+        'Ser utilizada por muchas personas.'
+      ],
+      correcta: 1,
+      explicacion: 'La innovación debe aportar utilidad o valor, no solamente novedad.'
+    },
+    {
+      texto: '¿Qué debe considerarse antes de implementar una tecnología?',
+      opciones: [
+        'Solamente su popularidad.',
+        'Sus beneficios, costos y riesgos.',
+        'Solamente su apariencia.',
+        'La opinión de una sola persona.'
+      ],
+      correcta: 1,
+      explicacion: 'Una decisión tecnológica responsable considera beneficios, recursos, costos y riesgos.'
+    },
+    {
+      texto: '¿Qué significa innovación responsable?',
+      opciones: [
+        'Utilizar toda tecnología disponible.',
+        'Innovar sin controles.',
+        'Considerar consecuencias y principios en la innovación.',
+        'Evitar cualquier cambio.'
+      ],
+      correcta: 2,
+      explicacion: 'La innovación responsable considera el impacto y mantiene criterios de seguridad, ética y utilidad.'
+    },
+    {
+      texto: '¿Qué ayuda a construir una cultura de innovación?',
+      opciones: [
+        'No experimentar.',
+        'Evitar aprender de los errores.',
+        'Experimentar, medir y mejorar.',
+        'Rechazar cualquier tecnología.'
+      ],
+      correcta: 2,
+      explicacion: 'La experimentación, medición y mejora continua son elementos fundamentales de una cultura innovadora.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+private cargarLeccionEducacionFinanciera(): void {
+  this.titulo = 'Educación financiera básica';
+  this.subtitulo = 'Comprender los principios fundamentales para administrar el dinero con responsabilidad.';
+  this.objetivo = 'Desarrollar conocimientos básicos sobre ingresos, gastos, ahorro y planificación para tomar decisiones económicas más conscientes.';
+
+  this.secciones = [
+    {
+      titulo: '1. ¿Qué es la educación financiera?',
+      parrafos: [
+        'La educación financiera permite comprender cómo administrar los recursos económicos y tomar decisiones responsables.',
+        'No se trata solamente de ganar más dinero, sino de aprender a utilizar adecuadamente los recursos disponibles.'
+      ],
+      destacado: 'La educación financiera comienza cuando comprendemos que cada decisión económica tiene consecuencias.'
+    },
+    {
+      titulo: '2. Ingresos y gastos',
+      parrafos: [
+        'Los ingresos representan los recursos que recibimos, mientras que los gastos representan los recursos que utilizamos.',
+        'Conocer ambos permite comprender nuestra situación económica real.'
+      ]
+    },
+    {
+      titulo: '3. Necesidades y deseos',
+      parrafos: [
+        'Una decisión económica consciente distingue entre aquello que necesitamos y aquello que simplemente deseamos.',
+        'Esta diferencia ayuda a establecer prioridades y evitar decisiones impulsivas.'
+      ],
+      conceptos: [
+        {
+          nombre: 'Ingreso',
+          significado: 'Recurso económico que una persona recibe.',
+          ejemplo: 'Un salario o ingreso generado por una actividad.'
+        },
+        {
+          nombre: 'Gasto',
+          significado: 'Recurso económico utilizado para adquirir algo.',
+          ejemplo: 'El pago de alimentación o transporte.'
+        },
+        {
+          nombre: 'Ahorro',
+          significado: 'Parte de los recursos que se reserva para el futuro.',
+          ejemplo: 'Separar una cantidad antes de realizar otros gastos.'
+        }
+      ]
+    },
+    {
+      titulo: '4. El valor de planificar',
+      parrafos: [
+        'Planificar permite anticipar necesidades, establecer prioridades y reducir decisiones impulsivas.',
+        'Una planificación sencilla puede mejorar significativamente el manejo de los recursos.'
+      ]
+    },
+    {
+      titulo: '5. Responsabilidad económica',
+      parrafos: [
+        'La responsabilidad económica implica conocer la propia situación, cumplir compromisos y tomar decisiones considerando las consecuencias.',
+        'El objetivo es construir estabilidad mediante hábitos sostenibles.'
+      ],
+      cierre: 'La educación financiera proporciona claridad para tomar mejores decisiones con los recursos disponibles.'
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Reflexión 1',
+      pregunta: '¿Qué aspecto de tus finanzas necesitas comprender mejor?'
+    },
+    {
+      titulo: 'Reflexión 2',
+      pregunta: '¿Qué decisión económica podrías mejorar mediante una planificación previa?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Qué busca desarrollar la educación financiera?',
+      opciones: [
+        'Únicamente aumentar ingresos.',
+        'Capacidad para administrar recursos y tomar decisiones responsables.',
+        'Gastar más.',
+        'Evitar ahorrar.'
+      ],
+      correcta: 1,
+      explicacion: 'La educación financiera desarrolla conocimientos para administrar recursos y tomar mejores decisiones económicas.'
+    },
+    {
+      texto: '¿Qué representa un ingreso?',
+      opciones: [
+        'Un recurso económico recibido.',
+        'Un gasto.',
+        'Una deuda.',
+        'Una necesidad.'
+      ],
+      correcta: 0,
+      explicacion: 'Un ingreso es un recurso económico que una persona recibe.'
+    },
+    {
+      texto: '¿Por qué es importante diferenciar necesidades y deseos?',
+      opciones: [
+        'Para eliminar todos los deseos.',
+        'Para establecer prioridades económicas.',
+        'Para gastar más.',
+        'Para evitar planificar.'
+      ],
+      correcta: 1,
+      explicacion: 'Distinguir necesidades y deseos ayuda a establecer prioridades y controlar gastos.'
+    },
+    {
+      texto: '¿Qué representa el ahorro?',
+      opciones: [
+        'Gastar inmediatamente.',
+        'Reservar recursos para el futuro.',
+        'Evitar todo gasto.',
+        'Solicitar dinero prestado.'
+      ],
+      correcta: 1,
+      explicacion: 'El ahorro consiste en reservar una parte de los recursos para objetivos o necesidades futuras.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+private cargarLeccionPresupuestoPersonal(): void {
+  this.titulo = 'Presupuesto personal';
+  this.subtitulo = 'Organizar ingresos y gastos para tomar decisiones económicas con claridad.';
+  this.objetivo = 'Aprender a elaborar un presupuesto personal sencillo que permita conocer la situación económica, establecer prioridades y planificar el uso de los recursos.';
+
+  this.secciones = [
+    {
+      titulo: '1. ¿Qué es un presupuesto?',
+      parrafos: [
+        'Un presupuesto es una herramienta que permite organizar anticipadamente los ingresos y gastos.',
+        'Su función principal es ofrecer claridad sobre cómo se utilizan los recursos.'
+      ],
+      destacado: 'Un presupuesto no limita tu libertad; te permite decidir con mayor claridad.'
+    },
+    {
+      titulo: '2. Registrar ingresos y gastos',
+      parrafos: [
+        'El primer paso consiste en conocer cuánto dinero entra y cuánto dinero sale.',
+        'Registrar esta información permite detectar patrones, gastos innecesarios y oportunidades de mejora.'
+      ]
+    },
+    {
+      titulo: '3. Clasificar los gastos',
+      parrafos: [
+        'Clasificar los gastos permite distinguir aquellos que son necesarios, variables, periódicos o prescindibles.',
+        'Esta clasificación facilita establecer prioridades.'
+      ],
+      conceptos: [
+        {
+          nombre: 'Gasto fijo',
+          significado: 'Gasto que suele mantenerse relativamente estable.',
+          ejemplo: 'Un pago mensual establecido.'
+        },
+        {
+          nombre: 'Gasto variable',
+          significado: 'Gasto cuyo valor puede cambiar.',
+          ejemplo: 'Consumo de alimentación o transporte.'
+        },
+        {
+          nombre: 'Prioridad financiera',
+          significado: 'Orden de importancia asignado a un uso del dinero.',
+          ejemplo: 'Atender primero una obligación necesaria.'
+        }
+      ]
+    },
+    {
+      titulo: '4. Ajustar el presupuesto',
+      parrafos: [
+        'Un presupuesto no es estático. Debe revisarse cuando cambian los ingresos, los gastos o las prioridades.',
+        'La revisión periódica permite corregir desviaciones antes de que se conviertan en problemas.'
+      ]
+    },
+    {
+      titulo: '5. Presupuestar con propósito',
+      parrafos: [
+        'El presupuesto debe estar relacionado con objetivos concretos.',
+        'Cuando existe un propósito claro, resulta más fácil tomar decisiones coherentes con las prioridades.'
+      ],
+      cierre: 'Un presupuesto bien utilizado transforma los números en información para decidir mejor.'
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Reflexión 1',
+      pregunta: '¿Qué gasto necesitas conocer mejor para organizar tus finanzas?'
+    },
+    {
+      titulo: 'Reflexión 2',
+      pregunta: '¿Qué objetivo debería tener tu presupuesto personal?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Para qué sirve un presupuesto?',
+      opciones: [
+        'Para gastar sin control.',
+        'Para organizar ingresos y gastos.',
+        'Para eliminar ingresos.',
+        'Para evitar revisar las finanzas.'
+      ],
+      correcta: 1,
+      explicacion: 'El presupuesto permite organizar ingresos y gastos para tomar decisiones económicas con mayor claridad.'
+    },
+    {
+      texto: '¿Qué debe registrarse en un presupuesto?',
+      opciones: [
+        'Solamente los gastos.',
+        'Solamente los ingresos.',
+        'Ingresos y gastos.',
+        'Solamente las deudas.'
+      ],
+      correcta: 2,
+      explicacion: 'Conocer ingresos y gastos permite comprender la situación económica completa.'
+    },
+    {
+      texto: '¿Por qué se clasifican los gastos?',
+      opciones: [
+        'Para complicar el presupuesto.',
+        'Para establecer prioridades.',
+        'Para aumentar gastos.',
+        'Para evitar ahorrar.'
+      ],
+      correcta: 1,
+      explicacion: 'Clasificar los gastos facilita identificar prioridades y oportunidades de ajuste.'
+    },
+    {
+      texto: '¿Debe revisarse periódicamente un presupuesto?',
+      opciones: [
+        'No.',
+        'Sí, porque las circunstancias pueden cambiar.',
+        'Solamente una vez.',
+        'Nunca después de crearlo.'
+      ],
+      correcta: 1,
+      explicacion: 'Los ingresos, gastos y prioridades pueden cambiar, por lo que el presupuesto debe revisarse.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+private cargarLeccionAhorroPlanificacion(): void {
+  this.titulo = 'Ahorro y planificación';
+  this.subtitulo = 'Construir hábitos de ahorro orientados a objetivos y necesidades futuras.';
+  this.objetivo = 'Comprender la importancia del ahorro y desarrollar una planificación que permita prepararse para objetivos y situaciones futuras.';
+
+  this.secciones = [
+    {
+      titulo: '1. ¿Por qué ahorrar?',
+      parrafos: [
+        'Ahorrar significa reservar recursos actuales para utilizarlos en el futuro.',
+        'El ahorro puede ayudar a alcanzar objetivos, responder ante imprevistos y desarrollar mayor estabilidad económica.'
+      ],
+      destacado: 'Ahorrar no significa guardar lo que sobra; significa asignar conscientemente una parte de los recursos al futuro.'
+    },
+    {
+      titulo: '2. Establecer objetivos',
+      parrafos: [
+        'Un objetivo de ahorro debe ser claro y realista.',
+        'Definir cuánto se necesita y para cuándo permite convertir una intención en un plan.'
+      ]
+    },
+    {
+      titulo: '3. Crear el hábito',
+      parrafos: [
+        'La constancia es más importante que realizar esfuerzos aislados.',
+        'Separar una cantidad de manera periódica puede ayudar a construir el hábito de ahorro.'
+      ],
+      conceptos: [
+        {
+          nombre: 'Meta',
+          significado: 'Resultado concreto que se desea alcanzar.',
+          ejemplo: 'Ahorrar para adquirir una herramienta de trabajo.'
+        },
+        {
+          nombre: 'Constancia',
+          significado: 'Continuidad en una acción a lo largo del tiempo.',
+          ejemplo: 'Ahorrar regularmente según un plan.'
+        },
+        {
+          nombre: 'Fondo de reserva',
+          significado: 'Recursos destinados a situaciones futuras o imprevistas.',
+          ejemplo: 'Reservar dinero para una emergencia.'
+        }
+      ]
+    },
+    {
+      titulo: '4. Planificar para el futuro',
+      parrafos: [
+        'La planificación permite anticipar necesidades y distribuir los recursos de manera ordenada.',
+        'Un plan debe revisarse cuando cambian las circunstancias.'
+      ]
+    },
+    {
+      titulo: '5. Disciplina financiera',
+      parrafos: [
+        'Ahorrar requiere disciplina y decisiones coherentes con los objetivos establecidos.',
+        'La disciplina financiera se construye mediante pequeños hábitos repetidos.'
+      ],
+      cierre: 'El ahorro convierte una decisión presente en una oportunidad futura.'
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Reflexión 1',
+      pregunta: '¿Para qué objetivo concreto te gustaría comenzar a ahorrar?'
+    },
+    {
+      titulo: 'Reflexión 2',
+      pregunta: '¿Qué hábito podría ayudarte a ahorrar con mayor constancia?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Qué significa ahorrar?',
+      opciones: [
+        'Gastar menos sin propósito.',
+        'Reservar recursos para el futuro.',
+        'Evitar todo gasto.',
+        'Solicitar crédito.'
+      ],
+      correcta: 1,
+      explicacion: 'Ahorrar consiste en reservar recursos actuales para utilizarlos en objetivos o necesidades futuras.'
+    },
+    {
+      texto: '¿Qué ayuda a convertir el ahorro en un hábito?',
+      opciones: [
+        'La improvisación.',
+        'La constancia.',
+        'Gastar primero.',
+        'No establecer objetivos.'
+      ],
+      correcta: 1,
+      explicacion: 'La constancia permite construir hábitos financieros sostenibles.'
+    },
+    {
+      texto: '¿Qué caracteriza a una meta de ahorro?',
+      opciones: [
+        'Ser completamente indefinida.',
+        'Ser clara y realista.',
+        'No tener plazo.',
+        'No requerir planificación.'
+      ],
+      correcta: 1,
+      explicacion: 'Una meta clara y realista facilita la planificación y el seguimiento.'
+    },
+    {
+      texto: '¿Para qué sirve un fondo de reserva?',
+      opciones: [
+        'Para gastar inmediatamente.',
+        'Para responder ante necesidades futuras o imprevistas.',
+        'Para evitar planificar.',
+        'Para aumentar gastos innecesarios.'
+      ],
+      correcta: 1,
+      explicacion: 'Un fondo de reserva ayuda a enfrentar necesidades futuras o situaciones inesperadas.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+private cargarLeccionAdministracionRecursos(): void {
+  this.titulo = 'Administración de recursos';
+  this.subtitulo = 'Utilizar los recursos disponibles de manera consciente, eficiente y responsable.';
+  this.objetivo = 'Comprender cómo administrar recursos económicos, materiales y de tiempo para aprovecharlos mejor y evitar desperdicios.';
+
+  this.secciones = [
+    {
+      titulo: '1. ¿Qué significa administrar recursos?',
+      parrafos: [
+        'Administrar recursos significa decidir cómo utilizarlos para alcanzar determinados objetivos.',
+        'Los recursos son limitados, por lo que requieren prioridades y planificación.'
+      ],
+      destacado: 'Administrar bien no significa tener mucho; significa utilizar adecuadamente lo que se tiene.'
+    },
+    {
+      titulo: '2. Identificar recursos',
+      parrafos: [
+        'Antes de tomar decisiones es necesario reconocer qué recursos están disponibles.',
+        'Además del dinero existen recursos como tiempo, conocimientos, herramientas, información y relaciones.'
+      ]
+    },
+    {
+      titulo: '3. Priorizar',
+      parrafos: [
+        'Priorizar significa ordenar los usos posibles de acuerdo con su importancia y propósito.',
+        'La prioridad permite evitar que recursos limitados se utilicen en actividades de menor valor.'
+      ],
+      conceptos: [
+        {
+          nombre: 'Recurso',
+          significado: 'Medio disponible para alcanzar un objetivo.',
+          ejemplo: 'Dinero, tiempo, conocimientos o herramientas.'
+        },
+        {
+          nombre: 'Eficiencia',
+          significado: 'Utilizar adecuadamente los recursos para obtener un resultado.',
+          ejemplo: 'Reducir desperdicios en un proceso.'
+        },
+        {
+          nombre: 'Prioridad',
+          significado: 'Importancia relativa asignada a una necesidad o actividad.',
+          ejemplo: 'Utilizar primero los recursos en una necesidad fundamental.'
+        }
+      ]
+    },
+    {
+      titulo: '4. Evitar desperdicios',
+      parrafos: [
+        'El desperdicio aparece cuando los recursos se utilizan sin propósito, planificación o control.',
+        'Revisar los procesos permite identificar oportunidades para mejorar.'
+      ]
+    },
+    {
+      titulo: '5. Administrar para crecer',
+      parrafos: [
+        'Una buena administración permite conservar y utilizar mejor los recursos mientras se trabaja hacia objetivos.',
+        'La disciplina y la revisión constante fortalecen la capacidad de administrar.'
+      ],
+      cierre: 'La administración responsable transforma recursos limitados en posibilidades de crecimiento.'
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Reflexión 1',
+      pregunta: '¿Qué recurso necesitas administrar mejor actualmente?'
+    },
+    {
+      titulo: 'Reflexión 2',
+      pregunta: '¿Dónde identificas actualmente un desperdicio que podrías reducir?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Qué significa administrar recursos?',
+      opciones: [
+        'Utilizarlos sin planificación.',
+        'Decidir cómo utilizarlos para alcanzar objetivos.',
+        'Gastarlos rápidamente.',
+        'Evitar utilizarlos.'
+      ],
+      correcta: 1,
+      explicacion: 'Administrar recursos implica decidir cómo utilizarlos de acuerdo con objetivos y prioridades.'
+    },
+    {
+      texto: '¿Cuál es un recurso además del dinero?',
+      opciones: [
+        'Solamente objetos.',
+        'Tiempo.',
+        'Nada.',
+        'Únicamente ingresos.'
+      ],
+      correcta: 1,
+      explicacion: 'El tiempo, los conocimientos, las herramientas y la información también son recursos.'
+    },
+    {
+      texto: '¿Para qué sirve priorizar?',
+      opciones: [
+        'Para utilizar recursos sin orden.',
+        'Para ordenar los usos según su importancia.',
+        'Para aumentar desperdicios.',
+        'Para eliminar objetivos.'
+      ],
+      correcta: 1,
+      explicacion: 'Priorizar ayuda a utilizar recursos limitados en aquello que tiene mayor importancia.'
+    },
+    {
+      texto: '¿Qué ayuda a reducir desperdicios?',
+      opciones: [
+        'La improvisación permanente.',
+        'La revisión de procesos.',
+        'La falta de control.',
+        'Evitar planificar.'
+      ],
+      correcta: 1,
+      explicacion: 'Revisar los procesos permite detectar desperdicios y oportunidades de mejora.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+private cargarLeccionDecisionesEconomicas(): void {
+  this.titulo = 'Decisiones económicas responsables';
+  this.subtitulo = 'Evaluar las consecuencias antes de tomar decisiones relacionadas con el dinero y los recursos.';
+  this.objetivo = 'Desarrollar criterios para tomar decisiones económicas responsables, considerando necesidades, consecuencias, riesgos y objetivos personales.';
+
+  this.secciones = [
+    {
+      titulo: '1. Toda decisión tiene consecuencias',
+      parrafos: [
+        'Cada decisión económica produce efectos sobre los recursos disponibles y sobre las posibilidades futuras.',
+        'Por eso conviene evaluar antes de actuar.'
+      ],
+      destacado: 'Una decisión económica responsable considera no solamente lo que ocurre hoy, sino también sus consecuencias futuras.'
+    },
+    {
+      titulo: '2. Pensar antes de comprar',
+      parrafos: [
+        'Antes de realizar una compra es conveniente preguntarse si realmente se necesita, si existe capacidad para pagarla y qué impacto tendrá.',
+        'Este análisis ayuda a reducir decisiones impulsivas.'
+      ]
+    },
+    {
+      titulo: '3. Evaluar alternativas',
+      parrafos: [
+        'Una decisión responsable compara diferentes opciones y considera costos, beneficios y riesgos.',
+        'No siempre la alternativa más barata es la mejor, ni la más costosa es necesariamente superior.'
+      ],
+      conceptos: [
+        {
+          nombre: 'Costo',
+          significado: 'Recurso que debe entregarse para obtener algo.',
+          ejemplo: 'El dinero utilizado para adquirir un producto.'
+        },
+        {
+          nombre: 'Beneficio',
+          significado: 'Valor positivo que se obtiene de una decisión.',
+          ejemplo: 'Ahorrar tiempo mediante una herramienta adecuada.'
+        },
+        {
+          nombre: 'Riesgo',
+          significado: 'Posibilidad de que ocurra un resultado desfavorable.',
+          ejemplo: 'Asumir una obligación que no se puede sostener.'
+        }
+      ]
+    },
+    {
+      titulo: '4. Evitar decisiones impulsivas',
+      parrafos: [
+        'La emoción puede influir en las decisiones económicas.',
+        'Esperar, comparar y revisar la situación financiera permite tomar decisiones con mayor claridad.'
+      ]
+    },
+    {
+      titulo: '5. Decidir con responsabilidad',
+      parrafos: [
+        'La responsabilidad económica implica asumir las consecuencias de las propias decisiones.',
+        'Una persona responsable utiliza información, evalúa alternativas y actúa de acuerdo con sus objetivos.'
+      ],
+      cierre: 'La claridad antes de decidir es una de las mejores herramientas para proteger los recursos.'
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Reflexión 1',
+      pregunta: '¿Qué preguntas deberías hacerte antes de realizar una compra importante?'
+    },
+    {
+      titulo: 'Reflexión 2',
+      pregunta: '¿Qué decisión económica reciente podrías haber evaluado mejor?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Qué debe considerar una decisión económica responsable?',
+      opciones: [
+        'Solamente el precio.',
+        'Consecuencias, beneficios y riesgos.',
+        'Solamente la emoción.',
+        'La opinión de otras personas.'
+      ],
+      correcta: 1,
+      explicacion: 'Una decisión responsable considera diferentes factores antes de actuar.'
+    },
+    {
+      texto: '¿Qué ayuda a evitar decisiones impulsivas?',
+      opciones: [
+        'Comprar inmediatamente.',
+        'Comparar y analizar antes de decidir.',
+        'No revisar recursos.',
+        'Ignorar consecuencias.'
+      ],
+      correcta: 1,
+      explicacion: 'Analizar y comparar alternativas permite tomar decisiones con mayor claridad.'
+    },
+    {
+      texto: '¿Qué representa un riesgo?',
+      opciones: [
+        'Un beneficio seguro.',
+        'Una posibilidad de resultado desfavorable.',
+        'Un ingreso.',
+        'Una meta.'
+      ],
+      correcta: 1,
+      explicacion: 'El riesgo representa la posibilidad de que ocurra un resultado desfavorable.'
+    },
+    {
+      texto: '¿Qué caracteriza a una persona económicamente responsable?',
+      opciones: [
+        'Actúa impulsivamente.',
+        'Evalúa información y consecuencias.',
+        'Ignora sus recursos.',
+        'Evita toda planificación.'
+      ],
+      correcta: 1,
+      explicacion: 'La responsabilidad económica requiere evaluar información, alternativas y consecuencias.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+private cargarLeccionComunicacionValor(): void {
+  this.titulo = 'Comunicación de valor';
+  this.subtitulo = 'Aprender a comunicar ideas, soluciones y propuestas de manera clara y significativa.';
+  this.objetivo = 'Comprender cómo comunicar valor identificando necesidades, expresando beneficios y utilizando mensajes claros para generar comprensión y confianza.';
+
+  this.secciones = [
+    {
+      titulo: '1. ¿Qué significa comunicar valor?',
+      parrafos: [
+        'Comunicar valor significa explicar de manera clara cómo una idea, producto, servicio o conocimiento puede aportar algo útil a una persona.',
+        'No se trata solamente de describir características, sino de conectar aquello que ofrecemos con una necesidad real.'
+      ],
+      destacado: 'El valor no está solamente en lo que ofrecemos, sino en cómo ayuda a resolver una necesidad.'
+    },
+    {
+      titulo: '2. Comprender antes de comunicar',
+      parrafos: [
+        'Una comunicación efectiva comienza comprendiendo a quién nos dirigimos.',
+        'Conocer sus necesidades, intereses, problemas y objetivos permite construir mensajes más relevantes.'
+      ]
+    },
+    {
+      titulo: '3. Características y beneficios',
+      parrafos: [
+        'Una característica describe lo que algo tiene o hace. Un beneficio explica lo que esa característica puede aportar.',
+        'Comunicar beneficios permite que la otra persona comprenda mejor la utilidad de una propuesta.'
+      ],
+      conceptos: [
+        {
+          nombre: 'Necesidad',
+          significado: 'Situación que requiere atención o solución.',
+          ejemplo: 'Necesitar una herramienta para organizar mejor el trabajo.'
+        },
+        {
+          nombre: 'Característica',
+          significado: 'Elemento o cualidad propia de una propuesta.',
+          ejemplo: 'Una aplicación permite organizar tareas.'
+        },
+        {
+          nombre: 'Beneficio',
+          significado: 'Resultado positivo que una persona puede obtener.',
+          ejemplo: 'La organización permite ahorrar tiempo.'
+        }
+      ]
+    },
+    {
+      titulo: '4. Claridad del mensaje',
+      parrafos: [
+        'Un mensaje de valor debe ser comprensible y evitar información innecesaria.',
+        'La claridad permite que la persona entienda rápidamente qué se ofrece, para quién es y qué utilidad puede tener.'
+      ],
+      puntos: [
+        'Hablar con claridad.',
+        'Evitar exageraciones.',
+        'Utilizar ejemplos concretos.',
+        'Comunicar beneficios reales.'
+      ]
+    },
+    {
+      titulo: '5. Construir confianza',
+      parrafos: [
+        'La comunicación de valor debe estar respaldada por honestidad y coherencia.',
+        'Prometer resultados que no pueden garantizarse puede generar expectativas incorrectas y deteriorar la confianza.'
+      ],
+      cierre: 'Comunicar valor es ayudar a comprender una solución sin manipular ni exagerar.'
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Reflexión 1',
+      pregunta: '¿Qué necesidad concreta resuelve aquello que actualmente quieres comunicar?'
+    },
+    {
+      titulo: 'Reflexión 2',
+      pregunta: '¿Tu mensaje explica realmente el beneficio o solamente describe características?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Qué significa comunicar valor?',
+      opciones: [
+        'Hablar constantemente de un producto.',
+        'Explicar cómo una propuesta puede aportar utilidad.',
+        'Utilizar palabras complicadas.',
+        'Prometer resultados garantizados.'
+      ],
+      correcta: 1,
+      explicacion: 'Comunicar valor consiste en conectar una propuesta con una necesidad y explicar su utilidad.'
+    },
+    {
+      texto: '¿Por qué es importante conocer al público?',
+      opciones: [
+        'Para hablar más.',
+        'Para comprender sus necesidades y comunicar de manera relevante.',
+        'Para evitar escuchar.',
+        'Para utilizar mensajes iguales siempre.'
+      ],
+      correcta: 1,
+      explicacion: 'Comprender al público permite construir mensajes adecuados a sus necesidades e intereses.'
+    },
+    {
+      texto: '¿Qué diferencia existe entre característica y beneficio?',
+      opciones: [
+        'No existe diferencia.',
+        'La característica describe y el beneficio explica la utilidad.',
+        'El beneficio siempre es una característica.',
+        'La característica siempre es un resultado.'
+      ],
+      correcta: 1,
+      explicacion: 'Una característica describe algo, mientras que un beneficio explica qué utilidad puede generar.'
+    },
+    {
+      texto: '¿Qué ayuda a construir confianza?',
+      opciones: [
+        'Exagerar resultados.',
+        'Prometer resultados seguros.',
+        'Comunicar con honestidad y coherencia.',
+        'Ocultar información importante.'
+      ],
+      correcta: 2,
+      explicacion: 'La honestidad y la coherencia permiten construir relaciones de confianza.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+private cargarLeccionMarcaPersonal(): void {
+  this.titulo = 'Marca personal';
+  this.subtitulo = 'Construir una identidad coherente a partir de valores, capacidades y propósito.';
+  this.objetivo = 'Comprender la marca personal como la expresión coherente de la identidad, las capacidades, los valores y la manera en que una persona aporta valor a los demás.';
+
+  this.secciones = [
+    {
+      titulo: '1. ¿Qué es una marca personal?',
+      parrafos: [
+        'La marca personal es la percepción que otras personas construyen a partir de nuestras acciones, conocimientos, valores y forma de relacionarnos.',
+        'No consiste simplemente en tener un logotipo o publicar contenido.'
+      ],
+      destacado: 'La marca personal se construye principalmente con lo que haces y sostienes en el tiempo.'
+    },
+    {
+      titulo: '2. Identidad y autenticidad',
+      parrafos: [
+        'Una marca personal sólida comienza con comprender quién eres, qué sabes hacer y qué principios quieres representar.',
+        'La autenticidad permite construir una identidad coherente en lugar de intentar imitar constantemente a otras personas.'
+      ]
+    },
+    {
+      titulo: '3. Elementos de una marca personal',
+      parrafos: [
+        'La identidad personal puede expresarse mediante conocimientos, habilidades, valores, comunicación, comportamiento y experiencias.',
+        'Estos elementos deben mantener coherencia entre lo que se dice y lo que se hace.'
+      ],
+      conceptos: [
+        {
+          nombre: 'Identidad',
+          significado: 'Conjunto de características que representan quién eres.',
+          ejemplo: 'Tus valores, conocimientos y forma de actuar.'
+        },
+        {
+          nombre: 'Reputación',
+          significado: 'Percepción que otras personas construyen sobre ti.',
+          ejemplo: 'Ser reconocido por cumplir compromisos.'
+        },
+        {
+          nombre: 'Coherencia',
+          significado: 'Correspondencia entre lo que se comunica y lo que se hace.',
+          ejemplo: 'Promover disciplina y demostrarla mediante acciones.'
+        }
+      ]
+    },
+    {
+      titulo: '4. Presencia digital',
+      parrafos: [
+        'La presencia digital forma parte de la manera en que una persona puede ser percibida en Internet.',
+        'Los contenidos, comentarios, perfiles y comportamientos digitales deben estar alineados con la identidad que se desea construir.'
+      ]
+    },
+    {
+      titulo: '5. Construir con tiempo',
+      parrafos: [
+        'Una marca personal no se construye de un día para otro.',
+        'Requiere consistencia, aprendizaje, experiencia y capacidad de aportar valor de manera sostenida.'
+      ],
+      cierre: 'Una marca personal sólida nace de una identidad auténtica y se fortalece mediante acciones coherentes.'
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Reflexión 1',
+      pregunta: '¿Qué tres valores quieres que las personas relacionen contigo?'
+    },
+    {
+      titulo: 'Reflexión 2',
+      pregunta: '¿Existe coherencia entre la imagen que quieres proyectar y tus acciones actuales?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Qué es principalmente una marca personal?',
+      opciones: [
+        'Un logotipo.',
+        'La percepción construida a partir de identidad, acciones y valores.',
+        'Una cuenta de redes sociales.',
+        'Un nombre comercial.'
+      ],
+      correcta: 1,
+      explicacion: 'La marca personal se relaciona con la percepción que generan nuestras acciones, capacidades y valores.'
+    },
+    {
+      texto: '¿Qué fortalece una marca personal?',
+      opciones: [
+        'La imitación constante.',
+        'La incoherencia.',
+        'La autenticidad y consistencia.',
+        'La exageración.'
+      ],
+      correcta: 2,
+      explicacion: 'La autenticidad y la consistencia permiten construir una identidad reconocible y confiable.'
+    },
+    {
+      texto: '¿Qué representa la reputación?',
+      opciones: [
+        'La percepción que otros construyen sobre una persona.',
+        'Una contraseña.',
+        'Un logotipo.',
+        'Un documento.'
+      ],
+      correcta: 0,
+      explicacion: 'La reputación es la percepción que otras personas forman a partir de nuestras acciones y comportamientos.'
+    },
+    {
+      texto: '¿Cómo se construye una marca personal sólida?',
+      opciones: [
+        'En un solo día.',
+        'Con consistencia, aprendizaje y acciones sostenidas.',
+        'Solamente con publicidad.',
+        'Imitando a otras personas.'
+      ],
+      correcta: 1,
+      explicacion: 'La marca personal se construye progresivamente mediante acciones coherentes y sostenidas.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+private cargarLeccionCreacionContenido(): void {
+  this.titulo = 'Creación de contenido';
+  this.subtitulo = 'Transformar conocimientos e ideas en contenidos útiles, claros y relevantes.';
+  this.objetivo = 'Comprender los principios básicos de la creación de contenido y desarrollar criterios para producir materiales que aporten valor a una audiencia.';
+
+  this.secciones = [
+    {
+      titulo: '1. ¿Qué es crear contenido?',
+      parrafos: [
+        'Crear contenido significa transformar conocimientos, experiencias, ideas o información en un formato que pueda ser comprendido por otras personas.',
+        'El contenido puede adoptar diferentes formas: texto, imagen, audio, video, presentación o material educativo.'
+      ],
+      destacado: 'Crear contenido no es solamente publicar. Es comunicar algo que puede ser útil para alguien.'
+    },
+    {
+      titulo: '2. Definir el propósito',
+      parrafos: [
+        'Antes de crear un contenido es importante saber qué se quiere lograr.',
+        'Un contenido puede buscar enseñar, informar, inspirar, orientar o ayudar a resolver un problema.'
+      ]
+    },
+    {
+      titulo: '3. Conocer a la audiencia',
+      parrafos: [
+        'Un contenido relevante considera las necesidades y características de las personas a quienes se dirige.',
+        'Conocer la audiencia permite utilizar ejemplos, lenguaje y formatos adecuados.'
+      ],
+      conceptos: [
+        {
+          nombre: 'Audiencia',
+          significado: 'Personas a quienes está dirigido un contenido.',
+          ejemplo: 'Estudiantes interesados en aprender una habilidad.'
+        },
+        {
+          nombre: 'Formato',
+          significado: 'Forma en que se presenta un contenido.',
+          ejemplo: 'Video, texto, audio o imagen.'
+        },
+        {
+          nombre: 'Relevancia',
+          significado: 'Grado en que un contenido resulta útil o significativo.',
+          ejemplo: 'Un tutorial que resuelve una dificultad concreta.'
+        }
+      ]
+    },
+    {
+      titulo: '4. Estructurar el contenido',
+      parrafos: [
+        'Una estructura clara facilita la comprensión.',
+        'Un buen contenido suele tener una introducción, desarrollo y cierre, además de ejemplos cuando sean necesarios.'
+      ]
+    },
+    {
+      titulo: '5. Crear con consistencia',
+      parrafos: [
+        'La creación de contenido mejora mediante práctica, observación y revisión.',
+        'La consistencia permite construir experiencia y desarrollar una relación de confianza con la audiencia.'
+      ],
+      cierre: 'El contenido tiene mayor valor cuando nace de un propósito claro y busca servir a una necesidad real.'
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Reflexión 1',
+      pregunta: '¿Qué conocimiento podrías convertir en contenido útil para otras personas?'
+    },
+    {
+      titulo: 'Reflexión 2',
+      pregunta: '¿Qué propósito tendría el contenido que quieres crear?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Qué significa crear contenido?',
+      opciones: [
+        'Publicar cualquier cosa.',
+        'Transformar ideas o conocimientos en materiales comprensibles para otros.',
+        'Utilizar únicamente videos.',
+        'Publicar diariamente.'
+      ],
+      correcta: 1,
+      explicacion: 'Crear contenido implica transformar información, conocimientos o ideas en un formato útil para otras personas.'
+    },
+    {
+      texto: '¿Qué debe definirse antes de crear contenido?',
+      opciones: [
+        'Solamente el color.',
+        'El propósito.',
+        'El número de seguidores.',
+        'La cantidad de publicaciones.'
+      ],
+      correcta: 1,
+      explicacion: 'Definir el propósito permite orientar el contenido hacia un objetivo concreto.'
+    },
+    {
+      texto: '¿Por qué es importante conocer a la audiencia?',
+      opciones: [
+        'Para copiarla.',
+        'Para adaptar el contenido a sus necesidades.',
+        'Para evitar escucharla.',
+        'Para publicar sin propósito.'
+      ],
+      correcta: 1,
+      explicacion: 'Conocer a la audiencia permite crear contenidos más relevantes y comprensibles.'
+    },
+    {
+      texto: '¿Qué ayuda a mejorar la creación de contenido?',
+      opciones: [
+        'La práctica y revisión.',
+        'Publicar sin revisar.',
+        'Evitar aprender.',
+        'Copiar siempre.'
+      ],
+      correcta: 0,
+      explicacion: 'La práctica, observación y revisión permiten mejorar progresivamente la calidad del contenido.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+private cargarLeccionMarketingDigital(): void {
+  this.titulo = 'Marketing digital';
+  this.subtitulo = 'Comprender cómo utilizar canales digitales para comunicar valor y conectar con personas.';
+  this.objetivo = 'Comprender los principios básicos del marketing digital y su relación con la comunicación, el contenido, la audiencia y la generación de valor.';
+
+  this.secciones = [
+    {
+      titulo: '1. ¿Qué es el marketing digital?',
+      parrafos: [
+        'El marketing digital comprende estrategias y acciones realizadas mediante canales digitales para comunicar propuestas y conectar con determinadas audiencias.',
+        'Su objetivo no debe reducirse a vender, sino a comprender necesidades y comunicar valor.'
+      ],
+      destacado: 'El marketing comienza con comprender a las personas y termina cuando el valor comunicado encuentra una necesidad real.'
+    },
+    {
+      titulo: '2. Conocer la audiencia',
+      parrafos: [
+        'Una estrategia efectiva necesita comprender a quién se dirige.',
+        'Conocer intereses, problemas, comportamientos y necesidades permite crear mensajes más relevantes.'
+      ]
+    },
+    {
+      titulo: '3. Canales digitales',
+      parrafos: [
+        'Existen diferentes canales para comunicar: redes sociales, correo electrónico, sitios web, buscadores y plataformas de contenido.',
+        'Cada canal tiene características y públicos diferentes.'
+      ],
+      conceptos: [
+        {
+          nombre: 'Audiencia',
+          significado: 'Grupo de personas al que se dirige una comunicación.',
+          ejemplo: 'Personas interesadas en formación profesional.'
+        },
+        {
+          nombre: 'Contenido',
+          significado: 'Material creado para informar, enseñar, inspirar o comunicar.',
+          ejemplo: 'Un video educativo.'
+        },
+        {
+          nombre: 'Conversión',
+          significado: 'Acción que una persona realiza después de interactuar con una propuesta.',
+          ejemplo: 'Registrarse en una actividad.'
+        }
+      ]
+    },
+    {
+      titulo: '4. Medir y aprender',
+      parrafos: [
+        'El marketing digital permite observar determinados resultados y utilizar esa información para mejorar.',
+        'Las métricas deben interpretarse de acuerdo con los objetivos y no convertirse en el objetivo por sí mismas.'
+      ]
+    },
+    {
+      titulo: '5. Ética y confianza',
+      parrafos: [
+        'Una estrategia digital sostenible debe evitar engaños, manipulación y promesas falsas.',
+        'La confianza se construye mediante comunicación transparente y cumplimiento de lo ofrecido.'
+      ],
+      cierre: 'El marketing digital es una herramienta de comunicación que debe utilizarse para generar valor y construir relaciones sostenibles.'
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Reflexión 1',
+      pregunta: '¿Qué audiencia específica quieres ayudar mediante tu comunicación digital?'
+    },
+    {
+      titulo: 'Reflexión 2',
+      pregunta: '¿Qué métrica tendría realmente sentido para medir tu objetivo?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Qué busca hacer el marketing digital?',
+      opciones: [
+        'Solamente publicar.',
+        'Comunicar propuestas y conectar con audiencias mediante canales digitales.',
+        'Aumentar seguidores sin propósito.',
+        'Evitar conocer al público.'
+      ],
+      correcta: 1,
+      explicacion: 'El marketing digital utiliza canales digitales para comunicar propuestas y conectar con audiencias.'
+    },
+    {
+      texto: '¿Por qué es importante conocer la audiencia?',
+      opciones: [
+        'Para ignorar sus necesidades.',
+        'Para crear mensajes más relevantes.',
+        'Para publicar más contenido sin objetivo.',
+        'Para copiar otras marcas.'
+      ],
+      correcta: 1,
+      explicacion: 'Conocer la audiencia permite adaptar la comunicación a sus necesidades e intereses.'
+    },
+    {
+      texto: '¿Para qué sirven las métricas?',
+      opciones: [
+        'Para sustituir los objetivos.',
+        'Para observar resultados y aprender.',
+        'Para garantizar resultados.',
+        'Para evitar mejorar.'
+      ],
+      correcta: 1,
+      explicacion: 'Las métricas proporcionan información que puede utilizarse para evaluar y mejorar las estrategias.'
+    },
+    {
+      texto: '¿Qué fortalece una estrategia digital sostenible?',
+      opciones: [
+        'Promesas falsas.',
+        'Manipulación.',
+        'Transparencia y cumplimiento.',
+        'Información engañosa.'
+      ],
+      correcta: 2,
+      explicacion: 'La transparencia y el cumplimiento de lo ofrecido fortalecen la confianza.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+private cargarLeccionEstrategiasComunicacion(): void {
+  this.titulo = 'Estrategias de comunicación';
+  this.subtitulo = 'Planificar mensajes y canales para comunicar con claridad, propósito y coherencia.';
+  this.objetivo = 'Desarrollar criterios para diseñar estrategias de comunicación alineadas con objetivos, audiencias, mensajes y canales adecuados.';
+
+  this.secciones = [
+    {
+      titulo: '1. ¿Qué es una estrategia de comunicación?',
+      parrafos: [
+        'Una estrategia de comunicación es una planificación que define qué se quiere comunicar, a quién, cómo, cuándo y con qué propósito.',
+        'Permite evitar mensajes improvisados y mantener coherencia.'
+      ],
+      destacado: 'Comunicar estratégicamente significa tener claridad sobre el propósito antes de elegir el mensaje y el canal.'
+    },
+    {
+      titulo: '2. Definir el objetivo',
+      parrafos: [
+        'Toda estrategia debe comenzar con un objetivo claro.',
+        'El objetivo permite determinar qué información debe comunicarse y cómo evaluar si la estrategia está funcionando.'
+      ]
+    },
+    {
+      titulo: '3. Mensaje y audiencia',
+      parrafos: [
+        'El mensaje debe adaptarse a las personas que lo recibirán sin perder su esencia.',
+        'Una misma idea puede requerir diferentes formas de comunicación según el contexto.'
+      ],
+      conceptos: [
+        {
+          nombre: 'Objetivo',
+          significado: 'Resultado que se busca alcanzar mediante la comunicación.',
+          ejemplo: 'Informar a una comunidad sobre una nueva actividad.'
+        },
+        {
+          nombre: 'Mensaje',
+          significado: 'Idea principal que se desea comunicar.',
+          ejemplo: 'Explicar claramente el beneficio de una formación.'
+        },
+        {
+          nombre: 'Canal',
+          significado: 'Medio utilizado para transmitir un mensaje.',
+          ejemplo: 'Correo electrónico, sitio web o red social.'
+        }
+      ]
+    },
+    {
+      titulo: '4. Coherencia y frecuencia',
+      parrafos: [
+        'La comunicación estratégica requiere coherencia entre los diferentes mensajes y canales.',
+        'La frecuencia debe responder al propósito y evitar saturar a la audiencia.'
+      ]
+    },
+    {
+      titulo: '5. Evaluar y mejorar',
+      parrafos: [
+        'Una estrategia debe revisarse a partir de sus resultados.',
+        'Aprender de las respuestas de la audiencia permite ajustar mensajes, canales y acciones.'
+      ],
+      cierre: 'Una estrategia de comunicación convierte la intención de comunicar en un proceso planificado y coherente.'
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Reflexión 1',
+      pregunta: '¿Qué objetivo debería tener una estrategia de comunicación que quieres desarrollar?'
+    },
+    {
+      titulo: 'Reflexión 2',
+      pregunta: '¿Qué canal sería más adecuado para llegar a tu audiencia y por qué?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Qué es una estrategia de comunicación?',
+      opciones: [
+        'Publicar sin planificación.',
+        'Planificar qué, a quién, cómo y para qué comunicar.',
+        'Utilizar todos los canales.',
+        'Crear mensajes diferentes sin relación.'
+      ],
+      correcta: 1,
+      explicacion: 'Una estrategia define objetivos, audiencia, mensajes, canales y acciones de comunicación.'
+    },
+    {
+      texto: '¿Qué debe definirse primero?',
+      opciones: [
+        'El objetivo.',
+        'El diseño.',
+        'El número de publicaciones.',
+        'La plataforma más popular.'
+      ],
+      correcta: 0,
+      explicacion: 'El objetivo orienta las demás decisiones estratégicas.'
+    },
+    {
+      texto: '¿Qué representa un canal?',
+      opciones: [
+        'El objetivo.',
+        'El medio utilizado para transmitir un mensaje.',
+        'La audiencia.',
+        'El resultado.'
+      ],
+      correcta: 1,
+      explicacion: 'El canal es el medio mediante el cual se transmite el mensaje.'
+    },
+    {
+      texto: '¿Por qué debe evaluarse una estrategia?',
+      opciones: [
+        'Para evitar cambios.',
+        'Para aprender de los resultados y mejorar.',
+        'Para publicar más.',
+        'Para eliminar objetivos.'
+      ],
+      correcta: 1,
+      explicacion: 'Evaluar permite identificar qué funciona y qué debe mejorarse.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+private cargarLeccionAutoconocimiento(): void {
+  this.titulo = 'Autoconocimiento';
+  this.subtitulo = 'Comprender quién eres, cómo piensas y qué principios orientan tus decisiones.';
+  this.objetivo = 'Fortalecer el autoconocimiento mediante la observación de pensamientos, emociones, capacidades, límites, valores y comportamientos.';
+
+  this.secciones = [
+    {
+      titulo: '1. ¿Qué es el autoconocimiento?',
+      parrafos: [
+        'El autoconocimiento es la capacidad de reconocer aspectos propios como pensamientos, emociones, fortalezas, dificultades, valores y motivaciones.',
+        'Conocerse permite tomar decisiones con mayor claridad.'
+      ],
+      destacado: 'La claridad sobre uno mismo es una base fundamental para crecer de manera consciente.'
+    },
+    {
+      titulo: '2. Reconocer fortalezas y áreas de mejora',
+      parrafos: [
+        'Todas las personas poseen capacidades que pueden fortalecer y aspectos que necesitan desarrollar.',
+        'Reconocer ambos sin exagerar fortalezas ni negar dificultades permite avanzar con realismo.'
+      ]
+    },
+    {
+      titulo: '3. Valores y decisiones',
+      parrafos: [
+        'Los valores influyen en las decisiones y en la manera de relacionarnos con otras personas.',
+        'Cuando existe claridad sobre los principios personales resulta más sencillo actuar con coherencia.'
+      ],
+      conceptos: [
+        {
+          nombre: 'Valor',
+          significado: 'Principio que orienta una forma de actuar.',
+          ejemplo: 'Actuar con honestidad incluso cuando nadie observa.'
+        },
+        {
+          nombre: 'Fortaleza',
+          significado: 'Capacidad que puede contribuir positivamente al desarrollo.',
+          ejemplo: 'Tener disciplina para cumplir compromisos.'
+        },
+        {
+          nombre: 'Área de mejora',
+          significado: 'Aspecto que necesita desarrollarse.',
+          ejemplo: 'Mejorar la capacidad de escuchar.'
+        }
+      ]
+    },
+    {
+      titulo: '4. Observar los propios patrones',
+      parrafos: [
+        'Las personas desarrollan hábitos y patrones de pensamiento y comportamiento.',
+        'Observarlos permite identificar cuáles ayudan al crecimiento y cuáles necesitan ser modificados.'
+      ]
+    },
+    {
+      titulo: '5. Convertir conocimiento en acción',
+      parrafos: [
+        'El autoconocimiento tiene valor cuando se convierte en decisiones y acciones concretas.',
+        'Conocerse mejor debe permitir elegir mejor y actuar con mayor coherencia.'
+      ],
+      cierre: 'Conocerse no significa quedarse igual. Significa comprenderse para poder evolucionar conscientemente.'
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Reflexión 1',
+      pregunta: '¿Qué fortaleza personal reconoces actualmente en ti?'
+    },
+    {
+      titulo: 'Reflexión 2',
+      pregunta: '¿Qué aspecto de ti necesitas comprender o desarrollar mejor?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Qué es el autoconocimiento?',
+      opciones: [
+        'Conocer solamente las propias fortalezas.',
+        'Comprender pensamientos, emociones, capacidades y valores propios.',
+        'Compararse constantemente.',
+        'Evitar reconocer dificultades.'
+      ],
+      correcta: 1,
+      explicacion: 'El autoconocimiento implica comprender diferentes aspectos de uno mismo.'
+    },
+    {
+      texto: '¿Por qué es importante reconocer áreas de mejora?',
+      opciones: [
+        'Para desvalorizarse.',
+        'Para identificar oportunidades de desarrollo.',
+        'Para compararse.',
+        'Para evitar actuar.'
+      ],
+      correcta: 1,
+      explicacion: 'Reconocer áreas de mejora permite trabajar conscientemente en el desarrollo personal.'
+    },
+    {
+      texto: '¿Qué función cumplen los valores?',
+      opciones: [
+        'No influyen en decisiones.',
+        'Orientan la manera de actuar.',
+        'Solamente sirven para otras personas.',
+        'Evitan tomar decisiones.'
+      ],
+      correcta: 1,
+      explicacion: 'Los valores sirven como principios que orientan decisiones y comportamientos.'
+    },
+    {
+      texto: '¿Cuándo adquiere valor el autoconocimiento?',
+      opciones: [
+        'Cuando se convierte en acciones y decisiones conscientes.',
+        'Cuando solamente se reflexiona.',
+        'Cuando se evita cambiar.',
+        'Cuando se compara con otros.'
+      ],
+      correcta: 0,
+      explicacion: 'El autoconocimiento debe traducirse en decisiones y acciones coherentes.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+private cargarLeccionHabilidadesPersonales(): void {
+  this.titulo = 'Habilidades personales';
+  this.subtitulo = 'Desarrollar capacidades que permiten actuar, relacionarse y resolver situaciones con mayor efectividad.';
+  this.objetivo = 'Reconocer y fortalecer habilidades personales relacionadas con comunicación, organización, aprendizaje, resolución de problemas y adaptación.';
+
+  this.secciones = [
+    {
+      titulo: '1. ¿Qué son las habilidades personales?',
+      parrafos: [
+        'Las habilidades personales son capacidades que influyen en la manera en que una persona piensa, actúa y se relaciona.',
+        'Muchas de ellas pueden desarrollarse mediante práctica y experiencia.'
+      ],
+      destacado: 'Las habilidades no son solamente talentos naturales; muchas se construyen mediante práctica consciente.'
+    },
+    {
+      titulo: '2. Comunicación y escucha',
+      parrafos: [
+        'Comunicar con claridad y escuchar activamente son habilidades fundamentales para relacionarse y trabajar con otras personas.',
+        'Escuchar implica prestar atención, comprender y evitar responder únicamente desde la propia perspectiva.'
+      ]
+    },
+    {
+      titulo: '3. Organización y resolución',
+      parrafos: [
+        'La organización permite gestionar tareas y recursos, mientras que la resolución de problemas ayuda a encontrar alternativas ante dificultades.',
+        'Ambas habilidades mejoran mediante práctica y reflexión.'
+      ],
+      conceptos: [
+        {
+          nombre: 'Escucha activa',
+          significado: 'Atención consciente para comprender lo que otra persona comunica.',
+          ejemplo: 'Escuchar antes de formular una respuesta.'
+        },
+        {
+          nombre: 'Resolución de problemas',
+          significado: 'Proceso de identificar y abordar una dificultad.',
+          ejemplo: 'Analizar causas y buscar diferentes soluciones.'
+        },
+        {
+          nombre: 'Adaptabilidad',
+          significado: 'Capacidad para responder adecuadamente ante cambios.',
+          ejemplo: 'Modificar un plan cuando cambian las circunstancias.'
+        }
+      ]
+    },
+    {
+      titulo: '4. Práctica y retroalimentación',
+      parrafos: [
+        'Las habilidades se fortalecen mediante práctica deliberada y retroalimentación.',
+        'Recibir observaciones permite identificar aspectos que necesitan mejorar.'
+      ]
+    },
+    {
+      titulo: '5. Desarrollo continuo',
+      parrafos: [
+        'El desarrollo personal no termina con la adquisición de una habilidad.',
+        'La mejora continua implica seguir aprendiendo y adaptarse a nuevas situaciones.'
+      ],
+      cierre: 'Las habilidades personales se convierten en capacidades reales cuando se practican de manera constante.'
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Reflexión 1',
+      pregunta: '¿Qué habilidad personal te ayudaría más a alcanzar tus objetivos actuales?'
+    },
+    {
+      titulo: 'Reflexión 2',
+      pregunta: '¿Cómo podrías practicar esa habilidad durante las próximas semanas?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Qué son las habilidades personales?',
+      opciones: [
+        'Capacidades que no pueden cambiar.',
+        'Capacidades que influyen en cómo pensamos, actuamos y nos relacionamos.',
+        'Únicamente talentos artísticos.',
+        'Características físicas.'
+      ],
+      correcta: 1,
+      explicacion: 'Las habilidades personales influyen en diferentes áreas de la vida y pueden desarrollarse mediante práctica.'
+    },
+    {
+      texto: '¿Qué implica la escucha activa?',
+      opciones: [
+        'Esperar el turno para hablar.',
+        'Prestar atención para comprender.',
+        'Interrumpir.',
+        'Preparar una respuesta sin escuchar.'
+      ],
+      correcta: 1,
+      explicacion: 'La escucha activa busca comprender realmente lo que la otra persona comunica.'
+    },
+    {
+      texto: '¿Qué ayuda a desarrollar habilidades?',
+      opciones: [
+        'La práctica y retroalimentación.',
+        'Evitar practicar.',
+        'No recibir observaciones.',
+        'Repetir siempre los mismos errores.'
+      ],
+      correcta: 0,
+      explicacion: 'La práctica y la retroalimentación permiten identificar errores y mejorar.'
+    },
+    {
+      texto: '¿Qué es la adaptabilidad?',
+      opciones: [
+        'Evitar todo cambio.',
+        'Responder adecuadamente ante cambios.',
+        'Mantener siempre el mismo plan.',
+        'No aprender.'
+      ],
+      correcta: 1,
+      explicacion: 'La adaptabilidad permite responder de manera adecuada ante nuevas circunstancias.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+private cargarLeccionInteligenciaEmocional(): void {
+  this.titulo = 'Inteligencia emocional';
+  this.subtitulo = 'Comprender y gestionar las emociones para actuar con mayor conciencia y equilibrio.';
+  this.objetivo = 'Desarrollar una comprensión básica de las emociones y fortalecer la capacidad de reconocerlas, gestionarlas y relacionarse de manera consciente.';
+
+  this.secciones = [
+    {
+      titulo: '1. ¿Qué es la inteligencia emocional?',
+      parrafos: [
+        'La inteligencia emocional implica reconocer y comprender las propias emociones y responder de manera adecuada ante ellas.',
+        'También incluye comprender que las demás personas experimentan emociones que influyen en su comportamiento.'
+      ],
+      destacado: 'Gestionar una emoción no significa negarla. Significa reconocerla y elegir cómo responder.'
+    },
+    {
+      titulo: '2. Reconocer las emociones',
+      parrafos: [
+        'Identificar lo que sentimos es un primer paso para comprender nuestras reacciones.',
+        'Poner nombre a una emoción puede ayudar a observarla con mayor claridad.'
+      ]
+    },
+    {
+      titulo: '3. Regular las respuestas',
+      parrafos: [
+        'Sentir una emoción y actuar inmediatamente desde ella son cosas diferentes.',
+        'La regulación emocional permite crear un espacio entre lo que sentimos y la respuesta que elegimos.'
+      ],
+      conceptos: [
+        {
+          nombre: 'Emoción',
+          significado: 'Respuesta que surge ante determinadas situaciones o estímulos.',
+          ejemplo: 'Sentir preocupación ante una situación incierta.'
+        },
+        {
+          nombre: 'Autorregulación',
+          significado: 'Capacidad para gestionar las propias respuestas emocionales.',
+          ejemplo: 'Tomarse un momento antes de responder durante un conflicto.'
+        },
+        {
+          nombre: 'Empatía',
+          significado: 'Capacidad de comprender la perspectiva o experiencia emocional de otra persona.',
+          ejemplo: 'Intentar comprender cómo se siente alguien antes de juzgarlo.'
+        }
+      ]
+    },
+    {
+      titulo: '4. Emociones y relaciones',
+      parrafos: [
+        'Las emociones influyen en la comunicación y en las relaciones.',
+        'Reconocer las propias emociones y escuchar las de los demás ayuda a responder con mayor respeto.'
+      ]
+    },
+    {
+      titulo: '5. Elegir la respuesta',
+      parrafos: [
+        'No siempre podemos controlar lo que sentimos, pero podemos trabajar en la manera en que respondemos.',
+        'Esta capacidad fortalece la responsabilidad personal.'
+      ],
+      cierre: 'La inteligencia emocional permite convertir la conciencia emocional en decisiones y relaciones más conscientes.'
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Reflexión 1',
+      pregunta: '¿Qué emoción reconoces con mayor facilidad y cuál te cuesta identificar?'
+    },
+    {
+      titulo: 'Reflexión 2',
+      pregunta: '¿Qué podrías hacer para crear más espacio entre una emoción y tu respuesta?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Qué implica la inteligencia emocional?',
+      opciones: [
+        'Evitar sentir emociones.',
+        'Reconocer y gestionar emociones de manera consciente.',
+        'Ocultar emociones.',
+        'Ignorar a los demás.'
+      ],
+      correcta: 1,
+      explicacion: 'La inteligencia emocional implica reconocer, comprender y gestionar las emociones.'
+    },
+    {
+      texto: '¿Qué ayuda a regular una respuesta emocional?',
+      opciones: [
+        'Actuar inmediatamente.',
+        'Crear un espacio antes de responder.',
+        'Ignorar lo que ocurre.',
+        'Culpar a otros.'
+      ],
+      correcta: 1,
+      explicacion: 'Tomar distancia antes de responder permite elegir una reacción más consciente.'
+    },
+    {
+      texto: '¿Qué es la empatía?',
+      opciones: [
+        'Estar siempre de acuerdo.',
+        'Comprender la perspectiva o experiencia de otra persona.',
+        'Evitar escuchar.',
+        'Imponer una opinión.'
+      ],
+      correcta: 1,
+      explicacion: 'La empatía implica intentar comprender la experiencia de otra persona.'
+    },
+    {
+      texto: '¿Qué podemos controlar mejor ante una emoción?',
+      opciones: [
+        'Que nunca aparezca.',
+        'La manera en que respondemos.',
+        'Las emociones de otras personas.',
+        'Todas las circunstancias.'
+      ],
+      correcta: 1,
+      explicacion: 'Aunque no siempre controlamos lo que sentimos, podemos trabajar en cómo respondemos.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+private cargarLeccionRelacionesHumanas(): void {
+  this.titulo = 'Relaciones humanas';
+  this.subtitulo = 'Construir relaciones basadas en respeto, comunicación, confianza y responsabilidad.';
+  this.objetivo = 'Comprender los principios que favorecen relaciones humanas saludables y desarrollar una actitud consciente en la interacción con otras personas.';
+
+  this.secciones = [
+    {
+      titulo: '1. La importancia de las relaciones',
+      parrafos: [
+        'Las relaciones humanas forman parte de prácticamente todas las áreas de la vida.',
+        'La manera en que nos comunicamos y tratamos a otras personas influye en la confianza y en la calidad de nuestras relaciones.'
+      ],
+      destacado: 'Nadie evoluciona solo. Las relaciones también forman parte de nuestro proceso de aprendizaje.'
+    },
+    {
+      titulo: '2. Respeto y límites',
+      parrafos: [
+        'El respeto implica reconocer la dignidad, autonomía y diferencias de otras personas.',
+        'También implica establecer límites saludables cuando sea necesario.'
+      ]
+    },
+    {
+      titulo: '3. Comunicación interpersonal',
+      parrafos: [
+        'Una comunicación saludable requiere expresar ideas con claridad y escuchar la perspectiva de la otra persona.',
+        'Los conflictos pueden reducirse cuando existe disposición para comprender antes de reaccionar.'
+      ],
+      conceptos: [
+        {
+          nombre: 'Respeto',
+          significado: 'Reconocimiento del valor y dignidad de otra persona.',
+          ejemplo: 'Escuchar una opinión diferente sin descalificar.'
+        },
+        {
+          nombre: 'Confianza',
+          significado: 'Seguridad que surge de experiencias consistentes y responsables.',
+          ejemplo: 'Cumplir compromisos acordados.'
+        },
+        {
+          nombre: 'Límite',
+          significado: 'Criterio que establece hasta dónde una persona acepta determinada conducta o situación.',
+          ejemplo: 'Expresar de manera clara una condición que se necesita respetar.'
+        }
+      ]
+    },
+    {
+      titulo: '4. Resolver conflictos',
+      parrafos: [
+        'Los conflictos forman parte de las relaciones humanas.',
+        'Resolverlos de manera constructiva requiere escuchar, identificar el problema y buscar alternativas que permitan avanzar.'
+      ]
+    },
+    {
+      titulo: '5. Cuidar las relaciones',
+      parrafos: [
+        'Las relaciones requieren atención y reciprocidad.',
+        'Pequeñas acciones de respeto, comunicación y cumplimiento de compromisos pueden fortalecerlas con el tiempo.'
+      ],
+      cierre: 'Las relaciones humanas se construyen mediante acciones repetidas que generan respeto, confianza y comprensión.'
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Reflexión 1',
+      pregunta: '¿Qué relación importante en tu vida necesita mayor atención?'
+    },
+    {
+      titulo: 'Reflexión 2',
+      pregunta: '¿Qué puedes mejorar en tu manera de comunicarte con otras personas?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Qué implica el respeto?',
+      opciones: [
+        'Estar siempre de acuerdo.',
+        'Reconocer el valor y dignidad de otras personas.',
+        'Evitar cualquier conversación.',
+        'Imponer una opinión.'
+      ],
+      correcta: 1,
+      explicacion: 'El respeto reconoce la dignidad y autonomía de otras personas incluso cuando existen diferencias.'
+    },
+    {
+      texto: '¿Qué ayuda a fortalecer la confianza?',
+      opciones: [
+        'Incumplir compromisos.',
+        'Actuar de manera consistente y responsable.',
+        'Ocultar información.',
+        'Evitar comunicarse.'
+      ],
+      correcta: 1,
+      explicacion: 'La consistencia y responsabilidad generan experiencias que fortalecen la confianza.'
+    },
+    {
+      texto: '¿Cómo puede abordarse un conflicto constructivamente?',
+      opciones: [
+        'Ignorándolo siempre.',
+        'Escuchando e identificando el problema.',
+        'Culpando inmediatamente.',
+        'Evitando cualquier diálogo.'
+      ],
+      correcta: 1,
+      explicacion: 'Escuchar e identificar el problema permite buscar alternativas de solución.'
+    },
+    {
+      texto: '¿Qué fortalece las relaciones?',
+      opciones: [
+        'El respeto y la comunicación.',
+        'La imposición.',
+        'La indiferencia.',
+        'La falta de límites.'
+      ],
+      correcta: 0,
+      explicacion: 'El respeto, la comunicación y la responsabilidad contribuyen a relaciones más saludables.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+private cargarLeccionEvolucionConsciente(): void {
+  this.titulo = 'Evolución consciente';
+  this.subtitulo = 'Convertir el aprendizaje, la disciplina y la reflexión en un proceso continuo de transformación.';
+  this.objetivo = 'Comprender la evolución personal como un proceso consciente basado en claridad, disciplina, aprendizaje, superación y revisión continua.';
+
+  this.secciones = [
+    {
+      titulo: '1. ¿Qué significa evolucionar?',
+      parrafos: [
+        'Evolucionar significa desarrollar nuevas capacidades, mejorar comportamientos y ampliar la comprensión sobre uno mismo y el entorno.',
+        'No implica buscar perfección inmediata, sino avanzar de manera consciente.'
+      ],
+      destacado: 'Evolucionar es avanzar con conciencia, no compararse permanentemente con los demás.'
+    },
+    {
+      titulo: '2. Claridad como punto de partida',
+      parrafos: [
+        'Sin claridad es difícil saber hacia dónde avanzar.',
+        'Definir qué se quiere mejorar y por qué permite orientar el esfuerzo.'
+      ]
+    },
+    {
+      titulo: '3. Disciplina y superación',
+      parrafos: [
+        'La disciplina permite sostener acciones incluso cuando la motivación cambia.',
+        'La superación implica aprender de las dificultades y continuar desarrollando capacidades.'
+      ],
+      conceptos: [
+        {
+          nombre: 'Claridad',
+          significado: 'Comprensión suficiente para identificar dirección y prioridades.',
+          ejemplo: 'Definir qué habilidad necesitas desarrollar.'
+        },
+        {
+          nombre: 'Disciplina',
+          significado: 'Capacidad de sostener acciones coherentes con un propósito.',
+          ejemplo: 'Practicar regularmente aunque no siempre exista motivación.'
+        },
+        {
+          nombre: 'Superación',
+          significado: 'Proceso de enfrentar dificultades y avanzar mediante aprendizaje.',
+          ejemplo: 'Aprender de un error y mejorar el siguiente intento.'
+        }
+      ]
+    },
+    {
+      titulo: '4. Revisar y ajustar',
+      parrafos: [
+        'La evolución requiere revisar resultados y reconocer qué necesita cambiar.',
+        'Ajustar el camino no significa fracasar; significa aprender de la experiencia.'
+      ]
+    },
+    {
+      titulo: '5. Construir una vida consciente',
+      parrafos: [
+        'La evolución consciente integra aprendizaje, decisiones, relaciones, hábitos y propósito.',
+        'El crecimiento sostenible surge de pequeñas mejoras acumuladas a lo largo del tiempo.'
+      ],
+      cierre: 'La evolución consciente convierte el desarrollo personal en un camino permanente de aprendizaje y superación.'
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Reflexión 1',
+      pregunta: '¿Qué aspecto de tu vida necesita mayor claridad actualmente?'
+    },
+    {
+      titulo: 'Reflexión 2',
+      pregunta: '¿Qué pequeña mejora podrías sostener con disciplina durante los próximos meses?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Qué significa evolucionar conscientemente?',
+      opciones: [
+        'Cambiar constantemente sin propósito.',
+        'Avanzar mediante aprendizaje y acciones conscientes.',
+        'Compararse con otros.',
+        'Buscar perfección inmediata.'
+      ],
+      correcta: 1,
+      explicacion: 'La evolución consciente implica avanzar mediante aprendizaje, reflexión y acciones orientadas.'
+    },
+    {
+      texto: '¿Por qué la claridad es importante?',
+      opciones: [
+        'Porque elimina todo esfuerzo.',
+        'Porque permite identificar dirección y prioridades.',
+        'Porque evita aprender.',
+        'Porque garantiza resultados.'
+      ],
+      correcta: 1,
+      explicacion: 'La claridad permite saber hacia dónde dirigir el esfuerzo.'
+    },
+    {
+      texto: '¿Qué permite la disciplina?',
+      opciones: [
+        'Actuar solamente cuando existe motivación.',
+        'Sostener acciones coherentes con un propósito.',
+        'Evitar responsabilidades.',
+        'Eliminar dificultades.'
+      ],
+      correcta: 1,
+      explicacion: 'La disciplina ayuda a sostener acciones aunque la motivación varíe.'
+    },
+    {
+      texto: '¿Qué significa ajustar el camino?',
+      opciones: [
+        'Fracasar necesariamente.',
+        'Aprender de la experiencia y realizar cambios.',
+        'Abandonar todos los objetivos.',
+        'Evitar revisar resultados.'
+      ],
+      correcta: 1,
+      explicacion: 'Ajustar permite utilizar la experiencia para mejorar el proceso.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+private cargarLeccionVisionLargoPlazo(): void {
+  this.titulo = 'Visión a largo plazo';
+  this.subtitulo = 'Aprender a pensar más allá del presente y construir una dirección sostenible.';
+  this.objetivo = 'Desarrollar una visión de largo plazo que permita conectar decisiones presentes con objetivos futuros y construir proyectos sostenibles.';
+
+  this.secciones = [
+    {
+      titulo: '1. ¿Qué es una visión?',
+      parrafos: [
+        'Una visión representa una imagen clara de aquello que se desea construir o alcanzar en el futuro.',
+        'Permite orientar decisiones presentes hacia una dirección determinada.'
+      ],
+      destacado: 'Una visión no predice el futuro. Define hacia dónde queremos dirigir nuestros esfuerzos.'
+    },
+    {
+      titulo: '2. Pensar más allá del presente',
+      parrafos: [
+        'Pensar a largo plazo implica considerar las consecuencias futuras de las decisiones actuales.',
+        'Esto requiere paciencia, planificación y capacidad para mantener una dirección.'
+      ]
+    },
+    {
+      titulo: '3. Convertir visión en objetivos',
+      parrafos: [
+        'Una visión amplia necesita objetivos concretos que permitan avanzar progresivamente.',
+        'Los objetivos convierten una aspiración general en acciones que pueden revisarse.'
+      ],
+      conceptos: [
+        {
+          nombre: 'Visión',
+          significado: 'Dirección futura que se desea construir.',
+          ejemplo: 'Construir una organización educativa sostenible.'
+        },
+        {
+          nombre: 'Objetivo',
+          significado: 'Resultado concreto que contribuye a una visión.',
+          ejemplo: 'Desarrollar una nueva etapa formativa.'
+        },
+        {
+          nombre: 'Horizonte',
+          significado: 'Periodo de tiempo considerado para planificar.',
+          ejemplo: 'Definir objetivos para los próximos cinco años.'
+        }
+      ]
+    },
+    {
+      titulo: '4. Mantener la dirección',
+      parrafos: [
+        'Los proyectos de largo plazo enfrentan cambios y dificultades.',
+        'Mantener una dirección no significa ignorar los cambios, sino adaptar las estrategias sin perder el propósito.'
+      ]
+    },
+    {
+      titulo: '5. Construir pensando en el futuro',
+      parrafos: [
+        'Una visión de largo plazo ayuda a tomar decisiones que no solamente resuelven necesidades inmediatas.',
+        'También permite pensar en sostenibilidad, continuidad y crecimiento.'
+      ],
+      cierre: 'Pensar a largo plazo permite construir hoy aquello que queremos que exista mañana.'
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Reflexión 1',
+      pregunta: '¿Qué te gustaría haber construido dentro de cinco o diez años?'
+    },
+    {
+      titulo: 'Reflexión 2',
+      pregunta: '¿Qué decisión presente podría acercarte a esa visión?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Qué representa una visión?',
+      opciones: [
+        'Una predicción exacta.',
+        'Una dirección futura que se desea construir.',
+        'Una tarea diaria.',
+        'Un resultado garantizado.'
+      ],
+      correcta: 1,
+      explicacion: 'La visión establece una dirección futura, no una predicción exacta.'
+    },
+    {
+      texto: '¿Qué convierte una visión en acciones concretas?',
+      opciones: [
+        'La improvisación.',
+        'Los objetivos.',
+        'La espera.',
+        'La comparación.'
+      ],
+      correcta: 1,
+      explicacion: 'Los objetivos permiten convertir una visión general en resultados y acciones concretas.'
+    },
+    {
+      texto: '¿Qué significa mantener una dirección?',
+      opciones: [
+        'Ignorar cualquier cambio.',
+        'Conservar el propósito y adaptar estrategias.',
+        'Nunca revisar resultados.',
+        'Evitar aprender.'
+      ],
+      correcta: 1,
+      explicacion: 'Mantener una dirección permite adaptar estrategias sin perder el propósito.'
+    },
+    {
+      texto: '¿Qué permite pensar a largo plazo?',
+      opciones: [
+        'Solamente resolver problemas inmediatos.',
+        'Considerar consecuencias y sostenibilidad futura.',
+        'Evitar planificar.',
+        'Eliminar objetivos.'
+      ],
+      correcta: 1,
+      explicacion: 'Pensar a largo plazo permite considerar consecuencias futuras y construir de manera sostenible.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+private cargarLeccionPropositoContribucion(): void {
+  this.titulo = 'Propósito y contribución';
+  this.subtitulo = 'Conectar lo que hacemos con una razón significativa y con el aporte que queremos realizar.';
+  this.objetivo = 'Comprender la relación entre propósito personal, capacidades y contribución para orientar decisiones hacia algo que genere valor más allá del beneficio inmediato.';
+
+  this.secciones = [
+    {
+      titulo: '1. ¿Qué es el propósito?',
+      parrafos: [
+        'El propósito representa una razón significativa que orienta aquello que hacemos.',
+        'Puede evolucionar a medida que una persona aprende y adquiere nuevas experiencias.'
+      ],
+      destacado: 'El propósito proporciona dirección; las acciones son las que permiten convertirlo en realidad.'
+    },
+    {
+      titulo: '2. Propósito y decisiones',
+      parrafos: [
+        'Cuando existe claridad sobre el propósito resulta más sencillo evaluar oportunidades y prioridades.',
+        'Una decisión puede analizarse preguntando si contribuye realmente a aquello que queremos construir.'
+      ]
+    },
+    {
+      titulo: '3. Contribuir a otros',
+      parrafos: [
+        'La contribución consiste en utilizar capacidades, conocimientos o recursos para generar valor para otras personas o para una causa.',
+        'Contribuir no significa olvidarse de uno mismo, sino comprender que el crecimiento también puede tener impacto en otros.'
+      ],
+      conceptos: [
+        {
+          nombre: 'Propósito',
+          significado: 'Razón significativa que orienta acciones y decisiones.',
+          ejemplo: 'Contribuir al desarrollo educativo de otras personas.'
+        },
+        {
+          nombre: 'Contribución',
+          significado: 'Aporte que genera valor para otras personas o una comunidad.',
+          ejemplo: 'Compartir conocimientos que ayudan a otros a desarrollarse.'
+        },
+        {
+          nombre: 'Impacto',
+          significado: 'Efecto que una acción produce en otras personas o en el entorno.',
+          ejemplo: 'Una formación que ayuda a desarrollar nuevas capacidades.'
+        }
+      ]
+    },
+    {
+      titulo: '4. Propósito y trabajo',
+      parrafos: [
+        'El propósito puede expresarse mediante el trabajo, proyectos, relaciones, educación y servicio.',
+        'No existe una única forma de contribuir.'
+      ]
+    },
+    {
+      titulo: '5. Vivir con dirección',
+      parrafos: [
+        'Vivir con propósito no significa tener todas las respuestas.',
+        'Significa revisar periódicamente si nuestras decisiones continúan alineadas con aquello que consideramos importante.'
+      ],
+      cierre: 'El propósito adquiere significado cuando se transforma en acciones que generan valor.'
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Reflexión 1',
+      pregunta: '¿Qué tipo de aporte te gustaría realizar a otras personas?'
+    },
+    {
+      titulo: 'Reflexión 2',
+      pregunta: '¿Tus decisiones actuales están alineadas con aquello que consideras importante?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Qué representa el propósito?',
+      opciones: [
+        'Una obligación externa.',
+        'Una razón significativa que orienta acciones.',
+        'Un objetivo económico únicamente.',
+        'Una tarea específica.'
+      ],
+      correcta: 1,
+      explicacion: 'El propósito proporciona una razón significativa que ayuda a orientar decisiones y acciones.'
+    },
+    {
+      texto: '¿Qué relación existe entre propósito y decisiones?',
+      opciones: [
+        'Ninguna.',
+        'El propósito puede orientar prioridades y decisiones.',
+        'El propósito elimina decisiones.',
+        'El propósito impide cambiar.'
+      ],
+      correcta: 1,
+      explicacion: 'La claridad sobre el propósito ayuda a evaluar oportunidades y prioridades.'
+    },
+    {
+      texto: '¿Qué significa contribuir?',
+      opciones: [
+        'Obtener siempre algo a cambio.',
+        'Generar valor para otras personas o una causa.',
+        'Evitar ayudar.',
+        'Trabajar únicamente para uno mismo.'
+      ],
+      correcta: 1,
+      explicacion: 'Contribuir significa aportar capacidades, conocimientos o recursos que generan valor.'
+    },
+    {
+      texto: '¿Cómo se expresa un propósito?',
+      opciones: [
+        'Solamente mediante palabras.',
+        'Mediante acciones que generan valor.',
+        'Evitando actuar.',
+        'Esperando resultados.'
+      ],
+      correcta: 1,
+      explicacion: 'El propósito adquiere significado cuando se transforma en acciones concretas.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+private cargarLeccionProyectosDuraderos(): void {
+  this.titulo = 'Construcción de proyectos duraderos';
+  this.subtitulo = 'Crear proyectos con bases sólidas, propósito, estructura y capacidad de continuidad.';
+  this.objetivo = 'Comprender los principios que permiten construir proyectos sostenibles y capaces de mantenerse, adaptarse y generar valor a lo largo del tiempo.';
+
+  this.secciones = [
+    {
+      titulo: '1. ¿Qué hace duradero a un proyecto?',
+      parrafos: [
+        'Un proyecto duradero necesita más que entusiasmo inicial.',
+        'Requiere propósito, estructura, recursos, procesos, aprendizaje y capacidad de adaptación.'
+      ],
+      destacado: 'Lo que perdura no depende solamente de una persona; depende de estructuras capaces de continuar.'
+    },
+    {
+      titulo: '2. Construir bases sólidas',
+      parrafos: [
+        'Las bases de un proyecto incluyen principios claros, objetivos definidos y procesos comprensibles.',
+        'Una estructura sólida facilita el crecimiento y reduce la dependencia de la improvisación.'
+      ]
+    },
+    {
+      titulo: '3. Personas y sistemas',
+      parrafos: [
+        'Las personas son fundamentales para cualquier proyecto, pero los procesos permiten que el conocimiento pueda mantenerse y compartirse.',
+        'Documentar y formar ayuda a construir continuidad.'
+      ],
+      conceptos: [
+        {
+          nombre: 'Sostenibilidad',
+          significado: 'Capacidad de mantenerse y funcionar de manera adecuada en el tiempo.',
+          ejemplo: 'Un proyecto que puede continuar mediante procesos claros.'
+        },
+        {
+          nombre: 'Estructura',
+          significado: 'Organización de elementos y procesos que sostienen un proyecto.',
+          ejemplo: 'Definir responsabilidades y procedimientos.'
+        },
+        {
+          nombre: 'Continuidad',
+          significado: 'Capacidad de mantener un proyecto más allá de una etapa inicial.',
+          ejemplo: 'Formar nuevas personas capaces de asumir responsabilidades.'
+        }
+      ]
+    },
+    {
+      titulo: '4. Adaptarse sin perder identidad',
+      parrafos: [
+        'Los proyectos duraderos necesitan adaptarse a cambios tecnológicos, sociales y económicos.',
+        'Adaptarse no significa abandonar los principios fundamentales.'
+      ]
+    },
+    {
+      titulo: '5. Pensar en generaciones',
+      parrafos: [
+        'Un proyecto con visión de legado debe preguntarse qué quedará cuando cambien las personas que lo iniciaron.',
+        'La formación, documentación y transmisión de principios permiten construir continuidad generacional.'
+      ],
+      cierre: 'Un proyecto verdaderamente duradero se prepara para continuar, evolucionar y servir más allá de quienes lo comenzaron.'
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Reflexión 1',
+      pregunta: '¿Qué elemento necesitaría tu proyecto para poder continuar sin depender completamente de una sola persona?'
+    },
+    {
+      titulo: 'Reflexión 2',
+      pregunta: '¿Qué conocimiento debería quedar documentado para las próximas generaciones?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Qué necesita un proyecto duradero?',
+      opciones: [
+        'Solamente entusiasmo.',
+        'Propósito, estructura, procesos y capacidad de adaptación.',
+        'Una sola persona.',
+        'Improvisación permanente.'
+      ],
+      correcta: 1,
+      explicacion: 'La permanencia requiere estructuras, procesos, propósito y capacidad de adaptación.'
+    },
+    {
+      texto: '¿Por qué son importantes los procesos?',
+      opciones: [
+        'Porque complican todo.',
+        'Porque permiten mantener y compartir conocimientos.',
+        'Porque eliminan personas.',
+        'Porque impiden aprender.'
+      ],
+      correcta: 1,
+      explicacion: 'Los procesos permiten organizar y transmitir conocimientos y responsabilidades.'
+    },
+    {
+      texto: '¿Qué significa adaptarse sin perder identidad?',
+      opciones: [
+        'Cambiar todos los principios.',
+        'Ajustar estrategias manteniendo los principios fundamentales.',
+        'No cambiar nunca.',
+        'Eliminar el propósito.'
+      ],
+      correcta: 1,
+      explicacion: 'Un proyecto puede evolucionar sin abandonar los principios que definen su identidad.'
+    },
+    {
+      texto: '¿Qué favorece la continuidad generacional?',
+      opciones: [
+        'Depender de una sola persona.',
+        'Formación, documentación y transmisión de principios.',
+        'Evitar enseñar.',
+        'No documentar procesos.'
+      ],
+      correcta: 1,
+      explicacion: 'La formación y documentación permiten transmitir conocimientos y principios a nuevas generaciones.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+private cargarLeccionMentoriaServicio(): void {
+  this.titulo = 'Mentoría y servicio';
+  this.subtitulo = 'Acompañar a otras personas desde la experiencia, el conocimiento, la escucha y la voluntad de servir.';
+  this.objetivo = 'Comprender la mentoría como una relación de acompañamiento orientada al desarrollo de otras personas, basada en respeto, experiencia, escucha y servicio.';
+
+  this.secciones = [
+    {
+      titulo: '1. ¿Qué es la mentoría?',
+      parrafos: [
+        'La mentoría es una relación de acompañamiento en la que una persona comparte experiencia, conocimientos y orientación para apoyar el desarrollo de otra.',
+        'El mentor no vive el proceso por la otra persona.'
+      ],
+      destacado: 'Acompañar no significa decidir por alguien. Significa ayudarle a desarrollar su propia capacidad para decidir.'
+    },
+    {
+      titulo: '2. Escuchar antes de orientar',
+      parrafos: [
+        'Una buena mentoría comienza escuchando y comprendiendo la situación de la persona acompañada.',
+        'Dar consejos sin conocer el contexto puede generar soluciones poco adecuadas.'
+      ]
+    },
+    {
+      titulo: '3. Orientar sin imponer',
+      parrafos: [
+        'El mentor puede compartir experiencias, preguntas y perspectivas, pero debe respetar la autonomía de la otra persona.',
+        'La responsabilidad final sobre las decisiones pertenece a quien está viviendo el proceso.'
+      ],
+      conceptos: [
+        {
+          nombre: 'Mentoría',
+          significado: 'Acompañamiento orientado al desarrollo de otra persona.',
+          ejemplo: 'Compartir experiencia para ayudar a alguien a evaluar alternativas.'
+        },
+        {
+          nombre: 'Acompañamiento',
+          significado: 'Presencia y apoyo durante un proceso.',
+          ejemplo: 'Dar seguimiento a una persona mientras desarrolla una habilidad.'
+        },
+        {
+          nombre: 'Servicio',
+          significado: 'Disposición para aportar valor y ayudar a otros.',
+          ejemplo: 'Compartir conocimientos sin buscar imponer decisiones.'
+        }
+      ]
+    },
+    {
+      titulo: '4. Desarrollar capacidades',
+      parrafos: [
+        'La mentoría debe buscar que la persona acompañada gane autonomía y capacidad.',
+        'Una buena orientación no crea dependencia, sino que fortalece el criterio propio.'
+      ]
+    },
+    {
+      titulo: '5. Servir con responsabilidad',
+      parrafos: [
+        'Servir implica actuar con respeto, honestidad y responsabilidad sobre la influencia que se ejerce.',
+        'Un mentor debe reconocer los límites de su experiencia y orientar hacia ayuda especializada cuando sea necesario.'
+      ],
+      cierre: 'La verdadera mentoría no busca crear seguidores dependientes, sino personas capaces de avanzar con mayor claridad y autonomía.'
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Reflexión 1',
+      pregunta: '¿Qué experiencia o conocimiento podrías compartir para ayudar a otra persona?'
+    },
+    {
+      titulo: 'Reflexión 2',
+      pregunta: '¿Cómo puedes acompañar sin imponer tus propias decisiones sobre los demás?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Qué es la mentoría?',
+      opciones: [
+        'Decidir por otra persona.',
+        'Acompañar y orientar el desarrollo de otra persona.',
+        'Controlar a alguien.',
+        'Dar órdenes.'
+      ],
+      correcta: 1,
+      explicacion: 'La mentoría consiste en acompañar y orientar el desarrollo respetando la autonomía de la persona.'
+    },
+    {
+      texto: '¿Por qué debe escucharse antes de orientar?',
+      opciones: [
+        'Para evitar comprender.',
+        'Para conocer el contexto de la persona.',
+        'Para imponer una solución.',
+        'Para hablar más.'
+      ],
+      correcta: 1,
+      explicacion: 'Comprender el contexto permite ofrecer una orientación más adecuada.'
+    },
+    {
+      texto: '¿Qué debe respetar un mentor?',
+      opciones: [
+        'La dependencia.',
+        'La autonomía de la persona.',
+        'La imposición.',
+        'La obediencia absoluta.'
+      ],
+      correcta: 1,
+      explicacion: 'La mentoría debe respetar la autonomía y responsabilidad de quien está viviendo el proceso.'
+    },
+    {
+      texto: '¿Cuál es un resultado positivo de una buena mentoría?',
+      opciones: [
+        'Crear dependencia.',
+        'Fortalecer la capacidad y autonomía.',
+        'Evitar decisiones.',
+        'Eliminar el aprendizaje.'
+      ],
+      correcta: 1,
+      explicacion: 'Una buena mentoría ayuda a desarrollar capacidades y autonomía.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+private cargarLeccionLegadoGeneracional(): void {
+  this.titulo = 'Legado generacional';
+  this.subtitulo = 'Construir principios, conocimientos y obras capaces de trascender una sola generación.';
+  this.objetivo = 'Comprender el legado como aquello que una persona, familia, organización o comunidad transmite a las generaciones futuras mediante principios, conocimiento, servicio y obras duraderas.';
+
+  this.secciones = [
+    {
+      titulo: '1. ¿Qué es el legado?',
+      parrafos: [
+        'El legado es aquello que permanece y puede influir en otras personas incluso después de que quienes lo construyeron ya no estén presentes.',
+        'Puede estar formado por conocimientos, valores, instituciones, obras, enseñanzas y formas de servir.'
+      ],
+      destacado: 'El legado no se mide solamente por lo que poseemos, sino por lo que somos capaces de transmitir y hacer perdurar.'
+    },
+    {
+      titulo: '2. Principios que trascienden',
+      parrafos: [
+        'Los principios ayudan a orientar decisiones a lo largo del tiempo.',
+        'Cuando esos principios son comprendidos y transmitidos, pueden convertirse en una referencia para nuevas generaciones.'
+      ]
+    },
+    {
+      titulo: '3. Transmitir conocimiento',
+      parrafos: [
+        'Un conocimiento que permanece solamente en una persona puede desaparecer con ella.',
+        'Documentar, enseñar y formar a otros permite que el conocimiento continúe circulando.'
+      ],
+      conceptos: [
+        {
+          nombre: 'Legado',
+          significado: 'Aquello que permanece y puede ser transmitido a otros.',
+          ejemplo: 'Una filosofía educativa transmitida a nuevas generaciones.'
+        },
+        {
+          nombre: 'Trascendencia',
+          significado: 'Capacidad de extender una influencia más allá del presente.',
+          ejemplo: 'Una obra que continúa beneficiando a personas durante muchos años.'
+        },
+        {
+          nombre: 'Generación',
+          significado: 'Grupo de personas que comparte una etapa histórica o temporal.',
+          ejemplo: 'Personas que reciben y continúan un conocimiento construido anteriormente.'
+        }
+      ]
+    },
+    {
+      titulo: '4. Construir para otros',
+      parrafos: [
+        'Pensar en legado cambia la perspectiva sobre nuestras acciones.',
+        'La pregunta deja de ser únicamente qué podemos obtener y también considera qué podemos dejar preparado para quienes vienen después.'
+      ]
+    },
+    {
+      titulo: '5. Movimiento con legado',
+      parrafos: [
+        'Un movimiento con legado necesita principios claros, formación, documentación, servicio y personas capaces de transmitir lo aprendido.',
+        'La permanencia depende de que las nuevas generaciones comprendan el propósito y puedan continuar desarrollándolo.'
+      ],
+      cierre: 'El verdadero legado comienza cuando construimos algo que puede servir, enseñar y trascender más allá de nosotros.'
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Reflexión 1',
+      pregunta: '¿Qué conocimiento, principio o enseñanza te gustaría transmitir a las próximas generaciones?'
+    },
+    {
+      titulo: 'Reflexión 2',
+      pregunta: '¿Qué estás construyendo hoy que podría seguir sirviendo a otros en el futuro?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Qué es un legado?',
+      opciones: [
+        'Solamente una herencia económica.',
+        'Aquello que permanece y puede ser transmitido a otros.',
+        'Un objetivo inmediato.',
+        'Una actividad temporal.'
+      ],
+      correcta: 1,
+      explicacion: 'El legado puede estar formado por conocimientos, principios, obras, instituciones y formas de servir.'
+    },
+    {
+      texto: '¿Cómo puede preservarse el conocimiento?',
+      opciones: [
+        'Manteniéndolo en secreto.',
+        'Documentándolo y enseñándolo.',
+        'Evitando compartirlo.',
+        'No formando a otras personas.'
+      ],
+      correcta: 1,
+      explicacion: 'Documentar y enseñar permite que el conocimiento pueda transmitirse a nuevas generaciones.'
+    },
+    {
+      texto: '¿Qué significa pensar en legado?',
+      opciones: [
+        'Pensar solamente en obtener beneficios.',
+        'Considerar qué podemos dejar preparado para otros.',
+        'Evitar construir proyectos.',
+        'No pensar en el futuro.'
+      ],
+      correcta: 1,
+      explicacion: 'Pensar en legado implica considerar aquello que puede permanecer y servir a otras personas.'
+    },
+    {
+      texto: '¿Qué necesita un movimiento con legado?',
+      opciones: [
+        'Solamente una persona.',
+        'Principios, formación, documentación, servicio y transmisión.',
+        'Únicamente recursos económicos.',
+        'No enseñar a nuevas generaciones.'
+      ],
+      correcta: 1,
+      explicacion: 'La continuidad requiere principios claros, formación, documentación y personas capaces de transmitir el propósito.'
     }
   ];
 
