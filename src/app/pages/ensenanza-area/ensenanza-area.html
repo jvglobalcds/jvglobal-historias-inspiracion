@@ -164,13 +164,35 @@
   </a>
 </ng-container>
 
+
+<!-- LIDERAZGO -->
+<ng-container *ngIf="areaActual.titulo === 'Liderazgo'">
+  <a
+    [routerLink]="[
+      '/ensenanza-cds/liderazgo',
+      [
+        'liderazgo-consciente',
+        'comunicacion-efectiva',
+        'trabajo-en-equipo',
+        'responsabilidad-y-servicio',
+        'acompanamiento-y-desarrollo-de-personas'
+      ][i]
+    ]"
+    class="tema-enlace"
+  >
+    <span>{{ tema }}</span>
+    <span class="tema-disponible">Ver lección →</span>
+  </a>
+</ng-container>
+
 <!-- DEMÁS ÁREAS SIN NAVEGACIÓN CONFIGURADA -->
 <ng-container
   *ngIf="
     areaActual.titulo !== 'Claridad' &&
     areaActual.titulo !== 'Disciplina' &&
     areaActual.titulo !== 'Superación' &&
-    areaActual.titulo !== 'Emprendimiento y negocios'
+    areaActual.titulo !== 'Emprendimiento y negocios'&&
+    areaActual.titulo !== 'Liderazgo'
   "
 >
   <h3>{{ tema }}</h3>

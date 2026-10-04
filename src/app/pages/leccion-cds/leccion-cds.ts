@@ -223,10 +223,16 @@ export class LeccionCds implements OnInit {
     'adaptacion-y-mejora-continua': 'jv-leccion-adaptacion-mejora-continua',
     'mentalidad-emprendedora': 'jv-leccion-mentalidad-emprendedora',
     'modelos-de-negocio': 'jv-leccion-modelos-de-negocio',
-'propuesta-de-valor': 'jv-leccion-propuesta-de-valor',
-'ventas-y-servicio': 'jv-leccion-ventas-y-servicio',
-'creacion-y-desarrollo-de-proyectos':
-  'jv-leccion-creacion-y-desarrollo-de-proyectos',
+    'propuesta-de-valor': 'jv-leccion-propuesta-de-valor',
+    'ventas-y-servicio': 'jv-leccion-ventas-y-servicio',
+    'creacion-y-desarrollo-de-proyectos':
+    'jv-leccion-creacion-y-desarrollo-de-proyectos',
+    'liderazgo-consciente': 'jv-leccion-liderazgo-consciente',
+    'comunicacion-efectiva': 'jv-leccion-comunicacion-efectiva',
+    'trabajo-en-equipo': 'jv-leccion-trabajo-en-equipo',
+    'responsabilidad-y-servicio': 'jv-leccion-responsabilidad-y-servicio',
+    'acompanamiento-y-desarrollo-de-personas':
+    'jv-leccion-acompanamiento-desarrollo-personas',
     };
 
   private readonly contenidoBase = {
@@ -325,6 +331,26 @@ export class LeccionCds implements OnInit {
 
           case 'adaptacion-y-mejora-continua':
           this.cargarLeccionAdaptacionMejora();
+          break;
+
+          case 'liderazgo-consciente':
+          this.cargarLeccionLiderazgoConsciente();
+          break;
+
+          case 'trabajo-en-equipo':
+          this.cargarLeccionTrabajoEnEquipo();
+          break;
+
+          case 'responsabilidad-y-servicio':
+          this.cargarLeccionResponsabilidadYServicio();
+          break;
+
+          case 'acompanamiento-y-desarrollo-de-personas':
+          this.cargarLeccionAcompanamientoDesarrolloPersonas();
+          break;
+
+          case 'comunicacion-efectiva':
+          this.cargarLeccionComunicacionEfectiva();
           break;
 
          default:
@@ -1075,12 +1101,6 @@ private cargarLeccionTomaDecisiones(): void {
     this.mensajeEvaluacion =
       `Evaluación finalizada. Obtuviste ${this.totalCorrectas} de ${this.preguntas.length} respuestas correctas (${this.calificacion}%).`;
 
-    const clave = this.clavesLecciones[this.leccionActual];
-
-    if (clave) {
-      localStorage.setItem(clave, 'completada');
-      this.leccionCompletada = true;
-    }
   }
 
   private cargarLeccionPlanificacion(): void {
@@ -3479,6 +3499,1054 @@ private cargarLeccionCreacionProyectos(): void {
       correcta: 2,
       explicacion:
         'La evaluación analiza los resultados y las dificultades para obtener aprendizajes y orientar mejoras.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+private cargarLeccionLiderazgoConsciente(): void {
+  this.titulo = 'Liderazgo consciente';
+  this.subtitulo = 'Comprender el liderazgo desde el autoconocimiento, los principios y la responsabilidad';
+  this.objetivo =
+    'Comprender el liderazgo como una práctica consciente que comienza con el autoconocimiento, se fortalece mediante principios y se expresa en las decisiones y acciones cotidianas.';
+
+  this.secciones = [
+    {
+      titulo: '1. ¿Qué es el liderazgo consciente?',
+      parrafos: [
+        'El liderazgo consciente es la capacidad de orientar las propias acciones y contribuir al desarrollo de otras personas con atención, responsabilidad y propósito.',
+        'Liderar no significa simplemente ocupar un cargo, dar instrucciones o tener autoridad. Implica reconocer el impacto de nuestras decisiones, comprender las circunstancias y actuar de manera coherente con nuestros principios.',
+        'El liderazgo comienza con la capacidad de dirigirnos a nosotros mismos antes de pretender orientar a los demás.'
+      ],
+      destacado:
+        'El liderazgo no comienza cuando otros te siguen; comienza cuando asumes la responsabilidad de tus propias acciones.'
+    },
+    {
+      titulo: '2. El autoconocimiento como punto de partida',
+      parrafos: [
+        'Conocerse permite identificar fortalezas, reconocer limitaciones y comprender cómo reaccionamos ante diferentes situaciones.',
+        'Una persona que desarrolla autoconocimiento puede observar sus comportamientos, reconocer sus errores y tomar decisiones con mayor claridad.'
+      ],
+      puntos: [
+        'Reconocer fortalezas y aspectos por mejorar.',
+        'Identificar hábitos que influyen en nuestras decisiones.',
+        'Comprender nuestras reacciones ante la presión.',
+        'Aceptar la retroalimentación.',
+        'Establecer objetivos personales de mejora.'
+      ]
+    },
+    {
+      titulo: '3. Principios que orientan al líder',
+      parrafos: [
+        'El liderazgo necesita fundamentos que orienten las decisiones, especialmente cuando aparecen dificultades o intereses diferentes.',
+        'Los principios adquieren significado cuando se convierten en comportamientos observables.'
+      ],
+      conceptos: [
+        {
+          nombre: 'Integridad',
+          significado: 'Actuar de acuerdo con los valores que se expresan.',
+          ejemplo: 'Cumplir un compromiso aunque nadie esté supervisando.'
+        },
+        {
+          nombre: 'Responsabilidad',
+          significado: 'Asumir las consecuencias de las propias decisiones y acciones.',
+          ejemplo: 'Reconocer un error y participar en su solución.'
+        },
+        {
+          nombre: 'Respeto',
+          significado: 'Reconocer la dignidad y las perspectivas de otras personas.',
+          ejemplo: 'Escuchar una opinión diferente sin descalificar a quien la expresa.'
+        },
+        {
+          nombre: 'Coherencia',
+          significado: 'Procurar que las acciones correspondan con las palabras.',
+          ejemplo: 'Aplicar personalmente los principios que se espera que otros respeten.'
+        },
+        {
+          nombre: 'Humildad',
+          significado: 'Mantener disposición para aprender, escuchar y corregir.',
+          ejemplo: 'Aceptar una observación útil aunque provenga de alguien con menos experiencia.'
+        }
+      ]
+    },
+    {
+      titulo: '4. La toma de decisiones consciente',
+      parrafos: [
+        'Cada decisión puede afectar el rumbo personal, el trabajo en equipo y los resultados de un proyecto.',
+        'Tomar decisiones de manera consciente requiere analizar la situación, considerar alternativas y evaluar sus posibles consecuencias.',
+        'No todas las decisiones serán perfectas. La capacidad de revisar y corregir el rumbo también forma parte del liderazgo.'
+      ],
+      puntos: [
+        'Definir claramente la situación.',
+        'Reunir información relevante.',
+        'Identificar las alternativas disponibles.',
+        'Considerar las posibles consecuencias.',
+        'Elegir una acción responsable.',
+        'Evaluar los resultados y aprender.'
+      ]
+    },
+    {
+      titulo: '5. Liderar con propósito',
+      parrafos: [
+        'El propósito conecta las acciones cotidianas con una dirección significativa. Permite establecer prioridades y mantener el compromiso sin perder de vista a las personas involucradas.',
+        'En JV Global, el liderazgo se relaciona con la formación, la colaboración y el crecimiento compartido.',
+        'El propósito no consiste solamente en alcanzar objetivos individuales, sino también en contribuir de manera responsable al entorno.'
+      ],
+      destacado:
+        'Un liderazgo con propósito busca avanzar sin perder de vista los principios ni el impacto de sus acciones.'
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Liderazgo personal',
+      pregunta:
+        '¿Qué comportamiento personal necesitas mejorar para ejercer un liderazgo más consciente?'
+    },
+    {
+      titulo: 'Coherencia',
+      pregunta:
+        '¿Tus decisiones actuales reflejan los principios que consideras importantes?'
+    },
+    {
+      titulo: 'Acción',
+      pregunta:
+        '¿Qué acción concreta puedes realizar esta semana para fortalecer tu liderazgo?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Dónde comienza el liderazgo consciente?',
+      opciones: [
+        'En ocupar una posición de autoridad.',
+        'En lograr que otras personas obedezcan.',
+        'En asumir responsabilidad sobre las propias acciones.',
+        'En tener más experiencia que los demás.'
+      ],
+      correcta: 2,
+      explicacion:
+        'El liderazgo consciente comienza con la responsabilidad personal y la capacidad de dirigir las propias acciones.'
+    },
+    {
+      texto: '¿Qué permite el autoconocimiento?',
+      opciones: [
+        'Evitar cualquier error.',
+        'Reconocer fortalezas, limitaciones y comportamientos.',
+        'Controlar las decisiones de otras personas.',
+        'Eliminar todas las dificultades.'
+      ],
+      correcta: 1,
+      explicacion:
+        'El autoconocimiento permite reconocer fortalezas, aspectos por mejorar y patrones de comportamiento.'
+    },
+    {
+      texto: '¿Cuál de estos elementos forma parte de un liderazgo basado en principios?',
+      opciones: [
+        'Coherencia entre palabras y acciones.',
+        'Evitar toda responsabilidad.',
+        'Imponer siempre la propia opinión.',
+        'Ocultar los errores.'
+      ],
+      correcta: 0,
+      explicacion:
+        'La coherencia implica procurar que las acciones correspondan con los principios y las palabras.'
+    },
+    {
+      texto: '¿Qué es importante al tomar una decisión consciente?',
+      opciones: [
+        'Actuar siempre de manera inmediata.',
+        'Ignorar las consecuencias.',
+        'Analizar la situación y considerar alternativas.',
+        'Esperar que otra persona decida.'
+      ],
+      correcta: 2,
+      explicacion:
+        'Una decisión consciente requiere comprender la situación, analizar alternativas y considerar consecuencias.'
+    },
+    {
+      texto: '¿Qué significa liderar con propósito?',
+      opciones: [
+        'Buscar únicamente beneficios personales.',
+        'Conectar las acciones con una dirección significativa y responsable.',
+        'Evitar cualquier cambio.',
+        'Concentrarse solamente en alcanzar una posición.'
+      ],
+      correcta: 1,
+      explicacion:
+        'Liderar con propósito significa orientar las acciones hacia una dirección significativa, considerando también el impacto en otras personas.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+
+private cargarLeccionComunicacionEfectiva(): void {
+  this.titulo = 'Comunicación efectiva';
+
+  this.subtitulo =
+    'Desarrollar la capacidad de expresar ideas con claridad, escuchar con atención y construir relaciones mediante una comunicación respetuosa.';
+
+  this.objetivo =
+    'Comprender los fundamentos de la comunicación efectiva, practicar la escucha activa, expresar ideas con claridad y aplicar herramientas que favorezcan el entendimiento y la colaboración.';
+
+  this.secciones = [
+    {
+      titulo: '1. ¿Qué es la comunicación efectiva?',
+      parrafos: [
+        'La comunicación es un proceso mediante el cual compartimos información, ideas, pensamientos, emociones y necesidades con otras personas.',
+        'Una comunicación efectiva no consiste únicamente en hablar bien o transmitir un mensaje. También requiere comprobar que el mensaje se comprende y reconocer cómo influyen el contexto, las emociones y las diferencias individuales.',
+        'En el liderazgo, comunicarse efectivamente permite orientar, coordinar esfuerzos, resolver dudas y construir relaciones basadas en el respeto.',
+        'La comunicación no garantiza que todas las personas estén de acuerdo. Su propósito es facilitar el entendimiento y permitir que las diferencias se aborden de manera constructiva.'
+      ],
+      destacado:
+        'Comunicar efectivamente significa expresar con claridad, escuchar con atención y procurar el entendimiento.'
+    },
+    {
+      titulo: '2. La claridad al expresar ideas',
+      parrafos: [
+        'Un mensaje confuso puede producir interpretaciones diferentes, errores y expectativas que no corresponden con lo que realmente se quiso comunicar.',
+        'La claridad consiste en organizar las ideas, utilizar palabras comprensibles y presentar la información de manera adecuada para cada situación.',
+        'Cuando un líder comunica una tarea, una decisión o un objetivo, necesita explicar qué se espera, por qué es importante y cuáles son los siguientes pasos.'
+      ],
+      puntos: [
+        'Definir el propósito del mensaje antes de hablar.',
+        'Utilizar un lenguaje sencillo y directo.',
+        'Organizar la información en un orden comprensible.',
+        'Evitar suposiciones y expresiones ambiguas.',
+        'Comprobar que las personas comprendieron lo comunicado.',
+        'Adaptar el mensaje al contexto y a las personas involucradas.'
+      ],
+      cierre:
+        'La claridad reduce las interpretaciones innecesarias y permite que las personas actúen con mayor seguridad.'
+    },
+    {
+      titulo: '3. La escucha activa',
+      parrafos: [
+        'Escuchar activamente implica prestar atención a lo que otra persona expresa, intentar comprender su perspectiva y responder de manera pertinente.',
+        'Escuchar no significa estar de acuerdo con todo. Significa conceder espacio para comprender antes de emitir un juicio o formular una respuesta.',
+        'En ocasiones, las personas necesitan explicar una dificultad o compartir una idea antes de recibir una orientación. Interrumpir constantemente o anticipar conclusiones puede dificultar el diálogo.'
+      ],
+      conceptos: [
+        {
+          nombre: 'Atención',
+          significado:
+            'Concentrarse en el mensaje y evitar distracciones innecesarias.',
+          ejemplo:
+            'Escuchar una explicación sin revisar constantemente el teléfono.'
+        },
+        {
+          nombre: 'Comprensión',
+          significado:
+            'Intentar identificar el significado y la perspectiva de la otra persona.',
+          ejemplo:
+            'Preguntar qué quiso decir alguien antes de interpretar su comentario.'
+        },
+        {
+          nombre: 'Validación',
+          significado:
+            'Reconocer que la otra persona tiene una experiencia o perspectiva que merece ser escuchada.',
+          ejemplo:
+            'Decir que comprendes por qué una situación le preocupa, aunque tengas una opinión diferente.'
+        },
+        {
+          nombre: 'Retroalimentación',
+          significado:
+            'Responder de forma que permita confirmar o ampliar la comprensión del mensaje.',
+          ejemplo:
+            'Resumir lo que entendiste y preguntar si interpretaste correctamente.'
+        }
+      ],
+      destacado:
+        'Escuchar con atención es una forma de respeto y una herramienta fundamental para comprender a los demás.'
+    },
+    {
+      titulo: '4. Comunicación verbal y no verbal',
+      parrafos: [
+        'La comunicación verbal utiliza palabras, tanto de forma oral como escrita. La comunicación no verbal comprende elementos como los gestos, la postura, la expresión facial y otros comportamientos que acompañan la interacción.',
+        'El tono de voz, el ritmo al hablar y la actitud pueden influir en cómo se interpreta un mensaje.',
+        'Es importante procurar coherencia entre las palabras y el comportamiento, sin asumir que un gesto aislado permite conocer con certeza lo que otra persona piensa o siente.'
+      ],
+      puntos: [
+        'Utilizar un tono adecuado al contexto.',
+        'Prestar atención a la postura y a las expresiones.',
+        'Evitar gestos que puedan transmitir desinterés o desprecio.',
+        'Cuidar la comunicación escrita y el contexto de los mensajes.',
+        'Observar las reacciones y preguntar cuando exista alguna duda.'
+      ],
+      cierre:
+        'La comunicación mejora cuando prestamos atención tanto al contenido del mensaje como a la manera en que se desarrolla la interacción.'
+    },
+    {
+      titulo: '5. La retroalimentación constructiva',
+      parrafos: [
+        'La retroalimentación permite compartir observaciones sobre comportamientos, decisiones, resultados o procesos con el propósito de favorecer el aprendizaje y la mejora.',
+        'Una observación constructiva se concentra en hechos concretos y evita descalificar a las personas.',
+        'También es importante estar dispuesto a recibir comentarios. Un líder que escucha la retroalimentación puede descubrir aspectos que no había considerado y mejorar su manera de actuar.'
+      ],
+      puntos: [
+        'Describir la situación de forma específica.',
+        'Explicar el impacto que tuvo el comportamiento o la decisión.',
+        'Evitar etiquetas personales y generalizaciones.',
+        'Proponer alternativas o acciones de mejora.',
+        'Escuchar la respuesta de la otra persona.',
+        'Reconocer los avances y los aspectos que se realizan adecuadamente.'
+      ],
+      destacado:
+        'La retroalimentación constructiva busca mejorar las acciones sin afectar la dignidad de las personas.'
+    },
+    {
+      titulo: '6. Comunicación en situaciones difíciles',
+      parrafos: [
+        'Los desacuerdos, los errores y las expectativas diferentes forman parte de las relaciones humanas y del trabajo colaborativo.',
+        'En situaciones difíciles, las emociones pueden influir en la manera de interpretar y responder a los mensajes.',
+        'Una comunicación consciente requiere evitar respuestas impulsivas, identificar el problema y buscar un espacio para dialogar con respeto.',
+        'No siempre será posible resolver una diferencia en una sola conversación. En algunos casos será necesario escuchar nuevamente, aclarar compromisos o establecer límites.'
+      ],
+      puntos: [
+        'Mantener la calma antes de responder.',
+        'Describir el problema sin atacar a las personas.',
+        'Expresar las propias necesidades y preocupaciones con respeto.',
+        'Escuchar las perspectivas involucradas.',
+        'Buscar acuerdos realistas cuando sea posible.',
+        'Definir los siguientes pasos y revisar su cumplimiento.'
+      ],
+      cierre:
+        'La comunicación efectiva no elimina los conflictos; permite abordarlos con mayor claridad, respeto y responsabilidad.'
+    },
+    {
+      titulo: '7. Aplicar la comunicación en el liderazgo',
+      parrafos: [
+        'En el liderazgo, la comunicación conecta los objetivos con las acciones y facilita que las personas comprendan cómo pueden contribuir.',
+        'Un líder necesita compartir información, explicar decisiones, escuchar propuestas y crear condiciones para que las personas puedan expresar inquietudes.',
+        'La comunicación también requiere responsabilidad. Es importante no prometer lo que no se puede cumplir, reconocer cuando falta información y corregir los mensajes que hayan generado confusión.',
+        'En JV Global, la comunicación debe contribuir a la formación, la colaboración y el crecimiento compartido.'
+      ],
+      puntos: [
+        'Comunicar objetivos y expectativas con claridad.',
+        'Escuchar las ideas y necesidades del equipo.',
+        'Compartir información relevante de manera oportuna.',
+        'Promover preguntas y conversaciones respetuosas.',
+        'Reconocer los errores de comunicación y corregirlos.',
+        'Utilizar el diálogo para fortalecer la confianza y la colaboración.'
+      ],
+      destacado:
+        'Un liderazgo responsable no solo transmite instrucciones: crea espacios para comprender, aprender y colaborar.'
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Mi forma de comunicar',
+      pregunta:
+        '¿Qué aspecto de tu manera de comunicarte necesitas mejorar para expresar tus ideas con mayor claridad?'
+    },
+    {
+      titulo: 'Mi capacidad de escuchar',
+      pregunta:
+        '¿Escuchas para comprender lo que otra persona expresa o sueles preparar tu respuesta mientras habla?'
+    },
+    {
+      titulo: 'Una conversación pendiente',
+      pregunta:
+        '¿Qué conversación podrías abordar de manera más consciente, respetuosa y constructiva?'
+    },
+    {
+      titulo: 'Mi compromiso',
+      pregunta:
+        '¿Qué hábito concreto puedes practicar durante los próximos siete días para mejorar tu comunicación?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Cuál es el propósito principal de la comunicación efectiva?',
+      opciones: [
+        'Conseguir que todas las personas estén de acuerdo.',
+        'Hablar durante más tiempo que los demás.',
+        'Expresar ideas con claridad y favorecer el entendimiento.',
+        'Evitar que otras personas hagan preguntas.'
+      ],
+      correcta: 2,
+      explicacion:
+        'La comunicación efectiva busca transmitir mensajes comprensibles y facilitar el entendimiento, aunque existan opiniones diferentes.'
+    },
+    {
+      texto: '¿Qué caracteriza a la escucha activa?',
+      opciones: [
+        'Interrumpir para corregir cada comentario.',
+        'Prestar atención e intentar comprender antes de responder.',
+        'Esperar en silencio sin prestar atención.',
+        'Preparar una respuesta mientras la otra persona habla.'
+      ],
+      correcta: 1,
+      explicacion:
+        'La escucha activa requiere atención, comprensión y respuestas que permitan desarrollar el diálogo.'
+    },
+    {
+      texto: '¿Cuál es una práctica adecuada al comunicar una instrucción?',
+      opciones: [
+        'Suponer que todos conocen los detalles.',
+        'Utilizar términos confusos para parecer más profesional.',
+        'Explicar qué se necesita, por qué y cuáles son los siguientes pasos.',
+        'Evitar comprobar si el mensaje fue comprendido.'
+      ],
+      correcta: 2,
+      explicacion:
+        'Una instrucción clara explica las expectativas y facilita que las personas comprendan cómo actuar.'
+    },
+    {
+      texto: '¿Qué caracteriza a la retroalimentación constructiva?',
+      opciones: [
+        'Descalificar a la persona para que cambie.',
+        'Concentrarse en hechos concretos y proponer oportunidades de mejora.',
+        'Evitar mencionar cualquier aspecto que pueda mejorarse.',
+        'Comparar constantemente a las personas.'
+      ],
+      correcta: 1,
+      explicacion:
+        'La retroalimentación constructiva se enfoca en comportamientos y situaciones específicas, y busca favorecer el aprendizaje.'
+    },
+    {
+      texto: '¿Cómo conviene abordar un desacuerdo dentro de un equipo?',
+      opciones: [
+        'Imponer la opinión de quien tiene mayor autoridad.',
+        'Evitar hablar del problema indefinidamente.',
+        'Escuchar las perspectivas, expresar las preocupaciones con respeto y buscar soluciones.',
+        'Culpar inmediatamente a una persona.'
+      ],
+      correcta: 2,
+      explicacion:
+        'El diálogo respetuoso permite comprender las diferencias y buscar acuerdos o siguientes pasos responsables.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+private cargarLeccionTrabajoEnEquipo(): void {
+  this.titulo = 'Trabajo en equipo';
+
+  this.subtitulo =
+    'Construir resultados compartidos mediante la colaboración, la confianza y el compromiso.';
+
+  this.objetivo =
+    'Comprender los principios del trabajo en equipo, fortalecer la colaboración y desarrollar habilidades para alcanzar objetivos comunes.';
+
+  this.secciones = [
+    {
+      titulo: '1. ¿Qué es el trabajo en equipo?',
+      parrafos: [
+        'El trabajo en equipo es la capacidad de unir esfuerzos, conocimientos y habilidades para alcanzar un objetivo común.',
+        'No consiste únicamente en reunir personas. Requiere coordinación, comunicación, compromiso y una visión compartida.',
+        'Un equipo sólido reconoce que cada integrante aporta algo valioso y que los resultados colectivos dependen de la participación responsable de todos.'
+      ],
+      puntos: [
+        'Objetivos compartidos.',
+        'Responsabilidades definidas.',
+        'Colaboración constante.',
+        'Respeto por las capacidades de cada persona.'
+      ],
+      destacado:
+        'Un equipo no se fortalece porque todos sean iguales, sino porque cada integrante contribuye desde sus capacidades.'
+    },
+    {
+      titulo: '2. La importancia de los objetivos comunes',
+      parrafos: [
+        'Para trabajar en equipo es necesario comprender hacia dónde se dirige el grupo y qué se desea alcanzar.',
+        'Los objetivos comunes permiten orientar las acciones, organizar los esfuerzos y evaluar los avances.',
+        'Cuando cada integrante conoce el propósito, puede tomar decisiones más coherentes y aportar con mayor responsabilidad.'
+      ],
+      puntos: [
+        'Definir metas claras.',
+        'Comunicar el propósito del equipo.',
+        'Alinear las tareas con los objetivos.',
+        'Revisar periódicamente los resultados.'
+      ]
+    },
+    {
+      titulo: '3. Confianza y respeto mutuo',
+      parrafos: [
+        'La confianza es una base fundamental para la colaboración. Permite que las personas compartan ideas, expresen inquietudes y asuman responsabilidades.',
+        'El respeto reconoce la dignidad, las opiniones y las diferencias de cada integrante.',
+        'Un equipo saludable no necesita que todos piensen igual. Necesita que sus integrantes puedan dialogar y trabajar juntos incluso cuando existen diferencias.'
+      ],
+      puntos: [
+        'Cumplir los compromisos adquiridos.',
+        'Respetar las opiniones diferentes.',
+        'Evitar descalificaciones personales.',
+        'Reconocer las contribuciones de los demás.'
+      ]
+    },
+    {
+      titulo: '4. Roles y responsabilidades',
+      parrafos: [
+        'Un equipo funciona mejor cuando cada integrante comprende su papel y conoce las responsabilidades que ha asumido.',
+        'La distribución de tareas evita confusiones, facilita la coordinación y permite aprovechar las capacidades individuales.',
+        'Asumir un rol también implica responder por las tareas asignadas y comunicar oportunamente cualquier dificultad.'
+      ],
+      puntos: [
+        'Identificar las fortalezas de cada integrante.',
+        'Distribuir tareas de forma equilibrada.',
+        'Establecer acuerdos y plazos.',
+        'Dar seguimiento a los compromisos.'
+      ]
+    },
+    {
+      titulo: '5. Resolver diferencias y conflictos',
+      parrafos: [
+        'Las diferencias forman parte de cualquier equipo humano. Pueden surgir por distintas opiniones, expectativas, formas de trabajo o dificultades de comunicación.',
+        'El conflicto no tiene que convertirse en una confrontación personal. Puede ser una oportunidad para comprender otros puntos de vista y mejorar los acuerdos.',
+        'Resolver diferencias exige escuchar, identificar el problema real y buscar soluciones que respeten a las personas y los objetivos comunes.'
+      ],
+      puntos: [
+        'Escuchar antes de responder.',
+        'Separar el problema de las personas.',
+        'Expresar desacuerdos con respeto.',
+        'Construir acuerdos y compromisos concretos.'
+      ],
+      destacado:
+        'La madurez de un equipo también se demuestra en la manera en que enfrenta sus diferencias.'
+    },
+    {
+      titulo: '6. Liderazgo colaborativo',
+      parrafos: [
+        'El liderazgo colaborativo promueve la participación y facilita que las personas aporten ideas, desarrollen capacidades y asuman responsabilidades.',
+        'Quien lidera un equipo no tiene que concentrar todas las decisiones ni realizar todas las tareas. Su función también consiste en orientar, escuchar y crear condiciones para que los demás puedan contribuir.',
+        'Un liderazgo consciente reconoce los logros colectivos y ayuda a que cada integrante crezca junto con el equipo.'
+      ],
+      puntos: [
+        'Promover la participación.',
+        'Delegar con claridad.',
+        'Acompañar sin imponer innecesariamente.',
+        'Reconocer los aportes individuales y colectivos.'
+      ]
+    },
+    {
+      titulo: '7. El compromiso con los resultados colectivos',
+      parrafos: [
+        'El trabajo en equipo requiere constancia. La colaboración no se limita a participar cuando resulta conveniente; también implica cumplir los acuerdos y mantener la disposición ante los desafíos.',
+        'Cada integrante es responsable de sus acciones y, al mismo tiempo, contribuye al resultado compartido.',
+        'Cuando existe compromiso, el equipo puede aprender de sus errores, adaptarse y avanzar de manera coordinada.'
+      ],
+      puntos: [
+        'Actuar con responsabilidad.',
+        'Mantener una comunicación abierta.',
+        'Apoyar al equipo ante las dificultades.',
+        'Aprender y mejorar continuamente.'
+      ],
+      destacado:
+        'El resultado colectivo se construye con la responsabilidad de cada persona.'
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Mi aporte al equipo',
+      pregunta:
+        '¿Qué capacidades, conocimientos o experiencias puedo aportar para ayudar a un equipo a alcanzar sus objetivos?'
+    },
+    {
+      titulo: 'Confianza y respeto',
+      pregunta:
+        '¿Qué acciones concretas puedo realizar para fortalecer la confianza y el respeto con las personas con quienes colaboro?'
+    },
+    {
+      titulo: 'Manejo de diferencias',
+      pregunta:
+        '¿Cómo suelo reaccionar cuando alguien tiene una opinión diferente a la mía y qué puedo mejorar?'
+    },
+    {
+      titulo: 'Compromiso colectivo',
+      pregunta:
+        '¿Qué compromiso personal puedo asumir para contribuir de manera más responsable a los resultados de mi equipo?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Cuál es el propósito principal del trabajo en equipo?',
+      opciones: [
+        'Que una sola persona tome todas las decisiones.',
+        'Unir esfuerzos y capacidades para alcanzar objetivos comunes.',
+        'Evitar que existan opiniones diferentes.',
+        'Distribuir tareas sin necesidad de coordinación.'
+      ],
+      correcta: 1,
+      explicacion:
+        'El trabajo en equipo integra las capacidades de sus integrantes para avanzar hacia objetivos compartidos.'
+    },
+    {
+      texto: '¿Qué acción fortalece la confianza dentro de un equipo?',
+      opciones: [
+        'Prometer resultados que no se pueden garantizar.',
+        'Evitar comunicar las dificultades.',
+        'Cumplir los compromisos y actuar con transparencia.',
+        'Ignorar las opiniones de los demás.'
+      ],
+      correcta: 2,
+      explicacion:
+        'La confianza se construye mediante acciones coherentes, cumplimiento y comunicación transparente.'
+    },
+    {
+      texto: '¿Por qué es importante definir roles y responsabilidades?',
+      opciones: [
+        'Para impedir que los integrantes colaboren entre sí.',
+        'Para concentrar todas las tareas en el líder.',
+        'Para evitar que las personas desarrollen nuevas habilidades.',
+        'Para organizar el trabajo y aclarar los compromisos de cada integrante.'
+      ],
+      correcta: 3,
+      explicacion:
+        'Los roles claros ayudan a coordinar esfuerzos, evitar confusiones y dar seguimiento a las responsabilidades.'
+    },
+    {
+      texto: '¿Cómo conviene abordar un desacuerdo dentro del equipo?',
+      opciones: [
+        'Escuchar las distintas perspectivas y buscar acuerdos respetuosos.',
+        'Imponer la opinión de quien tiene más autoridad.',
+        'Evitar cualquier conversación sobre el problema.',
+        'Convertir la diferencia en una confrontación personal.'
+      ],
+      correcta: 0,
+      explicacion:
+        'El diálogo respetuoso permite comprender el problema y construir soluciones sin atacar a las personas.'
+    },
+    {
+      texto: '¿Qué caracteriza al liderazgo colaborativo?',
+      opciones: [
+        'Controlar todas las actividades del equipo.',
+        'Promover la participación y el desarrollo de los integrantes.',
+        'Reconocer únicamente los logros individuales.',
+        'Evitar delegar responsabilidades.'
+      ],
+      correcta: 1,
+      explicacion:
+        'El liderazgo colaborativo facilita la participación, distribuye responsabilidades y promueve el crecimiento colectivo.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+
+private cargarLeccionResponsabilidadYServicio(): void {
+  this.titulo = 'Responsabilidad y servicio';
+
+  this.subtitulo =
+    'Liderar con integridad, asumir compromisos y contribuir al crecimiento de los demás.';
+
+  this.objetivo =
+    'Comprender la importancia de la responsabilidad y el servicio como principios del liderazgo consciente, fortaleciendo la integridad, el compromiso y la disposición para contribuir al bienestar colectivo.';
+
+  this.secciones = [
+    {
+      titulo: '1. La responsabilidad como principio del liderazgo',
+      parrafos: [
+        'La responsabilidad es la capacidad de reconocer el impacto de nuestras decisiones y asumir las consecuencias de nuestras acciones.',
+        'En el liderazgo, ser responsable significa actuar con conciencia, cumplir los compromisos y comprender que nuestras decisiones influyen en otras personas.',
+        'Un líder responsable no busca excusas permanentes ni atribuye todos sus errores a factores externos. Analiza lo sucedido, aprende y toma medidas para mejorar.'
+      ],
+      puntos: [
+        'Asumir las consecuencias de las decisiones.',
+        'Cumplir los compromisos adquiridos.',
+        'Reconocer los errores y corregirlos.',
+        'Actuar con coherencia entre lo que se dice y lo que se hace.'
+      ],
+      destacado:
+        'La responsabilidad no se demuestra únicamente con palabras, sino con acciones coherentes y sostenidas.'
+    },
+    {
+      titulo: '2. Integridad y coherencia personal',
+      parrafos: [
+        'La integridad consiste en actuar de acuerdo con los principios y valores que orientan nuestras decisiones, incluso cuando nadie está observando.',
+        'Un líder íntegro comprende que la confianza se construye con honestidad, transparencia y coherencia.',
+        'La autoridad no depende solamente del cargo o de la posición que una persona ocupa. También se fortalece mediante su conducta y la confianza que inspira.'
+      ],
+      puntos: [
+        'Decir la verdad y comunicar con honestidad.',
+        'Respetar los acuerdos y principios establecidos.',
+        'Evitar promesas que no se pueden cumplir.',
+        'Mantener la coherencia en situaciones difíciles.'
+      ]
+    },
+    {
+      titulo: '3. El servicio como actitud de liderazgo',
+      parrafos: [
+        'Servir significa poner nuestras capacidades, conocimientos y acciones a disposición de un propósito que también considera las necesidades de los demás.',
+        'El liderazgo orientado al servicio no busca protagonismo permanente. Busca aportar, facilitar el desarrollo de las personas y contribuir a objetivos compartidos.',
+        'Servir no significa renunciar a los límites personales ni aceptar cualquier comportamiento. Implica actuar con respeto, responsabilidad y disposición para ayudar.'
+      ],
+      puntos: [
+        'Identificar necesidades reales.',
+        'Ofrecer apoyo de manera respetuosa.',
+        'Compartir conocimientos y experiencias.',
+        'Contribuir sin generar dependencia innecesaria.'
+      ],
+      destacado:
+        'El servicio fortalece el liderazgo cuando ayuda a otros a desarrollar sus propias capacidades.'
+    },
+    {
+      titulo: '4. Compromiso y cumplimiento',
+      parrafos: [
+        'El compromiso es la decisión consciente de dedicar atención, esfuerzo y constancia a una responsabilidad asumida.',
+        'No basta con expresar buenas intenciones. Es necesario convertirlas en acciones, organizar el tiempo y dar seguimiento a los objetivos.',
+        'Cuando aparece una dificultad, una persona comprometida comunica la situación, busca alternativas y procura cumplir los acuerdos de manera responsable.'
+      ],
+      puntos: [
+        'Definir prioridades y organizar las tareas.',
+        'Establecer plazos realistas.',
+        'Comunicar avances y dificultades.',
+        'Dar seguimiento hasta cerrar los compromisos.'
+      ]
+    },
+    {
+      titulo: '5. Responsabilidad hacia las personas',
+      parrafos: [
+        'Las decisiones de un líder pueden influir en la motivación, las oportunidades y el desarrollo de otras personas.',
+        'Por ello, es importante considerar las consecuencias de nuestras palabras y acciones, respetar la dignidad de cada integrante y evitar ejercer la autoridad de manera arbitraria.',
+        'La responsabilidad hacia los demás también implica reconocer sus capacidades, respetar su autonomía y actuar con justicia.'
+      ],
+      puntos: [
+        'Escuchar antes de tomar decisiones que afectan al equipo.',
+        'Tratar a las personas con respeto.',
+        'Evitar la manipulación y las presiones indebidas.',
+        'Reconocer los aportes y respetar los límites de los demás.'
+      ]
+    },
+    {
+      titulo: '6. El servicio y el crecimiento colectivo',
+      parrafos: [
+        'Una comunidad se fortalece cuando sus integrantes comparten conocimientos, colaboran y buscan oportunidades para que otros también puedan avanzar.',
+        'El servicio permite transformar la experiencia individual en aprendizaje compartido y contribuye a construir relaciones basadas en la cooperación.',
+        'Un líder que sirve promueve la autonomía, anima a las personas a asumir responsabilidades y facilita que el crecimiento no dependa exclusivamente de una sola figura.'
+      ],
+      puntos: [
+        'Compartir herramientas y aprendizajes.',
+        'Acompañar sin imponer decisiones.',
+        'Promover la colaboración.',
+        'Facilitar oportunidades de desarrollo.'
+      ]
+    },
+    {
+      titulo: '7. Convertir los valores en acciones',
+      parrafos: [
+        'La responsabilidad y el servicio adquieren sentido cuando se reflejan en la vida cotidiana.',
+        'Pequeñas acciones sostenidas pueden fortalecer la confianza, mejorar las relaciones y generar resultados positivos en los equipos y las comunidades.',
+        'El liderazgo consciente exige revisar nuestras conductas, identificar oportunidades de mejora y mantener la disposición para aprender.'
+      ],
+      puntos: [
+        'Cumplir una tarea pendiente.',
+        'Reconocer un error y corregirlo.',
+        'Ofrecer ayuda cuando sea necesaria.',
+        'Actuar con respeto y transparencia.',
+        'Evaluar el impacto de nuestras decisiones.'
+      ],
+      destacado:
+        'El liderazgo con propósito se construye cuando los valores dejan de ser conceptos y se convierten en hábitos.'
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Mi responsabilidad personal',
+      pregunta:
+        '¿Qué compromiso importante he asumido y qué acciones concretas puedo realizar para cumplirlo mejor?'
+    },
+    {
+      titulo: 'Coherencia e integridad',
+      pregunta:
+        '¿En qué situaciones me resulta difícil actuar de acuerdo con mis principios y cómo puedo mejorar mi coherencia?'
+    },
+    {
+      titulo: 'Mi actitud de servicio',
+      pregunta:
+        '¿De qué manera puedo utilizar mis conocimientos o capacidades para contribuir al crecimiento de otras personas?'
+    },
+    {
+      titulo: 'Una acción para comenzar',
+      pregunta:
+        '¿Qué acción específica puedo realizar durante esta semana para demostrar responsabilidad y servicio en mi entorno?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Qué caracteriza a una persona responsable en el liderazgo?',
+      opciones: [
+        'Evitar reconocer los errores.',
+        'Delegar todas las decisiones difíciles.',
+        'Asumir sus decisiones, cumplir compromisos y corregir sus errores.',
+        'Buscar siempre a alguien a quien atribuir las dificultades.'
+      ],
+      correcta: 2,
+      explicacion:
+        'La responsabilidad implica asumir las consecuencias de las decisiones, cumplir los compromisos y aprender de los errores.'
+    },
+    {
+      texto: '¿Qué significa actuar con integridad?',
+      opciones: [
+        'Actuar de acuerdo con los principios y valores, incluso en situaciones difíciles.',
+        'Decir únicamente lo que los demás quieren escuchar.',
+        'Cambiar los principios según la conveniencia.',
+        'Evitar comunicar los problemas.'
+      ],
+      correcta: 0,
+      explicacion:
+        'La integridad se refleja en la coherencia entre los valores, las decisiones y las acciones.'
+    },
+    {
+      texto: '¿Cuál es una característica del liderazgo orientado al servicio?',
+      opciones: [
+        'Concentrar todos los logros en el líder.',
+        'Crear dependencia para mantener el control.',
+        'Ayudar únicamente cuando existe un beneficio personal.',
+        'Facilitar el desarrollo de las personas y contribuir a objetivos compartidos.'
+      ],
+      correcta: 3,
+      explicacion:
+        'El servicio busca aportar al bienestar y al desarrollo de los demás, respetando su autonomía.'
+    },
+    {
+      texto: '¿Qué debe hacer una persona comprometida cuando enfrenta una dificultad que afecta un acuerdo?',
+      opciones: [
+        'Ignorar el problema hasta que alguien lo descubra.',
+        'Comunicar la situación, buscar alternativas y actuar responsablemente.',
+        'Abandonar el compromiso sin dar explicaciones.',
+        'Prometer resultados sin evaluar las posibilidades.'
+      ],
+      correcta: 1,
+      explicacion:
+        'El compromiso requiere comunicación oportuna, búsqueda de soluciones y responsabilidad frente a los acuerdos.'
+    },
+    {
+      texto: '¿Cómo contribuye el servicio al crecimiento colectivo?',
+      opciones: [
+        'Impidiendo que otros tomen decisiones.',
+        'Evitando compartir conocimientos.',
+        'Compartiendo aprendizajes y facilitando el desarrollo de otras personas.',
+        'Concentrando todas las responsabilidades en una sola persona.'
+      ],
+      correcta: 2,
+      explicacion:
+        'El servicio fortalece el crecimiento colectivo cuando comparte conocimientos, promueve la colaboración y desarrolla autonomía.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+
+private cargarLeccionAcompanamientoDesarrolloPersonas(): void {
+  this.titulo = 'Acompañamiento y desarrollo de personas';
+
+  this.subtitulo =
+    'Impulsar el crecimiento de otros mediante la orientación, la escucha y el desarrollo de capacidades.';
+
+  this.objetivo =
+    'Comprender los principios del acompañamiento y desarrollar habilidades para orientar, motivar y apoyar el crecimiento de las personas, respetando su autonomía y sus objetivos individuales.';
+
+  this.secciones = [
+    {
+      titulo: '1. ¿Qué es el acompañamiento?',
+      parrafos: [
+        'Acompañar es estar presente en el proceso de crecimiento de otra persona, ofreciendo orientación, apoyo y herramientas que faciliten su aprendizaje.',
+        'No significa resolver todos los problemas de los demás ni tomar decisiones en su lugar. Consiste en crear condiciones para que cada persona pueda desarrollar sus capacidades y asumir sus propias responsabilidades.',
+        'El acompañamiento consciente requiere paciencia, respeto y una comprensión real de las necesidades de quien recibe el apoyo.'
+      ],
+      puntos: [
+        'Escuchar las necesidades de la persona.',
+        'Orientar sin imponer decisiones.',
+        'Ofrecer apoyo de acuerdo con cada situación.',
+        'Respetar el ritmo y la autonomía individual.'
+      ],
+      destacado:
+        'Acompañar no es caminar por otra persona, sino ayudarla a desarrollar la capacidad de avanzar por sí misma.'
+    },
+    {
+      titulo: '2. Reconocer el potencial de cada persona',
+      parrafos: [
+        'Cada persona posee capacidades, experiencias, intereses y oportunidades de crecimiento diferentes.',
+        'El desarrollo comienza cuando se reconocen las fortalezas y se identifican las áreas que pueden mejorar.',
+        'Un líder consciente evita comparar constantemente a las personas. En su lugar, ayuda a cada integrante a reconocer sus avances y a establecer objetivos adecuados a su situación.'
+      ],
+      puntos: [
+        'Identificar fortalezas y habilidades.',
+        'Reconocer oportunidades de aprendizaje.',
+        'Evitar comparaciones que desmotiven.',
+        'Promover objetivos personales y alcanzables.'
+      ]
+    },
+    {
+      titulo: '3. La escucha como herramienta de acompañamiento',
+      parrafos: [
+        'La escucha activa permite comprender lo que una persona piensa, siente y necesita comunicar.',
+        'Acompañar requiere prestar atención sin interrumpir innecesariamente, hacer preguntas que faciliten la reflexión y confirmar que se ha comprendido el mensaje.',
+        'Escuchar no significa estar siempre de acuerdo. Significa reconocer la perspectiva de la otra persona y responder con respeto.'
+      ],
+      puntos: [
+        'Prestar atención sin distracciones.',
+        'Realizar preguntas abiertas.',
+        'Evitar juzgar de manera apresurada.',
+        'Confirmar la comprensión antes de aconsejar.'
+      ],
+      destacado:
+        'Muchas veces, el primer paso para ayudar a alguien es escucharlo con verdadera atención.'
+    },
+    {
+      titulo: '4. Orientación y retroalimentación constructiva',
+      parrafos: [
+        'La orientación ayuda a las personas a comprender opciones, analizar dificultades y tomar decisiones con mayor claridad.',
+        'La retroalimentación constructiva ofrece información específica sobre comportamientos, resultados y oportunidades de mejora.',
+        'Para que sea útil, debe comunicarse con respeto, centrarse en hechos observables y proponer alternativas que faciliten el aprendizaje.'
+      ],
+      puntos: [
+        'Reconocer primero los avances reales.',
+        'Describir con claridad lo que se puede mejorar.',
+        'Evitar críticas personales y descalificaciones.',
+        'Proponer acciones concretas.',
+        'Dar espacio para preguntas y reflexión.'
+      ]
+    },
+    {
+      titulo: '5. Motivar sin generar dependencia',
+      parrafos: [
+        'La motivación puede fortalecerse cuando una persona comprende el sentido de sus objetivos y reconoce sus propios avances.',
+        'El acompañamiento saludable promueve la iniciativa y la confianza personal. No debe utilizar la presión, la manipulación o la aprobación permanente como mecanismos de control.',
+        'Un líder puede inspirar y apoyar, pero el compromiso con el propio desarrollo corresponde a cada persona.'
+      ],
+      puntos: [
+        'Reconocer el esfuerzo y los avances.',
+        'Estimular la iniciativa personal.',
+        'Promover la toma de decisiones.',
+        'Evitar crear dependencia emocional o funcional.',
+        'Respetar las decisiones individuales.'
+      ]
+    },
+    {
+      titulo: '6. Crear oportunidades de aprendizaje',
+      parrafos: [
+        'El desarrollo de personas necesita experiencias que permitan adquirir conocimientos, practicar habilidades y aprender de los resultados.',
+        'Un líder puede facilitar este proceso mediante conversaciones, actividades formativas, desafíos adecuados y espacios para compartir experiencias.',
+        'El aprendizaje se fortalece cuando las personas pueden experimentar, recibir orientación y reflexionar sobre sus propios resultados.'
+      ],
+      puntos: [
+        'Compartir conocimientos y recursos.',
+        'Proponer desafíos adecuados al nivel de experiencia.',
+        'Facilitar espacios de práctica.',
+        'Promover el intercambio de experiencias.',
+        'Reconocer el aprendizaje obtenido de los errores.'
+      ]
+    },
+    {
+      titulo: '7. Seguimiento y crecimiento continuo',
+      parrafos: [
+        'El acompañamiento no termina con una conversación o una recomendación. Es importante revisar los avances, identificar dificultades y ajustar las acciones cuando sea necesario.',
+        'El seguimiento debe ser respetuoso y acordado. Su propósito es facilitar el aprendizaje, no vigilar o controlar cada decisión de la persona.',
+        'Cuando el acompañamiento se realiza con constancia y claridad, puede fortalecer la confianza y favorecer un desarrollo más autónomo.'
+      ],
+      puntos: [
+        'Establecer acuerdos de seguimiento.',
+        'Revisar los avances y dificultades.',
+        'Ajustar los objetivos cuando sea necesario.',
+        'Reconocer los progresos.',
+        'Fortalecer gradualmente la autonomía.'
+      ],
+      destacado:
+        'El éxito del acompañamiento también se refleja en la capacidad que desarrolla una persona para continuar creciendo por sí misma.'
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Mi capacidad para acompañar',
+      pregunta:
+        '¿Cómo reacciono cuando alguien me pide orientación y qué puedo mejorar para ofrecer un acompañamiento más respetuoso y útil?'
+    },
+    {
+      titulo: 'Reconocer el potencial',
+      pregunta:
+        '¿Qué fortalezas observo en las personas de mi entorno que podría ayudarles a desarrollar?'
+    },
+    {
+      titulo: 'Escuchar antes de orientar',
+      pregunta:
+        '¿Suelo escuchar con atención antes de ofrecer consejos o soluciones? ¿Qué cambiaría en mi forma de comunicarme?'
+    },
+    {
+      titulo: 'Impulsar la autonomía',
+      pregunta:
+        '¿Cómo puedo ayudar a otra persona a desarrollar sus capacidades sin tomar decisiones en su lugar?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Cuál es el propósito principal del acompañamiento consciente?',
+      opciones: [
+        'Resolver todos los problemas de otras personas.',
+        'Controlar las decisiones de quienes reciben orientación.',
+        'Facilitar el aprendizaje y el desarrollo de capacidades respetando la autonomía.',
+        'Evitar que las personas cometan errores.'
+      ],
+      correcta: 2,
+      explicacion:
+        'El acompañamiento consciente ofrece orientación y apoyo para que cada persona fortalezca sus capacidades y su autonomía.'
+    },
+    {
+      texto: '¿Qué actitud favorece el reconocimiento del potencial de una persona?',
+      opciones: [
+        'Identificar sus fortalezas y oportunidades de crecimiento sin comparaciones constantes.',
+        'Señalar únicamente sus debilidades.',
+        'Exigir que avance al mismo ritmo que los demás.',
+        'Decidir por ella qué capacidades debe desarrollar.'
+      ],
+      correcta: 0,
+      explicacion:
+        'Reconocer las fortalezas y las oportunidades individuales permite orientar el desarrollo de forma respetuosa.'
+    },
+    {
+      texto: '¿Qué caracteriza a la escucha activa?',
+      opciones: [
+        'Interrumpir para ofrecer soluciones inmediatas.',
+        'Escuchar únicamente las partes con las que estamos de acuerdo.',
+        'Evitar hacer preguntas para no prolongar la conversación.',
+        'Prestar atención, hacer preguntas y confirmar la comprensión.'
+      ],
+      correcta: 3,
+      explicacion:
+        'La escucha activa implica atención, preguntas pertinentes y verificación de lo comprendido.'
+    },
+    {
+      texto: '¿Cómo debe ofrecerse la retroalimentación constructiva?',
+      opciones: [
+        'Mediante críticas personales para generar presión.',
+        'Con respeto, información específica y propuestas de mejora.',
+        'Evitando mencionar cualquier oportunidad de aprendizaje.',
+        'Comparando a la persona con quienes tienen mejores resultados.'
+      ],
+      correcta: 1,
+      explicacion:
+        'La retroalimentación constructiva se centra en hechos y oportunidades de mejora, comunicados de forma respetuosa.'
+    },
+    {
+      texto: '¿Qué demuestra que un acompañamiento está favoreciendo la autonomía?',
+      opciones: [
+        'Que la persona consulta todas sus decisiones con el líder.',
+        'Que el líder resuelve permanentemente sus dificultades.',
+        'Que la persona desarrolla capacidades para tomar decisiones y continuar su crecimiento.',
+        'Que la persona evita asumir nuevas responsabilidades.'
+      ],
+      correcta: 2,
+      explicacion:
+        'Un acompañamiento efectivo fortalece la capacidad de la persona para aprender, decidir y avanzar de manera autónoma.'
     }
   ];
 

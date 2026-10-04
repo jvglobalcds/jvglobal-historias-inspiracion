@@ -230,6 +230,13 @@ ngOnInit(): void {
   'jv-leccion-ventas-y-servicio',
   'jv-leccion-creacion-y-desarrollo-de-proyectos',
 ],
+liderazgo: [
+  'jv-leccion-liderazgo-consciente',
+  'jv-leccion-comunicacion-efectiva',
+  'jv-leccion-trabajo-en-equipo',
+  'jv-leccion-responsabilidad-y-servicio',
+  'jv-leccion-acompanamiento-desarrollo-personas',
+],
     };
 
     const slug = Object.keys(this.areas).find(

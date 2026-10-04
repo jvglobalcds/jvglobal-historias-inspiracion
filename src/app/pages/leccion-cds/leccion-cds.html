@@ -190,9 +190,9 @@
     completado la evaluación, puedes marcar esta lección como terminada.
   </p>
 
-  <div *ngIf="leccionCompletada" class="mensaje-completada">
-    ✓ Autoconocimiento y propósito completada
-  </div>
+ <div *ngIf="leccionCompletada" class="mensaje-completada">
+  ✓ {{ titulo }} completada
+</div>
 
   <button
     *ngIf="!leccionCompletada"
