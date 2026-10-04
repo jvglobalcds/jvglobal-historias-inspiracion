@@ -237,6 +237,55 @@ liderazgo: [
   'jv-leccion-responsabilidad-y-servicio',
   'jv-leccion-acompanamiento-desarrollo-personas',
 ],
+
+educacion: [
+  'jv-leccion-aprendizaje-continuo',
+  'jv-leccion-pensamiento-critico',
+  'jv-leccion-metodos-de-estudio',
+  'jv-leccion-investigacion-y-comprension',
+  'jv-leccion-desarrollo-de-capacidades',
+],
+
+tecnologia: [
+  'jv-leccion-alfabetizacion-digital',
+  'jv-leccion-inteligencia-artificial',
+  'jv-leccion-herramientas-de-productividad',
+  'jv-leccion-automatizacion',
+  'jv-leccion-innovacion-y-uso-responsable-de-la-tecnologia',
+],
+
+finanzas: [
+  'jv-leccion-educacion-financiera-basica',
+  'jv-leccion-presupuesto-personal',
+  'jv-leccion-ahorro-y-planificacion',
+  'jv-leccion-administracion-de-recursos',
+  'jv-leccion-decisiones-economicas-responsables',
+],
+
+marketing: [
+  'jv-leccion-comunicacion-de-valor',
+  'jv-leccion-marca-personal',
+  'jv-leccion-creacion-de-contenido',
+  'jv-leccion-marketing-digital',
+  'jv-leccion-estrategias-de-comunicacion',
+],
+
+'desarrollo-personal': [
+  'jv-leccion-autoconocimiento',
+  'jv-leccion-habilidades-personales',
+  'jv-leccion-inteligencia-emocional',
+  'jv-leccion-relaciones-humanas',
+  'jv-leccion-evolucion-consciente',
+],
+
+'vision-legado': [
+  'jv-leccion-vision-a-largo-plazo',
+  'jv-leccion-proposito-y-contribucion',
+  'jv-leccion-construccion-de-proyectos-duraderos',
+  'jv-leccion-mentoria-y-servicio',
+  'jv-leccion-legado-generacional',
+],
+
     };
 
     const slug = Object.keys(this.areas).find(

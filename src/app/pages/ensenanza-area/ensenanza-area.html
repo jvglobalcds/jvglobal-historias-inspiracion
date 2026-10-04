@@ -185,6 +185,26 @@
   </a>
 </ng-container>
 
+<!-- EDUCACIÓN Y CONOCIMIENTO -->
+<ng-container *ngIf="areaActual.titulo === 'Educación y conocimiento'">
+  <a
+    [routerLink]="[
+      '/ensenanza-cds/educacion',
+      [
+        'aprendizaje-continuo',
+        'pensamiento-critico',
+        'metodos-de-estudio',
+        'investigacion-y-comprension',
+        'desarrollo-de-capacidades'
+      ][i]
+    ]"
+    class="tema-enlace"
+  >
+    <span>{{ tema }}</span>
+    <span class="tema-disponible">Ver lección →</span>
+  </a>
+</ng-container>
+
 <!-- DEMÁS ÁREAS SIN NAVEGACIÓN CONFIGURADA -->
 <ng-container
   *ngIf="
@@ -192,7 +212,8 @@
     areaActual.titulo !== 'Disciplina' &&
     areaActual.titulo !== 'Superación' &&
     areaActual.titulo !== 'Emprendimiento y negocios'&&
-    areaActual.titulo !== 'Liderazgo'
+    areaActual.titulo !== 'Liderazgo' &&
+    areaActual.titulo !== 'Educación y conocimiento'
   "
 >
   <h3>{{ tema }}</h3>

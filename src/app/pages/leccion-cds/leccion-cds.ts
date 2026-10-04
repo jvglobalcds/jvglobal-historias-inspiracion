@@ -233,8 +233,24 @@ export class LeccionCds implements OnInit {
     'responsabilidad-y-servicio': 'jv-leccion-responsabilidad-y-servicio',
     'acompanamiento-y-desarrollo-de-personas':
     'jv-leccion-acompanamiento-desarrollo-personas',
-    };
 
+// EDUCACIÓN Y CONOCIMIENTO
+    'aprendizaje-continuo':
+    'jv-leccion-aprendizaje-continuo',
+
+    'pensamiento-critico':
+    'jv-leccion-pensamiento-critico',
+
+   'metodos-de-estudio':
+   'jv-leccion-metodos-de-estudio',
+
+  'investigacion-y-comprension':
+  'jv-leccion-investigacion-y-comprension',
+
+  'desarrollo-de-capacidades':
+  'jv-leccion-desarrollo-de-capacidades',
+};
+  
   private readonly contenidoBase = {
     titulo: this.titulo,
     subtitulo: this.subtitulo,
@@ -347,6 +363,26 @@ export class LeccionCds implements OnInit {
 
           case 'acompanamiento-y-desarrollo-de-personas':
           this.cargarLeccionAcompanamientoDesarrolloPersonas();
+          break;
+
+          case 'aprendizaje-continuo':
+          this.cargarLeccionAprendizajeContinuo();
+          break;
+
+          case 'pensamiento-critico':
+          this.cargarLeccionPensamientoCritico();
+          break;
+
+          case 'metodos-de-estudio':
+          this.cargarLeccionMetodosDeEstudio();
+          break;
+
+          case 'investigacion-y-comprension':
+          this.cargarLeccionInvestigacionComprension();
+          break;
+
+          case 'desarrollo-de-capacidades':
+          this.cargarLeccionDesarrolloCapacidades();
           break;
 
           case 'comunicacion-efectiva':
@@ -4547,6 +4583,654 @@ private cargarLeccionAcompanamientoDesarrolloPersonas(): void {
       correcta: 2,
       explicacion:
         'Un acompañamiento efectivo fortalece la capacidad de la persona para aprender, decidir y avanzar de manera autónoma.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+
+private cargarLeccionAprendizajeContinuo(): void {
+  this.titulo = 'Aprendizaje continuo';
+  this.subtitulo = 'El conocimiento como camino de evolución permanente';
+  this.objetivo = 'Comprender la importancia del aprendizaje continuo como una herramienta para desarrollar capacidades, adaptarse a los cambios y avanzar en la vida personal y profesional.';
+
+  this.secciones = [
+    {
+      titulo: '1. El aprendizaje no termina',
+      parrafos: [
+        'El aprendizaje es un proceso que acompaña a las personas durante toda su vida. No se limita a las aulas, los títulos académicos ni a una etapa determinada. Cada experiencia puede convertirse en una oportunidad para adquirir conocimientos y desarrollar nuevas habilidades.',
+        'Una mentalidad de aprendizaje continuo permite reconocer que siempre existe algo nuevo por descubrir y que el conocimiento puede ampliarse mediante la lectura, la práctica, la observación y el intercambio de experiencias.'
+      ],
+      destacado: 'Aprender continuamente significa mantener la disposición de crecer, incluso cuando creemos que ya sabemos suficiente.',
+      cierre: 'La evolución personal comienza cuando dejamos de considerar el aprendizaje como una obligación temporal y lo asumimos como un compromiso permanente.'
+    },
+    {
+      titulo: '2. La actitud del aprendiz',
+      parrafos: [
+        'Una persona que aprende continuamente desarrolla curiosidad, humildad y apertura mental. Reconoce sus conocimientos actuales, pero también identifica aquello que necesita mejorar.',
+        'Aceptar que no lo sabemos todo no es una debilidad. Es una fortaleza que nos permite escuchar otras perspectivas, cuestionar nuestras ideas y descubrir mejores maneras de actuar.'
+      ],
+      puntos: [
+        'Mantener la curiosidad y formular preguntas.',
+        'Aceptar la retroalimentación sin asumirla como un ataque.',
+        'Reconocer los errores como oportunidades de aprendizaje.',
+        'Estar dispuesto a actualizar conocimientos y hábitos.'
+      ]
+    },
+    {
+      titulo: '3. Convertir el conocimiento en práctica',
+      parrafos: [
+        'Acumular información no garantiza el crecimiento. El conocimiento adquiere verdadero valor cuando se comprende, se aplica y se convierte en una herramienta para resolver situaciones reales.',
+        'Por eso, el aprendizaje continuo requiere práctica, revisión y constancia. Leer sobre una habilidad puede ser el primer paso, pero desarrollarla exige ponerla en acción y evaluar los resultados.'
+      ],
+conceptos: [
+  {
+    nombre: 'Aprender',
+    significado: 'Adquirir y comprender nuevos conocimientos o habilidades.',
+    ejemplo: 'Estudiar un tema y explicar lo que se ha comprendido.'
+  },
+  {
+    nombre: 'Practicar',
+    significado: 'Utilizar lo aprendido en situaciones concretas.',
+    ejemplo: 'Aplicar un conocimiento mediante ejercicios.'
+  },
+  {
+    nombre: 'Mejorar',
+    significado: 'Revisar la experiencia y ajustar la forma de actuar.',
+    ejemplo: 'Identificar errores y corregirlos en el siguiente intento.'
+  }
+],
+      cierre: 'El conocimiento abre posibilidades; la práctica permite convertirlas en capacidades.'
+    },
+    {
+      titulo: '4. Construir un hábito de aprendizaje',
+      parrafos: [
+        'El aprendizaje continuo se fortalece cuando se integra en la rutina. No siempre se necesita disponer de muchas horas. Un espacio breve, constante y bien aprovechado puede producir avances importantes con el tiempo.',
+        'Elegir un tema, establecer un objetivo, estudiar con atención y revisar lo aprendido ayuda a transformar la intención de aprender en un hábito sostenible.'
+      ],
+      puntos: [
+        'Definir qué conocimiento se desea desarrollar.',
+        'Reservar un momento específico para aprender.',
+        'Tomar notas y organizar las ideas principales.',
+        'Aplicar lo aprendido y revisar los avances.'
+      ]
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Reflexión personal',
+      pregunta: '¿Qué conocimiento o habilidad necesitas desarrollar actualmente y qué acción concreta puedes realizar esta semana para comenzar?'
+    },
+    {
+      titulo: 'Compromiso de aprendizaje',
+      pregunta: '¿Qué hábito puedes incorporar a tu rutina para mantener una actitud de aprendizaje continuo?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Qué caracteriza principalmente al aprendizaje continuo?',
+      opciones: [
+        'Aprender únicamente durante la educación formal.',
+        'Mantener una disposición permanente para adquirir conocimientos y mejorar.',
+        'Acumular información sin necesidad de aplicarla.',
+        'Aprender solo cuando existe una obligación.'
+      ],
+      correcta: 1,
+      explicacion: 'El aprendizaje continuo implica mantener una actitud permanente de curiosidad, desarrollo y mejora.'
+    },
+    {
+      texto: '¿Por qué es importante aplicar el conocimiento?',
+      opciones: [
+        'Porque permite convertir lo aprendido en capacidades útiles.',
+        'Porque evita la necesidad de seguir aprendiendo.',
+        'Porque garantiza resultados inmediatos.',
+        'Porque reemplaza toda experiencia práctica.'
+      ],
+      correcta: 0,
+      explicacion: 'La aplicación permite transformar la comprensión en habilidades y utilizar el conocimiento en situaciones reales.'
+    },
+    {
+      texto: '¿Cuál es una actitud propia de una persona que aprende continuamente?',
+      opciones: [
+        'Rechazar las opiniones diferentes.',
+        'Evitar reconocer los errores.',
+        'Mantener curiosidad y apertura para mejorar.',
+        'Considerar que ya conoce todo lo necesario.'
+      ],
+      correcta: 2,
+      explicacion: 'La curiosidad y la apertura mental favorecen el descubrimiento, la revisión de ideas y el crecimiento.'
+    },
+    {
+      texto: '¿Qué ayuda a consolidar el hábito de aprendizaje?',
+      opciones: [
+        'Esperar a tener mucho tiempo libre.',
+        'Estudiar sin objetivos.',
+        'Cambiar constantemente de tema sin profundizar.',
+        'Establecer momentos regulares y aplicar lo aprendido.'
+      ],
+      correcta: 3,
+      explicacion: 'La constancia, los objetivos y la práctica ayudan a integrar el aprendizaje en la vida cotidiana.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+private cargarLeccionPensamientoCritico(): void {
+  this.titulo = 'Pensamiento crítico';
+  this.subtitulo = 'Analizar, cuestionar y decidir con fundamento';
+  this.objetivo = 'Desarrollar la capacidad de analizar información, evaluar argumentos y formar opiniones fundamentadas antes de tomar decisiones.';
+
+  this.secciones = [
+    {
+      titulo: '1. Comprender el pensamiento crítico',
+      parrafos: [
+        'El pensamiento crítico es la capacidad de examinar ideas, situaciones e información antes de aceptarlas como verdaderas. Implica analizar los argumentos, identificar supuestos y considerar diferentes perspectivas.',
+        'Pensar críticamente no significa oponerse a todo ni buscar errores en cada afirmación. Significa evitar conclusiones apresuradas y utilizar el razonamiento para comprender mejor la realidad.'
+      ],
+      destacado: 'Pensar críticamente es aprender a distinguir entre lo que parece cierto y lo que está suficientemente fundamentado.'
+    },
+    {
+      titulo: '2. Evaluar la información',
+      parrafos: [
+        'Vivimos rodeados de mensajes, opiniones y contenidos que pueden influir en nuestras decisiones. Por eso, es importante revisar de dónde proviene la información, qué evidencias la respaldan y qué intereses podrían estar presentes.',
+        'Una afirmación repetida muchas veces no necesariamente es verdadera. Del mismo modo, una opinión expresada con seguridad no constituye por sí sola una prueba.'
+      ],
+      puntos: [
+        'Identificar la fuente de la información.',
+        'Distinguir hechos, interpretaciones y opiniones.',
+        'Buscar evidencias que respalden las afirmaciones.',
+        'Contrastar distintas fuentes y perspectivas.'
+      ]
+    },
+    {
+      titulo: '3. Reconocer los sesgos',
+      parrafos: [
+        'Las personas interpretamos el mundo desde nuestras experiencias, creencias y emociones. Estos factores pueden influir en la forma en que seleccionamos información y evaluamos las situaciones.',
+        'Reconocer nuestros propios sesgos ayuda a evitar que las ideas previas determinen automáticamente nuestras conclusiones. También permite escuchar argumentos diferentes sin renunciar al análisis.'
+      ],
+conceptos: [
+  {
+    nombre: 'Sesgo',
+    significado: 'Tendencia que puede influir en un juicio o interpretación.',
+    ejemplo: 'Preferir una opinión sin analizar otras perspectivas.'
+  },
+  {
+    nombre: 'Evidencia',
+    significado: 'Información que sirve para respaldar o cuestionar una afirmación.',
+    ejemplo: 'Consultar datos verificables antes de aceptar una afirmación.'
+  },
+  {
+    nombre: 'Argumento',
+    significado: 'Conjunto de razones que sustentan una conclusión.',
+    ejemplo: 'Explicar una decisión utilizando razones y pruebas.'
+  }
+],
+      cierre: 'Cuestionar nuestras propias ideas también forma parte del pensamiento crítico.'
+    },
+    {
+      titulo: '4. Aplicar el pensamiento crítico en las decisiones',
+      parrafos: [
+        'Antes de tomar una decisión importante, conviene definir el problema, identificar las opciones disponibles y analizar sus posibles consecuencias.',
+        'El pensamiento crítico ayuda a reducir las decisiones impulsivas y a reconocer cuándo necesitamos más información. No elimina la incertidumbre, pero mejora la calidad del razonamiento.'
+      ],
+      puntos: [
+        'Definir claramente la situación que se desea resolver.',
+        'Reunir información relevante.',
+        'Comparar opciones y consecuencias.',
+        'Tomar una decisión fundamentada y revisar sus resultados.'
+      ]
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Reflexión personal',
+      pregunta: '¿Recuerdas alguna ocasión en la que hayas aceptado una información sin verificarla? ¿Qué harías diferente ahora?'
+    },
+    {
+      titulo: 'Análisis consciente',
+      pregunta: '¿Qué creencia o idea personal podrías examinar desde una perspectiva diferente?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Qué significa pensar críticamente?',
+      opciones: [
+        'Rechazar cualquier idea que no coincida con la propia.',
+        'Aceptar la información de personas con autoridad.',
+        'Analizar información y argumentos antes de llegar a conclusiones.',
+        'Evitar tomar decisiones.'
+      ],
+      correcta: 2,
+      explicacion: 'El pensamiento crítico consiste en examinar información y argumentos de manera razonada antes de formar conclusiones.'
+    },
+    {
+      texto: '¿Qué permite evaluar la confiabilidad de una afirmación?',
+      opciones: [
+        'La cantidad de veces que se repite.',
+        'La fuente, las evidencias y la posibilidad de contrastarla.',
+        'La seguridad con la que alguien la expresa.',
+        'La popularidad de quien la comparte.'
+      ],
+      correcta: 1,
+      explicacion: 'La confiabilidad requiere revisar el origen de la información y las evidencias que la respaldan.'
+    },
+    {
+      texto: '¿Qué es un sesgo?',
+      opciones: [
+        'Una prueba científica concluyente.',
+        'Una técnica para memorizar información.',
+        'Una conclusión que siempre es correcta.',
+        'Una tendencia que puede influir en nuestros juicios.'
+      ],
+      correcta: 3,
+      explicacion: 'Los sesgos pueden afectar la interpretación de la información y la forma en que evaluamos las situaciones.'
+    },
+    {
+      texto: '¿Cuál es una aplicación del pensamiento crítico al decidir?',
+      opciones: [
+        'Analizar opciones y sus posibles consecuencias.',
+        'Elegir siempre la primera alternativa.',
+        'Ignorar la información que genera dudas.',
+        'Decidir únicamente por presión externa.'
+      ],
+      correcta: 0,
+      explicacion: 'Comparar alternativas y consecuencias permite tomar decisiones con mayor fundamento.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+private cargarLeccionMetodosDeEstudio(): void {
+  this.titulo = 'Métodos de estudio';
+  this.subtitulo = 'Aprender con organización, comprensión y práctica';
+  this.objetivo = 'Conocer y aplicar métodos de estudio que faciliten la comprensión, la retención y el uso práctico del conocimiento.';
+
+  this.secciones = [
+    {
+      titulo: '1. Estudiar con propósito',
+      parrafos: [
+        'Estudiar de manera efectiva no consiste únicamente en dedicar muchas horas a leer o repetir información. Es necesario comprender qué se desea aprender y utilizar estrategias adecuadas para alcanzar ese propósito.',
+        'Definir objetivos concretos ayuda a orientar el esfuerzo, organizar el tiempo y evaluar el progreso. Un objetivo claro también permite identificar qué contenidos requieren mayor atención.'
+      ],
+      destacado: 'Un buen método de estudio transforma el tiempo dedicado en aprendizaje consciente.'
+    },
+    {
+      titulo: '2. Organizar la información',
+      parrafos: [
+        'La organización facilita la comprensión de contenidos complejos. Dividir un tema en partes, identificar conceptos principales y relacionar ideas permite construir una visión más clara.',
+        'Los esquemas, mapas conceptuales, resúmenes y notas personales pueden ayudar a organizar la información, siempre que se utilicen para comprender y no solamente para copiar.'
+      ],
+      puntos: [
+        'Identificar las ideas principales.',
+        'Agrupar conceptos relacionados.',
+        'Elaborar esquemas con palabras propias.',
+        'Relacionar los contenidos nuevos con conocimientos anteriores.'
+      ]
+    },
+    {
+      titulo: '3. Practicar la recuperación y la repetición espaciada',
+      parrafos: [
+        'La práctica de recuperación consiste en intentar recordar lo aprendido sin consultar inmediatamente el material. Por ejemplo, responder preguntas, explicar un tema de memoria o realizar ejercicios.',
+        'La repetición espaciada distribuye las sesiones de repaso a lo largo del tiempo. En lugar de estudiar todo en una sola sesión extensa, se vuelve a revisar el contenido en diferentes momentos.'
+      ],
+ conceptos: [
+  {
+    nombre: 'Recuperación activa',
+    significado: 'Recordar información sin verla directamente.',
+    ejemplo: 'Cerrar el libro e intentar explicar el tema con tus propias palabras.'
+  },
+  {
+    nombre: 'Repaso espaciado',
+    significado: 'Revisar contenidos en intervalos distribuidos.',
+    ejemplo: 'Repasar un tema hoy, luego mañana y nuevamente unos días después.'
+  },
+  {
+    nombre: 'Autoevaluación',
+    significado: 'Comprobar lo que se comprende y lo que necesita refuerzo.',
+    ejemplo: 'Resolver preguntas sobre un tema e identificar las respuestas incorrectas.'
+  }
+],
+      cierre: 'Recordar, practicar y repasar de forma planificada fortalece el aprendizaje.'
+    },
+    {
+      titulo: '4. Diseñar una rutina de estudio',
+      parrafos: [
+        'Una rutina de estudio necesita considerar el tiempo disponible, las prioridades y las condiciones personales. Un espacio ordenado y la reducción de distracciones pueden facilitar la concentración.',
+        'También es importante incorporar pausas y revisar periódicamente si las estrategias utilizadas están dando resultados. Un método puede ajustarse según el tipo de contenido y las necesidades de cada persona.'
+      ],
+      puntos: [
+        'Establecer horarios realistas.',
+        'Dividir las tareas grandes en actividades pequeñas.',
+        'Alternar estudio, práctica y pausas.',
+        'Revisar el progreso y ajustar el método.'
+      ]
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Reflexión personal',
+      pregunta: '¿Qué método de estudio utilizas actualmente y qué cambio podría ayudarte a comprender mejor lo que aprendes?'
+    },
+    {
+      titulo: 'Plan de aplicación',
+      pregunta: '¿Qué tema estudiarás esta semana y cómo organizarás tus sesiones de aprendizaje y repaso?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Cuál es el propósito de utilizar métodos de estudio?',
+      opciones: [
+        'Estudiar más horas sin planificación.',
+        'Memorizar todo sin comprender.',
+        'Evitar la práctica.',
+        'Mejorar la comprensión y organizar el aprendizaje.'
+      ],
+      correcta: 3,
+      explicacion: 'Los métodos de estudio permiten orientar el esfuerzo y favorecer la comprensión, la retención y la aplicación.'
+    },
+    {
+      texto: '¿Qué caracteriza a la práctica de recuperación?',
+      opciones: [
+        'Intentar recordar lo aprendido sin consultar el material de inmediato.',
+        'Copiar varias veces un texto.',
+        'Leer únicamente los títulos.',
+        'Evitar las preguntas de autoevaluación.'
+      ],
+      correcta: 0,
+      explicacion: 'La recuperación activa implica recordar la información sin depender directamente del material de estudio.'
+    },
+    {
+      texto: '¿Qué es la repetición espaciada?',
+      opciones: [
+        'Estudiar un contenido una sola vez.',
+        'Distribuir los repasos en distintos momentos.',
+        'Repetir una lectura sin detenerse.',
+        'Estudiar únicamente antes de una evaluación.'
+      ],
+      correcta: 1,
+      explicacion: 'La repetición espaciada organiza los repasos a lo largo del tiempo, en lugar de concentrarlos en una sola sesión.'
+    },
+    {
+      texto: '¿Por qué conviene revisar una rutina de estudio?',
+      opciones: [
+        'Para mantener siempre el mismo método, aunque no funcione.',
+        'Para eliminar todos los descansos.',
+        'Para identificar avances y ajustar las estrategias.',
+        'Para evitar establecer objetivos.'
+      ],
+      correcta: 2,
+      explicacion: 'Revisar el progreso permite reconocer qué estrategias funcionan y cuáles necesitan cambios.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+private cargarLeccionInvestigacionComprension(): void {
+  this.titulo = 'Investigación y comprensión';
+  this.subtitulo = 'Explorar, analizar y construir conocimiento';
+  this.objetivo = 'Desarrollar habilidades básicas para investigar un tema, seleccionar información relevante, comprender contenidos y elaborar conclusiones fundamentadas.';
+
+  this.secciones = [
+    {
+      titulo: '1. Investigar para comprender',
+      parrafos: [
+        'Investigar es un proceso de búsqueda y análisis que permite responder preguntas, aclarar dudas y profundizar en un tema. No se trata simplemente de reunir información, sino de comprenderla y utilizarla para construir explicaciones.',
+        'Una investigación comienza con una pregunta o una necesidad de conocimiento. A partir de ella se define qué información hace falta y cómo se puede obtener de manera organizada.'
+      ],
+      destacado: 'Investigar no es acumular datos: es buscar respuestas mediante un proceso ordenado.'
+    },
+    {
+      titulo: '2. Formular preguntas y delimitar un tema',
+      parrafos: [
+        'Una pregunta bien planteada ayuda a orientar la investigación. Cuando un tema es demasiado amplio, resulta difícil identificar qué información es relevante y cuándo se ha alcanzado el propósito.',
+        'Delimitar un tema significa establecer el enfoque, el alcance y los aspectos específicos que se desean comprender.'
+      ],
+      puntos: [
+        'Identificar qué se quiere conocer.',
+        'Formular preguntas claras y concretas.',
+        'Definir los límites del tema.',
+        'Establecer un objetivo de investigación.'
+      ]
+    },
+    {
+      titulo: '3. Buscar y analizar fuentes',
+      parrafos: [
+        'La información puede provenir de libros, artículos, documentos institucionales, entrevistas, bases de datos y otros recursos. Cada fuente debe revisarse de acuerdo con su pertinencia, actualidad, autoridad y propósito.',
+        'Comparar diferentes fuentes permite reconocer coincidencias, diferencias y posibles limitaciones. Es importante registrar los datos de origen para poder consultar y referenciar la información posteriormente.'
+      ],
+conceptos: [
+  {
+    nombre: 'Fuente primaria',
+    significado: 'Material que ofrece información directa sobre un hecho o tema.',
+    ejemplo: 'Consultar una entrevista original o un documento histórico.'
+  },
+  {
+    nombre: 'Fuente secundaria',
+    significado: 'Material que analiza, interpreta o resume información de otras fuentes.',
+    ejemplo: 'Leer un artículo que analiza un acontecimiento histórico.'
+  },
+  {
+    nombre: 'Pertinencia',
+    significado: 'Relación de la información con la pregunta de investigación.',
+    ejemplo: 'Elegir información que responda directamente a la pregunta investigada.'
+  }
+],
+      cierre: 'La calidad de una investigación depende, en parte, de la calidad y el análisis de sus fuentes.'
+    },
+    {
+      titulo: '4. Comprender, sintetizar y concluir',
+      parrafos: [
+        'Comprender un contenido implica identificar sus ideas principales, interpretar los conceptos y establecer relaciones entre ellos. Repetir literalmente una fuente no demuestra necesariamente que se haya entendido.',
+        'La síntesis permite expresar las ideas esenciales con claridad y palabras propias. Las conclusiones deben responder a la pregunta inicial y estar respaldadas por la información analizada, sin presentar suposiciones como hechos comprobados.'
+      ],
+      puntos: [
+        'Leer con una pregunta orientadora.',
+        'Identificar ideas y conceptos esenciales.',
+        'Relacionar información de distintas fuentes.',
+        'Elaborar conclusiones fundamentadas.'
+      ]
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Reflexión personal',
+      pregunta: '¿Qué tema te gustaría investigar y qué pregunta concreta podrías formular para comenzar?'
+    },
+    {
+      titulo: 'Comprensión y criterio',
+      pregunta: '¿Cómo puedes comprobar que realmente comprendiste una información y no solo la repetiste?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Cuál es el propósito principal de investigar?',
+      opciones: [
+        'Reunir la mayor cantidad posible de datos sin analizarlos.',
+        'Copiar información de distintas páginas.',
+        'Responder preguntas y construir conocimiento mediante un proceso organizado.',
+        'Confirmar siempre las ideas que ya tenemos.'
+      ],
+      correcta: 2,
+      explicacion: 'La investigación busca responder preguntas y profundizar en un tema mediante la búsqueda y el análisis organizado de información.'
+    },
+    {
+      texto: '¿Para qué sirve delimitar un tema de investigación?',
+      opciones: [
+        'Para definir un enfoque y concentrarse en aspectos específicos.',
+        'Para evitar formular preguntas.',
+        'Para eliminar la necesidad de consultar fuentes.',
+        'Para ampliar indefinidamente el contenido.'
+      ],
+      correcta: 0,
+      explicacion: 'Delimitar el tema permite orientar la búsqueda y establecer un alcance manejable.'
+    },
+    {
+      texto: '¿Qué conviene revisar al seleccionar una fuente?',
+      opciones: [
+        'Únicamente el diseño de la página.',
+        'La cantidad de imágenes que contiene.',
+        'Si coincide con nuestra opinión.',
+        'Su pertinencia, actualidad, autoridad y propósito.'
+      ],
+      correcta: 3,
+      explicacion: 'Evaluar estos aspectos ayuda a determinar si una fuente es adecuada para la investigación.'
+    },
+    {
+      texto: '¿Cómo deben elaborarse las conclusiones de una investigación?',
+      opciones: [
+        'Con afirmaciones que no necesitan respaldo.',
+        'Respondiendo a la pregunta inicial y utilizando la información analizada.',
+        'Copiando literalmente el primer resultado encontrado.',
+        'Incluyendo únicamente opiniones personales.'
+      ],
+      correcta: 1,
+      explicacion: 'Las conclusiones deben estar relacionadas con el propósito de la investigación y sustentarse en la información obtenida.'
+    }
+  ];
+
+  this.respuestas = [];
+  this.evaluacionEnviada = false;
+}
+
+private cargarLeccionDesarrolloCapacidades(): void {
+  this.titulo = 'Desarrollo de capacidades';
+  this.subtitulo = 'Transformar el potencial en habilidades mediante la práctica';
+  this.objetivo = 'Comprender cómo se desarrollan las capacidades personales y fortalecer habilidades mediante la práctica deliberada, la retroalimentación y la constancia.';
+
+  this.secciones = [
+    {
+      titulo: '1. Reconocer el potencial y las capacidades',
+      parrafos: [
+        'Las capacidades son recursos que permiten realizar actividades, resolver problemas y responder a diferentes situaciones. Algunas se manifiestan con mayor facilidad desde el inicio, mientras que otras necesitan desarrollarse mediante el aprendizaje y la experiencia.',
+        'Reconocer nuestras fortalezas y las áreas que requieren atención ayuda a establecer objetivos realistas y a orientar mejor nuestros esfuerzos.'
+      ],
+      destacado: 'El potencial representa posibilidades; el desarrollo requiere acción, aprendizaje y constancia.'
+    },
+    {
+      titulo: '2. Convertir habilidades en competencias',
+      parrafos: [
+        'Una habilidad es la capacidad de realizar una actividad. Una competencia integra conocimientos, habilidades y actitudes para responder de manera adecuada a situaciones concretas.',
+        'El desarrollo de una competencia exige comprender lo que se hace, practicar, resolver dificultades y adaptar las acciones según el contexto.'
+      ],
+      puntos: [
+        'Identificar la habilidad que se desea fortalecer.',
+        'Comprender los conocimientos necesarios.',
+        'Practicar en situaciones concretas.',
+        'Evaluar el desempeño y realizar ajustes.'
+      ]
+    },
+    {
+      titulo: '3. La práctica y la retroalimentación',
+      parrafos: [
+        'La práctica permite adquirir experiencia y mejorar progresivamente. Para que sea útil, debe tener un propósito claro y prestar atención a los aspectos que necesitan perfeccionarse.',
+        'La retroalimentación aporta información sobre el desempeño. Puede provenir de un mentor, un compañero, una evaluación o la observación de los propios resultados.',
+        'Recibir observaciones y utilizarlas de forma constructiva permite identificar errores, reconocer avances y elegir nuevas estrategias.'
+      ],
+conceptos: [
+  {
+    nombre: 'Práctica deliberada',
+    significado: 'Ejercicio intencional orientado a mejorar aspectos específicos.',
+    ejemplo: 'Practicar una habilidad concreta y concentrarse en corregir errores.'
+  },
+  {
+    nombre: 'Retroalimentación',
+    significado: 'Información que ayuda a reconocer fortalezas y oportunidades de mejora.',
+    ejemplo: 'Recibir observaciones sobre un trabajo y utilizarlas para mejorar.'
+  },
+  {
+    nombre: 'Adaptación',
+    significado: 'Ajuste de estrategias frente a nuevas condiciones o dificultades.',
+    ejemplo: 'Cambiar el método de aprendizaje cuando surgen nuevas dificultades.'
+  }
+],
+      cierre: 'La mejora no depende únicamente de repetir una actividad, sino de practicar con atención y aprender de los resultados.'
+    },
+    {
+      titulo: '4. Superar dificultades y sostener el desarrollo',
+      parrafos: [
+        'Desarrollar capacidades implica enfrentar desafíos, cometer errores y atravesar momentos de avance lento. La dificultad no significa necesariamente falta de talento; también puede señalar que hace falta más práctica, otra estrategia o apoyo.',
+        'La disciplina ayuda a sostener el esfuerzo, mientras que la claridad permite mantener presente el propósito. La superación se expresa en la disposición de continuar aprendiendo y mejorar con responsabilidad.'
+      ],
+      puntos: [
+        'Establecer metas específicas y alcanzables.',
+        'Dividir los desafíos en pasos progresivos.',
+        'Mantener la constancia sin ignorar el descanso.',
+        'Revisar los avances y aprender de las dificultades.'
+      ]
+    }
+  ];
+
+  this.reflexiones = [
+    {
+      titulo: 'Reflexión personal',
+      pregunta: '¿Qué capacidad personal deseas desarrollar y qué dificultad necesitas aprender a gestionar para avanzar?'
+    },
+    {
+      titulo: 'Compromiso de acción',
+      pregunta: '¿Qué práctica concreta puedes realizar durante los próximos siete días para fortalecer una habilidad importante para ti?'
+    }
+  ];
+
+  this.preguntas = [
+    {
+      texto: '¿Qué permite desarrollar una capacidad?',
+      opciones: [
+        'Esperar a que el talento aparezca por sí solo.',
+        'Evitar toda situación desafiante.',
+        'Depender exclusivamente de las habilidades iniciales.',
+        'Aprender, practicar y revisar el desempeño de manera constante.'
+      ],
+      correcta: 3,
+      explicacion: 'El desarrollo de capacidades se fortalece mediante el aprendizaje, la práctica y la revisión de resultados.'
+    },
+    {
+      texto: '¿Qué integra una competencia?',
+      opciones: [
+        'Únicamente conocimientos teóricos.',
+        'Conocimientos, habilidades y actitudes aplicados a situaciones concretas.',
+        'Solo facilidad natural para realizar una actividad.',
+        'La repetición de tareas sin comprensión.'
+      ],
+      correcta: 1,
+      explicacion: 'Una competencia combina diferentes recursos para responder adecuadamente a situaciones reales.'
+    },
+    {
+      texto: '¿Cuál es la función de la retroalimentación?',
+      opciones: [
+        'Identificar fortalezas y aspectos que pueden mejorarse.',
+        'Evitar que una persona cometa cualquier error.',
+        'Reemplazar toda práctica personal.',
+        'Garantizar resultados inmediatos.'
+      ],
+      correcta: 0,
+      explicacion: 'La retroalimentación proporciona información útil para reconocer avances y ajustar el desempeño.'
+    },
+    {
+      texto: '¿Qué actitud ayuda a superar las dificultades durante el desarrollo de capacidades?',
+      opciones: [
+        'Abandonar cualquier actividad que resulte difícil.',
+        'Ignorar los resultados.',
+        'Mantener la constancia y ajustar las estrategias cuando sea necesario.',
+        'Compararse continuamente con otras personas.'
+      ],
+      correcta: 2,
+      explicacion: 'La constancia, junto con la capacidad de revisar y ajustar las estrategias, favorece el progreso.'
     }
   ];
 
