@@ -45,6 +45,20 @@ export const routes: Routes = [
   },
 
   {
+  path: 'ensenanza-cds/temporada-1',
+  loadComponent: () =>
+    import('./pages/ensenanza-temporada/ensenanza-temporada')
+      .then(m => m.EnsenanzaTemporada)
+},
+
+{
+  path: 'ensenanza-cds/temporada-1/:slug',
+  loadComponent: () =>
+    import('./pages/ensenanza-reflexion/ensenanza-reflexion')
+      .then(m => m.EnsenanzaReflexion)
+},
+
+  {
   path: 'ensenanza-cds/:area/:leccion',
   loadComponent: () =>
     import('./pages/leccion-cds/leccion-cds')

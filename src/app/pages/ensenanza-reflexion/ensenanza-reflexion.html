@@ -1,0 +1,144 @@
+<div class="reflexion-page">
+
+  @if (reflexion) {
+
+    <header class="reflexion-header">
+
+      <a
+        routerLink="/ensenanza-cds/temporada-1"
+        class="volver">
+        ← TEMPORADA 01
+      </a>
+
+      <div class="encabezado">
+
+        <span class="etiqueta">
+          TEMPORADA 01
+        </span>
+
+        <span class="numero">
+          ENSEÑANZA {{ reflexion.numero }}
+        </span>
+
+        <h1>
+          {{ reflexion.titulo }}
+        </h1>
+
+        <p class="categoria">
+          {{ reflexion.categoria }}
+        </p>
+
+      </div>
+
+    </header>
+
+
+    <main class="reflexion-contenido">
+
+      <article class="contenido">
+
+        <p class="pregunta-inicial">
+          {{ reflexion.preguntaInicial }}
+        </p>
+
+
+        @for (bloque of reflexion.bloques; track $index) {
+
+          @if (bloque.tipo === 'parrafo') {
+
+            @for (linea of bloque.lineas; track $index) {
+
+              <p>
+                {{ linea }}
+              </p>
+
+            }
+
+          }
+
+
+          @if (bloque.tipo === 'destacado') {
+
+            @for (linea of bloque.lineas; track $index) {
+
+              <p class="destacado">
+                {{ linea }}
+              </p>
+
+            }
+
+          }
+
+
+          @if (bloque.tipo === 'frase-central') {
+
+            <div class="frase-central">
+
+              @for (linea of bloque.lineas; track $index) {
+
+                <p>
+                  {{ linea }}
+                </p>
+
+              }
+
+            </div>
+
+          }
+
+
+          @if (bloque.tipo === 'frase-final') {
+
+            <div class="frase-final">
+
+              @for (linea of bloque.lineas; track $index) {
+
+                <p>
+                  {{ linea }}
+                </p>
+
+              }
+
+            </div>
+
+          }
+
+        }
+
+    
+
+        <section class="pregunta-reflexion">
+
+          <span>
+            PREGUNTA PARA REFLEXIONAR
+          </span>
+
+          <h2>
+            {{ reflexion.preguntaReflexion }}
+          </h2>
+
+        </section>
+
+
+        <p class="cierre">
+          {{ reflexion.cierre }}
+        </p>
+
+      </article>
+
+
+      <div class="navegacion-final">
+
+        <a
+          routerLink="/ensenanza-cds/temporada-1"
+          class="volver-listado">
+          ← VOLVER A TEMPORADA 01
+        </a>
+
+      </div>
+
+    </main>
+
+  }
+
+</div>

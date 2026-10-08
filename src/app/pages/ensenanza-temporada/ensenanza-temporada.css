@@ -1,0 +1,222 @@
+.temporada-page {
+  min-height: 100vh;
+  background: #04101f;
+  color: #f5f0e6;
+}
+
+.temporada-header {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px 70px;
+}
+
+.volver {
+  display: inline-block;
+  margin-bottom: 70px;
+  color: #d4af37;
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+}
+
+.encabezado {
+  max-width: 850px;
+}
+
+.etiqueta,
+.numero-temporada,
+.seccion-numero,
+.seccion-heading span {
+  display: block;
+  color: #d4af37;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+}
+
+.numero-temporada {
+  margin-top: 18px;
+}
+
+.encabezado h1 {
+  margin: 18px 0 22px;
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.08;
+  font-weight: 600;
+}
+
+.encabezado p {
+  max-width: 720px;
+  margin: 0;
+  color: rgba(245, 240, 230, 0.72);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.temporada-contenido {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+.introduccion {
+  max-width: 800px;
+  padding: 45px 0 70px;
+  border-top: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.introduccion h2,
+.seccion-heading h2 {
+  margin: 14px 0 20px;
+  font-size: 1.7rem;
+  letter-spacing: 0.04em;
+}
+
+.introduccion p {
+  margin: 0;
+  color: rgba(245, 240, 230, 0.72);
+  line-height: 1.8;
+}
+
+.capitulos {
+  padding-top: 20px;
+}
+
+.seccion-heading {
+  margin-bottom: 28px;
+}
+
+.contenido-vacio {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 28px;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.contenido-numero {
+  color: #d4af37;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.contenido-vacio h3 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+}
+
+.contenido-vacio p {
+  margin: 0;
+  color: rgba(245, 240, 230, 0.65);
+  line-height: 1.6;
+}
+
+.volver-final {
+  margin-top: 70px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(212, 175, 55, 0.18);
+}
+
+.volver-final a {
+  color: #d4af37;
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+}
+
+.volver:hover,
+.volver-final a:hover {
+  opacity: 0.75;
+}
+
+@media (max-width: 700px) {
+
+  .temporada-header {
+    padding-top: 28px;
+  }
+
+  .volver {
+    margin-bottom: 50px;
+  }
+
+  .encabezado h1 {
+    font-size: 2rem;
+  }
+
+  .contenido-vacio {
+    align-items: flex-start;
+    padding: 22px;
+  }
+
+}
+.contenido-item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 28px;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  background: rgba(255, 255, 255, 0.025);
+  color: #f5f0e6;
+  text-decoration: none;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.contenido-item:hover {
+  border-color: rgba(212, 175, 55, 0.55);
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.contenido-numero {
+  flex-shrink: 0;
+  color: #d4af37;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.contenido-info {
+  flex: 1;
+}
+
+.contenido-tipo {
+  display: block;
+  margin-bottom: 8px;
+  color: #d4af37;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+}
+
+.contenido-info h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  letter-spacing: 0.06em;
+}
+
+.contenido-info p {
+  margin: 0;
+  color: rgba(245, 240, 230, 0.65);
+  line-height: 1.6;
+}
+
+.contenido-flecha {
+  flex-shrink: 0;
+  color: #d4af37;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 700px) {
+
+  .contenido-item {
+    align-items: flex-start;
+    padding: 22px;
+  }
+
+  .contenido-flecha {
+    padding-top: 4px;
+  }
+
+}

@@ -2,31 +2,32 @@
 
   <header class="buscador-header">
 
-    <a routerLink="/indice" class="volver">
-      ← VOLVER AL ÍNDICE
+    <a routerLink="/ensenanza-cds" class="volver">
+      ← VOLVER A ENSEÑANZA CDS
     </a>
 
     <div class="encabezado">
 
-      <span class="etiqueta">BIBLIOTECA</span>
+      <span class="etiqueta">FORMACIÓN Y CONOCIMIENTO</span>
 
       <h1>BUSCADOR</h1>
 
       <p>
-        Encuentra historias por nombre, categoría,
-        tema, época, contexto o valor CDS.
+        Encuentra lecciones por título, área o contenido
+        dentro de Enseñanza CDS.
       </p>
 
     </div>
 
   </header>
 
+
   <main class="buscador-contenido">
 
     <section class="busqueda">
 
       <label for="campo-busqueda">
-        BUSCAR EN LA BIBLIOTECA
+        BUSCAR EN ENSEÑANZA CDS
       </label>
 
       <div class="campo">
@@ -37,24 +38,30 @@
           id="campo-busqueda"
           type="text"
           [(ngModel)]="termino"
-          placeholder="Ejemplo: Derek, Barcelona, disciplina..."
+          placeholder="Ejemplo: disciplina, hábitos, liderazgo..."
           autocomplete="off"
         />
 
       </div>
 
+
       @if (termino.trim()) {
 
         <p class="resultado-info">
 
-          @if (historiasFiltradas.length > 0) {
+          @if (leccionesFiltradas.length > 0) {
 
-            {{ historiasFiltradas.length }}
-            {{ historiasFiltradas.length === 1 ? 'HISTORIA ENCONTRADA' : 'HISTORIAS ENCONTRADAS' }}
+            {{ leccionesFiltradas.length }}
+
+            {{
+              leccionesFiltradas.length === 1
+                ? 'LECCIÓN ENCONTRADA'
+                : 'LECCIONES ENCONTRADAS'
+            }}
 
           } @else {
 
-            No encontramos historias para
+            No encontramos lecciones para
             <strong>“{{ termino }}”</strong>.
 
           }
@@ -66,37 +73,39 @@
     </section>
 
 
-    @if (termino.trim() && historiasFiltradas.length > 0) {
+    @if (termino.trim() && leccionesFiltradas.length > 0) {
 
       <section class="resultados">
 
         <div class="historias-grid">
 
           @for (
-            historia of historiasFiltradas;
-            track historia.id
+            leccion of leccionesFiltradas;
+            track leccion.area + '-' + leccion.leccion
           ) {
 
             <a
-              [routerLink]="['/historia', historia.id]"
+              [routerLink]="[
+                '/ensenanza-cds',
+                leccion.area,
+                leccion.leccion
+              ]"
               class="historia-card">
 
               <span class="numero">
-                HISTORIA
+                {{ leccion.areaTitulo }}
               </span>
 
               <h2>
-                {{ historia.nombre }}
+                {{ leccion.titulo }}
               </h2>
 
               <p>
-                {{ historia.contexto }}
-                ·
-                {{ historia.epoca }}
+                {{ leccion.descripcion }}
               </p>
 
               <span class="ver-historia">
-                VER HISTORIA →
+                VER LECCIÓN →
               </span>
 
             </a>
@@ -120,12 +129,14 @@
 
         <div class="criterios">
 
-          <span>NOMBRE</span>
-          <span>CATEGORÍA</span>
-          <span>TEMA</span>
-          <span>ÉPOCA</span>
-          <span>CONTEXTO</span>
-          <span>VALOR CDS</span>
+          <span>TÍTULO</span>
+          <span>ÁREA</span>
+          <span>DISCIPLINA</span>
+          <span>LIDERAZGO</span>
+          <span>TECNOLOGÍA</span>
+          <span>FINANZAS</span>
+          <span>MARKETING</span>
+          <span>DESARROLLO PERSONAL</span>
 
         </div>
 
@@ -136,8 +147,8 @@
 
     <div class="volver-final">
 
-      <a routerLink="/indice">
-        ← VOLVER AL ÍNDICE
+      <a routerLink="/ensenanza-cds">
+        ← VOLVER A ENSEÑANZA CDS
       </a>
 
     </div>
