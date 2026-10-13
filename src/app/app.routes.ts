@@ -1,4 +1,4 @@
-
+﻿
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
@@ -56,6 +56,12 @@ export const routes: Routes = [
   loadComponent: () =>
     import('./pages/liderazgo-personal/liderazgo-personal')
       .then(m => m.LiderazgoPersonal)
+},
+{
+  path: 'educar-antes-motivar',
+  loadComponent: () =>
+    import('./pages/educar-antes-motivar/educar-antes-motivar')
+      .then(m => m.EducarAntesMotivar)
 },
 
   {
