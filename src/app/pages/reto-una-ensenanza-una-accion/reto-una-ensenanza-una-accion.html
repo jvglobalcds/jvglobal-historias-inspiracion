@@ -1,0 +1,149 @@
+﻿<main class="reto-page">
+  <header class="reto-header">
+    <a class="volver-inicio" routerLink="/liderazgo-cds">
+      ← LIDERAZGO CDS
+    </a>
+
+    <span class="sobretitulo">PRÁCTICA DE LIDERAZGO · RETO 01</span>
+
+    <h1>UNA PERSONA,<br><span>UNA OPORTUNIDAD</span></h1>
+
+    <div class="linea-dorada"></div>
+
+    <p class="descripcion">
+      Durante los próximos siete días, da pasos concretos para que una persona
+      conozca JV Global. Escucha primero, comparte con claridad y respeta su decisión.
+    </p>
+
+    <p class="valores">Claridad · Disciplina · Superación</p>
+  </header>
+
+  <section class="reto-contenido">
+    <section class="bienvenida">
+      <span class="etiqueta">MI OBJETIVO DE LOS PRÓXIMOS 7 DÍAS</span>
+      <h2>Conseguir que una persona conozca JV Global.</h2>
+      <p>
+        No se trata de presionar a nadie. Se trata de construir una conversación
+        genuina, comprender qué busca la otra persona y compartir información
+        para que pueda decidir libremente.
+      </p>
+
+      <label class="campo-etiqueta" for="fechaInicio">Fecha de inicio</label>
+      <input
+        id="fechaInicio"
+        class="campo-texto"
+        type="date"
+        [(ngModel)]="fechaInicio">
+
+      <p><strong>Fecha límite:</strong> {{ fechaLimite }}</p>
+      <p><strong>Días restantes:</strong> {{ diasRestantes }}</p>
+
+      <div class="barra-progreso" role="progressbar"
+        [attr.aria-valuenow]="progreso"
+        aria-valuemin="0"
+        aria-valuemax="100">
+        <div class="barra-progreso-relleno" [style.width.%]="progreso"></div>
+      </div>
+      <p class="texto-progreso">{{ progreso }} % de pasos registrados</p>
+    </section>
+
+    <section class="paso">
+      <span class="numero-paso">01</span>
+      <div class="paso-contenido">
+        <h2>¿Con quién vas a conversar?</h2>
+        <p>
+          Puedes anotar un nombre o una referencia que te ayude a recordar.
+          Evita compartir datos personales de terceros en el grupo.
+        </p>
+
+        <label class="campo-etiqueta" for="persona">Persona que tengo en mente (opcional)</label>
+        <input
+          id="persona"
+          class="campo-texto"
+          type="text"
+          [(ngModel)]="persona"
+          placeholder="Nombre o referencia privada">
+      </div>
+    </section>
+
+    <section class="paso">
+      <span class="numero-paso">02</span>
+      <div class="paso-contenido">
+        <h2>Registra tu avance</h2>
+        <p>Marca cada paso cuando lo hayas realizado de verdad.</p>
+
+        <div class="opciones-accion">
+          @for (paso of etapas; track paso; let i = $index) {
+            <label class="opcion-accion" [class.seleccionada]="i < etapa">
+              <input
+                type="checkbox"
+                [checked]="i < etapa"
+                [disabled]="i > etapa"
+                (change)="cambiarEtapa(i, $event)">
+              <span>{{ paso }}</span>
+            </label>
+          }
+        </div>
+
+        @if (etapa === etapas.length) {
+          <p class="mensaje-reto" role="status">
+            Has registrado los cinco pasos. Reflexiona sobre el resultado y define tu siguiente acción.
+          </p>
+        }
+      </div>
+    </section>
+
+    <section class="paso">
+      <span class="numero-paso">03</span>
+      <div class="paso-contenido">
+        <h2>Mi reflexión y próximo paso</h2>
+        <p>
+          ¿Qué aprendiste de la conversación? ¿La persona quiere conocer más?
+          ¿Qué seguimiento acordaron?
+        </p>
+
+        <label class="campo-etiqueta" for="reflexion">Mis notas</label>
+        <textarea
+          id="reflexion"
+          class="campo-texto"
+          rows="4"
+          [(ngModel)]="reflexion"
+          placeholder="Registra tus aprendizajes y el siguiente paso, sin incluir información privada innecesaria.">
+        </textarea>
+      </div>
+    </section>
+
+    <section class="compromiso-final">
+      <span class="etiqueta">COMPARTIR MI AVANCE</span>
+      <h2>Una conversación puede abrir una oportunidad.</h2>
+      <p>
+        Comparte tu compromiso y tus avances con la comunidad. La meta es que
+        una persona conozca el sistema, no presionarla para que ingrese.
+      </p>
+
+      <button
+        type="button"
+        class="boton-compartir"
+        (click)="compartirWhatsApp()">
+        COPIAR MI AVANCE Y ABRIR WHATSAPP
+        <span>→</span>
+      </button>
+
+      @if (mensaje) {
+        <p class="mensaje-reto" role="status">{{ mensaje }}</p>
+      }
+
+      <p class="nota">
+        El avance se mantiene en esta página mientras permanezca abierta.
+        Copia el mensaje antes de compartirlo y respeta la privacidad de los demás.
+      </p>
+    </section>
+  </section>
+
+  <footer class="reto-footer">
+    <strong>JV GLOBAL</strong>
+    <span>JUNTOS VENCEMOS</span>
+    <a routerLink="/liderazgo-cds">Volver a Liderazgo CDS ↑</a>
+  </footer>
+</main>
+

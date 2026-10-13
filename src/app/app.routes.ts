@@ -59,6 +59,13 @@ export const routes: Routes = [
 },
 
 {
+  path: 'reto-una-ensenanza-una-accion',
+  loadComponent: () =>
+    import('./pages/reto-una-ensenanza-una-accion/reto-una-ensenanza-una-accion')
+      .then(m => m.RetoUnaEnsenanzaUnaAccion)
+},
+
+{
   path: 'liderazgo-personal',
   loadComponent: () =>
     import('./pages/liderazgo-personal/liderazgo-personal')
@@ -133,6 +140,7 @@ export const routes: Routes = [
   }
 
 ];
+
 
 
 
