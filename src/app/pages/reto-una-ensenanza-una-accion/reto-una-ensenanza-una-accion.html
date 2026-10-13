@@ -133,6 +133,31 @@
         <p class="mensaje-reto" role="status">{{ mensaje }}</p>
       }
 
+      @if (textoParaCopiar) {
+        <div class="alternativa-copiar">
+          <label class="campo-etiqueta" for="mensajeParaCopiar">
+            Tu mensaje para WhatsApp
+          </label>
+          <p>
+            Pulsa el botón para seleccionar todo el texto y después presiona
+            Ctrl+C. Luego pégalo en el grupo de WhatsApp.
+          </p>
+          <textarea
+            id="mensajeParaCopiar"
+            class="campo-texto"
+            rows="12"
+            readonly
+            [value]="textoParaCopiar">
+          </textarea>
+          <button
+            type="button"
+            class="boton-compartir"
+            (click)="seleccionarMensaje()">
+            SELECCIONAR MENSAJE PARA COPIAR
+          </button>
+        </div>
+      }
+
       <p class="nota">
         El avance se mantiene en esta página mientras permanezca abierta.
         Copia el mensaje antes de compartirlo y respeta la privacidad de los demás.
@@ -146,4 +171,5 @@
     <a routerLink="/liderazgo-cds">Volver a Liderazgo CDS ↑</a>
   </footer>
 </main>
+
 

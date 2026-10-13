@@ -14,6 +14,7 @@ export class RetoUnaEnsenanzaUnaAccion {
   fechaInicio = this.fechaLocal();
   reflexion = '';
   mensaje = '';
+  textoParaCopiar = '';
   etapa = 0;
   fechaSeguimiento = '';
 
@@ -70,6 +71,42 @@ export class RetoUnaEnsenanzaUnaAccion {
     }
   }
 
+  private copiarConMetodoAlternativo(texto: string): boolean {
+    const campo = document.createElement('textarea');
+    campo.value = texto;
+    campo.setAttribute('readonly', '');
+    campo.style.position = 'fixed';
+    campo.style.left = '-9999px';
+    campo.style.top = '0';
+    document.body.appendChild(campo);
+    campo.focus();
+    campo.select();
+
+    let copiado = false;
+
+    try {
+      copiado = document.execCommand('copy');
+    } catch {
+      copiado = false;
+    } finally {
+      document.body.removeChild(campo);
+    }
+
+    return copiado;
+  }
+
+  seleccionarMensaje(): void {
+    const campo = document.getElementById(
+      'mensajeParaCopiar'
+    ) as HTMLTextAreaElement | null;
+
+    if (campo) {
+      campo.focus();
+      campo.select();
+      this.mensaje = 'Mensaje seleccionado. Presiona Ctrl+C para copiarlo y pégalo en WhatsApp.';
+    }
+  }
+
   async compartirWhatsApp(): Promise<void> {
     const partes = [
       '*JV GLOBAL · RETO 01*',
@@ -118,13 +155,22 @@ export class RetoUnaEnsenanzaUnaAccion {
     );
 
     const texto = partes.join('\n');
+    this.textoParaCopiar = '';
+
     const ventana = window.open(this.enlaceGrupo, '_blank');
 
     try {
       await navigator.clipboard.writeText(texto);
       this.mensaje = 'Mensaje copiado. Pégalo en el grupo de WhatsApp.';
     } catch {
-      this.mensaje = 'No se pudo copiar automáticamente. Selecciona y copia el mensaje desde un navegador seguro (localhost o HTTPS).';
+      const copiado = this.copiarConMetodoAlternativo(texto);
+
+      if (copiado) {
+        this.mensaje = 'Mensaje copiado. Pégalo en el grupo de WhatsApp.';
+      } else {
+        this.textoParaCopiar = texto;
+        this.mensaje = 'La copia automática no está disponible. Aquí tienes el mensaje para copiarlo manualmente.';
+      }
     }
 
     if (!ventana) {
@@ -132,5 +178,3 @@ export class RetoUnaEnsenanzaUnaAccion {
     }
   }
 }
-
-
