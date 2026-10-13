@@ -1,0 +1,194 @@
+﻿<div class="leccion-page">
+
+  <header class="leccion-header">
+    <a routerLink="/liderazgo-cds" class="marca">JV GLOBAL</a>
+
+    <a routerLink="/liderazgo-cds" class="volver">
+      ← VOLVER A LIDERAZGO CDS
+    </a>
+
+    <p class="etiqueta">LIDERAZGO CDS · ENSEÑANZA 04</p>
+
+    <h1>FORMAR LÍDERES QUE FORMEN A OTROS</h1>
+
+    <p class="subtitulo">
+      El liderazgo crece cuando ayudamos a otras personas a descubrir
+      sus capacidades, tomar decisiones y desarrollar su propio camino.
+    </p>
+
+    <div class="linea-dorada"></div>
+
+    <p class="introduccion">
+      No se trata de que otros dependan siempre de nosotros.
+      Se trata de compartir lo aprendido, acompañar con respeto
+      y contribuir a que cada persona pueda avanzar con autonomía.
+    </p>
+
+    <p class="valores">Claridad · Disciplina · Superación</p>
+  </header>
+
+  <main>
+
+    <section class="idea-central">
+      <p class="etiqueta">LA IDEA CENTRAL</p>
+      <h2>Un buen líder no busca seguidores dependientes: desarrolla personas capaces.</h2>
+      <p>
+        Formar a otros comienza con la disposición de escuchar y aprender.
+        Continúa cuando compartimos conocimientos sin imponer nuestras
+        respuestas y ofrecemos apoyo sin quitarle a otra persona la
+        responsabilidad de elegir y actuar.
+      </p>
+    </section>
+
+    <section class="contenido">
+
+      <article class="leccion-bloque">
+        <span class="numero">01</span>
+        <div>
+          <h2>Acompañar sin controlar</h2>
+          <p>
+            Acompañar no significa resolver todos los problemas de los demás.
+            Significa escuchar, ayudar a comprender las opciones y respetar
+            las decisiones que cada persona necesita aprender a tomar.
+          </p>
+          <p>
+            Cuando escuchamos antes de aconsejar, creamos un espacio para
+            que otros expresen sus ideas, identifiquen sus necesidades y
+            descubran posibles soluciones.
+          </p>
+        </div>
+      </article>
+
+      <article class="leccion-bloque">
+        <span class="numero">02</span>
+        <div>
+          <h2>Enseñar con el ejemplo</h2>
+          <p>
+            La coherencia fortalece la confianza. Nuestras acciones enseñan
+            cuando cumplimos compromisos, reconocemos errores y tratamos
+            a las personas con respeto.
+          </p>
+          <p>
+            No necesitamos aparentar perfección. Podemos mostrar cómo
+            aprendemos, corregimos el rumbo y seguimos avanzando.
+          </p>
+        </div>
+      </article>
+
+      <article class="leccion-bloque">
+        <span class="numero">03</span>
+        <div>
+          <h2>Compartir lo aprendido</h2>
+          <p>
+            Una experiencia adquiere mayor valor cuando nos ayuda a comprender
+            algo y podemos compartir esa enseñanza de manera útil y honesta.
+          </p>
+          <p>
+            Enseñar no es imponer una fórmula. Es explicar lo que sabemos,
+            reconocer lo que todavía estamos aprendiendo y permitir que
+            otros encuentren la manera de aplicar ese conocimiento.
+          </p>
+        </div>
+      </article>
+
+      <article class="leccion-bloque">
+        <span class="numero">04</span>
+        <div>
+          <h2>Desarrollar autonomía y confianza</h2>
+          <p>
+            Una persona crece cuando aprende a analizar situaciones,
+            considerar alternativas y asumir las consecuencias de sus
+            decisiones.
+          </p>
+          <p>
+            Podemos hacer preguntas, reconocer sus avances y ofrecer
+            orientación sin reemplazar su criterio. La meta es que cada
+            persona gane capacidad para actuar responsablemente.
+          </p>
+        </div>
+      </article>
+
+      <article class="leccion-bloque">
+        <span class="numero">05</span>
+        <div>
+          <h2>Formar a quienes también formen a otros</h2>
+          <p>
+            El aprendizaje puede continuar cuando una persona comparte
+            con otra lo que ha comprendido y la acompaña a ponerlo en práctica.
+          </p>
+          <p>
+            Así se construye una cultura de colaboración: no centrada en una
+            sola persona, sino en el desarrollo de capacidades, la confianza
+            y la responsabilidad compartida.
+          </p>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="reflexion">
+      <p class="etiqueta">LLEVARLO A LA PRÁCTICA</p>
+      <h2>Mi compromiso como líder</h2>
+      <p class="reflexion-intro">
+        Reflexiona con sinceridad. Selecciona la opción que mejor represente
+        tu punto de partida y escribe tu respuesta personal.
+      </p>
+
+      @for (item of reflexiones; track item.titulo; let i = $index) {
+        <div class="pregunta">
+          <label [for]="'reflexion-' + i">{{ item.titulo }}</label>
+          <p>{{ item.pregunta }}</p>
+
+          <div class="opciones">
+            @for (opcion of item.opciones; track opcion) {
+              <label class="opcion">
+                <input
+                  type="radio"
+                  [name]="'opcion-' + i"
+                  [value]="opcion"
+                  [(ngModel)]="item.seleccion"
+                  (change)="guardarLocalmente()">
+                <span>{{ opcion }}</span>
+              </label>
+            }
+          </div>
+
+          <textarea
+            [id]="'reflexion-' + i"
+            [(ngModel)]="item.respuesta"
+            (ngModelChange)="guardarLocalmente()"
+            placeholder="Escribe aquí tu reflexión personal..."
+            rows="3"></textarea>
+        </div>
+      }
+
+      <button type="button" class="boton-guardar" (click)="guardarReflexion()">
+        GUARDAR Y PREPARAR MIS REFLEXIONES PARA COMPARTIR
+      </button>
+
+      @if (mensaje) {
+        <p class="mensaje-guardado" role="status">{{ mensaje }}</p>
+      }
+
+      <p class="nota-privacidad">
+        Tus respuestas se guardan en este navegador. Al compartirlas,
+        revisa el mensaje en WhatsApp y envíalo tú cuando estés listo.
+      </p>
+    </section>
+
+    <section class="cierre">
+      <p class="etiqueta">EL LIDERAZGO SE MULTIPLICA</p>
+      <h2>Crecer no es llegar solo. También es ayudar a otros a descubrir de lo que son capaces.</h2>
+      <p>
+        Empieza con una acción sencilla: escucha a alguien, comparte algo útil
+        y acompaña sin imponer. Después, permite que esa persona también
+        contribuya al crecimiento de alguien más.
+      </p>
+      <p class="lema">JUNTOS VENCEMOS</p>
+      <a routerLink="/liderazgo-cds" class="enlace-final">
+        ← VOLVER A LOS CUATRO EJES DE LIDERAZGO CDS
+      </a>
+    </section>
+
+  </main>
+</div>
