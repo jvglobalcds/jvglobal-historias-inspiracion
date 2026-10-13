@@ -95,6 +95,26 @@ export class RetoUnaEnsenanzaUnaAccion {
     return copiado;
   }
 
+  async copiarMensaje(): Promise<void> {
+    if (!this.textoParaCopiar) {
+      this.mensaje = 'Primero prepara el mensaje.';
+      return;
+    }
+
+    try {
+      await navigator.clipboard.writeText(this.textoParaCopiar);
+      this.mensaje = '¡Mensaje copiado! Ahora puedes pegarlo en WhatsApp.';
+    } catch {
+      const copiado = this.copiarConMetodoAlternativo(this.textoParaCopiar);
+
+      if (copiado) {
+        this.mensaje = '¡Mensaje copiado! Ahora puedes pegarlo en WhatsApp.';
+      } else {
+        this.seleccionarMensaje();
+      }
+    }
+  }
+
   seleccionarMensaje(): void {
     const campo = document.getElementById(
       'mensajeParaCopiar'
@@ -103,7 +123,7 @@ export class RetoUnaEnsenanzaUnaAccion {
     if (campo) {
       campo.focus();
       campo.select();
-      this.mensaje = 'Mensaje seleccionado. Presiona Ctrl+C para copiarlo y pégalo en WhatsApp.';
+      this.mensaje = 'Texto seleccionado. Presiona Ctrl+C y luego pégalo en WhatsApp.';
     }
   }
 
@@ -129,11 +149,7 @@ export class RetoUnaEnsenanzaUnaAccion {
     }
 
     if (this.etapa < this.etapas.length) {
-      partes.push(
-        '',
-        '*Mi siguiente paso:*',
-        this.etapas[this.etapa]
-      );
+      partes.push('', '*Mi siguiente paso:*', this.etapas[this.etapa]);
     } else {
       partes.push(
         '',
@@ -169,7 +185,8 @@ export class RetoUnaEnsenanzaUnaAccion {
         this.mensaje = 'Mensaje copiado. Pégalo en el grupo de WhatsApp.';
       } else {
         this.textoParaCopiar = texto;
-        this.mensaje = 'La copia automática no está disponible. Aquí tienes el mensaje para copiarlo manualmente.';
+        this.mensaje = 'No se pudo copiar automáticamente. Selecciona el mensaje y pulsa Ctrl+C.';
+        this.seleccionarMensaje();
       }
     }
 
@@ -178,3 +195,5 @@ export class RetoUnaEnsenanzaUnaAccion {
     }
   }
 }
+
+
