@@ -173,10 +173,11 @@ export class RetoUnaEnsenanzaUnaAccion {
     const texto = partes.join('\n');
     this.textoParaCopiar = '';
 
+    const promesaCopia = navigator.clipboard.writeText(texto);
     const ventana = window.open(this.enlaceGrupo, '_blank');
 
     try {
-      await navigator.clipboard.writeText(texto);
+      await promesaCopia;
       this.mensaje = 'Mensaje copiado. Pégalo en el grupo de WhatsApp.';
     } catch {
       const copiado = this.copiarConMetodoAlternativo(texto);
@@ -195,5 +196,6 @@ export class RetoUnaEnsenanzaUnaAccion {
     }
   }
 }
+
 
 
