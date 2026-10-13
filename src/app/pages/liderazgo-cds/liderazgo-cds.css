@@ -236,3 +236,61 @@
 .eje-enlace:hover {
   text-decoration: underline;
 }
+
+/* Práctica de Liderazgo CDS */
+.practica-destacada {
+  margin-top: 45px;
+  padding: 34px;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 10px;
+  background: rgba(212, 175, 55, 0.045);
+}
+
+.practica-destacada h2 {
+  margin: 0;
+  color: #f5f0e6;
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  line-height: 1.4;
+}
+
+.practica-destacada > p {
+  max-width: 680px;
+  margin: 16px 0 0;
+  color: rgba(245, 240, 230, 0.72);
+  font-size: 0.96rem;
+  line-height: 1.9;
+}
+
+.practica-enlace {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 23px;
+  padding: 14px 19px;
+  border: 1px solid #d4af37;
+  border-radius: 5px;
+  background: #d4af37;
+  color: #04101f;
+  font-size: 0.77rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.practica-enlace:hover {
+  background: transparent;
+  color: #d4af37;
+}
+
+@media (max-width: 600px) {
+  .practica-destacada {
+    margin-top: 35px;
+    padding: 24px 20px;
+  }
+
+  .practica-enlace {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}

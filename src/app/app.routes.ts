@@ -52,6 +52,13 @@ export const routes: Routes = [
 },
 
 {
+  path: 'practica-liderazgo-cds',
+  loadComponent: () =>
+    import('./pages/practica-liderazgo-cds/practica-liderazgo-cds')
+      .then(m => m.PracticaLiderazgoCds)
+},
+
+{
   path: 'liderazgo-personal',
   loadComponent: () =>
     import('./pages/liderazgo-personal/liderazgo-personal')
@@ -126,5 +133,6 @@ export const routes: Routes = [
   }
 
 ];
+
 
 
