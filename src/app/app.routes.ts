@@ -63,6 +63,12 @@ export const routes: Routes = [
     import('./pages/educar-antes-motivar/educar-antes-motivar')
       .then(m => m.EducarAntesMotivar)
 },
+{
+  path: 'construir-personas-comunidad',
+  loadComponent: () =>
+    import('./pages/construir-personas-comunidad/construir-personas-comunidad')
+      .then(m => m.ConstruirPersonasComunidad)
+},
 
   {
   path: 'ensenanza-cds/temporada-1',
@@ -114,3 +120,4 @@ export const routes: Routes = [
   }
 
 ];
+

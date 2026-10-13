@@ -1,0 +1,359 @@
+﻿:host {
+  display: block;
+  --azul: #04101f;
+  --azul-panel: #0b1c30;
+  --azul-claro: #142941;
+  --dorado: #d4af37;
+  --marfil: #f5f0e6;
+  --texto: #f5f0e6;
+  --borde: #66582e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.leccion-page {
+  min-height: 100vh;
+  background: var(--azul);
+  color: var(--marfil);
+  font-family: inherit;
+  line-height: 1.7;
+}
+
+.leccion-header {
+  background: var(--azul);
+  color: var(--marfil);
+  padding: 30px 22px 54px;
+  text-align: center;
+  border-bottom: 2px solid var(--dorado);
+}
+
+.marca {
+  display: inline-block;
+  color: var(--dorado);
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-decoration: none;
+}
+
+.volver {
+  display: block;
+  width: fit-content;
+  margin: 18px auto 30px;
+  color: var(--marfil);
+  text-decoration: none;
+  font-size: 0.92rem;
+}
+
+.volver:hover,
+.enlace-final:hover {
+  color: var(--dorado);
+}
+
+.etiqueta {
+  color: var(--dorado);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  margin: 0 0 12px;
+}
+
+.leccion-header h1 {
+  max-width: 850px;
+  margin: 0 auto;
+  color: var(--marfil);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.15;
+  letter-spacing: 0.035em;
+}
+
+.subtitulo {
+  max-width: 680px;
+  margin: 20px auto;
+  color: var(--marfil);
+  font-size: 1.12rem;
+}
+
+.linea-dorada {
+  width: 76px;
+  height: 3px;
+  margin: 26px auto;
+  background: var(--dorado);
+}
+
+.introduccion {
+  max-width: 760px;
+  margin: 0 auto;
+  color: var(--marfil);
+  font-size: 1.02rem;
+}
+
+.valores {
+  color: var(--dorado);
+  font-weight: 700;
+  letter-spacing: 0.045em;
+  margin-top: 24px;
+}
+
+main {
+  width: min(100% - 32px, 900px);
+  margin: 0 auto;
+  padding: 38px 0 64px;
+  background: transparent;
+}
+
+.idea-central {
+  padding: 30px;
+  background: var(--azul-panel);
+  color: var(--marfil);
+  border: 1px solid var(--borde);
+  border-top: 4px solid var(--dorado);
+  border-radius: 12px;
+  margin-bottom: 38px;
+}
+
+.idea-central h2,
+.reflexion h2,
+.cierre h2 {
+  color: var(--dorado);
+  line-height: 1.35;
+}
+
+.idea-central h2 {
+  margin: 8px 0 14px;
+  font-size: clamp(1.45rem, 3vw, 2rem);
+}
+
+.idea-central p:last-child {
+  margin-bottom: 0;
+}
+
+.contenido {
+  display: grid;
+  gap: 18px;
+  margin-bottom: 48px;
+}
+
+.leccion-bloque {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 18px;
+  padding: 25px 22px;
+  background: var(--azul-panel);
+  color: var(--marfil);
+  border: 1px solid var(--borde);
+  border-left: 3px solid var(--dorado);
+  border-radius: 10px;
+}
+
+.numero {
+  color: var(--dorado);
+  font-size: 1.7rem;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.leccion-bloque h2 {
+  margin: 0 0 10px;
+  color: var(--dorado);
+  font-size: 1.28rem;
+  line-height: 1.4;
+}
+
+.leccion-bloque p {
+  color: var(--marfil);
+  margin: 0 0 12px;
+}
+
+.leccion-bloque p:last-child {
+  margin-bottom: 0;
+}
+
+.reflexion {
+  padding: clamp(22px, 5vw, 42px);
+  background: var(--azul-panel);
+  color: var(--marfil);
+  border: 1px solid var(--dorado);
+  border-radius: 14px;
+  box-shadow: 0 8px 28px rgb(0 0 0 / 22%);
+}
+
+.reflexion h2 {
+  margin: 0 0 12px;
+  font-size: clamp(1.65rem, 4vw, 2.3rem);
+}
+
+.reflexion-intro {
+  color: var(--marfil);
+  margin: 0 0 30px;
+}
+
+.pregunta {
+  padding: 25px 0;
+  border-top: 1px solid var(--borde);
+}
+
+.pregunta > label:first-child {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--dorado);
+  font-weight: 750;
+  font-size: 1.06rem;
+}
+
+.opciones {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.opcion {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 14px;
+  background: var(--azul-claro);
+  color: var(--marfil);
+  border: 1px solid #34465a;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.opcion:hover {
+  border-color: var(--dorado);
+  background: #1a3048;
+}
+
+.opcion input {
+  flex: 0 0 auto;
+  margin-top: 6px;
+  accent-color: var(--dorado);
+}
+
+.pregunta textarea {
+  display: block;
+  width: 100%;
+  min-height: 86px;
+  margin-top: 12px;
+  padding: 13px 14px;
+  border: 1px solid #8e793b;
+  border-radius: 8px;
+  background: var(--azul);
+  color: var(--marfil);
+  font: inherit;
+  resize: vertical;
+}
+
+.pregunta textarea::placeholder {
+  color: #c5c0b5;
+}
+
+.pregunta textarea:focus {
+  outline: 2px solid var(--dorado);
+  outline-offset: 2px;
+}
+
+.boton-guardar {
+  display: block;
+  width: 100%;
+  padding: 16px 20px;
+  margin-top: 12px;
+  border: 2px solid var(--dorado);
+  border-radius: 8px;
+  background: var(--dorado);
+  color: var(--azul);
+  font: inherit;
+  font-weight: 800;
+  letter-spacing: 0.035em;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.boton-guardar:hover {
+  background: var(--azul);
+  color: var(--dorado);
+}
+
+.mensaje-guardado {
+  color: var(--dorado);
+  font-weight: 700;
+  text-align: center;
+}
+
+.nota-privacidad {
+  margin: 18px 0 0;
+  color: #d0cabb;
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+.cierre {
+  padding: 46px 16px 0;
+  text-align: center;
+  color: var(--marfil);
+}
+
+.cierre > p:first-child {
+  color: #d0cabb;
+}
+
+.cierre h2 {
+  max-width: 680px;
+  margin: 12px auto;
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+}
+
+.lema {
+  color: var(--dorado);
+  font-size: 1.2rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+}
+
+.enlace-final {
+  display: inline-block;
+  margin-top: 18px;
+  color: var(--marfil);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .leccion-header {
+    padding: 25px 18px 38px;
+  }
+
+  main {
+    width: min(100% - 22px, 900px);
+    padding-top: 22px;
+  }
+
+  .idea-central {
+    padding: 22px 18px;
+  }
+
+  .leccion-bloque {
+    grid-template-columns: 38px minmax(0, 1fr);
+    gap: 12px;
+    padding: 20px 15px;
+  }
+
+  .numero {
+    font-size: 1.35rem;
+  }
+
+  .reflexion {
+    padding: 23px 16px;
+  }
+
+  .opcion {
+    padding: 12px;
+  }
+
+  .boton-guardar {
+    font-size: 0.92rem;
+  }
+}

@@ -1,0 +1,175 @@
+﻿<div class="leccion-page">
+  <header class="leccion-header">
+    <a routerLink="/liderazgo-cds" class="marca">JV GLOBAL</a>
+    <a routerLink="/liderazgo-cds" class="volver">← Volver a Liderazgo CDS</a>
+    <p class="etiqueta">LIDERAZGO CDS · ENSEÑANZA 03</p>
+    <h1>CONSTRUIR PERSONAS Y COMUNIDAD</h1>
+    <p class="subtitulo">Crecer juntos comienza con la forma en que tratamos a los demás.</p>
+    <div class="linea-dorada"></div>
+    <p class="introduccion">
+      Una comunidad sólida no se construye solamente reuniendo personas.
+      Se construye cuando existe confianza, respeto, aprendizaje compartido
+      y voluntad de contribuir al crecimiento de los demás.
+    </p>
+    <p class="valores">Claridad · Disciplina · Superación</p>
+  </header>
+
+  <main>
+    <section class="idea-central">
+      <p class="etiqueta">IDEA CENTRAL</p>
+      <h2>No se trata solamente de reunir personas, sino de ayudarnos a crecer.</h2>
+      <p>
+        Una relación se fortalece cuando escuchamos con atención, cumplimos
+        nuestra palabra y reconocemos que cada persona tiene su propio camino.
+      </p>
+    </section>
+
+    <section class="contenido">
+      <article class="leccion-bloque">
+        <span class="numero">01</span>
+        <div>
+          <h2>La confianza se construye</h2>
+          <p>
+            La confianza no se exige ni aparece de un día para otro.
+            Se desarrolla con pequeñas acciones: hablar con honestidad,
+            cumplir los compromisos y reconocer nuestros errores.
+          </p>
+          <p><strong>Para reflexionar:</strong> ¿Mis acciones respaldan lo que digo?</p>
+        </div>
+      </article>
+
+      <article class="leccion-bloque">
+        <span class="numero">02</span>
+        <div>
+          <h2>Escuchar antes de juzgar</h2>
+          <p>
+            Cada persona tiene experiencias, preocupaciones y aspiraciones
+            diferentes. Escuchar de verdad significa prestar atención,
+            preguntar con respeto y comprender antes de ofrecer una solución.
+          </p>
+          <p><strong>Para reflexionar:</strong> ¿Escucho para comprender o solamente para responder?</p>
+        </div>
+      </article>
+
+      <article class="leccion-bloque">
+        <span class="numero">03</span>
+        <div>
+          <h2>Crecer juntos, sin competir</h2>
+          <p>
+            Colaborar no significa pensar igual en todo. Significa compartir
+            conocimientos, respetar las diferencias y buscar formas de avanzar
+            sin disminuir los logros de los demás.
+          </p>
+          <p><strong>Para reflexionar:</strong> ¿Qué puedo aprender de las personas que me rodean?</p>
+        </div>
+      </article>
+
+      <article class="leccion-bloque">
+        <span class="numero">04</span>
+        <div>
+          <h2>Ayudar a otros a desarrollar sus capacidades</h2>
+          <p>
+            Contribuir no es decidir por otra persona ni hacer que dependa
+            de nosotros. Es compartir herramientas, orientar cuando nos lo
+            solicitan y animar a cada persona a pensar y actuar por sí misma.
+          </p>
+          <p><strong>Para reflexionar:</strong> ¿Mi ayuda fortalece la autonomía de los demás?</p>
+        </div>
+      </article>
+
+      <article class="leccion-bloque">
+        <span class="numero">05</span>
+        <div>
+          <h2>Convertir la intención en una acción</h2>
+          <p>
+            Una comunidad mejora cuando sus integrantes ponen en práctica
+            lo que aprenden. Un mensaje respetuoso, una promesa cumplida
+            o una conversación sincera pueden ser un buen comienzo.
+          </p>
+          <p><strong>Para reflexionar:</strong> ¿Qué acción concreta puedo realizar hoy?</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="reflexion">
+      <p class="etiqueta">MI ESPACIO DE REFLEXIÓN</p>
+      <h2>¿Cómo contribuyo a construir comunidad?</h2>
+      <p class="reflexion-intro">
+        Responde con sinceridad. No se trata de dar respuestas perfectas,
+        sino de reconocer dónde estás y qué puedes fortalecer.
+      </p>
+
+      <div class="pregunta">
+        <label for="confianza">1. ¿Cómo construyo confianza con mis acciones?</label>
+        <div class="opciones">
+          <label class="opcion"><input type="radio" name="confianza" [(ngModel)]="confianza" value="Cumplo mi palabra y mis compromisos"> Cumplo mi palabra y mis compromisos</label>
+          <label class="opcion"><input type="radio" name="confianza" [(ngModel)]="confianza" value="Hablo con honestidad y respeto"> Hablo con honestidad y respeto</label>
+          <label class="opcion"><input type="radio" name="confianza" [(ngModel)]="confianza" value="Reconozco mis errores y aprendo"> Reconozco mis errores y aprendo</label>
+        </div>
+        <textarea [(ngModel)]="confianzaDetalle" [ngModelOptions]="{standalone: true}" placeholder="¿Qué puedo mejorar en mi manera de actuar?" rows="3"></textarea>
+      </div>
+
+      <div class="pregunta">
+        <label for="escucha">2. ¿Cómo puedo escuchar y comprender mejor a los demás?</label>
+        <div class="opciones">
+          <label class="opcion"><input type="radio" name="escucha" [(ngModel)]="escucha" value="Escucho sin interrumpir"> Escucho sin interrumpir</label>
+          <label class="opcion"><input type="radio" name="escucha" [(ngModel)]="escucha" value="Pregunto antes de sacar conclusiones"> Pregunto antes de sacar conclusiones</label>
+          <label class="opcion"><input type="radio" name="escucha" [(ngModel)]="escucha" value="Respeto opiniones diferentes"> Respeto opiniones diferentes</label>
+        </div>
+        <textarea [(ngModel)]="escuchaDetalle" [ngModelOptions]="{standalone: true}" placeholder="Describe una situación en la que quieras escuchar mejor." rows="3"></textarea>
+      </div>
+
+      <div class="pregunta">
+        <label for="contribucion">3. ¿Cómo puedo contribuir al crecimiento de otra persona?</label>
+        <div class="opciones">
+          <label class="opcion"><input type="radio" name="contribucion" [(ngModel)]="contribucion" value="Compartiendo lo que he aprendido"> Compartiendo lo que he aprendido</label>
+          <label class="opcion"><input type="radio" name="contribucion" [(ngModel)]="contribucion" value="Escuchando y ofreciendo apoyo respetuoso"> Escuchando y ofreciendo apoyo respetuoso</label>
+          <label class="opcion"><input type="radio" name="contribucion" [(ngModel)]="contribucion" value="Ayudando a desarrollar su autonomía"> Ayudando a desarrollar su autonomía</label>
+        </div>
+        <textarea [(ngModel)]="contribucionDetalle" [ngModelOptions]="{standalone: true}" placeholder="¿A quién podrías apoyar y de qué manera?" rows="3"></textarea>
+      </div>
+
+      <div class="pregunta">
+        <label for="aprendizaje">4. ¿Qué aprendizaje me llevo de esta enseñanza?</label>
+        <textarea id="aprendizaje" [(ngModel)]="aprendizaje" [ngModelOptions]="{standalone: true}" placeholder="Escribe la idea que más te hizo reflexionar." rows="4"></textarea>
+      </div>
+
+      <div class="pregunta">
+        <label for="accion">5. ¿Qué acción y compromiso asumiré para fortalecer mi comunidad?</label>
+        <div class="opciones">
+          <label class="opcion"><input type="radio" name="accion" [(ngModel)]="accion" value="Tendré una conversación pendiente con respeto"> Tendré una conversación pendiente con respeto</label>
+          <label class="opcion"><input type="radio" name="accion" [(ngModel)]="accion" value="Cumpliré un compromiso que he asumido"> Cumpliré un compromiso que he asumido</label>
+          <label class="opcion"><input type="radio" name="accion" [(ngModel)]="accion" value="Compartiré un aprendizaje útil"> Compartiré un aprendizaje útil</label>
+        </div>
+        <textarea [(ngModel)]="accionDetalle" [ngModelOptions]="{standalone: true}" placeholder="¿Qué harás concretamente y cuándo?" rows="3"></textarea>
+        <div class="opciones">
+          <label class="opcion"><input type="radio" name="compromiso" [(ngModel)]="compromiso" value="Comenzaré hoy"> Comenzaré hoy</label>
+          <label class="opcion"><input type="radio" name="compromiso" [(ngModel)]="compromiso" value="Revisaré mi avance en siete días"> Revisaré mi avance en siete días</label>
+          <label class="opcion"><input type="radio" name="compromiso" [(ngModel)]="compromiso" value="Pediré retroalimentación y seguiré aprendiendo"> Pediré retroalimentación y seguiré aprendiendo</label>
+        </div>
+        <textarea [(ngModel)]="compromisoDetalle" [ngModelOptions]="{standalone: true}" placeholder="Escribe tu compromiso personal." rows="2"></textarea>
+      </div>
+
+      <button type="button" class="boton-guardar" (click)="guardarReflexion()">
+        GUARDAR Y COMPARTIR MI REFLEXIÓN
+      </button>
+
+      @if (guardado) {
+        <p class="mensaje-guardado">Tu reflexión se guardó en este dispositivo.</p>
+      }
+
+      <p class="nota-privacidad">
+        Tus respuestas se guardan en este dispositivo. Al compartirlas,
+        tú decides qué enviar y confirmas personalmente el envío en WhatsApp.
+      </p>
+    </section>
+
+    <section class="cierre">
+      <p>Una comunidad fuerte no exige que todos sean iguales.</p>
+      <h2>Crece tú. Contribuye al crecimiento de otros. Avancemos juntos.</h2>
+      <p class="valores">Claridad · Disciplina · Superación</p>
+      <p class="lema">JUNTOS VENCEMOS</p>
+      <a routerLink="/liderazgo-cds" class="enlace-final">← VOLVER A LIDERAZGO CDS</a>
+    </section>
+  </main>
+</div>
