@@ -1,0 +1,303 @@
+﻿:host {
+  display: block;
+  color: #f5f0e6;
+  background: #04101f;
+  min-height: 100vh;
+}
+
+.leccion-page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 28px 70px;
+}
+
+.leccion-header {
+  padding: 28px 0 58px;
+  border-bottom: 1px solid rgba(212, 175, 55, .28);
+}
+
+.marca,
+.volver,
+.volver-boton {
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+
+.marca {
+  display: inline-block;
+  font-size: 1.05rem;
+}
+
+.volver {
+  display: block;
+  margin-top: 32px;
+  font-size: .78rem;
+}
+
+.encabezado {
+  max-width: 820px;
+  margin: 55px auto 0;
+  text-align: center;
+}
+
+.etiqueta {
+  color: #d4af37;
+  font-size: .76rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+}
+
+.encabezado h1 {
+  margin: 18px 0 12px;
+  font-size: clamp(2.2rem, 6vw, 4.5rem);
+  line-height: 1.06;
+  letter-spacing: .025em;
+}
+
+.encabezado h2 {
+  margin: 0;
+  color: #d4af37;
+  font-size: clamp(1.15rem, 3vw, 1.8rem);
+  font-weight: 500;
+}
+
+.linea-dorada {
+  width: 76px;
+  height: 3px;
+  margin: 28px auto;
+  background: #d4af37;
+}
+
+.encabezado > p,
+.idea-central p,
+.paso p,
+.intro-ejercicio,
+.cierre > p {
+  color: #d6dce4;
+  font-size: 1.04rem;
+  line-height: 1.85;
+}
+
+.valores {
+  display: inline-block;
+  margin-top: 14px;
+  color: #d4af37;
+  font-size: .9rem;
+  letter-spacing: .04em;
+}
+
+.leccion-contenido {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.idea-central {
+  padding: 54px 0 42px;
+}
+
+.idea-central h2,
+.titulo-seccion h2,
+.ejercicio h2,
+.cierre h2 {
+  margin: 12px 0 20px;
+  font-size: clamp(1.65rem, 4vw, 2.4rem);
+  line-height: 1.25;
+}
+
+.pasos {
+  padding: 34px 0 50px;
+}
+
+.titulo-seccion {
+  margin-bottom: 30px;
+}
+
+.paso {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 22px;
+  padding: 28px 0;
+  border-top: 1px solid rgba(245, 240, 230, .14);
+}
+
+.numero {
+  color: #d4af37;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.paso h3 {
+  margin: 0 0 12px;
+  font-size: 1.35rem;
+}
+
+.paso p {
+  margin: 0 0 14px;
+}
+
+.ejemplo {
+  margin-top: 18px;
+  padding: 18px 20px;
+  border-left: 3px solid #d4af37;
+  background: rgba(245, 240, 230, .045);
+  color: #d6dce4;
+  line-height: 1.75;
+}
+
+.ejemplo strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #d4af37;
+}
+
+.ejercicio {
+  margin-top: 28px;
+  padding: clamp(22px, 5vw, 44px);
+  border: 1px solid rgba(212, 175, 55, .35);
+  background: rgba(245, 240, 230, .025);
+  border-radius: 4px;
+}
+
+.intro-ejercicio {
+  margin-bottom: 28px;
+}
+
+.campo {
+  margin: 24px 0;
+}
+
+.campo label {
+  display: block;
+  margin-bottom: 10px;
+  color: #f5f0e6;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.campo textarea {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  min-height: 100px;
+  padding: 14px;
+  resize: vertical;
+  border: 1px solid rgba(212, 175, 55, .35);
+  border-radius: 3px;
+  background: #081827;
+  color: #f5f0e6;
+  font: inherit;
+  line-height: 1.6;
+}
+
+.campo textarea:focus {
+  outline: 2px solid #d4af37;
+  outline-offset: 2px;
+}
+
+.campo textarea::placeholder {
+  color: #9da8b5;
+}
+
+.guardar {
+  margin-top: 8px;
+  padding: 14px 20px;
+  border: 1px solid #d4af37;
+  background: #d4af37;
+  color: #04101f;
+  font-weight: 800;
+  letter-spacing: .04em;
+  cursor: pointer;
+}
+
+.guardar:hover {
+  background: #f5f0e6;
+  border-color: #f5f0e6;
+}
+
+.mensaje-guardado {
+  color: #d4af37;
+  font-weight: 700;
+}
+
+.nota-privacidad {
+  color: #aab5c2;
+  font-size: .85rem;
+  line-height: 1.6;
+}
+
+.cierre {
+  padding: 58px 0 0;
+  text-align: center;
+}
+
+.frase-final {
+  color: #d4af37 !important;
+  font-weight: 600;
+}
+
+.volver-boton {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 22px;
+  padding: 14px 18px;
+  border: 1px solid #d4af37;
+  font-size: .8rem;
+}
+
+.volver-boton:hover {
+  background: rgba(212, 175, 55, .1);
+}
+
+@media (max-width: 600px) {
+  .leccion-page {
+    padding-right: 19px;
+    padding-left: 19px;
+  }
+
+  .leccion-header {
+    padding-top: 22px;
+  }
+
+  .encabezado {
+    margin-top: 42px;
+  }
+
+  .paso {
+    grid-template-columns: 40px 1fr;
+    gap: 12px;
+  }
+
+  .numero {
+    font-size: 1.4rem;
+  }
+
+  .ejercicio {
+    padding: 22px 17px;
+  }
+}
+.opcion {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 12px 0;
+  color: #d6dce4;
+  font-weight: 400;
+  line-height: 1.6;
+  cursor: pointer;
+}
+
+.opcion input {
+  flex-shrink: 0;
+  margin-top: 5px;
+  accent-color: #d4af37;
+}
+
+.campo > label:first-child {
+  display: block;
+  margin-bottom: 14px;
+  color: #f5f0e6;
+  font-weight: 600;
+}

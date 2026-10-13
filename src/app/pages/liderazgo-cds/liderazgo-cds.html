@@ -1,0 +1,98 @@
+﻿<div class="liderazgo-page">
+
+  <header class="liderazgo-header">
+
+    <a routerLink="/inspiracion-cds" class="volver-inicio">
+      JV GLOBAL
+    </a>
+
+    <div class="titulo-seccion">
+      <span>INSPIRACIÓN CDS</span>
+      <h1>LIDERAZGO CDS</h1>
+      <div class="linea-dorada"></div>
+    </div>
+
+    <p class="descripcion-principal">
+      El liderazgo no consiste solamente en dirigir.
+      También significa aprender a conocernos, construir
+      confianza y contribuir al crecimiento de los demás.
+    </p>
+
+    <p class="valores">
+      Claridad · Disciplina · Superación
+    </p>
+
+  </header>
+
+  <main class="liderazgo-contenido">
+
+    <section class="introduccion">
+      <span class="etiqueta">UNA FORMA DE CRECER</span>
+
+      <h2>Primero desarrollamos personas.</h2>
+
+      <p>
+        Las oportunidades adquieren mayor sentido cuando
+        desarrollamos las capacidades necesarias para
+        aprovecharlas. Por eso, el liderazgo comienza con
+        el trabajo personal y continúa en la manera en que
+        nos relacionamos, colaboramos y ayudamos a crecer
+        a otras personas.
+      </p>
+    </section>
+
+    <section class="ejes-section">
+
+      <div class="seccion-heading">
+        <span>CUATRO EJES PARA REFLEXIONAR</span>
+        <h2>El liderazgo se aprende y se practica.</h2>
+      </div>
+
+      <div class="ejes-lista">
+
+        @for (eje of ejes; track eje.numero) {
+          <article class="eje">
+
+            <span class="numero">{{ eje.numero }}</span>
+
+            <div class="eje-contenido">
+              <h3>{{ eje.titulo }}</h3>
+              <p>{{ eje.descripcion }}</p>
+
+              <div class="pregunta">
+                <span>PARA REFLEXIONAR</span>
+                <p>{{ eje.pregunta }}</p>
+                @if (eje.numero === '01') {
+  <a routerLink="/liderazgo-personal" class="eje-enlace">
+    COMENZAR ESTA ENSEÑANZA →
+  </a>
+}
+              </div>
+            </div>
+
+          </article>
+        }
+
+      </div>
+    </section>
+
+    <section class="cierre">
+      <span class="etiqueta">EL SIGUIENTE PASO</span>
+
+      <h2>Crecer para avanzar. Liderar para contribuir.</h2>
+
+      <p>
+        No necesitamos tener todas las respuestas para
+        comenzar. Podemos empezar por aprender, poner en
+        práctica lo aprendido y compartirlo con respeto.
+      </p>
+
+      <a routerLink="/inspiracion-cds" class="volver-boton">
+        VOLVER A INSPIRACIÓN CDS
+        <span>→</span>
+      </a>
+    </section>
+
+  </main>
+
+</div>

@@ -45,6 +45,20 @@ export const routes: Routes = [
   },
 
   {
+  path: 'liderazgo-cds',
+  loadComponent: () =>
+    import('./pages/liderazgo-cds/liderazgo-cds')
+      .then(m => m.LiderazgoCds)
+},
+
+{
+  path: 'liderazgo-personal',
+  loadComponent: () =>
+    import('./pages/liderazgo-personal/liderazgo-personal')
+      .then(m => m.LiderazgoPersonal)
+},
+
+  {
   path: 'ensenanza-cds/temporada-1',
   loadComponent: () =>
     import('./pages/ensenanza-temporada/ensenanza-temporada')
