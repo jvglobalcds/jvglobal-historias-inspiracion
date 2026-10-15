@@ -3925,6 +3925,342 @@ export class EnsenanzaReflexion {
     'La decisión comienza contigo.'
 },
 
+
+'la-persistencia-transforma-cada-experiencia-en-una-victoria': {
+  numero: '29',
+  titulo: 'LA PERSISTENCIA TRANSFORMA CADA EXPERIENCIA EN UNA VICTORIA',
+  categoria: 'MENTALIDAD, PROPÓSITO Y CRECIMIENTO',
+
+  preguntaInicial:
+    '¿VAS A ABANDONAR POR UNA DERROTA O VAS A APRENDER LO NECESARIO PARA VOLVER A INTENTARLO?',
+
+  bloques: [
+
+    {
+      tipo: 'frase-central',
+      lineas: [
+        'SI NO TE RINDES,',
+        'TODAVÍA PUEDES SEGUIR CONSTRUYENDO TU HISTORIA.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'En el camino hacia una meta encontrarás obstáculos, dificultades y momentos en los que los resultados no serán los que esperabas.',
+        'Habrá ocasiones en las que el esfuerzo no produzca una recompensa inmediata.',
+        'También habrá momentos en los que tendrás que detenerte, revisar tus decisiones y encontrar una manera diferente de avanzar.'
+      ]
+    },
+
+    {
+      tipo: 'destacado',
+      lineas: [
+        'NO SIEMPRE PUEDES CONTROLAR EL RESULTADO.',
+        'PERO PUEDES DECIDIR CÓMO RESPONDER ANTE ÉL.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'El talento puede darte una ventaja inicial.',
+        'Los recursos pueden facilitarte el camino.',
+        'Los contactos pueden abrirte algunas puertas.',
+        'Pero ninguna de estas cosas garantiza que continuarás cuando aparezcan las dificultades.',
+        'Ahí es donde la persistencia comienza a marcar una diferencia.'
+      ]
+    },
+
+    {
+      tipo: 'frase-central',
+      lineas: [
+        'LA PERSISTENCIA NO SIGNIFICA QUE NUNCA CAIGAS.',
+        'SIGNIFICA QUE NO CONVIERTES CADA CAÍDA EN UNA RAZÓN PARA ABANDONAR.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'Persistir no consiste en repetir lo mismo indefinidamente, aunque no funcione.',
+        'Consiste en mantener el propósito, aprender de los resultados y tener la disposición de corregir el camino cuando sea necesario.',
+        'A veces necesitarás insistir.',
+        'Otras veces necesitarás cambiar de estrategia, adquirir nuevos conocimientos o reconocer que una decisión debe ser revisada.'
+      ]
+    },
+
+    {
+      tipo: 'destacado',
+      lineas: [
+        'NO CONFUNDAS PERSISTENCIA CON TERQUEDAD.',
+        'PERSISTIR TAMBIÉN ES APRENDER A CAMBIAR LO QUE NO FUNCIONA.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'Puedes perder una oportunidad y descubrir qué necesitas mejorar.',
+        'Puedes cometer un error y comprender algo que antes no veías.',
+        'Puedes experimentar un fracaso y reconocer que todavía necesitas preparación.',
+        'Cada experiencia puede convertirse en una fuente de aprendizaje si tienes la humildad de examinarla.'
+      ]
+    },
+
+    {
+      tipo: 'frase-central',
+      lineas: [
+        'UNA EXPERIENCIA DIFÍCIL NO TIENE QUE SER UNA EXPERIENCIA DESPERDICIADA.',
+        'PUEDES TRANSFORMARLA EN CONOCIMIENTO.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'El éxito no siempre aparece en el momento en que alcanzas una meta.',
+        'También hay progreso cuando desarrollas disciplina, fortaleces tu carácter, reconoces tus errores y aprendes a tomar mejores decisiones.',
+        'Ese aprendizaje no elimina las dificultades, pero puede prepararte mejor para afrontar las siguientes.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'Sin embargo, persistir no significa ignorar los límites, arriesgarlo todo sin pensar o continuar por orgullo.',
+        'La verdadera persistencia necesita claridad para reconocer el propósito, disciplina para mantener el compromiso y sabiduría para corregir el rumbo.'
+      ]
+    },
+
+    {
+      tipo: 'destacado',
+      lineas: [
+        'CLARIDAD PARA SABER HACIA DÓNDE VAS.',
+        'DISCIPLINA PARA CONTINUAR.',
+        'SUPERACIÓN PARA APRENDER DE CADA EXPERIENCIA.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'En JV Global, estos principios representan una manera de afrontar el crecimiento.',
+        'La Claridad te ayuda a comprender qué estás construyendo y por qué.',
+        'La Disciplina te recuerda que el compromiso no depende únicamente de tus ganas.',
+        'La Superación te impulsa a convertir los errores, los desafíos y los aprendizajes en herramientas para evolucionar.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'No necesitas demostrar que eres invencible.',
+        'Necesitas desarrollar la capacidad de aprender, levantarte cuando sea posible, pedir orientación cuando la necesites y tomar decisiones más conscientes.',
+        'Tu historia no se define únicamente por las veces que triunfas, sino también por lo que aprendes y por la manera en que eliges continuar.'
+      ]
+    },
+
+    {
+      tipo: 'frase-final',
+      lineas: [
+        'NO PERMITAS QUE UNA DERROTA DECIDA TODA TU HISTORIA.',
+        'APRENDE.',
+        'CORRIGE.',
+        'VUELVE A INTENTARLO CUANDO TENGA SENTIDO.',
+        'Y CONVIERTE CADA EXPERIENCIA EN UNA OPORTUNIDAD PARA CRECER.'
+      ]
+    }
+
+  ],
+
+  preguntaReflexion:
+    '¿Qué dificultad reciente puedes convertir en aprendizaje y qué necesitas corregir para continuar avanzando hacia tu propósito?',
+
+  cierre:
+    'La decisión comienza contigo.'
+},
+
+
+'estas-dispuesto-a-pagar-el-precio': {
+  numero: '30',
+  titulo: '¿ESTÁS DISPUESTO A PAGAR EL PRECIO?',
+  categoria: 'MENTALIDAD, PROPÓSITO Y CRECIMIENTO',
+
+  preguntaInicial:
+    '¿ESTÁS DISPUESTO A HACER LO QUE EXIGE LA META QUE DICES QUERER ALCANZAR?',
+
+  bloques: [
+
+    {
+      tipo: 'frase-central',
+      lineas: [
+        '¿ESTÁS DISPUESTO A PAGAR EL PRECIO?',
+        'ESA ES LA PREGUNTA.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'Muchas personas hablan de sus sueños.',
+        'Quieren crecer, mejorar su situación, alcanzar nuevas metas y construir una vida diferente.',
+        'Pero entre desear algo y comprometerse de verdad existe una diferencia: la disposición para realizar el trabajo que ese objetivo exige.'
+      ]
+    },
+
+    {
+      tipo: 'destacado',
+      lineas: [
+        'QUERER EL RESULTADO ES FÁCIL.',
+        'COMPROMETERTE CON EL PROCESO ES LO QUE PONE A PRUEBA TU DECISIÓN.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'Es fácil imaginar el momento en que alcanzas una meta.',
+        'Lo difícil es levantarte y trabajar cuando no tienes ganas.',
+        'Estudiar cuando preferirías distraerte.',
+        'Practicar cuando todavía cometes errores.',
+        'Aceptar una corrección cuando tu orgullo quisiera tener siempre la razón.',
+        'Y continuar aprendiendo cuando los resultados todavía no aparecen.'
+      ]
+    },
+
+    {
+      tipo: 'frase-central',
+      lineas: [
+        'EL PRECIO DE UNA META NO SE PAGA CON PALABRAS.',
+        'SE PAGA CON DECISIONES Y ACCIONES.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'Pagar el precio significa comprender que cada objetivo tiene exigencias.',
+        'Si quieres adquirir conocimiento, tendrás que dedicar tiempo a aprender.',
+        'Si quieres desarrollar una habilidad, necesitarás practicar.',
+        'Si quieres convertirte en una persona más disciplinada, tendrás que aprender a cumplir tus compromisos incluso cuando la motivación disminuya.'
+      ]
+    },
+
+    {
+      tipo: 'destacado',
+      lineas: [
+        'NO PUEDES EXIGIRLE AL FUTURO',
+        'LOS RESULTADOS QUE NO ESTÁS DISPUESTO A CONSTRUIR EN EL PRESENTE.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'El precio también puede incluir renunciar a ciertas distracciones, aprender a decir no y utilizar mejor tu tiempo.',
+        'No todo lo que deseas hacer te acerca a lo que quieres construir.',
+        'Por eso necesitas claridad para distinguir entre lo urgente, lo importante y aquello que solamente te entretiene.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'Sin embargo, pagar el precio no significa destruir tu salud, abandonar tus responsabilidades ni arriesgarlo todo sin pensar.',
+        'El compromiso inteligente requiere equilibrio, planificación y decisiones conscientes.',
+        'No se trata de sacrificarlo todo por una meta, sino de estar dispuesto a realizar los esfuerzos necesarios sin perder de vista lo que verdaderamente tiene valor.'
+      ]
+    },
+
+    {
+      tipo: 'frase-central',
+      lineas: [
+        'EL SACRIFICIO SIN DIRECCIÓN PUEDE AGOTARTE.',
+        'EL ESFUERZO CON CLARIDAD PUEDE AYUDARTE A AVANZAR.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'Imagina una caja fuerte que necesita una combinación para abrirse.',
+        'Cada intento te permite comprobar una posibilidad.',
+        'Algunas combinaciones no funcionan, pero eso no significa que hayas perdido el tiempo si observas, aprendes y ajustas tu siguiente intento.',
+        'La clave no consiste en golpear la caja ni en probar al azar eternamente.',
+        'Consiste en avanzar con paciencia, método y perseverancia.'
+      ]
+    },
+
+    {
+      tipo: 'destacado',
+      lineas: [
+        'NO BASTA CON INTENTAR UNA VEZ.',
+        'APRENDE DE CADA INTENTO Y MEJORA EL SIGUIENTE.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'En el camino encontrarás negativas, errores, retrasos y resultados que no esperabas.',
+        'Algunas veces tendrás que insistir.',
+        'Otras veces necesitarás cambiar tu estrategia.',
+        'Y también habrá momentos en los que debas reconocer que una meta necesita replantearse.',
+        'Persistir no significa ignorar la realidad; significa responder a ella con madurez y determinación.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'La pregunta más importante no es solamente cuánto deseas alcanzar una meta.',
+        'También es qué estás dispuesto a aprender, qué hábitos necesitas cambiar y qué acciones concretas estás preparado para repetir con constancia.',
+        'La respuesta no se demuestra en un discurso motivacional.',
+        'Se demuestra en tus decisiones cotidianas.'
+      ]
+    },
+
+    {
+      tipo: 'destacado',
+      lineas: [
+        'CLARIDAD ES SABER QUÉ QUIERES Y POR QUÉ.',
+        'DISCIPLINA ES CUMPLIR CON EL TRABAJO NECESARIO.',
+        'SUPERACIÓN ES APRENDER, CORREGIR Y CONTINUAR EVOLUCIONANDO.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'En JV Global, la Filosofía CDS nos invita a examinarnos con honestidad.',
+        'La Claridad te ayuda a reconocer si tus decisiones están alineadas con tu propósito.',
+        'La Disciplina te impulsa a actuar más allá de las ganas del momento.',
+        'La Superación te permite convertir cada desafío en una oportunidad para desarrollar mejores capacidades.'
+      ]
+    },
+
+    {
+      tipo: 'frase-final',
+      lineas: [
+        'DEJA DE PREGUNTARTE ÚNICAMENTE CUÁNTO DESEAS ALCANZAR.',
+        'PREGÚNTATE QUÉ ESTÁS DISPUESTO A HACER PARA CONSTRUIRLO.',
+        'DEFINE TU PROPÓSITO.',
+        'ASUME TU COMPROMISO.',
+        'Y DEMUÉSTRALO CON ACCIONES.'
+      ]
+    }
+
+  ],
+
+  preguntaReflexion:
+    '¿Qué meta dices querer alcanzar y qué acción concreta, hábito o distracción necesitas cambiar para demostrar tu compromiso desde hoy?',
+
+  cierre:
+    'La decisión comienza contigo.'
+},
+
+
 };
 
 
