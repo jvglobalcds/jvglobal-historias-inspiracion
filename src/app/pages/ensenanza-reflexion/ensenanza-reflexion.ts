@@ -4261,6 +4261,581 @@ export class EnsenanzaReflexion {
 },
 
 
+'adentrate-en-tu-proposito': {
+  numero: '31',
+  titulo: 'ADÉNTRATE EN TU PROPÓSITO',
+  categoria: 'MENTALIDAD, PROPÓSITO Y CRECIMIENTO',
+
+  preguntaInicial:
+    '¿ESTÁS CONSTRUYENDO LA VIDA QUE DESEAS O TE ESTÁS DISTRAYENDO DEL PROPÓSITO QUE DIJISTE SEGUIR?',
+
+  bloques: [
+
+    {
+      tipo: 'frase-central',
+      lineas: [
+        'ADÉNTRATE EN TU PROPÓSITO.',
+        'NO TE DISTRAIGAS DEL CAMINO QUE HAS DECIDIDO CONSTRUIR.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'Toda persona que desea construir algo significativo necesita saber hacia dónde quiere avanzar.',
+        'Sin una dirección clara, es fácil dedicar tiempo, energía y atención a actividades que no contribuyen a sus objetivos.',
+        'Puedes pasar el día ocupado y, aun así, terminar lejos de aquello que realmente querías conseguir.'
+      ]
+    },
+
+    {
+      tipo: 'destacado',
+      lineas: [
+        'ESTAR OCUPADO NO SIEMPRE SIGNIFICA ESTAR AVANZANDO.',
+        'APRENDE A DISTINGUIR ENTRE HACER MUCHO Y HACER LO QUE IMPORTA.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'A tu alrededor siempre habrá distracciones, opiniones y caminos que parecerán más sencillos.',
+        'Algunas opiniones pueden ayudarte a crecer; otras pueden confundirte si permites que sustituyan tu propio criterio.',
+        'Por eso necesitas claridad para reconocer qué merece tu atención y qué te aleja de tus prioridades.'
+      ]
+    },
+
+    {
+      tipo: 'frase-central',
+      lineas: [
+        'CUANDO SABES HACIA DÓNDE VAS,',
+        'PUEDES DECIDIR MEJOR A QUÉ LE DEDICAS TU TIEMPO.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'Un propósito no se construye únicamente con deseos.',
+        'Necesita convertirse en un plan que puedas llevar a la práctica.',
+        'Define tu objetivo, identifica los pasos necesarios y establece qué puedes hacer cada día para acercarte a él.',
+        'No necesitas resolverlo todo de una vez; necesitas saber cuál es el siguiente paso y comprometerte con él.'
+      ]
+    },
+
+    {
+      tipo: 'destacado',
+      lineas: [
+        'UN PROPÓSITO SIN UN PLAN PUEDE QUEDARSE EN UNA INTENCIÓN.',
+        'UN PLAN ACOMPAÑADO DE ACCIONES COMIENZA A CONVERTIRLO EN REALIDAD.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'Al principio, la motivación puede impulsarte a comenzar.',
+        'Pero habrá días en los que no sentirás el mismo entusiasmo.',
+        'Estarás cansado, aparecerán dificultades o tendrás dudas sobre tus capacidades.',
+        'En esos momentos, la disciplina te ayudará a recordar tus compromisos y a cumplir con las acciones que estén a tu alcance.'
+      ]
+    },
+
+    {
+      tipo: 'frase-central',
+      lineas: [
+        'LA MOTIVACIÓN PUEDE AYUDARTE A COMENZAR.',
+        'LA DISCIPLINA TE AYUDA A MANTENER EL COMPROMISO.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'La disciplina no significa exigirte sin descanso ni ignorar tus necesidades.',
+        'Significa aprender a organizarte, cumplir tus responsabilidades y mantener hábitos que favorezcan tu crecimiento.',
+        'También significa reconocer cuándo necesitas descansar, revisar tu planificación o cambiar una estrategia que no está dando resultado.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'Cada día ofrece oportunidades para tomar decisiones.',
+        'Puedes dedicar tiempo a aprender una habilidad, avanzar en una tarea pendiente o corregir un error.',
+        'También puedes dejar que las distracciones consuman las horas que necesitabas para progresar.',
+        'Tus decisiones cotidianas no determinan por sí solas todo tu futuro, pero pueden influir en la dirección que estás construyendo.'
+      ]
+    },
+
+    {
+      tipo: 'destacado',
+      lineas: [
+        'NO SUBESTIMES EL PODER DE UNA ACCIÓN PEQUEÑA',
+        'CUANDO LA REPITES CON CONSTANCIA Y DIRECCIÓN.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'No siempre verás resultados inmediatos.',
+        'Aprender puede llevar tiempo.',
+        'Desarrollar una habilidad requiere práctica.',
+        'Construir un proyecto exige ajustes, paciencia y esfuerzo.',
+        'Que todavía no veas el resultado que deseas no significa necesariamente que estés perdiendo el tiempo.',
+        'Examina tu progreso, aprende de lo que ocurre y continúa mejorando tu manera de avanzar.'
+      ]
+    },
+
+    {
+      tipo: 'frase-central',
+      lineas: [
+        'NO CONFUNDAS IR DESPACIO CON ESTAR DETENIDO.',
+        'REVISA TU DIRECCIÓN Y SIGUE AVANZANDO.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'Recuerda por qué decidiste comenzar.',
+        'Vuelve a mirar tu propósito cuando las dificultades te hagan dudar.',
+        'Pero no te aferres únicamente a una imagen del resultado final: comprométete también con el aprendizaje, los hábitos y las decisiones que necesitas desarrollar durante el proceso.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'Nadie puede realizar por ti todas las acciones que te corresponden.',
+        'Puedes recibir orientación, aprender de otras personas y encontrar apoyo en una comunidad.',
+        'Sin embargo, tu participación, tus decisiones y tu compromiso personal siguen siendo fundamentales.',
+        'Tu propósito necesita expresarse en lo que haces, no solamente en lo que dices que deseas.'
+      ]
+    },
+
+    {
+      tipo: 'destacado',
+      lineas: [
+        'CLARIDAD PARA ELEGIR EL CAMINO.',
+        'DISCIPLINA PARA RESPETAR EL PLAN.',
+        'SUPERACIÓN PARA APRENDER Y CONTINUAR EVOLUCIONANDO.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'Esta es la aplicación de la Filosofía CDS en tu vida cotidiana.',
+        'La Claridad te ayuda a identificar tu propósito y establecer prioridades.',
+        'La Disciplina te permite mantener tus compromisos incluso cuando la motivación disminuye.',
+        'La Superación te impulsa a aprender de los obstáculos, corregir tus acciones y desarrollar las capacidades que necesitas para seguir creciendo.'
+      ]
+    },
+
+    {
+      tipo: 'frase-final',
+      lineas: [
+        'ADÉNTRATE EN TU PROPÓSITO.',
+        'DEFINE TU PLAN.',
+        'PROTEGE TU ATENCIÓN.',
+        'CUMPLE CON EL PASO QUE TE CORRESPONDE HOY.',
+        'Y SIGUE CONSTRUYENDO, UN DÍA A LA VEZ, AQUELLO QUE DESEAS CONVERTIR EN LEGADO.'
+      ]
+    }
+
+  ],
+
+  preguntaReflexion:
+    '¿Cuál es tu propósito actual, qué distracción está alejándote de él y qué acción concreta puedes realizar hoy para avanzar según tu plan?',
+
+  cierre:
+    'La decisión comienza contigo.'
+},
+
+
+'creetelo-confia-en-ti-y-demuestralo-con-acciones': {
+  numero: '32',
+  titulo: 'CRÉETELO: CONFÍA EN TI Y DEMUÉSTRALO CON ACCIONES',
+  categoria: 'MENTALIDAD, PROPÓSITO Y CRECIMIENTO',
+
+  preguntaInicial:
+    '¿CUÁNTO DE TU POTENCIAL ESTÁS LIMITANDO POR MIEDO A LO QUE OTROS PUEDAN PENSAR DE TI?',
+
+  bloques: [
+
+    {
+      tipo: 'frase-central',
+      lineas: [
+        '¡CRÉETELO!',
+        'CONFÍA EN LO QUE PUEDES LLEGAR A SER.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'Muchas personas tienen capacidades que todavía no han desarrollado porque dudan de sí mismas antes de intentarlo.',
+        'Se preguntan qué dirán los demás.',
+        'Temen equivocarse, recibir críticas o descubrir que todavía necesitan aprender.',
+        'Y mientras esperan sentirse completamente seguras, dejan pasar oportunidades para crecer.'
+      ]
+    },
+
+    {
+      tipo: 'destacado',
+      lineas: [
+        'NO NECESITAS QUE TODOS CREAN EN TI',
+        'PARA DAR EL PRIMER PASO.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'La opinión de otras personas puede aportar perspectivas valiosas, pero no debe convertirse en la medida absoluta de tu capacidad.',
+        'Habrá quienes comprendan tus objetivos y quienes no los compartan.',
+        'Algunas críticas te ayudarán a mejorar; otras no aportarán nada útil.',
+        'Tu responsabilidad es aprender a distinguirlas sin permitir que la necesidad de aprobación decida por ti.'
+      ]
+    },
+
+    {
+      tipo: 'frase-central',
+      lineas: [
+        'NO PERMITAS QUE LA DUDA DE OTROS',
+        'SE CONVIERTA AUTOMÁTICAMENTE EN TU PROPIA DUDA.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'Creer en ti no significa pensar que eres superior a los demás.',
+        'Tampoco significa que nunca cometerás errores o que podrás conseguir cualquier cosa sin esfuerzo.',
+        'Significa reconocer que tienes valor, que puedes aprender y que tus capacidades pueden desarrollarse mediante la preparación, la práctica y la experiencia.'
+      ]
+    },
+
+    {
+      tipo: 'destacado',
+      lineas: [
+        'LA CONFIANZA NO CONSISTE EN CREER QUE YA LO SABES TODO.',
+        'CONSISTE EN SABER QUE PUEDES SEGUIR APRENDIENDO.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'Tal vez hoy no tengas todos los conocimientos que necesitas.',
+        'Tal vez todavía te falte experiencia.',
+        'Tal vez sientas miedo antes de comenzar algo nuevo.',
+        'Nada de eso significa que debas renunciar automáticamente a tu propósito.',
+        'Puedes prepararte, pedir orientación, practicar y avanzar paso a paso hasta desarrollar las habilidades que te hacen falta.'
+      ]
+    },
+
+    {
+      tipo: 'frase-central',
+      lineas: [
+        'NO ESPERES A SENTIRTE CAPAZ DE TODO.',
+        'COMIENZA A DESARROLLAR LAS CAPACIDADES QUE NECESITAS.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'La confianza personal también se construye cumpliendo las promesas que te haces.',
+        'Cuando estableces una meta y trabajas por ella, comienzas a reunir pruebas de tu propio compromiso.',
+        'Cada tarea terminada, cada conocimiento adquirido y cada dificultad afrontada puede ayudarte a reconocer que eres capaz de avanzar.'
+      ]
+    },
+
+    {
+      tipo: 'destacado',
+      lineas: [
+        'NO BASTA CON DECIRTE QUE PUEDES.',
+        'CONSTRUYE CON TUS ACCIONES RAZONES PARA CREER EN TI.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'Habrá días en los que te sentirás fuerte y otros en los que volverán las dudas.',
+        'No necesitas interpretar cada duda como una señal de incapacidad.',
+        'Puedes escuchar lo que sientes, examinar la situación y decidir cuál es el siguiente paso razonable.',
+        'La valentía no siempre consiste en actuar sin miedo; muchas veces consiste en actuar con responsabilidad a pesar de sentirlo.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'También debes aprender a recibir las correcciones sin convertirlas en ataques contra tu identidad.',
+        'Una equivocación no significa que seas un fracaso.',
+        'Una habilidad que todavía no dominas no determina todo tu potencial.',
+        'Puedes reconocer lo que necesitas mejorar sin dejar de respetarte.'
+      ]
+    },
+
+    {
+      tipo: 'frase-central',
+      lineas: [
+        'TU VALOR COMO PERSONA NO DEPENDE DE UN RESULTADO.',
+        'PERO TU CRECIMIENTO SÍ NECESITA APRENDIZAJE Y ACCIÓN.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'En la Filosofía CDS, la confianza personal también necesita claridad.',
+        'La Claridad te ayuda a reconocer tus fortalezas, identificar tus áreas de mejora y decidir hacia dónde quieres avanzar.',
+        'La Disciplina te impulsa a trabajar cada día en la persona que deseas llegar a ser.',
+        'La Superación te permite aprender de los errores, afrontar las dificultades y continuar desarrollando tus capacidades.'
+      ]
+    },
+
+    {
+      tipo: 'destacado',
+      lineas: [
+        'CLARIDAD PARA RECONOCER TU POTENCIAL.',
+        'DISCIPLINA PARA DESARROLLARLO.',
+        'SUPERACIÓN PARA SEGUIR CRECIENDO.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'No necesitas convertirte en una copia de otra persona para demostrar tu valor.',
+        'Puedes aprender de quienes admiras y reconocer sus logros sin menospreciar tu propio camino.',
+        'Tu tarea es construir tu mejor versión, con tus capacidades, tus experiencias, tus principios y tus decisiones.'
+      ]
+    },
+
+    {
+      tipo: 'frase-final',
+      lineas: [
+        'CRÉETELO.',
+        'RECONOCE TU VALOR.',
+        'CONFÍA EN TU CAPACIDAD DE APRENDER.',
+        'ACTÚA AUNQUE EXISTA DUDA.',
+        'Y DEMUESTRA CON DISCIPLINA LA PERSONA QUE ESTÁS DECIDIENDO CONSTRUIR.'
+      ]
+    }
+
+  ],
+
+  preguntaReflexion:
+    '¿Qué harías hoy si dejaras de buscar la aprobación de los demás y confiaras lo suficiente en tu capacidad para aprender, actuar y mejorar?',
+
+  cierre:
+    'La decisión comienza contigo.'
+},
+
+
+'solo-triunfa-quien-aprende-a-sostener-el-proceso': {
+  numero: '33',
+  titulo: 'SÓLO TRIUNFA QUIEN APRENDE A SOSTENER EL PROCESO',
+  categoria: 'MENTALIDAD, PROPÓSITO Y CRECIMIENTO',
+
+  preguntaInicial:
+    '¿ESTÁS DISPUESTO A CONTINUAR TRABAJANDO POR TU PROPÓSITO INCLUSO CUANDO EL CAMINO SE VUELVE DIFÍCIL?',
+
+  bloques: [
+
+    {
+      tipo: 'frase-central',
+      lineas: [
+        'NO BASTA CON QUERER LLEGAR A LA META.',
+        'TAMBIÉN DEBES APRENDER A SOSTENER EL PROCESO.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'Muchas personas desean alcanzar grandes objetivos.',
+        'Imaginan los resultados, visualizan la cima y sueñan con el momento en que podrán decir que lo consiguieron.',
+        'Sin embargo, entre el lugar donde se encuentran y el lugar al que desean llegar existe un camino que exige aprendizaje, esfuerzo, paciencia y constancia.'
+      ]
+    },
+
+    {
+      tipo: 'destacado',
+      lineas: [
+        'TODOS PUEDEN DESEAR EL RESULTADO.',
+        'EL COMPROMISO SE DEMUESTRA DURANTE EL PROCESO.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'El proceso no siempre será emocionante.',
+        'Habrá días de entusiasmo y otros de cansancio.',
+        'Habrá momentos en los que verás avances y otros en los que tendrás que detenerte a revisar lo que estás haciendo.',
+        'Puede que debas aprender desde cero, reconocer errores o aceptar que todavía no tienes las capacidades que necesitas.',
+        'Eso forma parte de muchos caminos de crecimiento.'
+      ]
+    },
+
+    {
+      tipo: 'frase-central',
+      lineas: [
+        'NO ESTÁS OBLIGADO A SABERLO TODO DESDE EL PRINCIPIO.',
+        'ESTÁS LLAMADO A APRENDER MIENTRAS AVANZAS.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'La resistencia no consiste simplemente en aguantar.',
+        'Consiste en desarrollar la capacidad de responder ante las dificultades sin perder de vista aquello que estás construyendo.',
+        'Significa organizar tus esfuerzos, cuidar tus recursos, aprender de los obstáculos y buscar soluciones cuando las cosas no salen como esperabas.'
+      ]
+    },
+
+    {
+      tipo: 'destacado',
+      lineas: [
+        'LA CONSTANCIA NO ES REPETIR SIN PENSAR.',
+        'ES CONTINUAR APRENDIENDO Y MEJORANDO.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'A veces avanzar significará trabajar más.',
+        'Otras veces significará cambiar de estrategia, pedir ayuda, adquirir nuevos conocimientos o concederte el descanso necesario para recuperar fuerzas.',
+        'No todas las dificultades se resuelven insistiendo de la misma manera.',
+        'La madurez consiste en reconocer qué debes mantener, qué necesitas corregir y qué debes aprender.'
+      ]
+    },
+
+    {
+      tipo: 'frase-central',
+      lineas: [
+        'EL PROCESO TE EXIGE ESFUERZO.',
+        'PERO TAMBIÉN TE EXIGE INTELIGENCIA PARA APRENDER.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'Cuando los resultados tardan, es fácil comenzar a cuestionarte.',
+        'Puedes sentir que avanzas demasiado despacio o que otras personas están consiguiendo en menos tiempo lo que tú todavía estás construyendo.',
+        'Pero comparar tu proceso con el de los demás no siempre te ayuda a avanzar.',
+        'Cada persona parte de circunstancias, recursos, conocimientos y responsabilidades diferentes.'
+      ]
+    },
+
+    {
+      tipo: 'destacado',
+      lineas: [
+        'NO UTILICES EL RITMO DE OTRA PERSONA',
+        'COMO MEDIDA ABSOLUTA DE TU PROGRESO.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'En lugar de preguntarte por qué todavía no has llegado, examina lo que has aprendido y qué puedes mejorar.',
+        '¿Tienes más conocimientos que antes?',
+        '¿Has desarrollado mejores hábitos?',
+        '¿Reconoces errores que antes repetías?',
+        '¿Estás tomando decisiones más conscientes?',
+        'Estas preguntas pueden ayudarte a evaluar tu crecimiento con mayor claridad.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'No confundas una etapa difícil con una derrota definitiva.',
+        'Un obstáculo puede obligarte a detenerte, revisar tus planes y encontrar una nueva manera de continuar.',
+        'Y si descubres que una dirección no es adecuada, cambiar de rumbo también puede ser una decisión inteligente.',
+        'Lo importante es no abandonar tus posibilidades de crecimiento por una dificultad que todavía puedes comprender y afrontar.'
+      ]
+    },
+
+    {
+      tipo: 'frase-central',
+      lineas: [
+        'NO NECESITAS UN CAMINO SIN DIFICULTADES.',
+        'NECESITAS APRENDER A RESPONDER MEJOR ANTE ELLAS.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'El carácter se desarrolla también mediante las decisiones que tomas cuando las cosas no salen como deseas.',
+        'Aprendes paciencia cuando comprendes que algunos resultados requieren tiempo.',
+        'Desarrollas disciplina cuando cumples tus compromisos sin depender únicamente de la motivación.',
+        'Fortaleces tu criterio cuando examinas tus errores y dejas de repetir aquello que no funciona.'
+      ]
+    },
+
+    {
+      tipo: 'destacado',
+      lineas: [
+        'CADA ETAPA PUEDE DEJARTE UNA ENSEÑANZA.',
+        'TU RESPONSABILIDAD ES DESCUBRIRLA Y APLICARLA.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'La Filosofía CDS de JV Global te ofrece una manera de afrontar ese proceso.',
+        'La Claridad te recuerda hacia dónde quieres avanzar y por qué esa dirección tiene sentido para ti.',
+        'La Disciplina te ayuda a mantener tus compromisos y organizar tus esfuerzos.',
+        'La Superación te impulsa a aprender de las dificultades, corregir tus acciones y desarrollar nuevas capacidades.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'No necesitas demostrar fortaleza fingiendo que nunca te cansas.',
+        'Puedes reconocer tus límites sin renunciar a crecer.',
+        'Puedes pedir apoyo sin perder tu autonomía.',
+        'Puedes descansar y después retomar tus responsabilidades.',
+        'La verdadera constancia no depende de ser invulnerable, sino de aprender a continuar de una manera sostenible y consciente.'
+      ]
+    },
+
+    {
+      tipo: 'frase-final',
+      lineas: [
+        'RESPETA TU PROCESO.',
+        'APRENDE DE CADA ETAPA.',
+        'CORRIGE LO QUE SEA NECESARIO.',
+        'MANTÉN TU COMPROMISO.',
+        'Y SIGUE AVANZANDO HACIA LA PERSONA QUE HAS DECIDIDO CONSTRUIR.'
+      ]
+    }
+
+  ],
+
+  preguntaReflexion:
+    '¿Qué parte de tu proceso te está resultando más difícil y qué puedes aprender, corregir o cambiar para continuar avanzando con constancia?',
+
+  cierre:
+    'La decisión comienza contigo.'
+},
+
+
 };
 
 
