@@ -4836,6 +4836,279 @@ export class EnsenanzaReflexion {
 },
 
 
+'manana-puede-convertirse-en-nunca': {
+  numero: '34',
+  titulo: 'MAÑANA PUEDE CONVERTIRSE EN NUNCA',
+  categoria: 'MENTALIDAD, PROPÓSITO Y CRECIMIENTO',
+
+  preguntaInicial:
+    '¿CUÁNTAS VECES HAS PROMETIDO COMENZAR MAÑANA ALGO QUE PODRÍAS EMPEZAR HOY?',
+
+  bloques: [
+    {
+      tipo: 'frase-central',
+      lineas: [
+        'MAÑANA EMPIEZO.',
+        'MAÑANA CAMBIO.',
+        'MAÑANA LO HAGO.',
+        '¿Y SI MAÑANA SE CONVIERTE EN NUNCA?'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        '¿Cuántos sueños habrán quedado atrás porque sus dueños siempre creyeron que tendrían tiempo para comenzar mañana?',
+        'Mañana empiezo, mañana cambio, mañana lo hago. Y cuando lo dices, de verdad lo crees. Piensas que después tendrás más tiempo, más energía, más seguridad o mejores condiciones.',
+        'Pero llega mañana y encuentras una nueva razón para esperar.',
+        'Los días se convierten en semanas, las semanas en meses y los meses en años. Hasta que un día miras atrás y te preguntas: ¿en qué momento pasó tanto tiempo?'
+      ]
+    },
+
+    {
+      tipo: 'destacado',
+      lineas: [
+        'APLAZAR UNA DECISIÓN PUEDE DARTE TRANQUILIDAD POR UN MOMENTO.',
+        'PERO NO TE ACERCA A LO QUE QUIERES CONSTRUIR.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'Esa es la trampa de dejarlo todo para después. Cuando pospones algo, sientes un alivio momentáneo porque ya no tienes que enfrentar el esfuerzo, el miedo o la incomodidad de comenzar.',
+        'Te dices que lo harás más adelante y te tranquilizas pensando que todavía queda tiempo.',
+        'Sin embargo, mientras esperas las condiciones perfectas, el tiempo continúa avanzando.',
+        'El calendario no se detiene porque tengas dudas. Tus responsabilidades no desaparecen porque las aplaces. Y tus sueños no se convierten en realidad solamente porque sigas pensando en ellos.'
+      ]
+    },
+
+    {
+      tipo: 'frase-central',
+      lineas: [
+        'EL TIEMPO VA A PASAR DE TODAS FORMAS.',
+        'LA PREGUNTA ES QUÉ HARÁS CON ÉL.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'Dentro de un año desearás haber comenzado hoy. Tal vez no habrás conseguido todo lo que imaginabas, pero podrías haber aprendido, adquirido experiencia y avanzado hacia una meta importante.',
+        'Y si lo intentas y te equivocas, todavía tendrás la oportunidad de corregir, aprender y volver a comenzar.',
+        'Lo más triste no siempre será fracasar. A veces será preguntarte qué habría pasado si lo hubieras intentado.',
+        'Quien actúa obtiene experiencia. Quien aprende de sus errores puede mejorar. Pero quien siempre posterga nunca descubre hasta dónde habría podido llegar.'
+      ]
+    },
+
+    {
+      tipo: 'destacado',
+      lineas: [
+        'NO NECESITAS TENERLO TODO RESUELTO PARA COMENZAR.',
+        'NECESITAS DAR EL PRIMER PASO CON LO QUE TIENES HOY.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'No tienes que resolver toda tu vida en un solo día.',
+        'Puedes comenzar dedicando tiempo a aprender, organizando tus prioridades, terminando una tarea pendiente o tomando esa decisión que llevas semanas evitando.',
+        'No confundas prepararte con postergar. Prepararte significa adquirir herramientas para actuar; postergar significa encontrar nuevas razones para no hacerlo.',
+        'La disciplina consiste en cumplir tus compromisos incluso cuando las ganas no aparecen y los resultados todavía tardan en llegar.'
+      ]
+    },
+
+    {
+      tipo: 'frase-central',
+      lineas: [
+        'DEJA DE HACERLE PROMESAS A TU YO DEL FUTURO.',
+        'COMIENZA A CUMPLIRLE AL DE HOY.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'En la Filosofía CDS, la Claridad te ayuda a reconocer qué quieres construir y qué necesitas cambiar.',
+        'La Disciplina te impulsa a convertir tus intenciones en acciones concretas.',
+        'La Superación te permite aprender de cada experiencia, corregir el rumbo y continuar creciendo.',
+        'No se trata de correr sin pensar ni de exigirte resultados inmediatos. Se trata de dejar de aplazar lo importante y asumir la responsabilidad de tu próximo paso.'
+      ]
+    },
+
+    {
+      tipo: 'destacado',
+      lineas: [
+        'CLARIDAD PARA DECIDIR.',
+        'DISCIPLINA PARA COMENZAR.',
+        'SUPERACIÓN PARA CONTINUAR.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'Pregúntate con honestidad qué llevas tiempo diciendo que harás y todavía no has comenzado.',
+        'Identifica la excusa que más repites y decide qué acción concreta puedes realizar hoy.',
+        'No necesitas sentirte completamente preparado. Necesitas comenzar, aprender durante el camino y ajustar tus acciones cuando sea necesario.',
+        'Cada compromiso que cumples contigo mismo fortalece la confianza en tu propia palabra.'
+      ]
+    },
+
+    {
+      tipo: 'frase-final',
+      lineas: [
+        'NO ESPERES OTRO AÑO PARA HACER LO QUE PUEDES COMENZAR HOY.',
+        'NO ESPERES A PERDER EL MIEDO PARA DAR EL PRIMER PASO.',
+        'NO CONVIERTAS TUS SUEÑOS EN PROMESAS REPETIDAS.',
+        'DECIDE.',
+        'COMIENZA.',
+        'Y DEMUESTRA CON ACCIONES QUE TU PROPÓSITO TAMBIÉN MERECE TU TIEMPO.'
+      ]
+    }
+  ],
+
+  preguntaReflexion:
+    '¿Qué llevas tiempo aplazando y qué acción concreta puedes realizar hoy para dejar de prometerlo y comenzar a cumplirlo?',
+
+  cierre:
+    'La vida que quieres construir comienza con las decisiones que tomas hoy.'
+},
+
+
+'deja-de-esperar-empieza-a-hacer-que-pase': {
+  numero: '35',
+  titulo: 'DEJA DE ESPERAR. EMPIEZA A HACER QUE PASE.',
+  categoria: 'DECISIÓN, DISCIPLINA Y ACCIÓN',
+
+  preguntaInicial:
+    '¿ESTÁS ESPERANDO QUE TU VIDA CAMBIE O ESTÁS TOMANDO DECISIONES PARA CAMBIARLA?',
+
+  bloques: [
+    {
+      tipo: 'frase-central',
+      lineas: [
+        'DEJA DE DECIR «OJALÁ PASE».',
+        'COMIENZA A DECIR «VOY A HACER MI PARTE PARA QUE PASE».'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'Hay una diferencia profunda entre desear que algo suceda y asumir el compromiso de trabajar para hacerlo posible.',
+        'Puedes desear una vida diferente, esperar una oportunidad, imaginar nuevos resultados y hablar durante años de lo que algún día quieres conseguir.',
+        'Pero llega un momento en el que debes preguntarte qué estás haciendo hoy para acercarte a aquello que deseas.',
+        'Porque mientras esperas que aparezca el momento perfecto, la oportunidad ideal o las condiciones que te hagan sentir completamente preparado, puedes estar dejando pasar oportunidades de aprender, avanzar y construir.',
+        'No siempre podrás elegir las circunstancias que te rodean. Pero puedes decidir cómo responder ante ellas y qué hacer con los recursos que tienes a tu alcance.'
+      ]
+    },
+
+    {
+      tipo: 'destacado',
+      lineas: [
+        'NO TODO DEPENDE DE TI.',
+        'PERO TU PRÓXIMO PASO SÍ MERECE UNA DECISIÓN CONSCIENTE.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'Deja de repetir «ojalá me vaya bien» y comienza a prepararte para afrontar los desafíos.',
+        'Deja de decir «ojalá tenga una oportunidad» y trabaja en desarrollar las capacidades que te permitan aprovecharla.',
+        'Deja de decir «ojalá las cosas cambien» y examina qué puedes mejorar, corregir o hacer de manera diferente.',
+        'Deja de esperar a sentirte completamente seguro y aprende a avanzar con responsabilidad, incluso cuando todavía tengas preguntas.',
+        'No se trata de creer que todo saldrá exactamente como lo imaginas. Se trata de comprender que puedes actuar con determinación sin tener garantizado el resultado.'
+      ]
+    },
+
+    {
+      tipo: 'frase-central',
+      lineas: [
+        'EL DESEO TE MUESTRA LO QUE QUIERES.',
+        'LA DECISIÓN DEFINE TU COMPROMISO.',
+        'LA ACCIÓN PONE ESE COMPROMISO EN MOVIMIENTO.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'Piensa en una meta que sea importante para ti.',
+        'Tal vez quieras aprender algo nuevo, mejorar tus hábitos, desarrollar un proyecto, fortalecer tus relaciones o avanzar hacia una vida más organizada.',
+        'Pregúntate qué parte de ese objetivo depende de tus decisiones actuales.',
+        'Quizá necesites estudiar, pedir orientación, organizar tu tiempo, corregir un error, conversar con alguien o comenzar una tarea que has estado evitando.',
+        'No necesitas resolverlo todo hoy.',
+        'Necesitas identificar el siguiente paso y comprometerte a darlo.'
+      ]
+    },
+
+    {
+      tipo: 'destacado',
+      lineas: [
+        'NO ESPERES TENER TODAS LAS RESPUESTAS.',
+        'APRENDE, ACTÚA, EVALÚA Y CORRIGE EL RUMBO.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'En la Filosofía CDS de JV Global, la Claridad te ayuda a reconocer hacia dónde quieres avanzar y qué tiene verdadero valor para ti.',
+        'La Disciplina convierte tus intenciones en compromisos y tus compromisos en acciones sostenidas.',
+        'La Superación te permite aprender de los resultados, reconocer tus errores y encontrar mejores maneras de continuar.',
+        'Tener una herramienta es importante. Conocer una oportunidad también puede ser importante. Pero ninguna herramienta sustituye el criterio, la responsabilidad ni el esfuerzo de quien decide utilizarla.',
+        'No confundas actuar con apresurarte. Antes de dar un paso, comprende tus opciones, evalúa los riesgos y decide con responsabilidad.',
+        'Después, haz tu parte con constancia y aprende de lo que ocurra.'
+      ]
+    },
+
+    {
+      tipo: 'frase-central',
+      lineas: [
+        'CLARIDAD PARA SABER HACIA DÓNDE VAS.',
+        'DISCIPLINA PARA HACER TU PARTE.',
+        'SUPERACIÓN PARA APRENDER Y CONTINUAR.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'Hoy puedes comenzar con algo sencillo: elige una meta, identifica una acción concreta y establece cuándo la realizarás.',
+        'No te limites a decir «voy a mejorar». Define qué vas a practicar.',
+        'No te limites a decir «voy a prepararme». Decide qué necesitas aprender.',
+        'No te limites a decir «voy a avanzar». Identifica el siguiente paso que puedes completar de manera responsable.',
+        'Cuando conviertes una intención en una acción específica, dejas de depender únicamente de lo que esperas y comienzas a participar activamente en tu proceso.',
+        'Puede que el resultado tarde. Puede que necesites cambiar de estrategia. Puede que encuentres dificultades que no habías previsto.',
+        'Aun así, cada experiencia puede ayudarte a comprender mejor el camino y a tomar decisiones más conscientes.'
+      ]
+    },
+
+    {
+      tipo: 'frase-final',
+      lineas: [
+        'MENOS ESPERA.',
+        'MÁS CLARIDAD.',
+        'MÁS DISCIPLINA.',
+        'MÁS ACCIÓN CONSCIENTE.',
+        'NO PUEDES CONTROLARLO TODO.',
+        'PERO PUEDES DECIDIR QUÉ HARÁS HOY.',
+        'DEJA DE ESPERAR QUE TODO CAMBIE POR SÍ SOLO.',
+        'COMIENZA A HACER TU PARTE PARA CONSTRUIR EL CAMBIO.'
+      ]
+    }
+  ],
+
+  preguntaReflexion:
+    '¿Qué estás esperando que suceda y qué acción concreta, responsable y posible puedes realizar hoy para acercarte a lo que deseas construir?',
+
+  cierre:
+    'No tienes que controlar todas las circunstancias para comenzar a avanzar. Necesitas claridad para elegir, disciplina para actuar y humildad para aprender. Tu siguiente paso comienza con una decisión.'
+},
+
 };
 
 
