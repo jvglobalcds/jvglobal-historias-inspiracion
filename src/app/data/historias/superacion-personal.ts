@@ -1755,5 +1755,248 @@ url:
     ]
   },
 
+{
+  id: 'lola-anderson',
+  nombre: 'Lola Anderson',
+  epoca: 'Momento clave: 2012–2024 · Del sueño escrito al oro olímpico',
+
+  contexto:
+    'Después de inspirarse viendo los Juegos Olímpicos de Londres 2012, escribió en su diario que soñaba con competir en remo en unos Juegos Olímpicos y ganar una medalla de oro para Gran Bretaña. Al sentirse avergonzada y dudar de sus propias posibilidades, arrancó la página y la tiró a la basura. Su padre, Don, la rescató y la conservó durante años. En 2024, Lola alcanzó aquel sueño al ganar el oro olímpico en París.',
+
+  categoria: [
+    'Superación personal',
+    'Disciplina',
+    'Perseverancia',
+    'Familia',
+    'Deporte'
+  ],
+
+  temas: [
+    'Superación',
+    'Claridad',
+    'Disciplina',
+    'Perseverancia',
+    'Sueños',
+    'Autoconfianza',
+    'Acompañamiento',
+    'Familia',
+    'Duelo',
+    'Trabajo en equipo',
+    'Resiliencia',
+    'Legado'
+  ],
+
+  valoresCds: [
+    'Claridad',
+    'Disciplina',
+    'Superación'
+  ],
+
+  quienEs:
+    'Lola Anderson es una remera británica que alcanzó el reconocimiento internacional al conquistar la medalla de oro en la prueba femenina de cuádruple scull en los Juegos Olímpicos de París 2024. Su historia se hizo especialmente conocida por la página de su diario en la que había escrito, años antes, su sueño de ganar el oro olímpico. Su padre, Don Anderson, conservó aquella página después de que ella la arrojara a la basura y se la devolvió poco antes de fallecer en 2019.',
+
+  contextoAmpliado:
+    'Lola creció en Richmond, en el área de Londres, dentro de una familia vinculada al remo. Su padre había practicado este deporte durante sus años universitarios y contribuyó a acercarla a esa actividad. Al principio, Lola tuvo dificultades para progresar y no siempre se sintió segura de sus capacidades. Sin embargo, continuó entrenando y aprendiendo. La victoria de las remeras británicas Helen Glover y Heather Stanning en los Juegos Olímpicos de Londres 2012 despertó en ella una aspiración que terminaría marcando su trayectoria.',
+
+  antesDelMomentoClave:
+    'En 2012, después de ver la victoria olímpica británica en remo, Lola escribió en su diario que su mayor sueño era participar en unos Juegos Olímpicos y, si era posible, ganar una medalla de oro para Gran Bretaña. Poco después, al releer lo que había escrito, consideró que aquella aspiración era demasiado ambiciosa y se sintió avergonzada. Arrancó la página y la arrojó a la basura. Sin que ella lo supiera, su padre encontró la nota y decidió guardarla.',
+
+  momentoClave:
+    'En 2019, después de conservar la página durante siete años, Don Anderson se la devolvió a su hija mientras recibía tratamiento por una enfermedad terminal. Falleció de cáncer en diciembre de ese año. La nota se convirtió en un recuerdo profundamente significativo para Lola y en un símbolo de la confianza que su padre había depositado en ella. Cinco años después, el 31 de julio de 2024, Lola ganó la medalla de oro olímpica en París junto a Lauren Henry, Hannah Scott y Georgie Brayshaw. El equipo británico superó a Países Bajos por apenas 0,15 segundos en un final extraordinariamente ajustado.',
+
+  loQueHizo:
+    'Lola continuó desarrollándose como remera a pesar de las dificultades iniciales y de los momentos en los que dudó de sí misma. Se formó, entrenó y compitió durante años hasta llegar a la élite internacional. En 2019 conquistó el oro en el Campeonato Mundial sub-23 de remo y, posteriormente, siguió avanzando en su carrera hasta convertirse en campeona mundial y europea con su equipo. En París 2024, ella y sus compañeras transformaron años de preparación en una victoria olímpica. Su logro no fue producto de una sola persona: también dependió del esfuerzo, la coordinación y el compromiso de todo el equipo.',
+
+  elAcompanamiento:
+    'El acompañamiento de su padre fue una parte esencial de la historia. Don no solamente conservó aquella página: también había animado a Lola a volver a la embarcación después de sus primeras dificultades y a disfrutar del deporte sin concentrarse únicamente en los resultados. Su gesto de devolverle la nota fue una expresión de confianza en un momento especialmente difícil. Lola también reconoció la importancia de sus compañeras, entrenadores y demás personas que contribuyeron a su desarrollo. Su historia muestra que creer en alguien puede ayudarlo a reconocer posibilidades que todavía no alcanza a ver por sí mismo.',
+
+  historiaCompleta: [
+    'Lola Anderson creció en Richmond, cerca de Londres, en una familia que tenía una relación cercana con el remo.',
+
+    'Su padre, Don Anderson, había practicado este deporte durante sus años universitarios y contribuyó a acercarla a él.',
+
+    'Al principio, Lola no destacó inmediatamente como una deportista excepcional. Tuvo dificultades en sus primeras experiencias y necesitó tiempo para desarrollar sus capacidades.',
+
+    'Su padre la animaba a regresar a la embarcación después de los vuelcos y de las sesiones difíciles, recordándole que también podía disfrutar del deporte sin medirlo todo por los resultados.',
+
+    'En 2012, Lola vio por televisión los Juegos Olímpicos de Londres.',
+
+    'La victoria de las remeras británicas Helen Glover y Heather Stanning en la prueba femenina de dos sin timonel despertó en ella una nueva ambición.',
+
+    'Inspirada por aquella competición, escribió en su diario que soñaba con participar en unos Juegos Olímpicos de remo y, si era posible, ganar una medalla de oro para Gran Bretaña.',
+
+    'Después de escribirlo, volvió a leer la página y dudó de que pudiera cumplir aquel sueño.',
+
+    'Avergonzada por haber expresado una aspiración que le parecía demasiado grande, arrancó la página del diario y la tiró a la basura.',
+
+    'Su padre encontró la nota y decidió conservarla, aunque Lola no sabía que él la había rescatado.',
+
+    'Don guardó aquella página durante siete años. Para él, aquellas palabras representaban una posibilidad que su hija todavía no se atrevía a creer.',
+
+    'Mientras tanto, Lola continuó entrenando y desarrollándose como remera.',
+
+    'El camino deportivo exigió preparación física, aprendizaje técnico, constancia y capacidad para afrontar las dificultades propias de la competición.',
+
+    'Su progreso no dependió únicamente de la aspiración que había escrito en su diario. Fue necesario convertirla en entrenamiento, experiencia y participación en competiciones.',
+
+    'En 2019, Lola ganó la medalla de oro en la prueba femenina de cuádruple scull del Campeonato Mundial sub-23.',
+
+    'Ese mismo año, su padre le devolvió la página que había conservado desde 2012.',
+
+    'Don estaba recibiendo tratamiento por una enfermedad terminal y falleció de cáncer en diciembre de 2019, aproximadamente dos meses después de devolverle la nota.',
+
+    'La página adquirió para Lola un significado especial. No era solamente el recuerdo de un sueño infantil, sino también una muestra del amor y la confianza que su padre había mantenido en ella.',
+
+    'Lola continuó su carrera después de la pérdida de su padre y siguió trabajando para alcanzar el máximo nivel del remo internacional.',
+
+    'En 2022 obtuvo una medalla de bronce en el Campeonato Mundial y también participó en el desarrollo de una trayectoria que la llevó a competir por los principales títulos internacionales.',
+
+    'En 2023, Lola formó parte del equipo británico que ganó el oro mundial en cuádruple scull en Belgrado.',
+
+    'En 2024, el equipo británico también ganó el Campeonato Europeo de remo, reforzando su posición entre las tripulaciones más competitivas del mundo.',
+
+    'Lola llegó a los Juegos Olímpicos de París 2024 con una trayectoria construida durante años de entrenamiento y competición.',
+
+    'El 31 de julio de 2024 compitió en la final femenina de cuádruple scull junto a Lauren Henry, Hannah Scott y Georgie Brayshaw.',
+
+    'Durante gran parte de la carrera, la embarcación británica persiguió a la tripulación de Países Bajos.',
+
+    'En los últimos metros, las británicas aceleraron y consiguieron superar a sus rivales en un final decidido mediante una ajustada revisión de la llegada.',
+
+    'Gran Bretaña ganó la medalla de oro por una diferencia de apenas 0,15 segundos.',
+
+    'Fue la primera medalla de oro olímpica de Gran Bretaña en la prueba femenina de cuádruple scull.',
+
+    'Al cruzar la línea de llegada y comprender lo que habían conseguido, Lola se emocionó profundamente.',
+
+    'La victoria representaba mucho más que una medalla: era el cumplimiento de aquella aspiración que había escrito cuando era adolescente y que, por un momento, había considerado imposible.',
+
+    'Su padre no pudo estar presente para presenciar la victoria, pero la página que había conservado durante años seguía siendo un símbolo de la confianza que había depositado en ella.',
+
+    'Lola ha explicado públicamente cuánto significaba para ella que su padre hubiera creído en sus posibilidades incluso cuando ella todavía dudaba de sí misma.',
+
+    'También ha reconocido que su potencial no habría llegado a desarrollarse plenamente sin las compañeras que cruzaron la meta junto a ella y sin todas las personas que contribuyeron a su trayectoria.',
+
+    'La historia de Lola Anderson reúne una aspiración personal, años de preparación, el apoyo de una familia, el dolor de una pérdida y la colaboración de un equipo.',
+
+    'Su experiencia permite comprender que un sueño puede permanecer vivo incluso durante períodos en los que parece lejano, pero que hacerlo realidad exige convertirlo en acciones concretas.',
+
+    'También recuerda que el apoyo de quienes creen en nosotros puede tener un valor enorme, especialmente cuando todavía no hemos aprendido a reconocer nuestras propias capacidades.',
+
+    'La página rescatada por su padre terminó convirtiéndose en un símbolo de un sueño cumplido y de un amor que continuó acompañando a Lola a través de su recuerdo.'
+  ],
+
+  hechosDocumentados: [
+    'Lola Anderson es una remera británica que compite en pruebas internacionales de remo.',
+    'Los Juegos Olímpicos de Londres 2012 inspiraron su sueño de competir en unos Juegos Olímpicos y ganar el oro para Gran Bretaña.',
+    'Escribió aquella aspiración en una página de su diario y después la arrancó y la tiró a la basura.',
+    'Su padre, Don Anderson, rescató la página y la conservó durante siete años.',
+    'Don devolvió la nota a su hija en 2019, poco antes de fallecer de cáncer.',
+    'Lola ganó el oro en cuádruple scull femenino en el Campeonato Mundial sub-23 de 2019.',
+    'Formó parte del equipo británico que ganó el oro mundial en cuádruple scull en 2023.',
+    'En 2024 ganó el Campeonato Europeo con el equipo británico de cuádruple scull.',
+    'El 31 de julio de 2024 ganó la medalla de oro olímpica en cuádruple scull femenino en París.',
+    'Sus compañeras en la final olímpica fueron Lauren Henry, Hannah Scott y Georgie Brayshaw.',
+    'La tripulación británica superó a Países Bajos por 0,15 segundos.',
+    'Fue la primera medalla de oro olímpica británica en la prueba femenina de cuádruple scull.',
+    'Lola ha hablado públicamente sobre la importancia de la confianza de su padre y del apoyo de sus compañeras.'
+  ],
+
+  loQuePodemosObservar: [
+    'Un sueño puede comenzar como una idea que todavía no nos atrevemos a creer posible.',
+
+    'Dudar de nuestras capacidades no significa que carezcamos de ellas. Puede significar que todavía necesitamos tiempo, preparación y experiencias para desarrollarlas.',
+
+    'La claridad permite reconocer una aspiración, pero la disciplina es necesaria para convertirla en acciones concretas.',
+
+    'La perseverancia no consiste únicamente en mantener una idea en la mente, sino en continuar trabajando para acercarse a ella.',
+
+    'El apoyo de una persona que cree en nosotros puede ayudarnos a reconocer posibilidades que todavía no vemos.',
+
+    'El acompañamiento no sustituye el esfuerzo personal, pero puede fortalecer la confianza necesaria para continuar.',
+
+    'Una trayectoria extraordinaria rara vez se construye de un día para otro. Detrás de una victoria pueden existir años de aprendizaje y preparación.',
+
+    'Los grandes logros también pueden depender del trabajo colectivo. En el remo, la coordinación y el compromiso de cada integrante son fundamentales.',
+
+    'Una pérdida personal puede permanecer en nuestra historia sin borrar el valor de los vínculos, las enseñanzas y el apoyo recibidos.',
+
+    'El legado de una persona no se limita a los objetos que deja. También puede permanecer en la confianza, los valores y las posibilidades que ayudó a despertar en otros.',
+
+    'Cumplir un sueño no significa que todo haya sido fácil. Significa que, a pesar de las dificultades, hubo preparación, decisiones y perseverancia.',
+
+    'La superación también consiste en aprender a reconocer nuestro propio potencial y asumir la responsabilidad de desarrollarlo.'
+  ],
+
+  paraReflexionar: [
+    '¿Qué sueño has dejado de lado porque dudas de que puedas alcanzarlo?',
+
+    '¿Qué escribirías hoy en tu diario si te permitieras expresar aquello que realmente deseas construir?',
+
+    '¿Qué diferencia existe entre reconocer que un sueño es difícil y convencerte de que es imposible?',
+
+    '¿Qué acciones concretas estás realizando para acercarte a tus objetivos?',
+
+    '¿Qué capacidad necesitas desarrollar para convertir una aspiración en una posibilidad real?',
+
+    '¿Quién ha creído en ti incluso cuando tú mismo dudabas de tus capacidades?',
+
+    '¿Has reconocido alguna vez el valor de una persona que te acompañó durante una etapa difícil?',
+
+    '¿Qué puedes aprender de quienes te han apoyado sin sustituir tu propia responsabilidad?',
+
+    '¿Qué necesitas hacer para continuar cuando los resultados todavía no aparecen?',
+
+    '¿Qué papel desempeña la disciplina en la construcción de tus sueños?',
+
+    '¿Qué puedes aprender de la capacidad de un equipo para trabajar unido hacia un objetivo común?',
+
+    'Si alcanzaras tu objetivo dentro de varios años, ¿qué te gustaría haber hecho hoy para acercarte a él?'
+  ],
+
+  reflexionCds: {
+    claridad:
+      'La claridad puede observarse en el sueño que Lola identificó en 2012: competir en remo en unos Juegos Olímpicos y ganar una medalla de oro para Gran Bretaña. Aunque llegó a dudar de sus posibilidades, aquella aspiración representó una dirección que posteriormente pudo desarrollar mediante su preparación deportiva. La claridad no significa conocer de antemano todo el camino, sino reconocer hacia dónde queremos avanzar.',
+
+    disciplina:
+      'La disciplina aparece en los años de entrenamiento y competición que separaron aquella página de diario de la victoria en París. Un sueño no se convierte en realidad solamente por desearlo. Requiere aprendizaje, preparación, constancia y la disposición de continuar trabajando cuando todavía no existe una garantía de éxito.',
+
+    superacion:
+      'La superación puede observarse en el proceso mediante el cual Lola continuó desarrollándose a pesar de sus dudas, las dificultades deportivas y la pérdida de su padre. Su victoria olímpica no elimina el dolor de esa pérdida, pero permite comprender cómo una persona puede seguir construyendo su vida mientras conserva el significado de los vínculos que la marcaron. Su historia también muestra que superar una dificultad implica reconocer el apoyo recibido y continuar avanzando con responsabilidad.'
+  },
+
+  unaIdeaParaLlevar:
+    'No tires a la basura tus sueños solamente porque hoy te parecen demasiado grandes. Escríbelos, trabaja para acercarte a ellos y recuerda a quienes creyeron en ti cuando todavía dudabas de tus propias capacidades. La claridad te muestra una dirección, la disciplina te ayuda a avanzar y la superación te permite continuar incluso cuando el camino se vuelve difícil.',
+
+  fuentes: [
+    {
+      nombre:
+        'British Rowing · Perfil oficial de Lola Anderson · VER FUENTE',
+      url:
+        'https://www.britishrowing.org/athlete/lola-anderson/'
+    },
+
+    {
+      nombre:
+        'Team GB · Perfil oficial de Lola Anderson · VER FUENTE',
+      url:
+        'https://www.teamgb.com/athlete/lola-anderson/6PCVbcH5HfWV5cdNqqZR4p'
+    },
+
+    {
+      nombre:
+        'BBC Sport · La nota del diario y el sueño olímpico de Lola Anderson · VER FUENTE',
+      url:
+        'https://bbc.com.im/sport/rowing/articles/cd1xvv0rwqqo'
+    },
+
+    {
+      nombre:
+        'Team GB · La victoria olímpica y el legado de su padre · VER FUENTE',
+      url:
+        'https://www.teamgb.com/article/emotional-quadruple-sculls-triumph-can-inspire-the-next-generation/7hfvsU5EUapp1MkG8sPx7y'
+    }
+  ]
+},
 
 ];
