@@ -5109,6 +5109,154 @@ export class EnsenanzaReflexion {
     'No tienes que controlar todas las circunstancias para comenzar a avanzar. Necesitas claridad para elegir, disciplina para actuar y humildad para aprender. Tu siguiente paso comienza con una decisión.'
 },
 
+  'el-poder-de-creer-en-ti-mismo': {
+  numero: '36',
+  titulo: 'EL PODER DE CREER EN TI MISMO',
+  categoria: 'MENTALIDAD, PROPÓSITO Y CRECIMIENTO',
+  preguntaInicial: '¿Qué cambiaría en tu vida si comenzaras a creer verdaderamente en ti mismo?',
+ 
+
+  bloques: [
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'Creer en ti mismo no significa pensar que nunca te equivocarás ni que todo saldrá como deseas.',
+        'Significa reconocer que tienes la capacidad de aprender, desarrollar habilidades, corregir errores y avanzar mediante decisiones conscientes.',
+        'Muchas veces, el primer obstáculo no es la falta de oportunidades, sino las creencias que hemos aceptado sobre nuestras propias capacidades.',
+        'Cuando piensas que no puedes aprender algo nuevo, es posible que ni siquiera lo intentes. Cuando decides aprender, comienzas a descubrir posibilidades que antes no considerabas.',
+        'Tu mentalidad influye en las decisiones que tomas, en el esfuerzo que estás dispuesto a realizar y en la manera en que respondes ante las dificultades.'
+      ]
+    },
+
+    {
+      tipo: 'frase-central',
+      lineas: [
+        'NO SE TRATA DE CREER QUE TODO SERÁ FÁCIL.',
+        'SE TRATA DE RECONOCER QUE PUEDES APRENDER A ENFRENTAR LOS DESAFÍOS.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'La confianza personal no aparece de un día para otro. Se fortalece cuando aprendes, practicas, cumples los compromisos que asumes y reconoces tus avances.',
+        'No necesitas saberlo todo para comenzar. Necesitas disposición para aprender y humildad para aceptar aquello que todavía debes mejorar.',
+        'Cada habilidad que desarrollas, cada error que corriges y cada pequeño compromiso que cumples puede ayudarte a construir una confianza más sólida.',
+        'Por eso, en lugar de compararte constantemente con otras personas, observa tu propio proceso y pregúntate qué puedes mejorar respecto a quien eras ayer.'
+      ]
+    },
+
+    {
+      tipo: 'frase-central',
+      lineas: [
+        'TU VALOR NO DEPENDE DE SER PERFECTO.',
+        'TU CRECIMIENTO DEPENDE, EN PARTE, DE LO QUE DECIDES APRENDER Y PRACTICAR.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'También es importante reconocer que creer en ti mismo no significa ignorar tus limitaciones ni negar las circunstancias que enfrentas.',
+        'Significa observar tu realidad con honestidad, identificar los recursos que tienes disponibles y buscar alternativas responsables para avanzar.',
+        'Algunas metas requieren más tiempo, preparación o colaboración. Otras necesitan que cambies de estrategia o que aprendas de una experiencia que no salió como esperabas.',
+        'Una dificultad no determina por sí sola tu futuro. Puede convertirse en una oportunidad para revisar tus decisiones, fortalecer tus habilidades y descubrir qué necesitas mejorar.'
+      ]
+    },
+
+    {
+      tipo: 'frase-central',
+      lineas: [
+        'NO CONFUNDAS UNA DIFICULTAD CON UNA SENTENCIA DEFINITIVA.',
+        'APRENDE, AJUSTA TU ESTRATEGIA Y SIGUE AVANZANDO CON RESPONSABILIDAD.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'La disciplina es una aliada fundamental de la confianza. Cuando dependes únicamente de la motivación, puedes detenerte cada vez que pierdes el entusiasmo.',
+        'En cambio, cuando estableces hábitos y compromisos realistas, aprendes a actuar incluso en los días en que avanzar requiere más esfuerzo.',
+        'No necesitas realizar cambios extraordinarios de inmediato. Puedes comenzar con acciones pequeñas, concretas y sostenibles.',
+        'Lee unas páginas, practica una habilidad, termina una tarea pendiente, pide orientación cuando la necesites o dedica tiempo a desarrollar una capacidad que te acerque a tus objetivos.',
+        'Cada acción realizada con intención puede convertirse en parte de un proceso de crecimiento.'
+      ]
+    },
+
+    {
+      tipo: 'frase-central',
+      lineas: [
+        'LA CONFIANZA CRECE CUANDO PASAS DE LA INTENCIÓN A LA PRÁCTICA.',
+        'APRENDE.',
+        'APLICA.',
+        'EVALÚA.',
+        'MEJORA.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'Tu entorno también influye en tu manera de pensar. Por eso, procura aprender de personas que te ayuden a reflexionar, desarrollar habilidades y tomar mejores decisiones.',
+        'Escuchar otras perspectivas no significa renunciar a tu criterio. Significa mantener una actitud abierta para aprender y distinguir qué ideas pueden contribuir a tu crecimiento.',
+        'Del mismo modo, reconoce tus avances sin menospreciar a los demás. El crecimiento personal no requiere competir constantemente con otras personas.',
+        'Puedes aprender de quienes tienen más experiencia y, a medida que desarrollas tus capacidades, compartir lo aprendido con quienes también desean avanzar.'
+      ]
+    },
+
+    {
+      tipo: 'frase-central',
+      lineas: [
+        'CRECER NO SIGNIFICA SENTIRTE SUPERIOR.',
+        'SIGNIFICA DESARROLLAR TUS CAPACIDADES Y UTILIZARLAS CON RESPONSABILIDAD.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'Ahora lleva estas ideas a tu propia vida. Identifica una creencia que te haya impedido avanzar y examina si está basada en hechos, en experiencias pasadas o en el temor a equivocarte.',
+        'Después, define qué necesitas aprender, qué recurso puedes utilizar y cuál será tu primera acción concreta.',
+        'No tienes que resolver todo hoy. Lo importante es dejar de tratar tus dudas como verdades definitivas y comenzar a construir nuevas experiencias mediante acciones responsables.',
+        'Recuerda que los resultados no siempre dependen exclusivamente de ti. Sin embargo, puedes trabajar en tus conocimientos, tus hábitos, tus decisiones y tu manera de responder ante las circunstancias.'
+      ]
+    },
+
+    {
+      tipo: 'parrafo',
+      lineas: [
+        'Hoy puedes comenzar con algo sencillo: elige una meta, identifica una acción concreta y establece cuándo la realizarás.',
+        'No te limites a decir «voy a mejorar». Define qué vas a practicar.',
+        'No te limites a decir «voy a prepararme». Decide qué necesitas aprender.',
+        'No te limites a decir «voy a avanzar». Identifica el siguiente paso que puedes completar de manera responsable.',
+        'Cuando conviertes una intención en una acción específica, dejas de depender únicamente de lo que esperas y comienzas a participar activamente en tu proceso.',
+        'Puede que el resultado tarde. Puede que necesites cambiar de estrategia. Puede que encuentres dificultades que no habías previsto.',
+        'Aun así, cada experiencia puede ayudarte a comprender mejor el camino y a tomar decisiones más conscientes.'
+      ]
+    },
+
+    {
+      tipo: 'frase-final',
+      lineas: [
+        'CREE EN TU CAPACIDAD DE APRENDER.',
+        'RECONOCE LO QUE NECESITAS MEJORAR.',
+        'ACTÚA CON DISCIPLINA.',
+        'APRENDE DE CADA EXPERIENCIA.',
+        'NO NECESITAS TENER TODAS LAS RESPUESTAS PARA COMENZAR.',
+        'NECESITAS DISPOSICIÓN PARA DAR EL SIGUIENTE PASO.',
+        'TU FUTURO NO SE CONSTRUYE SOLAMENTE CON LO QUE DESEAS.',
+        'TAMBIÉN SE CONSTRUYE CON LO QUE APRENDES Y HACES CADA DÍA.'
+      ]
+    }
+  ],
+
+  preguntaReflexion:
+    '¿Qué creencia sobre ti mismo necesitas revisar y qué acción concreta puedes realizar esta semana para desarrollar una capacidad que te acerque a tus objetivos?',
+
+  cierre:
+    'Creer en ti mismo no significa garantizar que todo saldrá como esperas. Significa reconocer que puedes aprender, mejorar y actuar con responsabilidad. Fortalece tu mentalidad, desarrolla tus habilidades y avanza con claridad, disciplina y perseverancia.'
+},
+
 };
 
 
